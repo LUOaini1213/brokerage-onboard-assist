@@ -1,0 +1,15 @@
+{
+  "label": "REAL (public reference data), codes only",
+  "source_repository": "https://github.com/datasets/harmonized-system",
+  "source_url": "https://raw.githubusercontent.com/datasets/harmonized-system/b1be3f2531a85fb0ea17147b19c41d3641912e43/data/harmonized-system.csv",
+  "source_commit": "b1be3f2531a85fb0ea17147b19c41d3641912e43",
+  "raw_sha256": "e77ee9e1cfd15a42d1fadeb2c0618d10f6b9ed9aec0e5d66826dc7ef9d3126a5",
+  "retrieved": "2026-11-15",
+  "hs_edition": "HS 2022 (the file's TOTAL row reads 'Total of all HS2022 commodities')",
+  "licence_declared_by_source": "ODC-PDDL-1.0 (datapackage.json); data from UN Comtrade",
+  "licence_note": "The HS nomenclature is a World Customs Organization publication and the WCO holds copyright in its text. Only the numeric 6-digit codes, with their chapter and heading numbers, are redistributed here; descriptions are not.",
+  "excluded": "chapter 99 codes (not WCO HS; UN Comtrade uses 99 for unspecified commodities)",
+  "subheadings_in_source": 5613,
+  "subheadings_kept": 5612,
+  "chapters_kept": 96
+}
