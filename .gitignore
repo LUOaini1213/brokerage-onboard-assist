@@ -1,0 +1,15 @@
+# local environment
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# downloaded validation tooling (fetched by tools/fetch_schemas.sh and tools/check_tmdl.ps1)
+.schemas/
+.tom/
+# raw downloads made by scripts/fetch_hs_nomenclature.py (only the derived codes file is committed)
+data/reference/raw/
+# Power BI Desktop local files (per user / per machine)
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+# scratch output of the reproducibility test and the mutation runner
+.build_check/
