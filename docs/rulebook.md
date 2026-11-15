@@ -6,7 +6,7 @@ Requirements are **paraphrased** from official public pages and were read on the
 
 Status: **verified** = the requirement as written was found in the cited source; **partially verified** = the core requirement was found but a detail used here (a tolerance, a base, a mapping) was not; **not verified** = no cited source states it (a derived rule or common practice).
 
-44 rules: 29 verified, 13 partially verified, 2 not verified.
+44 rules: 28 verified, 14 partially verified, 2 not verified.
 
 | Rule | Title | Hold reasons | Automated check | Status |
 |---|---|---|---|---|
@@ -24,7 +24,7 @@ Status: **verified** = the requirement as written was found in the cited source;
 | [SG-IMP-12](#sg-imp-12) | GST rate 9% | - | gst_estimate | verified |
 | [SG-IMP-13](#sg-imp-13) | Dutiable goods: liquor, tobacco, motor vehicles, petroleum products | VALUE_CIF | dutiable_screening | partially verified |
 | [SG-IMP-14](#sg-imp-14) | Controlled goods need competent-authority approval before import | CA_APPROVAL | ca_screening | partially verified |
-| [SG-IMP-15](#sg-imp-15) | Competent authorities and what they control | CA_APPROVAL | ca_screening | verified |
+| [SG-IMP-15](#sg-imp-15) | Competent authorities and what they control | CA_APPROVAL | ca_screening | partially verified |
 | [SG-IMP-16](#sg-imp-16) | HSA: health products that need licensing or approval; cosmetics do not | CA_APPROVAL | ca_screening | verified |
 | [SG-IMP-17](#sg-imp-17) | SFA: food imports need a licence or registration and a permit before arrival | CA_APPROVAL | ca_screening | verified |
 | [SG-IMP-18](#sg-imp-18) | IMDA: telecommunication equipment is declared to IMDA | CA_APPROVAL | ca_screening | verified |
@@ -61,10 +61,11 @@ Status: **verified** = the requirement as written was found in the cited source;
 
 **Customs import permit before the goods are imported** (permit; status: verified)
 
-The importer must obtain the relevant customs permit, submitted through TradeNet, before the goods are imported into Singapore. A permit that was never used, or one already used, is listed among common errors.
+The importer must obtain the relevant customs permit before the goods are imported into Singapore; the permit is submitted through TradeNet. The overview's 'common errors' section explains how a wrong permit is corrected depending on whether it has already been used for clearance.
 
 - Readiness check: Permit application timestamp is earlier than the arrival date of the shipment.
 - Corrective action: Apply for the permit before re-presenting the cargo; for later shipments the handling note asks for the permit before arrival. If goods were imported without a permit, the error can only be corrected through a voluntary disclosure (SG-IMP-27).
+- Note: The timing comes from the overview and the TradeNet route from the permit page; neither page alone states both. The second-pass check found that the first version wrongly said an unused or used permit is itself listed as an error; corrected.
 - Source: Singapore Customs, [Import Procedures Overview](https://www.customs.gov.sg/doing-business/import-operations/import-procedures/import-procedures-overview/) (opening paragraph; 'Common errors' list); accessed 2026-11-15
 - Source: Singapore Customs, [Obtain a Customs Import Permit](https://www.customs.gov.sg/doing-business/import-operations/import-procedures/obtain-a-customs-import-permit/) (opening paragraph); accessed 2026-11-15
 
@@ -76,6 +77,7 @@ Wrong importer name and UEN, and wrong importer, are listed as common permit err
 
 - Readiness check: Importer UEN and name on the draft permit equal the customer profile.
 - Corrective action: Amend the importer fields while the permit is valid, or cancel and re-apply if the field is not amendable (SG-IMP-26); correct the customer master data.
+- Note: The two errors appear in the overview's sub-lists for Major Exporter Scheme traders and for In-Payment permits.
 - Source: Singapore Customs, [Import Procedures Overview](https://www.customs.gov.sg/doing-business/import-operations/import-procedures/import-procedures-overview/) ('Do not' list; 'Common errors' list); accessed 2026-11-15
 
 ### SG-IMP-07
@@ -173,12 +175,12 @@ HSA licensing and/or approval before import applies to therapeutic products, med
 
 **SFA: food imports need a licence or registration and a permit before arrival** (controlled_goods; status: verified)
 
-SFA controls imports of fruit and vegetables (licence), livestock and animal products (permit in advance), meat and egg products (licence, approved sources, permit per consignment, veterinary health certificate), processed food and food appliances (registration), rice (licence) and fish (licence, permit per consignment, health certificates for some items). The customs permit must be obtained before the goods arrive.
+SFA controls imports of fruit and vegetables (licence), livestock and animal products (permit in advance), meat (licence for meat and fish products, a permit for every consignment of meat product, veterinary health certificate), salted/preserved eggs and processed egg products (from SFA-approved establishments, with a health certificate), processed food and food appliances (registration), rice (licence) and fish (licence, permit per consignment, health certificates for some items). The customs permit must be obtained before the goods arrive.
 
 - Readiness check: Food chapters require an SFA licence/registration reference; meat and seafood lines also need a health certificate on file.
 - Corrective action: Ask for the SFA licence or registration number and the exporting country's health certificate.
 - Assumptions: Health certificate requirement screened at chapters 02 and 03.
-- Note: The health-certificate check is applied to chapters 02 and 03 only.
+- Note: The second-pass check found that the first version applied the meat licence, permit and veterinary certificate to egg products as well; corrected. The health-certificate check is applied to chapters 02 and 03 only.
 - Source: Singapore Customs, [Competent Authorities Requirements: Singapore Food Agency (SFA)](https://www.customs.gov.sg/doing-business/quick-links-for-traders/tradenet/competent-authorities-requirements-for-controlled-items/singapore-food-agency/) (sections by product type); accessed 2026-11-15
 
 ### SG-IMP-18
@@ -207,7 +209,7 @@ NEA requires a hazardous substances licence for items containing EPMA-listed ing
 
 **Prohibited imports** (controlled_goods; status: partially verified)
 
-Goods that cannot be imported include chewing gum (other than HSA-approved oral dental and medicinal gum), rhinoceros horn and endangered wildlife products, certain telecommunication equipment such as jammers and scanning receivers, imitation tobacco products including e-cigarettes and vaporisers, other listed tobacco and nicotine products, and controlled drugs listed in the Misuse of Drugs Regulations.
+Goods that cannot be imported include chewing gum (other than HSA-approved oral dental and medicinal gum), rhinoceros horn and endangered wildlife products, certain telecommunication equipment such as jammers and scanning receivers, imitation tobacco products including e-cigarettes and vaporisers, other listed tobacco and nicotine products, and controlled drugs listed in the 4th Schedule of the Misuse of Drugs Regulations.
 
 - Readiness check: Lines in heading 1704.10 (chewing gum) or subheading 8543.40 (e-cigarettes) are flagged 'prohibited: do not accept for import'.
 - Corrective action: Do not lodge; inform the customer that the goods cannot be imported.
@@ -244,7 +246,7 @@ Derived rule: what must be added to the invoice price to reach the CIF value dep
 
 - Readiness check: Invoice states an Incoterms 2020 rule (and named place).
 - Corrective action: Ask the supplier to state the Incoterm on the invoice.
-- Note: No cited page states 'the invoice must show an Incoterm' as a requirement; the rule is inferred from the valuation pages.
+- Note: No cited page states 'the invoice must show an Incoterm' as a requirement; the rule is inferred from the valuation pages. The permit's term-type field (Module 5 field 90) applies only to dutiable goods with ad valorem duty, so it does not support a general requirement either; the second-pass check agreed.
 - Source: Singapore Customs, [Establishing Customs Value and Methods](https://www.customs.gov.sg/doing-business/valuation-duties-and-fees/establishing-customs-value/establishing-customs-value-and-methods/) (EXW example); accessed 2026-11-15
 - Source: Singapore Customs, [Flat Rates for Freight and Insurance](https://www.customs.gov.sg/doing-business/valuation-duties-and-fees/establishing-customs-value/flat-rates-for-freight-and-insurance/) (conditions); accessed 2026-11-15
 - Source: Singapore Customs, [Flat Rate for Insurance](https://www.customs.gov.sg/doing-business/valuation-duties-and-fees/establishing-customs-value/flat-rate-for-insurance/) (conditions); accessed 2026-11-15
@@ -266,10 +268,11 @@ Provide full supporting documents (invoices, shipping documents, certificates of
 
 **Amend while valid; cancel and re-apply for non-amendable fields** (amendment; status: verified)
 
-An approved permit can be amended in TradeNet while it is valid, any number of times, except non-amendable fields. Incorrect details in non-amendable fields are corrected by cancelling the valid permit and applying for a new one. A permit used for cargo clearance or expired cannot be amended; such errors need a voluntary disclosure.
+An approved permit can be amended in TradeNet while it is valid, any number of times, except non-amendable fields. Incorrect details in non-amendable fields are corrected by cancelling the valid permit and applying for a new one. A permit used for cargo clearance or expired cannot be amended; a permit used for cargo clearance, expired for more than 1 calendar day, or requested for audit by the Manifest Compliance Unit cannot be cancelled, and for such cases the page points to a voluntary disclosure.
 
-- Readiness check: Corrective action chosen by permit state: valid and amendable -> amend; valid and non-amendable -> cancel and re-apply; used or expired -> voluntary disclosure.
+- Readiness check: Corrective action chosen by permit state: valid -> amend (or cancel and re-apply for a non-amendable field); expired by at most 1 calendar day -> cancel and re-apply; used for clearance or expired longer -> voluntary disclosure; under a Customs check -> respond to the check, because a voluntary disclosure must come before any Customs check (SG-IMP-27).
 - Corrective action: See readiness_check.
+- Note: The second-pass check found that the first version treated every expired permit as needing a voluntary disclosure; the 1-calendar-day cancellation window and the audit case were added.
 - Source: Singapore Customs, [Permit Amendment and Cancellation](https://www.customs.gov.sg/doing-business/import-operations/import-procedures/permit-amendment-and-cancellation/) (Amendment; Cancellation; used permits); accessed 2026-11-15
 
 ## Singapore imports and exports
@@ -278,7 +281,7 @@ An approved permit can be amended in TradeNet while it is valid, any number of t
 
 **UEN from ACRA and an activated Customs account** (party; status: verified)
 
-An importer first registers with ACRA to obtain a UEN and then activates a Customs account with Singapore Customs; the activation is needed before any import permit application can be submitted. A declaring agent may apply for permits on the importer's behalf.
+An importer first registers with ACRA (or the relevant UEN issuance agency) to obtain a UEN and then activates a Customs account with Singapore Customs; the activation is needed before any import permit application can be submitted. A declaring agent may apply for permits on the importer's behalf.
 
 - Readiness check: Customer profile has a UEN and the Customs account is recorded as activated before the first permit is drafted.
 - Corrective action: Ask the customer to activate the Customs account (or confirm activation) before the first shipment; hold the enrolment at 'Documents received' until confirmed.
@@ -288,24 +291,24 @@ An importer first registers with ACRA to obtain a UEN and then activates a Custo
 
 **UEN format** (party; status: partially verified)
 
-Entity UENs have three formats: businesses registered with ACRA NNNNNNNNC (9 characters), local companies YYYYNNNNNC (10 characters), other entities TYYPQNNNNC or SYYPQNNNNC (10 characters), where N is a digit, C a check letter, YYYY or TYY/SYY a year and PQ an entity-type code.
+Entity UEN formats: businesses registered with ACRA NNNNNNNNC (9 characters); local companies YYYYNNNNNC (10 characters), with foreign companies listed under the same entry as F000NNNNNC or FDDDNNNNNC (D = a space); other entities TYYPQNNNNC or SYYPQNNNNC (10 characters). N is a digit, C a check letter, YYYY or TYY/SYY a year (T = 20, S = 19) and PQ an entity-type code.
 
 - Readiness check: UEN on the enrolment form matches one of the three patterns.
 - Corrective action: Request the UEN as shown on the ACRA business profile; do not draft permits until it is on file.
 - Assumptions: Only the character pattern is validated; the check letter and the registration year are not.
-- Note: Formats verified against the OECD TIN sheet that Singapore supplied; the agency page it links to (uen.gov.sg) returned HTTP 403, and the check-letter algorithm is not published there, so only the pattern is checked, not the check letter or whether the UEN exists.
+- Note: Formats verified against the OECD TIN sheet that Singapore supplied; the agency page it links to (uen.gov.sg) returned HTTP 403, and the check-letter algorithm is not published there, so only the pattern is checked, not the check letter or whether the UEN exists. The second-pass check found that the first version omitted the foreign-company formats; they were added.
 - Source: OECD (information supplied by Singapore), [Singapore - Information on Tax Identification Numbers (UEN structure, Section II)](https://www.oecd.org/tax/automatic-exchange/crs-implementation-and-assistance/tax-identification-numbers/Singapore-TIN.pdf) (Section II - TIN structure, entity ID types); accessed 2026-11-15
 
 ### SG-IMP-05
 
 **HS code valid in STCCED 2022 (8-digit AHTN, based on HS 2022)** (classification; status: partially verified)
 
-The permit HS code must be a valid code of the Singapore Trade Classification, Customs and Excise Duties (STCCED) publication. Singapore's current schedule is STCCED 2022, built on the 8-digit ASEAN Harmonised Tariff Nomenclature, whose 2022 amendment incorporated the HS 2022 changes; HS itself is the WCO 6-digit nomenclature.
+The permit HS code must be a valid code of the Singapore Trade Classification, Customs and Excise Duties (STCCED) publication, and Singapore's current schedule is STCCED 2022. Separately, the same page describes the ASEAN Harmonised Tariff Nomenclature (AHTN) as an 8-digit nomenclature used by all ASEAN member states, based on the WCO 6-digit HS, whose 2022 amendment incorporated the HS 2022 changes.
 
 - Readiness check: HS code is 8 digits and its first 6 digits are an HS 2022 subheading.
 - Corrective action: Correct the code in the product master and the permit (amend while valid). For doubtful cases use the HS/CA Product Code Checker or apply for a classification ruling (SG-IMP-14).
 - Assumptions: Validity is tested at the 6-digit level only.
-- Note: The requirement is verified. The check uses only the public HS 2022 6-digit list: the national 7th-8th digits are not validated because the STCCED code list is not used here.
+- Note: The requirement is verified. The page does not itself say that STCCED 2022 is built on AHTN 2022 (that link is this project's reading). The check uses only the public HS 2022 6-digit list: the national 7th-8th digits are not validated because the STCCED code list is not used here.
 - Source: Singapore Customs, [Understanding HS Classification](https://www.customs.gov.sg/doing-business/business-resources/hs-classification-of-goods/understanding-hs-classification/) (HS and AHTN paragraphs); accessed 2026-11-15
 - Source: Singapore Customs, [Guide to Customs' Procedures, Module 5: TradeNet Permit Applications - Important Permit Fields (footer: Last Updated July 2026; file name: Updated 18 Aug 2026)](https://isomer-user-content.by.gov.sg/174/a40a6521-10e3-4e86-8e70-c047937dee95/Module%205_Important%20Permit%20Fields%20(Updated%2018%20Aug%202026).pdf) (Inward fields, 36 HS code); accessed 2026-11-15
 
@@ -335,18 +338,19 @@ Controlled goods need authorisation from the relevant Competent Authority (advan
 
 ### SG-IMP-15
 
-**Competent authorities and what they control** (controlled_goods; status: verified)
+**Competent authorities and what they control** (controlled_goods; status: partially verified)
 
-Singapore Customs lists 14 competent authorities for controlled items: BCA (sand and granite), CNB (controlled substances), Enterprise Singapore (rubber exports), GRA (fruit and jackpot machines), HSA (health products), IMDA (publications, telecommunication equipment), LTA (power-assisted bicycles, motorised PMDs), MOH (biological agents and toxins), NEA (wastes, hazardous substances and chemicals, ODS, HFCs, radioactive materials, irradiating apparatus), NParks (CITES specimens, plants, live animals, animal products, ornamental fish), SCDF (petroleum and flammable materials), Singapore Customs (regulated goods and sanctioned trade), SFA (fruit, vegetables, livestock, meat, eggs, processed food, rice, fish) and SPF (guns, explosives and weapons; amusement game machines).
+Singapore Customs lists 14 competent authorities for controlled items: BCA (sand and granite), CNB (controlled substances), Enterprise Singapore (rubber exports), GRA (fruit and jackpot machines), HSA (health products), IMDA (publications, telecommunication equipment), LTA (PABs and motorised PMDs), MOH (biological agents and toxins), NEA (wastes, hazardous substances and chemicals, ODS, HFCs, radioactive materials, irradiating apparatus), NParks (CITES specimens, plants, live animals, animal products, ornamental fish), SCDF (petroleum and flammable materials), Singapore Customs (regulated goods and sanctioned trade), SFA (fruit, vegetables, livestock, animal products, meat, salted/preserved eggs and processed egg products, processed food, rice, fish) and SPF (GEW-regulated items; amusement game machines).
 
 - Readiness check: The CA named by the screening table is written into the handling note with the licence type to ask for.
+- Note: The list is verified as written above. The expansions used elsewhere in this project, PAB = power-assisted bicycle and GEW = guns, explosives and weapons, are this project's reading; the page uses only the abbreviations. The first version also named eggs in general under SFA; corrected.
 - Source: Singapore Customs, [Competent Authorities Requirements for Controlled Items](https://www.customs.gov.sg/doing-business/quick-links-for-traders/tradenet/competent-authorities-requirements-for-controlled-items/) (list of competent authorities); accessed 2026-11-15
 
 ### SG-IMP-23
 
 **Invoice data the permit needs** (documents; status: partially verified)
 
-The permit carries the commercial invoice number and date, the goods description as on the invoice, the total invoice amount with currency and exchange rate (excluding freight, insurance and other charges shown separately), item values on CIF terms for imports, and, for goods with ad valorem duty, the unit price with its currency and term type.
+The permit carries the commercial invoice number and date, the goods description as on the invoice, the total invoice amount with currency and exchange rate (excluding freight, insurance and other taxable charges when these are shown separately), item values on CIF terms for imports, and, for goods with ad valorem duty, the unit price with its currency and term type.
 
 - Readiness check: Invoice has number, date, seller, buyer, currency, Incoterm, and for every line a description, quantity, unit, unit price, line value and origin.
 - Corrective action: Request a corrected commercial invoice from the supplier; add the missing fields to the customer's invoice checklist in the handling note.
@@ -368,7 +372,7 @@ Traders are encouraged to disclose errors or omissions in their declarations thr
 
 **Quantities and weights agree across invoice, packing list and transport document** (documents; status: not verified)
 
-The permit declares total gross weight (tonnes for sea, kilograms for air) and item quantities; these come from the packing list and the bill of lading or air waybill, so the documents must agree.
+The permit declares total gross weight (tonnes for sea, kilograms for air) and item quantities in the prescribed units. This project assumes these figures are taken from the packing list and the bill of lading or air waybill, so those documents must agree.
 
 - Readiness check: Line quantities on invoice and packing list are equal; packing-list gross weight is within 2% of the transport document.
 - Corrective action: Reconcile with the supplier and the forwarder; obtain corrected documents.
@@ -424,7 +428,7 @@ Singapore may be declared as the country of origin only if the goods meet the FT
 
 **Exporter is normally the invoicing party** (party; status: verified)
 
-The exporter is usually the party issuing the commercial invoice to the overseas customer; a third party may declare itself exporter on that party's behalf or as consolidator. A UEN must not be used to export goods that do not belong to that entity unless it acts as exporter or consolidator.
+The exporter is usually the party issuing the commercial invoice to the overseas customer; a third party involved in exporting the goods may declare itself exporter when it acts on the invoicing party's behalf or consolidates for customers without a UEN. A UEN must not be used to export goods that do not belong to that entity unless it acts as exporter or consolidator.
 
 - Readiness check: Exporter UEN on the permit equals the invoicing customer's UEN.
 - Corrective action: Correct the exporter fields.
@@ -472,7 +476,7 @@ The usual method (transaction value) is based on the price actually paid or paya
 - Corrective action: Ask the customer to show freight and insurance separately on the invoice.
 - Note: FOB basis verified against the ABS methods publication; the ABF valuation fact sheet (PDF) could not be read here.
 - Source: Australian Border Force, [Requirements to import goods](https://www.abf.gov.au/importing-exporting-and-manufacturing/importing/how-to-import/requirements) (Valuation); accessed 2026-11-15
-- Source: Australian Bureau of Statistics, [International Merchandise Trade, Australia: Concepts, Sources and Methods, 2018 - Trade system, valuation and time of recording](https://www.abs.gov.au/statistics/detailed-methodology-information/concepts-sources-methods/international-merchandise-trade-australia-concepts-sources-and-methods/2018/trade-system-valuation-and-time-recording) (paragraphs 3.14 and 3.18); accessed 2026-11-15
+- Source: Australian Bureau of Statistics, [International Merchandise Trade, Australia: Concepts, Sources and Methods, 2018 - Trade system, valuation and time of recording](https://www.abs.gov.au/statistics/detailed-methodology-information/concepts-sources-methods/international-merchandise-trade-australia-concepts-sources-and-methods/2018/trade-system-valuation-and-time-recording) (paragraphs 3.13, 3.16 and 3.18); accessed 2026-11-15
 
 ### AU-04
 
@@ -512,12 +516,12 @@ Imported goods are classified under the Customs Tariff Act 1995; importers self-
 
 **Biosecurity import conditions (BICON)** (biosecurity; status: partially verified)
 
-Some goods are subject to biosecurity import conditions by law: some are not permitted, others need supporting documentation, treatment or a biosecurity import permit; BICON is used to find out which. Standard permit applications are issued within 20 business days and non-standard ones within 40 after payment.
+Some goods are subject to biosecurity import conditions by law: some are not permitted, others need supporting documentation, treatment or a biosecurity import permit; BICON is used to find out which. Most permits are issued within 20 business days for standard (category 1) applications and within 40 for non-standard ones, after payment and a complete application.
 
 - Readiness check: SG-to-AU lines in screened chapters (food, plants, animal products, wood, raw fibres) need a BICON check recorded in the handling note.
 - Corrective action: Check BICON for the commodity and obtain the permit or treatment certificate it asks for before shipping.
 - Assumptions: Biosecurity screening by HS chapter.
-- Note: Requirement verified; the chapter screening list (rules/au_biosecurity_screening.csv) is this project's heuristic and cannot see packaging such as timber pallets.
+- Note: Requirement verified; the chapter screening list (rules/au_biosecurity_screening.csv) is this project's heuristic. It cannot see packaging such as timber pallets, nor timber goods classified outside the screened chapters (for example wooden furniture in chapter 94).
 - Source: Department of Agriculture, Fisheries and Forestry (Australia), [Biosecurity Import Conditions system (BICON)](https://www.agriculture.gov.au/biosecurity-trade/import/online-services/bicon) (Importing into Australia; Biosecurity import permits); accessed 2026-11-15
 
 ### AU-08
@@ -539,6 +543,7 @@ Preferential tariff details should not be entered unless there is appropriate ev
 
 - Readiness check: If the customer asks for AU preference, a certificate or declaration of origin is on file.
 - Corrective action: Obtain the origin document; otherwise the consignee declares the general rate.
+- Note: On the ABF page the key sentence reads 'should not be input ... if appropriate evidence that the goods meet the rules of origin' and appears to omit a word; the next sentence (certificate or declaration of origin not available) supports the reading used here.
 - Source: Australian Border Force, [Claiming Preference in the Integrated Cargo System](https://www.abf.gov.au/importing-exporting-and-manufacturing/fta/claiming-preference-in-ics) (Step five; Table 1); accessed 2026-11-15
 
 ### AU-10

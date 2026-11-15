@@ -299,11 +299,19 @@ def validate_shipment(b, fx_to_sgd, fx_sgd_to_aud):
 
 # ---------------------------------------------------------------------------------------------- corrective action
 
-def corrective_action_route(permit_state, field_amendable=True):
+def corrective_action_route(permit_state, field_amendable=True, days_expired=0):
     """SG-IMP-26 / SG-IMP-27: how a declaration error is corrected, given the permit's state.
-    permit_state: 'valid' (approved, not yet used for clearance), 'used' (used for cargo clearance) or 'expired'."""
+
+    permit_state: 'valid' (approved, not yet used for clearance), 'used' (used for cargo clearance), 'expired'
+    (days_expired calendar days ago) or 'audit' (Customs has requested it for audit or started a check)."""
+    disclosure = "submit a voluntary disclosure (complete, before any Customs check)"
     if permit_state == "valid":
         return "amend the permit in TradeNet" if field_amendable else "cancel the permit and apply for a new one"
-    if permit_state in ("used", "expired"):
-        return "submit a voluntary disclosure (complete, before any Customs check)"
+    if permit_state == "expired":
+        # an expired permit cannot be amended; it can still be cancelled up to 1 calendar day after expiry
+        return "cancel the permit and apply for a new one" if days_expired <= 1 else disclosure
+    if permit_state == "used":
+        return disclosure
+    if permit_state == "audit":
+        return "respond to the Customs check; a voluntary disclosure is no longer accepted once Customs has started"
     raise ValueError(f"unknown permit state {permit_state!r}")

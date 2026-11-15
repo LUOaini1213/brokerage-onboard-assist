@@ -45,6 +45,8 @@ def test_au_accepts_ten_digits_with_statistical_code():
     ("T09LL0001B", "other entity"),     # TYYPQNNNNC (LL = limited liability partnership)
     ("S98SS0123A", "other entity"),     # SYYPQNNNNC
     ("F00012345A", "foreign company"),  # F000NNNNNC
+    ("F   12345A", "foreign company"),  # FDDDNNNNNC, D = space
+    ("F0012345A", None),                # one character short
     ("200912345", None),                # check letter missing
     ("200912345k", None),               # lower-case check letter
     (" 200912345K", None),              # leading space (not allowed)

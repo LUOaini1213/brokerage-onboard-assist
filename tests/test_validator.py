@@ -288,7 +288,11 @@ def test_corrective_action_route():
     assert corrective_action_route("valid") == "amend the permit in TradeNet"
     assert corrective_action_route("valid", field_amendable=False) == "cancel the permit and apply for a new one"
     assert "voluntary disclosure" in corrective_action_route("used")
-    assert "voluntary disclosure" in corrective_action_route("expired")
+    # SG-IMP-26: an expired permit can still be cancelled within 1 calendar day; later only a disclosure helps
+    assert corrective_action_route("expired", days_expired=1) == "cancel the permit and apply for a new one"
+    assert "voluntary disclosure" in corrective_action_route("expired", days_expired=2)
+    # SG-IMP-27: a disclosure must come before any Customs check
+    assert "no longer accepted" in corrective_action_route("audit")
     with pytest.raises(ValueError):
         corrective_action_route("draft")
 

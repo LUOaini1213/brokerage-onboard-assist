@@ -84,3 +84,16 @@ def test_rulebook_markdown_is_current():
     text = R.render_markdown()
     expected = text if text.endswith("\n") else text + "\n"
     assert (DOCS / "rulebook.md").read_text(encoding="utf-8") == expected, "run python scripts/build_all.py"
+
+
+def test_rule_check_log_covers_every_rule_with_its_final_status():
+    rows = {}
+    for line in (DOCS / "rule_check.md").read_text(encoding="utf-8").splitlines():
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        if len(cells) == 7 and re.fullmatch(r"(SG-(IMP|EXP)|AU)-\d\d", cells[0]):
+            rows[cells[0]] = cells
+    assert set(rows) == {r["id"] for r in R.rules()}
+    for r in R.rules():
+        verdict, final = rows[r["id"]][2], rows[r["id"]][6]
+        assert verdict in ("confirmed", "partly confirmed", "contradicted"), r["id"]
+        assert final == r["status"], f"{r['id']}: rule_check.md says {final}, rulebook says {r['status']}"
