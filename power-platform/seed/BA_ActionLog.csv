@@ -1,0 +1,27 @@
+ActionTitle,AccountNo,ShipmentRef,ActionType,LoggedOn,Outcome,LoggedBy
+Hold follow-up DEMO-S0021,DEMO-C002,DEMO-S0021,Hold follow-up,2026-10-20,Reason: Consignee details. Waiting for customer documents.,Agent
+Hold follow-up DEMO-S0023,DEMO-C002,DEMO-S0023,Hold follow-up,2026-11-03,Reason: Consignee details. Released after documents corrected.,Agent
+Welcome call DEMO-C002,DEMO-C002,,Welcome call,2026-10-08,Explained first-three-shipment monitoring and document checklist.,Agent
+Hold follow-up DEMO-S0042,DEMO-C004,DEMO-S0042,Hold follow-up,2026-10-26,Reason: HS code query. Released after documents corrected.,Agent
+Welcome call DEMO-C004,DEMO-C004,,Welcome call,2026-10-10,Explained first-three-shipment monitoring and document checklist.,Agent
+Hold follow-up DEMO-S0053,DEMO-C005,DEMO-S0053,Hold follow-up,2026-11-23,Reason: HS code query. Released after documents corrected.,Agent
+Welcome call DEMO-C005,DEMO-C005,,Welcome call,2026-10-30,Explained first-three-shipment monitoring and document checklist.,Agent
+Hold follow-up DEMO-S0091,DEMO-C009,DEMO-S0091,Hold follow-up,2026-10-16,Reason: Invoice missing. Waiting for customer documents.,Agent
+Welcome call DEMO-C009,DEMO-C009,,Welcome call,2026-10-03,Explained first-three-shipment monitoring and document checklist.,Agent
+Hold follow-up DEMO-S0111,DEMO-C011,DEMO-S0111,Hold follow-up,2026-10-24,Reason: Invoice missing. Released after documents corrected.,Agent
+Welcome call DEMO-C011,DEMO-C011,,Welcome call,2026-10-13,Explained first-three-shipment monitoring and document checklist.,Agent
+Welcome call DEMO-C012,DEMO-C012,,Welcome call,2026-10-04,Explained first-three-shipment monitoring and document checklist.,Agent
+Welcome call DEMO-C013,DEMO-C013,,Welcome call,2026-10-27,Explained first-three-shipment monitoring and document checklist.,Agent
+Welcome call DEMO-C014,DEMO-C014,,Welcome call,2026-10-08,Explained first-three-shipment monitoring and document checklist.,Agent
+Hold follow-up DEMO-S0161,DEMO-C016,DEMO-S0161,Hold follow-up,2026-10-19,Reason: HS code query. Waiting for customer documents.,Agent
+Welcome call DEMO-C016,DEMO-C016,,Welcome call,2026-10-08,Explained first-three-shipment monitoring and document checklist.,Agent
+Hold follow-up DEMO-S0173,DEMO-C017,DEMO-S0173,Hold follow-up,2026-11-01,Reason: Valuation query. Released after documents corrected.,Agent
+Welcome call DEMO-C017,DEMO-C017,,Welcome call,2026-10-06,Explained first-three-shipment monitoring and document checklist.,Agent
+Hold follow-up DEMO-S0181,DEMO-C018,DEMO-S0181,Hold follow-up,2026-11-02,Reason: Consignee details. Released after documents corrected.,Agent
+Hold follow-up DEMO-S0183,DEMO-C018,DEMO-S0183,Hold follow-up,2026-11-17,Reason: Invoice missing. Waiting for customer documents.,Agent
+Welcome call DEMO-C018,DEMO-C018,,Welcome call,2026-10-21,Explained first-three-shipment monitoring and document checklist.,Agent
+Hold follow-up DEMO-S0193,DEMO-C019,DEMO-S0193,Hold follow-up,2026-11-26,Reason: Invoice missing. Released after documents corrected.,Agent
+Welcome call DEMO-C019,DEMO-C019,,Welcome call,2026-10-30,Explained first-three-shipment monitoring and document checklist.,Agent
+Hold follow-up DEMO-S0203,DEMO-C020,DEMO-S0203,Hold follow-up,2026-11-04,Reason: Valuation query. Waiting for customer documents.,Agent
+Welcome call DEMO-C020,DEMO-C020,,Welcome call,2026-10-09,Explained first-three-shipment monitoring and document checklist.,Agent
+Welcome call DEMO-C022,DEMO-C022,,Welcome call,2026-10-20,Explained first-three-shipment monitoring and document checklist.,Agent

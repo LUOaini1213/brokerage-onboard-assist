@@ -1,0 +1,25 @@
+CustomerName,AccountNo,TradeLane,Commodity,ImporterUEN,InvoiceReady,PackingListReady,PermitNeeded,PermitReady,CoORequested,ReadinessScore,EnrolmentStatus,HandlingNotes,RequestedOn,AccountExec
+Demo Customer 001,DEMO-C001,SG-AU,Cosmetics,UEN-DEMO-001,No,Yes,Yes,Yes,No,75,Docs pending,Commercial invoice not yet received.,2026-10-06,AE-06
+Demo Customer 002,DEMO-C002,SG-MY,Auto parts,UEN-DEMO-002,Yes,Yes,No,Yes,No,100,Active,No open items.,2026-10-06,AE-01
+Demo Customer 003,DEMO-C003,SG-AU,Food supplements,UEN-DEMO-003,Yes,Yes,Yes,No,Yes,75,Docs pending,Controlled item: permit/licence to be confirmed before first shipment. Customer wants FTA preference: certificate of origin needed.,2026-10-02,AE-06
+Demo Customer 004,DEMO-C004,CN-SG,Electronics,UEN-DEMO-004,Yes,Yes,No,Yes,Yes,100,Active,Customer wants FTA preference: certificate of origin needed.,2026-10-08,AE-01
+Demo Customer 005,DEMO-C005,US-SG,Auto parts,UEN-DEMO-005,Yes,Yes,No,Yes,Yes,100,Validated,Customer wants FTA preference: certificate of origin needed.,2026-10-28,AE-05
+Demo Customer 006,DEMO-C006,DE-SG,Cosmetics,UEN-DEMO-006,Yes,Yes,Yes,No,No,75,Docs pending,Controlled item: permit/licence to be confirmed before first shipment.,2026-10-03,AE-02
+Demo Customer 007,DEMO-C007,SG-AU,Machinery,UEN-DEMO-007,Yes,No,No,Yes,No,75,Docs pending,Packing list outstanding.,2026-10-12,AE-01
+Demo Customer 008,DEMO-C008,CN-SG,Auto parts,,Yes,Yes,No,Yes,No,75,Docs pending,Importer UEN missing on enrolment form.,2026-10-24,AE-05
+Demo Customer 009,DEMO-C009,DE-SG,Electronics,UEN-DEMO-009,Yes,Yes,No,Yes,Yes,100,Active,Customer wants FTA preference: certificate of origin needed.,2026-10-01,AE-02
+Demo Customer 010,DEMO-C010,CN-SG,Auto parts,UEN-DEMO-010,No,Yes,No,Yes,No,75,Docs pending,Commercial invoice not yet received.,2026-10-16,AE-05
+Demo Customer 011,DEMO-C011,SG-AU,Food supplements,UEN-DEMO-011,Yes,Yes,Yes,Yes,Yes,100,Validated,Customer wants FTA preference: certificate of origin needed.,2026-10-11,AE-05
+Demo Customer 012,DEMO-C012,CN-SG,Apparel,UEN-DEMO-012,Yes,Yes,No,Yes,No,100,Active,No open items.,2026-10-02,AE-02
+Demo Customer 013,DEMO-C013,US-SG,Auto parts,UEN-DEMO-013,Yes,Yes,No,Yes,No,100,Validated,No open items.,2026-10-25,AE-04
+Demo Customer 014,DEMO-C014,CN-SG,Cosmetics,UEN-DEMO-014,Yes,Yes,Yes,Yes,Yes,100,Active,Customer wants FTA preference: certificate of origin needed.,2026-10-06,AE-01
+Demo Customer 015,DEMO-C015,CN-SG,Food supplements,UEN-DEMO-015,Yes,Yes,Yes,No,Yes,75,Docs pending,Controlled item: permit/licence to be confirmed before first shipment. Customer wants FTA preference: certificate of origin needed.,2026-10-03,AE-05
+Demo Customer 016,DEMO-C016,CN-SG,Auto parts,UEN-DEMO-016,Yes,Yes,No,Yes,No,100,Validated,No open items.,2026-10-06,AE-04
+Demo Customer 017,DEMO-C017,DE-SG,Food supplements,UEN-DEMO-017,Yes,Yes,Yes,Yes,No,100,Active,No open items.,2026-10-04,AE-06
+Demo Customer 018,DEMO-C018,DE-SG,Auto parts,UEN-DEMO-018,Yes,Yes,No,Yes,No,100,Active,No open items.,2026-10-19,AE-05
+Demo Customer 019,DEMO-C019,SG-MY,Machinery,UEN-DEMO-019,Yes,Yes,No,Yes,No,100,Validated,No open items.,2026-10-28,AE-03
+Demo Customer 020,DEMO-C020,SG-MY,Auto parts,UEN-DEMO-020,Yes,Yes,No,Yes,No,100,Validated,No open items.,2026-10-07,AE-02
+Demo Customer 021,DEMO-C021,SG-MY,Apparel,UEN-DEMO-021,No,Yes,No,Yes,No,75,Docs pending,Commercial invoice not yet received.,2026-10-22,AE-01
+Demo Customer 022,DEMO-C022,CN-SG,Electronics,UEN-DEMO-022,Yes,Yes,No,Yes,Yes,100,Validated,Customer wants FTA preference: certificate of origin needed.,2026-10-18,AE-03
+Demo Customer 023,DEMO-C023,SG-MY,Cosmetics,UEN-DEMO-023,Yes,Yes,Yes,No,No,75,Docs pending,Controlled item: permit/licence to be confirmed before first shipment.,2026-10-16,AE-04
+Demo Customer 024,DEMO-C024,DE-SG,Auto parts,,Yes,Yes,No,Yes,Yes,75,Docs pending,Importer UEN missing on enrolment form. Customer wants FTA preference: certificate of origin needed.,2026-10-19,AE-02

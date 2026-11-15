@@ -1,0 +1,59 @@
+{
+  "_about": "Schema of the three Microsoft Lists used by the Power Apps / Power Automate part (power-platform/). Column names and seed data follow the lists created in the owner's Microsoft 365 account (seed/make_seed.py, SYNTHETIC, fixed seed 20261115). Internal names equal the column names, except the first column of each list, which is SharePoint's Title column renamed (internal name stays 'Title'). 'type' is the intended SharePoint column type; confirm it against the built list.",
+  "site": "<onedrive-site-url>",
+  "lists": [
+    {
+      "name": "BA_Customers",
+      "seed": "seed/BA_Customers.csv",
+      "purpose": "One row per new customer enrolment: document flags, readiness score, status and handling notes.",
+      "columns": [
+        {"name": "CustomerName", "internal": "Title", "type": "Single line of text", "required": true, "note": "Title column renamed; fictional names only."},
+        {"name": "AccountNo", "internal": "AccountNo", "type": "Single line of text", "required": true, "note": "Join key used by the other two lists; index it."},
+        {"name": "TradeLane", "internal": "TradeLane", "type": "Choice", "choices": ["CN-SG", "SG-MY", "US-SG", "SG-AU", "DE-SG"]},
+        {"name": "Commodity", "internal": "Commodity", "type": "Choice", "choices": ["Electronics", "Auto parts", "Cosmetics", "Food supplements", "Machinery", "Apparel"]},
+        {"name": "ImporterUEN", "internal": "ImporterUEN", "type": "Single line of text", "note": "Seed values are placeholders (UEN-DEMO-nnn), not real UENs."},
+        {"name": "InvoiceReady", "internal": "InvoiceReady", "type": "Yes/No"},
+        {"name": "PackingListReady", "internal": "PackingListReady", "type": "Yes/No"},
+        {"name": "PermitNeeded", "internal": "PermitNeeded", "type": "Yes/No"},
+        {"name": "PermitReady", "internal": "PermitReady", "type": "Yes/No", "note": "Yes when no permit is needed."},
+        {"name": "CoORequested", "internal": "CoORequested", "type": "Yes/No"},
+        {"name": "ReadinessScore", "internal": "ReadinessScore", "type": "Number", "note": "0-100, 25 points per check (invoice, packing list, permit, UEN present)."},
+        {"name": "EnrolmentStatus", "internal": "EnrolmentStatus", "type": "Choice", "choices": ["Requested", "Docs pending", "Validated", "Active"]},
+        {"name": "HandlingNotes", "internal": "HandlingNotes", "type": "Multiple lines of text"},
+        {"name": "RequestedOn", "internal": "RequestedOn", "type": "Date and Time", "note": "Date only."},
+        {"name": "AccountExec", "internal": "AccountExec", "type": "Single line of text", "note": "Role codes AE-01 to AE-06, no person names."}
+      ]
+    },
+    {
+      "name": "BA_Shipments",
+      "seed": "seed/BA_Shipments.csv",
+      "purpose": "Each validated customer's first three shipments, with hold status.",
+      "columns": [
+        {"name": "ShipmentRef", "internal": "Title", "type": "Single line of text", "required": true, "note": "Title column renamed."},
+        {"name": "AccountNo", "internal": "AccountNo", "type": "Single line of text", "required": true, "note": "Matches BA_Customers.AccountNo; index it."},
+        {"name": "ShipmentSeq", "internal": "ShipmentSeq", "type": "Number", "note": "1, 2 or 3."},
+        {"name": "HSCode", "internal": "HSCode", "type": "Single line of text", "note": "Kept as text (e.g. 8471.30)."},
+        {"name": "DeclaredValueSGD", "internal": "DeclaredValueSGD", "type": "Number"},
+        {"name": "Incoterm", "internal": "Incoterm", "type": "Choice", "choices": ["EXW", "FCA", "FOB", "CIF", "DAP", "DDP"]},
+        {"name": "Status", "internal": "Status", "type": "Choice", "choices": ["Booked", "In transit", "Held", "Released"]},
+        {"name": "HoldReason", "internal": "HoldReason", "type": "Choice", "choices": ["None", "Invoice missing", "HS code query", "Permit missing", "Valuation query", "Consignee details", "CoO missing"]},
+        {"name": "HeldOn", "internal": "HeldOn", "type": "Date and Time", "note": "Date only."},
+        {"name": "ReleasedOn", "internal": "ReleasedOn", "type": "Date and Time", "note": "Date only."}
+      ]
+    },
+    {
+      "name": "BA_ActionLog",
+      "seed": "seed/BA_ActionLog.csv",
+      "purpose": "Actions taken for each customer and held shipment.",
+      "columns": [
+        {"name": "ActionTitle", "internal": "Title", "type": "Single line of text", "required": true, "note": "Title column renamed."},
+        {"name": "AccountNo", "internal": "AccountNo", "type": "Single line of text", "required": true},
+        {"name": "ShipmentRef", "internal": "ShipmentRef", "type": "Single line of text", "note": "Blank for account-level actions."},
+        {"name": "ActionType", "internal": "ActionType", "type": "Choice", "choices": ["Hold follow-up", "Welcome call", "Document request", "Enrolment check"]},
+        {"name": "LoggedOn", "internal": "LoggedOn", "type": "Date and Time", "note": "Date only."},
+        {"name": "Outcome", "internal": "Outcome", "type": "Multiple lines of text"},
+        {"name": "LoggedBy", "internal": "LoggedBy", "type": "Single line of text", "note": "Role or 'Flow', no person names."}
+      ]
+    }
+  ]
+}
