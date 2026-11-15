@@ -1,0 +1,7 @@
+region_as_published,flat_rate_pct_of_fob,country_codes_mapped_here
+"Africa, Canada and USA",24.5,US;CA
+Europe,19,DE;FR;IT;NL;GB
+"Japan, Australia and New Zealand",19,JP;AU;NZ
+"China, Chinese Taipei, Korea, Sri Lanka, India and Pakistan",15.5,CN;TW;KR;LK;IN;PK
+"Myanmar, Thailand, Cambodia, Laos, Vietnam, Hong Kong, Philippines and Indonesia",9.5,MM;TH;KH;LA;VN;HK;PH;ID
+Peninsular Malaysia,5,MY

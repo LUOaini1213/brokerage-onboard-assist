@@ -1,0 +1,237 @@
+{
+  "_about": "Official sources the rulebook cites. 'accessed' is the date the page was read for the first pass; docs/rule_check.md records the second, independent pass. 'read_with' says how the page was read: some sites refuse automated fetches, and the Australian Border Force pages were read in a browser.",
+  "sources": [
+    {
+      "id": "SC-IMP-OVERVIEW",
+      "publisher": "Singapore Customs",
+      "title": "Import Procedures Overview",
+      "url": "https://www.customs.gov.sg/doing-business/import-operations/import-procedures/import-procedures-overview/",
+      "accessed": "2026-11-15",
+      "read_with": "web fetch"
+    },
+    {
+      "id": "SC-IMP-PERMIT",
+      "publisher": "Singapore Customs",
+      "title": "Obtain a Customs Import Permit",
+      "url": "https://www.customs.gov.sg/doing-business/import-operations/import-procedures/obtain-a-customs-import-permit/",
+      "accessed": "2026-11-15",
+      "read_with": "web fetch"
+    },
+    {
+      "id": "SC-HS-UNDERSTAND",
+      "publisher": "Singapore Customs",
+      "title": "Understanding HS Classification",
+      "url": "https://www.customs.gov.sg/doing-business/business-resources/hs-classification-of-goods/understanding-hs-classification/",
+      "accessed": "2026-11-15",
+      "read_with": "web fetch"
+    },
+    {
+      "id": "SC-HS-FIND",
+      "publisher": "Singapore Customs",
+      "title": "Find my Harmonised System Code",
+      "url": "https://www.customs.gov.sg/doing-business/business-resources/hs-classification-of-goods/find-my-harmonised-system-code/",
+      "accessed": "2026-11-15",
+      "read_with": "web fetch"
+    },
+    {
+      "id": "SC-VALUE-METHODS",
+      "publisher": "Singapore Customs",
+      "title": "Establishing Customs Value and Methods",
+      "url": "https://www.customs.gov.sg/doing-business/valuation-duties-and-fees/establishing-customs-value/establishing-customs-value-and-methods/",
+      "accessed": "2026-11-15",
+      "read_with": "web fetch"
+    },
+    {
+      "id": "SC-FLAT-INS",
+      "publisher": "Singapore Customs",
+      "title": "Flat Rate for Insurance",
+      "url": "https://www.customs.gov.sg/doing-business/valuation-duties-and-fees/establishing-customs-value/flat-rate-for-insurance/",
+      "accessed": "2026-11-15",
+      "read_with": "web fetch"
+    },
+    {
+      "id": "SC-FLAT-FI",
+      "publisher": "Singapore Customs",
+      "title": "Flat Rates for Freight and Insurance",
+      "url": "https://www.customs.gov.sg/doing-business/valuation-duties-and-fees/establishing-customs-value/flat-rates-for-freight-and-insurance/",
+      "accessed": "2026-11-15",
+      "read_with": "web fetch"
+    },
+    {
+      "id": "SC-GST",
+      "publisher": "Singapore Customs",
+      "title": "Goods and Services Tax",
+      "url": "https://www.customs.gov.sg/doing-business/valuation-duties-and-fees/goods-and-services-tax-gst/",
+      "accessed": "2026-11-15",
+      "read_with": "web fetch"
+    },
+    {
+      "id": "IRAS-GST-RATE",
+      "publisher": "Inland Revenue Authority of Singapore",
+      "title": "Current GST rates",
+      "url": "https://www.iras.gov.sg/taxes/goods-services-tax-(gst)/basics-of-gst/current-gst-rates",
+      "accessed": "2026-11-15",
+      "read_with": "web fetch"
+    },
+    {
+      "id": "SC-DUTIABLE",
+      "publisher": "Singapore Customs",
+      "title": "Duties and Dutiable Goods Overview",
+      "url": "https://www.customs.gov.sg/doing-business/valuation-duties-and-fees/duties-and-dutiable-goods/duties-and-dutiable-goods-overview/",
+      "accessed": "2026-11-15",
+      "read_with": "web fetch"
+    },
+    {
+      "id": "SC-CONTROLLED-IMP",
+      "publisher": "Singapore Customs",
+      "title": "Controlled and Prohibited Goods for Imports",
+      "url": "https://www.customs.gov.sg/doing-business/import-operations/import-procedures/controlled-and-prohibited-goods-for-imports/",
+      "accessed": "2026-11-15",
+      "read_with": "web fetch"
+    },
+    {
+      "id": "SC-CA-LIST",
+      "publisher": "Singapore Customs",
+      "title": "Competent Authorities Requirements for Controlled Items",
+      "url": "https://www.customs.gov.sg/doing-business/quick-links-for-traders/tradenet/competent-authorities-requirements-for-controlled-items/",
+      "accessed": "2026-11-15",
+      "read_with": "web fetch"
+    },
+    {
+      "id": "SC-CA-HSA",
+      "publisher": "Singapore Customs",
+      "title": "Competent Authorities Requirements: Health Sciences Authority (HSA)",
+      "url": "https://www.customs.gov.sg/doing-business/quick-links-for-traders/tradenet/competent-authorities-requirements-for-controlled-items/health-sciences-authority/",
+      "accessed": "2026-11-15",
+      "read_with": "web fetch"
+    },
+    {
+      "id": "SC-CA-SFA",
+      "publisher": "Singapore Customs",
+      "title": "Competent Authorities Requirements: Singapore Food Agency (SFA)",
+      "url": "https://www.customs.gov.sg/doing-business/quick-links-for-traders/tradenet/competent-authorities-requirements-for-controlled-items/singapore-food-agency/",
+      "accessed": "2026-11-15",
+      "read_with": "web fetch"
+    },
+    {
+      "id": "SC-CA-IMDA",
+      "publisher": "Singapore Customs",
+      "title": "Competent Authorities Requirements: Info-communications Media Development Authority (IMDA)",
+      "url": "https://www.customs.gov.sg/doing-business/quick-links-for-traders/tradenet/competent-authorities-requirements-for-controlled-items/info-communications-media-development-authority/",
+      "accessed": "2026-11-15",
+      "read_with": "web fetch"
+    },
+    {
+      "id": "SC-CA-NEA",
+      "publisher": "Singapore Customs",
+      "title": "Competent Authorities Requirements: National Environment Agency (NEA)",
+      "url": "https://www.customs.gov.sg/doing-business/quick-links-for-traders/tradenet/competent-authorities-requirements-for-controlled-items/national-environment-agency/",
+      "accessed": "2026-11-15",
+      "read_with": "web fetch"
+    },
+    {
+      "id": "SC-PREF",
+      "publisher": "Singapore Customs",
+      "title": "Claiming Preferential Tariff Treatment for Dutiable Imports",
+      "url": "https://www.customs.gov.sg/doing-business/import-operations/import-procedures/claiming-preferential-tariff-treatment-for-dutiable-imports/",
+      "accessed": "2026-11-15",
+      "read_with": "web fetch"
+    },
+    {
+      "id": "SC-PERMIT-AMEND",
+      "publisher": "Singapore Customs",
+      "title": "Permit Amendment and Cancellation",
+      "url": "https://www.customs.gov.sg/doing-business/import-operations/import-procedures/permit-amendment-and-cancellation/",
+      "accessed": "2026-11-15",
+      "read_with": "web fetch"
+    },
+    {
+      "id": "SC-VDP",
+      "publisher": "Singapore Customs",
+      "title": "Voluntary Disclosure Programme",
+      "url": "https://www.customs.gov.sg/doing-business/compliance/voluntary-disclosure-programme/",
+      "accessed": "2026-11-15",
+      "read_with": "web fetch"
+    },
+    {
+      "id": "SC-EXP-OVERVIEW",
+      "publisher": "Singapore Customs",
+      "title": "Export Procedures Overview",
+      "url": "https://www.customs.gov.sg/doing-business/export-operations/export-procedures/export-procedures-overview/",
+      "accessed": "2026-11-15",
+      "read_with": "web fetch"
+    },
+    {
+      "id": "SC-EXP-DOCS",
+      "publisher": "Singapore Customs",
+      "title": "Documentation for Clearance of Goods",
+      "url": "https://www.customs.gov.sg/doing-business/export-operations/export-procedures/documentation-for-clearance-of-goods/",
+      "accessed": "2026-11-15",
+      "read_with": "web fetch"
+    },
+    {
+      "id": "SC-MODULE5",
+      "publisher": "Singapore Customs",
+      "title": "Guide to Customs' Procedures, Module 5: TradeNet Permit Applications - Important Permit Fields (footer: Last Updated July 2026; file name: Updated 18 Aug 2026)",
+      "url": "https://isomer-user-content.by.gov.sg/174/a40a6521-10e3-4e86-8e70-c047937dee95/Module%205_Important%20Permit%20Fields%20(Updated%2018%20Aug%202026).pdf",
+      "accessed": "2026-11-15",
+      "read_with": "PDF text extraction (pdftotext)"
+    },
+    {
+      "id": "OECD-SG-TIN",
+      "publisher": "OECD (information supplied by Singapore)",
+      "title": "Singapore - Information on Tax Identification Numbers (UEN structure, Section II)",
+      "url": "https://www.oecd.org/tax/automatic-exchange/crs-implementation-and-assistance/tax-identification-numbers/Singapore-TIN.pdf",
+      "accessed": "2026-11-15",
+      "read_with": "PDF text extraction (pdftotext); the UEN agency page it links to (uen.gov.sg) returned HTTP 403"
+    },
+    {
+      "id": "ABF-IMP-DECL",
+      "publisher": "Australian Border Force",
+      "title": "Import declarations",
+      "url": "https://www.abf.gov.au/importing-exporting-and-manufacturing/importing/how-to-import/import-declaration",
+      "accessed": "2026-11-15",
+      "read_with": "browser (the site returns HTTP 403 to automated fetches)"
+    },
+    {
+      "id": "ABF-REQ",
+      "publisher": "Australian Border Force",
+      "title": "Requirements to import goods",
+      "url": "https://www.abf.gov.au/importing-exporting-and-manufacturing/importing/how-to-import/requirements",
+      "accessed": "2026-11-15",
+      "read_with": "browser (the site returns HTTP 403 to automated fetches)"
+    },
+    {
+      "id": "ABF-GST",
+      "publisher": "Australian Border Force",
+      "title": "GST and other taxes when importing",
+      "url": "https://www.abf.gov.au/importing-exporting-and-manufacturing/importing/cost-of-importing-goods/gst-and-other-taxes",
+      "accessed": "2026-11-15",
+      "read_with": "browser (the site returns HTTP 403 to automated fetches)"
+    },
+    {
+      "id": "ABF-FTA-ICS",
+      "publisher": "Australian Border Force",
+      "title": "Claiming Preference in the Integrated Cargo System",
+      "url": "https://www.abf.gov.au/importing-exporting-and-manufacturing/fta/claiming-preference-in-ics",
+      "accessed": "2026-11-15",
+      "read_with": "browser (the site returns HTTP 403 to automated fetches)"
+    },
+    {
+      "id": "ABS-VALUATION",
+      "publisher": "Australian Bureau of Statistics",
+      "title": "International Merchandise Trade, Australia: Concepts, Sources and Methods, 2018 - Trade system, valuation and time of recording",
+      "url": "https://www.abs.gov.au/statistics/detailed-methodology-information/concepts-sources-methods/international-merchandise-trade-australia-concepts-sources-and-methods/2018/trade-system-valuation-and-time-recording",
+      "accessed": "2026-11-15",
+      "read_with": "web fetch"
+    },
+    {
+      "id": "DAFF-BICON",
+      "publisher": "Department of Agriculture, Fisheries and Forestry (Australia)",
+      "title": "Biosecurity Import Conditions system (BICON)",
+      "url": "https://www.agriculture.gov.au/biosecurity-trade/import/online-services/bicon",
+      "accessed": "2026-11-15",
+      "read_with": "browser (automated fetch timed out)"
+    }
+  ]
+}

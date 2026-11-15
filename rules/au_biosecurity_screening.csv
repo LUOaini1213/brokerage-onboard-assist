@@ -1,0 +1,30 @@
+hs_chapter,scope,rule_id,basis
+01,Live animals,AU-07,screening heuristic
+02,Meat,AU-07,screening heuristic
+03,Fish and seafood,AU-07,screening heuristic
+04,Dairy and eggs,AU-07,screening heuristic
+05,Other animal products,AU-07,screening heuristic
+06,Live plants,AU-07,screening heuristic
+07,Vegetables,AU-07,screening heuristic
+08,Fruit and nuts,AU-07,screening heuristic
+09,"Coffee, tea and spices",AU-07,screening heuristic
+10,Cereals,AU-07,screening heuristic
+11,Milling products,AU-07,screening heuristic
+12,Seeds and plant parts,AU-07,screening heuristic
+13,Plant extracts,AU-07,screening heuristic
+14,Vegetable plaiting materials,AU-07,screening heuristic
+15,Fats and oils,AU-07,screening heuristic
+16,Meat and fish preparations,AU-07,screening heuristic
+17,Sugar and confectionery,AU-07,screening heuristic
+18,Cocoa preparations,AU-07,screening heuristic
+19,Cereal preparations,AU-07,screening heuristic
+20,Vegetable and fruit preparations,AU-07,screening heuristic
+21,Miscellaneous food preparations,AU-07,screening heuristic
+23,Animal feed,AU-07,screening heuristic
+41,Raw hides and skins,AU-07,screening heuristic
+43,Furskins,AU-07,screening heuristic
+44,Wood,AU-07,screening heuristic
+46,Basketware and plaiting,AU-07,screening heuristic
+50,Silk (raw),AU-07,screening heuristic
+51,Wool and animal hair,AU-07,screening heuristic
+52,Cotton,AU-07,screening heuristic
