@@ -1,0 +1,801 @@
+data_label,customer_id,customer_name,segment,uen,customs_account_active,primary_lane_id,trade_direction,commodity_group
+SYNTHETIC,SYN-C0001,Synthetic Customer 0001,SME,209977819R,TRUE,US-SG-AIR,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0002,Synthetic Customer 0002,SME,209932134X,TRUE,CN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0003,Synthetic Customer 0003,SME,209923304R,TRUE,MY-SG-ROAD,Import,Packaged food and drink
+SYNTHETIC,SYN-C0004,Synthetic Customer 0004,SME,209960183U,TRUE,US-SG-AIR,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0005,Synthetic Customer 0005,SME,209926862P,TRUE,SG-AU-SEA,Export,Furniture and homeware
+SYNTHETIC,SYN-C0006,Synthetic Customer 0006,Mid-size,209960504W,TRUE,MY-SG-ROAD,Import,Apparel and footwear
+SYNTHETIC,SYN-C0007,Synthetic Customer 0007,SME,209918096N,TRUE,SG-AU-SEA,Export,Packaged food and drink
+SYNTHETIC,SYN-C0008,Synthetic Customer 0008,SME,209986762H,TRUE,US-SG-AIR,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0009,Synthetic Customer 0009,SME,209942246W,TRUE,CN-SG-SEA,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0010,Synthetic Customer 0010,SME,09916636Y,FALSE,VN-SG-SEA,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0011,Synthetic Customer 0011,Mid-size,209974252E,TRUE,SG-AU-AIR,Export,Packaged food and drink
+SYNTHETIC,SYN-C0012,Synthetic Customer 0012,Mid-size,209995141B,TRUE,DE-SG-AIR,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0013,Synthetic Customer 0013,SME,209912653W,FALSE,VN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0014,Synthetic Customer 0014,Mid-size,209990959C,TRUE,CN-SG-SEA,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0015,Synthetic Customer 0015,SME,209966049W,TRUE,CN-SG-SEA,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0016,Synthetic Customer 0016,SME,209910685T,TRUE,SG-AU-SEA,Export,Pharmaceutical and medical
+SYNTHETIC,SYN-C0017,Synthetic Customer 0017,SME,209913196X,TRUE,SG-AU-AIR,Export,Apparel and footwear
+SYNTHETIC,SYN-C0018,Synthetic Customer 0018,SME,209970038M,TRUE,SG-AU-SEA,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0019,Synthetic Customer 0019,SME,209996117Y,TRUE,JP-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0020,Synthetic Customer 0020,SME,209955055X,TRUE,SG-AU-SEA,Export,Pharmaceutical and medical
+SYNTHETIC,SYN-C0021,Synthetic Customer 0021,Mid-size,,TRUE,SG-AU-SEA,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0022,Synthetic Customer 0022,Mid-size,209948025B,TRUE,US-SG-AIR,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0023,Synthetic Customer 0023,Mid-size,209998172R,TRUE,US-SG-AIR,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0024,Synthetic Customer 0024,SME,209945801H,TRUE,DE-SG-AIR,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0025,Synthetic Customer 0025,Mid-size,209911833P,TRUE,SG-AU-SEA,Export,Packaged food and drink
+SYNTHETIC,SYN-C0026,Synthetic Customer 0026,Mid-size,209991285K,TRUE,CN-SG-SEA,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0027,Synthetic Customer 0027,Mid-size,209989213M,TRUE,SG-AU-SEA,Export,Packaged food and drink
+SYNTHETIC,SYN-C0028,Synthetic Customer 0028,SME,209970315N,TRUE,VN-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0029,Synthetic Customer 0029,Large,209982276U,TRUE,CN-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0030,Synthetic Customer 0030,SME,209914768Z,TRUE,CN-SG-AIR,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0031,Synthetic Customer 0031,SME,209975458M,TRUE,SG-AU-AIR,Export,Packaged food and drink
+SYNTHETIC,SYN-C0032,Synthetic Customer 0032,Large,209914508N,TRUE,SG-AU-AIR,Export,Packaged food and drink
+SYNTHETIC,SYN-C0033,Synthetic Customer 0033,SME,209953438J,TRUE,MY-SG-ROAD,Import,Consumer electronics
+SYNTHETIC,SYN-C0034,Synthetic Customer 0034,SME,209935223G,TRUE,CN-SG-SEA,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0035,Synthetic Customer 0035,SME,209917205A,TRUE,MY-SG-ROAD,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0036,Synthetic Customer 0036,SME,209956798S,TRUE,US-SG-AIR,Import,Apparel and footwear
+SYNTHETIC,SYN-C0037,Synthetic Customer 0037,Mid-size,209970329S,TRUE,US-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0038,Synthetic Customer 0038,SME,209928837K,TRUE,DE-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0039,Synthetic Customer 0039,SME,209944380F,TRUE,CN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0040,Synthetic Customer 0040,SME,209956824L,TRUE,CN-SG-AIR,Import,Toys and games
+SYNTHETIC,SYN-C0041,Synthetic Customer 0041,SME,209951920A,TRUE,SG-AU-AIR,Export,Packaged food and drink
+SYNTHETIC,SYN-C0042,Synthetic Customer 0042,Mid-size,209913831M,FALSE,VN-SG-SEA,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0043,Synthetic Customer 0043,Large,209945564K,TRUE,SG-AU-AIR,Export,Pharmaceutical and medical
+SYNTHETIC,SYN-C0044,Synthetic Customer 0044,SME,209909895C,TRUE,SG-AU-SEA,Export,Cosmetics and personal care
+SYNTHETIC,SYN-C0045,Synthetic Customer 0045,SME,209984915J,TRUE,SG-AU-SEA,Export,Pharmaceutical and medical
+SYNTHETIC,SYN-C0046,Synthetic Customer 0046,SME,209923517X,TRUE,CN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0047,Synthetic Customer 0047,Mid-size,209967600K,TRUE,MY-SG-ROAD,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0048,Synthetic Customer 0048,SME,209955176U,TRUE,DE-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0049,Synthetic Customer 0049,SME,209906873e,TRUE,CN-SG-SEA,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0050,Synthetic Customer 0050,Mid-size,209961401K,TRUE,US-SG-AIR,Import,Apparel and footwear
+SYNTHETIC,SYN-C0051,Synthetic Customer 0051,Mid-size,209927408X,TRUE,MY-SG-ROAD,Import,Toys and games
+SYNTHETIC,SYN-C0052,Synthetic Customer 0052,SME,209902477J,TRUE,MY-SG-ROAD,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0053,Synthetic Customer 0053,SME,209923570B,TRUE,SG-AU-SEA,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0054,Synthetic Customer 0054,Mid-size,209956306U,TRUE,CN-SG-SEA,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0055,Synthetic Customer 0055,Mid-size,209986759M,TRUE,CN-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0056,Synthetic Customer 0056,SME,209958767Z,TRUE,US-SG-AIR,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0057,Synthetic Customer 0057,Large,209952205L,TRUE,VN-SG-SEA,Import,Chemicals
+SYNTHETIC,SYN-C0058,Synthetic Customer 0058,Mid-size,209995940P,TRUE,CN-SG-SEA,Import,Chemicals
+SYNTHETIC,SYN-C0059,Synthetic Customer 0059,Mid-size,209923460W,TRUE,US-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0060,Synthetic Customer 0060,Large,209999972T,TRUE,SG-AU-SEA,Export,Packaged food and drink
+SYNTHETIC,SYN-C0061,Synthetic Customer 0061,SME,209993010E,TRUE,CN-SG-SEA,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0062,Synthetic Customer 0062,Mid-size,209928344X,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0063,Synthetic Customer 0063,Large,209936521A,TRUE,CN-SG-AIR,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0064,Synthetic Customer 0064,SME,209982116S,TRUE,US-SG-AIR,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0065,Synthetic Customer 0065,SME,209993024N,TRUE,MY-SG-ROAD,Import,Apparel and footwear
+SYNTHETIC,SYN-C0066,Synthetic Customer 0066,Mid-size,209937924K,TRUE,SG-AU-AIR,Export,Consumer electronics
+SYNTHETIC,SYN-C0067,Synthetic Customer 0067,SME,209914331Y,TRUE,CN-SG-SEA,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0068,Synthetic Customer 0068,SME,209923942E,TRUE,CN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0069,Synthetic Customer 0069,SME,209923959E,TRUE,US-SG-AIR,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0070,Synthetic Customer 0070,Mid-size,209944832U,TRUE,DE-SG-AIR,Import,Apparel and footwear
+SYNTHETIC,SYN-C0071,Synthetic Customer 0071,Mid-size,209967362T,TRUE,CN-SG-AIR,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0072,Synthetic Customer 0072,Large,209908541W,TRUE,CN-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0073,Synthetic Customer 0073,SME,209908050X,TRUE,SG-AU-SEA,Export,Cosmetics and personal care
+SYNTHETIC,SYN-C0074,Synthetic Customer 0074,SME,209905118L,TRUE,US-SG-AIR,Import,Apparel and footwear
+SYNTHETIC,SYN-C0075,Synthetic Customer 0075,SME,209903266W,TRUE,US-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0076,Synthetic Customer 0076,Mid-size,209929005E,TRUE,SG-AU-AIR,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0077,Synthetic Customer 0077,Mid-size,209995552U,TRUE,SG-AU-SEA,Export,Consumer electronics
+SYNTHETIC,SYN-C0078,Synthetic Customer 0078,SME,209924837B,TRUE,DE-SG-AIR,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0079,Synthetic Customer 0079,SME,209909650D,TRUE,MY-SG-ROAD,Import,Furniture and homeware
+SYNTHETIC,SYN-C0080,Synthetic Customer 0080,SME,209979415G,TRUE,MY-SG-ROAD,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0081,Synthetic Customer 0081,SME,209993640F,TRUE,SG-AU-AIR,Export,Apparel and footwear
+SYNTHETIC,SYN-C0082,Synthetic Customer 0082,Mid-size,209949990S,TRUE,CN-SG-AIR,Import,Furniture and homeware
+SYNTHETIC,SYN-C0083,Synthetic Customer 0083,SME,209910568F,TRUE,CN-SG-AIR,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0084,Synthetic Customer 0084,Large,209963057A,TRUE,CN-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0085,Synthetic Customer 0085,Mid-size,209974002N,TRUE,MY-SG-ROAD,Import,Apparel and footwear
+SYNTHETIC,SYN-C0086,Synthetic Customer 0086,SME,209964531E,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0087,Synthetic Customer 0087,Large,209966626A,TRUE,CN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0088,Synthetic Customer 0088,SME,209909533D,TRUE,SG-AU-AIR,Export,Consumer electronics
+SYNTHETIC,SYN-C0089,Synthetic Customer 0089,Mid-size,209919419P,TRUE,VN-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0090,Synthetic Customer 0090,Mid-size,209987503U,TRUE,MY-SG-ROAD,Import,Furniture and homeware
+SYNTHETIC,SYN-C0091,Synthetic Customer 0091,SME,209966415Y,TRUE,SG-AU-AIR,Export,Consumer electronics
+SYNTHETIC,SYN-C0092,Synthetic Customer 0092,Large,209916722M,TRUE,SG-AU-SEA,Export,Consumer electronics
+SYNTHETIC,SYN-C0093,Synthetic Customer 0093,SME,209955035R,TRUE,SG-AU-AIR,Export,Consumer electronics
+SYNTHETIC,SYN-C0094,Synthetic Customer 0094,SME,209912844L,TRUE,MY-SG-ROAD,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0095,Synthetic Customer 0095,SME,209968884G,TRUE,DE-SG-AIR,Import,Furniture and homeware
+SYNTHETIC,SYN-C0096,Synthetic Customer 0096,SME,209953785R,TRUE,JP-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0097,Synthetic Customer 0097,SME,209985875M,TRUE,CN-SG-SEA,Import,Chemicals
+SYNTHETIC,SYN-C0098,Synthetic Customer 0098,SME,209981455E,TRUE,SG-AU-SEA,Export,Consumer electronics
+SYNTHETIC,SYN-C0099,Synthetic Customer 0099,SME,209940042C,TRUE,US-SG-AIR,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0100,Synthetic Customer 0100,Mid-size,209929961R,TRUE,CN-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0101,Synthetic Customer 0101,SME,209981766L,TRUE,VN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0102,Synthetic Customer 0102,SME,209941300T,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0103,Synthetic Customer 0103,SME,209941214G,TRUE,CN-SG-SEA,Import,Toys and games
+SYNTHETIC,SYN-C0104,Synthetic Customer 0104,SME,209926606F,TRUE,SG-AU-AIR,Export,Apparel and footwear
+SYNTHETIC,SYN-C0105,Synthetic Customer 0105,SME,09980267T,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0106,Synthetic Customer 0106,SME,209918291Z,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0107,Synthetic Customer 0107,Mid-size,209971925P,TRUE,CN-SG-SEA,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0108,Synthetic Customer 0108,SME,209953530F,TRUE,DE-SG-AIR,Import,Furniture and homeware
+SYNTHETIC,SYN-C0109,Synthetic Customer 0109,SME,209921734P,TRUE,CN-SG-AIR,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0110,Synthetic Customer 0110,SME,209942066R,TRUE,DE-SG-AIR,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0111,Synthetic Customer 0111,Large,209943413M,TRUE,SG-AU-AIR,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0112,Synthetic Customer 0112,SME,209945247P,TRUE,SG-AU-AIR,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0113,Synthetic Customer 0113,SME,209900288C,TRUE,CN-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0114,Synthetic Customer 0114,Large,209996062N,TRUE,JP-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0115,Synthetic Customer 0115,SME,209959356G,FALSE,US-SG-AIR,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0116,Synthetic Customer 0116,SME,209961473Y,TRUE,US-SG-AIR,Import,Apparel and footwear
+SYNTHETIC,SYN-C0117,Synthetic Customer 0117,SME,209942395S,TRUE,CN-SG-AIR,Import,Furniture and homeware
+SYNTHETIC,SYN-C0118,Synthetic Customer 0118,Mid-size,209908213E,FALSE,CN-SG-SEA,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0119,Synthetic Customer 0119,SME,209992203T,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0120,Synthetic Customer 0120,SME,209963491W,TRUE,DE-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0121,Synthetic Customer 0121,Mid-size,209929470H,TRUE,MY-SG-ROAD,Import,Consumer electronics
+SYNTHETIC,SYN-C0122,Synthetic Customer 0122,SME,209972483S,TRUE,SG-AU-AIR,Export,Packaged food and drink
+SYNTHETIC,SYN-C0123,Synthetic Customer 0123,Large,209985304R,TRUE,US-SG-AIR,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0124,Synthetic Customer 0124,Mid-size,209943609U,TRUE,JP-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0125,Synthetic Customer 0125,SME,209946201R,TRUE,CN-SG-AIR,Import,Apparel and footwear
+SYNTHETIC,SYN-C0126,Synthetic Customer 0126,SME,209955220D,TRUE,DE-SG-AIR,Import,Apparel and footwear
+SYNTHETIC,SYN-C0127,Synthetic Customer 0127,Mid-size,209924167X,TRUE,SG-AU-SEA,Export,Apparel and footwear
+SYNTHETIC,SYN-C0128,Synthetic Customer 0128,Large,209952241W,TRUE,CN-SG-SEA,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0129,Synthetic Customer 0129,SME,209920651J,TRUE,DE-SG-AIR,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0130,Synthetic Customer 0130,Mid-size,209950426G,TRUE,CN-SG-AIR,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0131,Synthetic Customer 0131,Mid-size,209946785M,TRUE,VN-SG-SEA,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0132,Synthetic Customer 0132,Mid-size,209922480C,TRUE,SG-AU-SEA,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0133,Synthetic Customer 0133,SME,209975449Z,TRUE,CN-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0134,Synthetic Customer 0134,SME,209942137M,TRUE,CN-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0135,Synthetic Customer 0135,SME,209923768M,TRUE,DE-SG-AIR,Import,Furniture and homeware
+SYNTHETIC,SYN-C0136,Synthetic Customer 0136,Mid-size,209951825A,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0137,Synthetic Customer 0137,Mid-size,09961230B,TRUE,VN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0138,Synthetic Customer 0138,Mid-size,,TRUE,CN-SG-SEA,Import,Chemicals
+SYNTHETIC,SYN-C0139,Synthetic Customer 0139,Large,209968398G,TRUE,CN-SG-SEA,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0140,Synthetic Customer 0140,Mid-size,209955279J,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0141,Synthetic Customer 0141,SME,209968097K,TRUE,MY-SG-ROAD,Import,Apparel and footwear
+SYNTHETIC,SYN-C0142,Synthetic Customer 0142,Large,209904825R,TRUE,CN-SG-SEA,Import,Chemicals
+SYNTHETIC,SYN-C0143,Synthetic Customer 0143,Mid-size,209953400Z,TRUE,SG-AU-SEA,Export,Consumer electronics
+SYNTHETIC,SYN-C0144,Synthetic Customer 0144,Mid-size,209998986Z,TRUE,SG-AU-SEA,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0145,Synthetic Customer 0145,SME,209962326A,TRUE,CN-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0146,Synthetic Customer 0146,Mid-size,209918157C,TRUE,SG-AU-AIR,Export,Apparel and footwear
+SYNTHETIC,SYN-C0147,Synthetic Customer 0147,Large,209970589C,TRUE,MY-SG-ROAD,Import,Apparel and footwear
+SYNTHETIC,SYN-C0148,Synthetic Customer 0148,Mid-size,209993544M,TRUE,SG-AU-SEA,Export,Consumer electronics
+SYNTHETIC,SYN-C0149,Synthetic Customer 0149,Mid-size,209923992M,TRUE,US-SG-AIR,Import,Apparel and footwear
+SYNTHETIC,SYN-C0150,Synthetic Customer 0150,SME,209901111C,TRUE,SG-AU-SEA,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0151,Synthetic Customer 0151,Mid-size,209938786W,TRUE,CN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0152,Synthetic Customer 0152,SME,209967367B,TRUE,CN-SG-AIR,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0153,Synthetic Customer 0153,SME,209976734Y,TRUE,SG-AU-AIR,Export,Apparel and footwear
+SYNTHETIC,SYN-C0154,Synthetic Customer 0154,SME,209953951A,TRUE,SG-AU-AIR,Export,Apparel and footwear
+SYNTHETIC,SYN-C0155,Synthetic Customer 0155,SME,209909838T,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0156,Synthetic Customer 0156,Mid-size,209917721B,TRUE,US-SG-AIR,Import,Furniture and homeware
+SYNTHETIC,SYN-C0157,Synthetic Customer 0157,SME,209940974D,TRUE,VN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0158,Synthetic Customer 0158,Mid-size,209941048,TRUE,SG-AU-AIR,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0159,Synthetic Customer 0159,Mid-size,209999518N,TRUE,SG-AU-AIR,Export,Consumer electronics
+SYNTHETIC,SYN-C0160,Synthetic Customer 0160,Mid-size,209915772P,TRUE,US-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0161,Synthetic Customer 0161,Mid-size,209940572D,TRUE,CN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0162,Synthetic Customer 0162,Large,209932534U,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0163,Synthetic Customer 0163,Mid-size,209985284L,FALSE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0164,Synthetic Customer 0164,SME,209921417S,TRUE,SG-AU-AIR,Export,Packaged food and drink
+SYNTHETIC,SYN-C0165,Synthetic Customer 0165,Mid-size,209924828H,TRUE,VN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0166,Synthetic Customer 0166,Large,209948534A,TRUE,SG-AU-AIR,Export,Consumer electronics
+SYNTHETIC,SYN-C0167,Synthetic Customer 0167,Mid-size,209913111Y,TRUE,SG-AU-AIR,Export,Pharmaceutical and medical
+SYNTHETIC,SYN-C0168,Synthetic Customer 0168,SME,209924422G,TRUE,VN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0169,Synthetic Customer 0169,SME,209976396F,TRUE,CN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0170,Synthetic Customer 0170,SME,209925732L,TRUE,JP-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0171,Synthetic Customer 0171,SME,209915825Z,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0172,Synthetic Customer 0172,Mid-size,209989857W,TRUE,US-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0173,Synthetic Customer 0173,Mid-size,,TRUE,DE-SG-AIR,Import,Furniture and homeware
+SYNTHETIC,SYN-C0174,Synthetic Customer 0174,SME,209954778F,TRUE,VN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0175,Synthetic Customer 0175,SME,209958919D,TRUE,MY-SG-ROAD,Import,Toys and games
+SYNTHETIC,SYN-C0176,Synthetic Customer 0176,Mid-size,209924493L,FALSE,CN-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0177,Synthetic Customer 0177,SME,209995933N,TRUE,SG-AU-SEA,Export,Auto parts and tyres
+SYNTHETIC,SYN-C0178,Synthetic Customer 0178,SME,209924823C,TRUE,SG-AU-SEA,Export,Consumer electronics
+SYNTHETIC,SYN-C0179,Synthetic Customer 0179,SME,209946849R,FALSE,CN-SG-AIR,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0180,Synthetic Customer 0180,Mid-size,209969014U,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0181,Synthetic Customer 0181,SME,209936135M,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0182,Synthetic Customer 0182,SME,209931664Y,TRUE,SG-AU-AIR,Export,Apparel and footwear
+SYNTHETIC,SYN-C0183,Synthetic Customer 0183,Large,09984910W,TRUE,SG-AU-AIR,Export,Toys and games
+SYNTHETIC,SYN-C0184,Synthetic Customer 0184,SME,209972162C,TRUE,SG-AU-AIR,Export,Packaged food and drink
+SYNTHETIC,SYN-C0185,Synthetic Customer 0185,SME,209975071H,TRUE,VN-SG-SEA,Import,Chemicals
+SYNTHETIC,SYN-C0186,Synthetic Customer 0186,SME,209935591T,TRUE,DE-SG-AIR,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0187,Synthetic Customer 0187,Mid-size,209948661L,TRUE,JP-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0188,Synthetic Customer 0188,SME,209931887R,TRUE,CN-SG-AIR,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0189,Synthetic Customer 0189,SME,209900037J,TRUE,JP-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0190,Synthetic Customer 0190,Large,209919640K,TRUE,VN-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0191,Synthetic Customer 0191,Mid-size,209905429L,TRUE,JP-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0192,Synthetic Customer 0192,SME,209926376T,TRUE,SG-AU-SEA,Export,Consumer electronics
+SYNTHETIC,SYN-C0193,Synthetic Customer 0193,Mid-size,209930327P,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0194,Synthetic Customer 0194,SME,209912036G,TRUE,JP-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0195,Synthetic Customer 0195,SME,209916554K,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0196,Synthetic Customer 0196,Mid-size,209908957W,TRUE,SG-AU-AIR,Export,Apparel and footwear
+SYNTHETIC,SYN-C0197,Synthetic Customer 0197,Large,209938264E,TRUE,SG-AU-SEA,Export,Cosmetics and personal care
+SYNTHETIC,SYN-C0198,Synthetic Customer 0198,Mid-size,209960828A,TRUE,CN-SG-SEA,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0199,Synthetic Customer 0199,Mid-size,209980243D,TRUE,CN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0200,Synthetic Customer 0200,SME,209928405N,TRUE,US-SG-AIR,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0201,Synthetic Customer 0201,SME,209921863P,TRUE,SG-AU-SEA,Export,Apparel and footwear
+SYNTHETIC,SYN-C0202,Synthetic Customer 0202,Mid-size,209990448W,TRUE,SG-AU-SEA,Export,Cosmetics and personal care
+SYNTHETIC,SYN-C0203,Synthetic Customer 0203,SME,209968569B,TRUE,VN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0204,Synthetic Customer 0204,SME,209983797Y,TRUE,US-SG-AIR,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0205,Synthetic Customer 0205,Large,209925345Z,TRUE,SG-AU-AIR,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0206,Synthetic Customer 0206,SME,209946488N,TRUE,CN-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0207,Synthetic Customer 0207,SME,209939833K,TRUE,VN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0208,Synthetic Customer 0208,SME,209905238,TRUE,JP-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0209,Synthetic Customer 0209,Large,209944288T,TRUE,MY-SG-ROAD,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0210,Synthetic Customer 0210,Mid-size,209904264S,TRUE,SG-AU-SEA,Export,Apparel and footwear
+SYNTHETIC,SYN-C0211,Synthetic Customer 0211,SME,209990773B,TRUE,MY-SG-ROAD,Import,Consumer electronics
+SYNTHETIC,SYN-C0212,Synthetic Customer 0212,SME,209953467J,TRUE,US-SG-AIR,Import,Apparel and footwear
+SYNTHETIC,SYN-C0213,Synthetic Customer 0213,Mid-size,209916803L,TRUE,CN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0214,Synthetic Customer 0214,SME,209945102S,TRUE,CN-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0215,Synthetic Customer 0215,SME,209983236N,TRUE,SG-AU-SEA,Export,Consumer electronics
+SYNTHETIC,SYN-C0216,Synthetic Customer 0216,Mid-size,209958427K,TRUE,JP-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0217,Synthetic Customer 0217,Mid-size,209969430J,TRUE,SG-AU-AIR,Export,Consumer electronics
+SYNTHETIC,SYN-C0218,Synthetic Customer 0218,SME,209905761W,TRUE,CN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0219,Synthetic Customer 0219,Mid-size,209987886A,TRUE,CN-SG-AIR,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0220,Synthetic Customer 0220,Mid-size,209962442W,TRUE,SG-AU-AIR,Export,Auto parts and tyres
+SYNTHETIC,SYN-C0221,Synthetic Customer 0221,Large,209944486Z,TRUE,DE-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0222,Synthetic Customer 0222,SME,209986571H,TRUE,MY-SG-ROAD,Import,Packaged food and drink
+SYNTHETIC,SYN-C0223,Synthetic Customer 0223,Mid-size,209935120K,TRUE,SG-AU-AIR,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0224,Synthetic Customer 0224,Mid-size,209928979R,TRUE,CN-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0225,Synthetic Customer 0225,SME,209903709K,TRUE,SG-AU-SEA,Export,Chemicals
+SYNTHETIC,SYN-C0226,Synthetic Customer 0226,SME,209940133N,TRUE,SG-AU-SEA,Export,Pharmaceutical and medical
+SYNTHETIC,SYN-C0227,Synthetic Customer 0227,SME,209927760E,TRUE,SG-AU-AIR,Export,Chemicals
+SYNTHETIC,SYN-C0228,Synthetic Customer 0228,Large,209912647R,TRUE,DE-SG-AIR,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0229,Synthetic Customer 0229,SME,209997103L,FALSE,CN-SG-AIR,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0230,Synthetic Customer 0230,Large,209998932C,TRUE,SG-AU-SEA,Export,Consumer electronics
+SYNTHETIC,SYN-C0231,Synthetic Customer 0231,Mid-size,209925553D,TRUE,MY-SG-ROAD,Import,Chemicals
+SYNTHETIC,SYN-C0232,Synthetic Customer 0232,SME,209987939C,TRUE,SG-AU-SEA,Export,Packaged food and drink
+SYNTHETIC,SYN-C0233,Synthetic Customer 0233,SME,209961296T,TRUE,SG-AU-SEA,Export,Packaged food and drink
+SYNTHETIC,SYN-C0234,Synthetic Customer 0234,SME,209973453K,TRUE,MY-SG-ROAD,Import,Chemicals
+SYNTHETIC,SYN-C0235,Synthetic Customer 0235,Mid-size,209986828A,TRUE,SG-AU-AIR,Export,Consumer electronics
+SYNTHETIC,SYN-C0236,Synthetic Customer 0236,SME,209969444F,TRUE,MY-SG-ROAD,Import,Packaged food and drink
+SYNTHETIC,SYN-C0237,Synthetic Customer 0237,SME,209989492H,TRUE,JP-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0238,Synthetic Customer 0238,Mid-size,209955510J,TRUE,CN-SG-SEA,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0239,Synthetic Customer 0239,SME,209964791R,TRUE,US-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0240,Synthetic Customer 0240,Mid-size,209947590F,TRUE,MY-SG-ROAD,Import,Apparel and footwear
+SYNTHETIC,SYN-C0241,Synthetic Customer 0241,Mid-size,209929902M,TRUE,DE-SG-AIR,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0242,Synthetic Customer 0242,Large,209973289A,TRUE,CN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0243,Synthetic Customer 0243,Mid-size,209906085L,TRUE,JP-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0244,Synthetic Customer 0244,Mid-size,209931079Z,TRUE,CN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0245,Synthetic Customer 0245,Large,209946438T,TRUE,CN-SG-SEA,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0246,Synthetic Customer 0246,SME,209934258F,TRUE,JP-SG-SEA,Import,Chemicals
+SYNTHETIC,SYN-C0247,Synthetic Customer 0247,SME,209951491P,TRUE,CN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0248,Synthetic Customer 0248,Mid-size,209954835U,TRUE,VN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0249,Synthetic Customer 0249,Mid-size,209911207W,TRUE,MY-SG-ROAD,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0250,Synthetic Customer 0250,SME,209995077P,TRUE,CN-SG-SEA,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0251,Synthetic Customer 0251,Mid-size,209935225W,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0252,Synthetic Customer 0252,SME,209983719K,TRUE,MY-SG-ROAD,Import,Consumer electronics
+SYNTHETIC,SYN-C0253,Synthetic Customer 0253,Large,209914225R,TRUE,SG-AU-SEA,Export,Pharmaceutical and medical
+SYNTHETIC,SYN-C0254,Synthetic Customer 0254,Mid-size,209921917M,TRUE,DE-SG-AIR,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0255,Synthetic Customer 0255,Large,209982133F,TRUE,MY-SG-ROAD,Import,Furniture and homeware
+SYNTHETIC,SYN-C0256,Synthetic Customer 0256,SME,209974780X,TRUE,CN-SG-SEA,Import,Toys and games
+SYNTHETIC,SYN-C0257,Synthetic Customer 0257,Mid-size,209979467R,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0258,Synthetic Customer 0258,SME,209943939R,TRUE,JP-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0259,Synthetic Customer 0259,SME,209934107Z,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0260,Synthetic Customer 0260,Mid-size,209907939M,TRUE,DE-SG-AIR,Import,Furniture and homeware
+SYNTHETIC,SYN-C0261,Synthetic Customer 0261,Mid-size,209994005W,TRUE,CN-SG-SEA,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0262,Synthetic Customer 0262,SME,209946913B,TRUE,VN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0263,Synthetic Customer 0263,Mid-size,209949770B,TRUE,DE-SG-AIR,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0264,Synthetic Customer 0264,Large,209906404M,TRUE,DE-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0265,Synthetic Customer 0265,SME,209988715R,TRUE,SG-AU-AIR,Export,Consumer electronics
+SYNTHETIC,SYN-C0266,Synthetic Customer 0266,Mid-size,209999389F,TRUE,CN-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0267,Synthetic Customer 0267,SME,209953969F,TRUE,MY-SG-ROAD,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0268,Synthetic Customer 0268,Mid-size,209906803K,TRUE,CN-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0269,Synthetic Customer 0269,SME,209951846T,TRUE,VN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0270,Synthetic Customer 0270,SME,209993901M,TRUE,CN-SG-SEA,Import,Chemicals
+SYNTHETIC,SYN-C0271,Synthetic Customer 0271,Large,209997182W,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0272,Synthetic Customer 0272,SME,209999150X,TRUE,CN-SG-SEA,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0273,Synthetic Customer 0273,Mid-size,209972888N,TRUE,MY-SG-ROAD,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0274,Synthetic Customer 0274,Mid-size,209967473W,TRUE,SG-AU-SEA,Export,Packaged food and drink
+SYNTHETIC,SYN-C0275,Synthetic Customer 0275,Mid-size,209998355U,TRUE,CN-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0276,Synthetic Customer 0276,SME,209902585S,TRUE,CN-SG-SEA,Import,Toys and games
+SYNTHETIC,SYN-C0277,Synthetic Customer 0277,Mid-size,209999824Y,TRUE,DE-SG-AIR,Import,Apparel and footwear
+SYNTHETIC,SYN-C0278,Synthetic Customer 0278,Mid-size,209998446G,TRUE,US-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0279,Synthetic Customer 0279,SME,209925413U,TRUE,SG-AU-SEA,Export,Furniture and homeware
+SYNTHETIC,SYN-C0280,Synthetic Customer 0280,Large,209990102Y,TRUE,CN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0281,Synthetic Customer 0281,Large,209984562R,TRUE,SG-AU-SEA,Export,Apparel and footwear
+SYNTHETIC,SYN-C0282,Synthetic Customer 0282,SME,209963788G,TRUE,MY-SG-ROAD,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0283,Synthetic Customer 0283,SME,209955651B,TRUE,VN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0284,Synthetic Customer 0284,SME,209988284M,TRUE,CN-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0285,Synthetic Customer 0285,SME,209922630B,TRUE,DE-SG-AIR,Import,Apparel and footwear
+SYNTHETIC,SYN-C0286,Synthetic Customer 0286,Large,209943343D,TRUE,VN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0287,Synthetic Customer 0287,SME,209931736L,TRUE,SG-AU-AIR,Export,Apparel and footwear
+SYNTHETIC,SYN-C0288,Synthetic Customer 0288,SME,209982827J,TRUE,MY-SG-ROAD,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0289,Synthetic Customer 0289,Mid-size,209901453H,TRUE,US-SG-AIR,Import,Chemicals
+SYNTHETIC,SYN-C0290,Synthetic Customer 0290,Large,209912412D,TRUE,CN-SG-AIR,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0291,Synthetic Customer 0291,Large,209959619E,TRUE,US-SG-AIR,Import,Furniture and homeware
+SYNTHETIC,SYN-C0292,Synthetic Customer 0292,Large,209915803X,TRUE,DE-SG-AIR,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0293,Synthetic Customer 0293,SME,209987670F,TRUE,CN-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0294,Synthetic Customer 0294,SME,209937906H,TRUE,MY-SG-ROAD,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0295,Synthetic Customer 0295,SME,209991294C,TRUE,CN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0296,Synthetic Customer 0296,SME,209929125X,TRUE,US-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0297,Synthetic Customer 0297,SME,209901594P,TRUE,CN-SG-AIR,Import,Furniture and homeware
+SYNTHETIC,SYN-C0298,Synthetic Customer 0298,SME,209967365K,TRUE,CN-SG-SEA,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0299,Synthetic Customer 0299,Mid-size,209981980U,TRUE,SG-AU-AIR,Export,Packaged food and drink
+SYNTHETIC,SYN-C0300,Synthetic Customer 0300,SME,209967620R,TRUE,MY-SG-ROAD,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0301,Synthetic Customer 0301,SME,209938138M,TRUE,DE-SG-AIR,Import,Apparel and footwear
+SYNTHETIC,SYN-C0302,Synthetic Customer 0302,SME,209970147F,TRUE,SG-AU-AIR,Export,Chemicals
+SYNTHETIC,SYN-C0303,Synthetic Customer 0303,Large,209955453R,TRUE,CN-SG-SEA,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0304,Synthetic Customer 0304,Large,209981017F,TRUE,CN-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0305,Synthetic Customer 0305,SME,209996165Y,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0306,Synthetic Customer 0306,Mid-size,209973015A,TRUE,VN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0307,Synthetic Customer 0307,SME,209939121K,TRUE,CN-SG-AIR,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0308,Synthetic Customer 0308,Mid-size,209996762Z,TRUE,CN-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0309,Synthetic Customer 0309,SME,209983104F,TRUE,MY-SG-ROAD,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0310,Synthetic Customer 0310,SME,209944522,TRUE,CN-SG-SEA,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0311,Synthetic Customer 0311,SME,209918186R,TRUE,MY-SG-ROAD,Import,Apparel and footwear
+SYNTHETIC,SYN-C0312,Synthetic Customer 0312,SME,209922051D,TRUE,SG-AU-SEA,Export,Packaged food and drink
+SYNTHETIC,SYN-C0313,Synthetic Customer 0313,SME,209925122U,TRUE,US-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0314,Synthetic Customer 0314,SME,209950661T,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0315,Synthetic Customer 0315,Mid-size,209987466M,TRUE,SG-AU-AIR,Export,Furniture and homeware
+SYNTHETIC,SYN-C0316,Synthetic Customer 0316,Mid-size,209914013S,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0317,Synthetic Customer 0317,Large,209948314A,TRUE,DE-SG-AIR,Import,Toys and games
+SYNTHETIC,SYN-C0318,Synthetic Customer 0318,SME,209958690U,TRUE,CN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0319,Synthetic Customer 0319,Mid-size,209914561A,TRUE,SG-AU-AIR,Export,Furniture and homeware
+SYNTHETIC,SYN-C0320,Synthetic Customer 0320,Mid-size,209941077U,TRUE,CN-SG-AIR,Import,Chemicals
+SYNTHETIC,SYN-C0321,Synthetic Customer 0321,SME,209936063J,TRUE,CN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0322,Synthetic Customer 0322,SME,209981975R,TRUE,VN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0323,Synthetic Customer 0323,Mid-size,209975875L,TRUE,SG-AU-AIR,Export,Toys and games
+SYNTHETIC,SYN-C0324,Synthetic Customer 0324,Mid-size,209954481S,TRUE,US-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0325,Synthetic Customer 0325,SME,209982779S,TRUE,DE-SG-AIR,Import,Chemicals
+SYNTHETIC,SYN-C0326,Synthetic Customer 0326,Mid-size,209939961Y,TRUE,VN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0327,Synthetic Customer 0327,SME,209941708Y,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0328,Synthetic Customer 0328,SME,209915308N,TRUE,SG-AU-SEA,Export,Apparel and footwear
+SYNTHETIC,SYN-C0329,Synthetic Customer 0329,SME,209995437R,TRUE,SG-AU-AIR,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0330,Synthetic Customer 0330,SME,209943394R,TRUE,MY-SG-ROAD,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0331,Synthetic Customer 0331,SME,209905818K,TRUE,US-SG-AIR,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0332,Synthetic Customer 0332,SME,209932954R,TRUE,DE-SG-AIR,Import,Apparel and footwear
+SYNTHETIC,SYN-C0333,Synthetic Customer 0333,Mid-size,209903446B,TRUE,CN-SG-SEA,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0334,Synthetic Customer 0334,SME,209939860Z,TRUE,VN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0335,Synthetic Customer 0335,Mid-size,209922718M,TRUE,MY-SG-ROAD,Import,Toys and games
+SYNTHETIC,SYN-C0336,Synthetic Customer 0336,SME,209947787P,TRUE,CN-SG-SEA,Import,Chemicals
+SYNTHETIC,SYN-C0337,Synthetic Customer 0337,Large,209918265C,TRUE,SG-AU-SEA,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0338,Synthetic Customer 0338,SME,209992186R,TRUE,CN-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0339,Synthetic Customer 0339,SME,209921389Y,TRUE,US-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0340,Synthetic Customer 0340,Mid-size,209986690D,TRUE,SG-AU-SEA,Export,Apparel and footwear
+SYNTHETIC,SYN-C0341,Synthetic Customer 0341,Mid-size,209914750R,TRUE,CN-SG-AIR,Import,Apparel and footwear
+SYNTHETIC,SYN-C0342,Synthetic Customer 0342,SME,209915047H,TRUE,DE-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0343,Synthetic Customer 0343,Mid-size,209939931Y,TRUE,MY-SG-ROAD,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0344,Synthetic Customer 0344,SME,209992133E,TRUE,SG-AU-AIR,Export,Apparel and footwear
+SYNTHETIC,SYN-C0345,Synthetic Customer 0345,Mid-size,209956604Z,TRUE,CN-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0346,Synthetic Customer 0346,SME,209900504W,TRUE,VN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0347,Synthetic Customer 0347,SME,209927237P,TRUE,MY-SG-ROAD,Import,Apparel and footwear
+SYNTHETIC,SYN-C0348,Synthetic Customer 0348,SME,209953185N,TRUE,CN-SG-AIR,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0349,Synthetic Customer 0349,Mid-size,209999075K,TRUE,VN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0350,Synthetic Customer 0350,Large,209995231N,TRUE,JP-SG-SEA,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0351,Synthetic Customer 0351,SME,209909230N,TRUE,VN-SG-SEA,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0352,Synthetic Customer 0352,SME,209906651E,TRUE,JP-SG-SEA,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0353,Synthetic Customer 0353,Mid-size,209947670Z,TRUE,JP-SG-SEA,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0354,Synthetic Customer 0354,Mid-size,209985687Y,TRUE,CN-SG-SEA,Import,Chemicals
+SYNTHETIC,SYN-C0355,Synthetic Customer 0355,Mid-size,209911925H,TRUE,SG-AU-SEA,Export,Chemicals
+SYNTHETIC,SYN-C0356,Synthetic Customer 0356,Mid-size,209951651J,TRUE,SG-AU-SEA,Export,Chemicals
+SYNTHETIC,SYN-C0357,Synthetic Customer 0357,Mid-size,209956477j,TRUE,SG-AU-SEA,Export,Apparel and footwear
+SYNTHETIC,SYN-C0358,Synthetic Customer 0358,SME,209918139U,TRUE,VN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0359,Synthetic Customer 0359,Large,209935896H,TRUE,DE-SG-AIR,Import,Toys and games
+SYNTHETIC,SYN-C0360,Synthetic Customer 0360,SME,209963002S,TRUE,DE-SG-AIR,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0361,Synthetic Customer 0361,SME,209933670W,TRUE,SG-AU-SEA,Export,Apparel and footwear
+SYNTHETIC,SYN-C0362,Synthetic Customer 0362,Mid-size,209928403G,TRUE,SG-AU-SEA,Export,Auto parts and tyres
+SYNTHETIC,SYN-C0363,Synthetic Customer 0363,SME,209963818C,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0364,Synthetic Customer 0364,Mid-size,209973200X,TRUE,CN-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0365,Synthetic Customer 0365,Mid-size,209992923B,TRUE,SG-AU-SEA,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0366,Synthetic Customer 0366,SME,209983963N,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0367,Synthetic Customer 0367,Mid-size,209924535N,TRUE,SG-AU-AIR,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0368,Synthetic Customer 0368,SME,209906687G,TRUE,CN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0369,Synthetic Customer 0369,Large,209962341A,TRUE,CN-SG-AIR,Import,Apparel and footwear
+SYNTHETIC,SYN-C0370,Synthetic Customer 0370,SME,209982781W,TRUE,MY-SG-ROAD,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0371,Synthetic Customer 0371,SME,209933047X,TRUE,DE-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0372,Synthetic Customer 0372,SME,209931653K,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0373,Synthetic Customer 0373,Mid-size,209908455N,TRUE,VN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0374,Synthetic Customer 0374,SME,209961892C,TRUE,SG-AU-AIR,Export,Furniture and homeware
+SYNTHETIC,SYN-C0375,Synthetic Customer 0375,SME,209963385E,TRUE,CN-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0376,Synthetic Customer 0376,Mid-size,209986566W,TRUE,US-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0377,Synthetic Customer 0377,SME,209954513M,TRUE,DE-SG-AIR,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0378,Synthetic Customer 0378,SME,,TRUE,VN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0379,Synthetic Customer 0379,Large,209976048R,TRUE,US-SG-AIR,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0380,Synthetic Customer 0380,SME,209921242F,TRUE,VN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0381,Synthetic Customer 0381,Mid-size,209953301K,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0382,Synthetic Customer 0382,Mid-size,209931256G,FALSE,SG-AU-SEA,Export,Chemicals
+SYNTHETIC,SYN-C0383,Synthetic Customer 0383,Large,209929959X,TRUE,MY-SG-ROAD,Import,Packaged food and drink
+SYNTHETIC,SYN-C0384,Synthetic Customer 0384,SME,209907671D,TRUE,SG-AU-AIR,Export,Furniture and homeware
+SYNTHETIC,SYN-C0385,Synthetic Customer 0385,SME,209958387T,TRUE,US-SG-AIR,Import,Apparel and footwear
+SYNTHETIC,SYN-C0386,Synthetic Customer 0386,Large,209926077H,TRUE,CN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0387,Synthetic Customer 0387,SME,209908458P,TRUE,MY-SG-ROAD,Import,Toys and games
+SYNTHETIC,SYN-C0388,Synthetic Customer 0388,SME,209965192G,TRUE,MY-SG-ROAD,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0389,Synthetic Customer 0389,SME,209936843T,TRUE,VN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0390,Synthetic Customer 0390,SME,209969177H,TRUE,VN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0391,Synthetic Customer 0391,SME,209989947M,TRUE,VN-SG-SEA,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0392,Synthetic Customer 0392,SME,209900052B,TRUE,SG-AU-SEA,Export,Apparel and footwear
+SYNTHETIC,SYN-C0393,Synthetic Customer 0393,Mid-size,209945240T,FALSE,SG-AU-AIR,Export,Cosmetics and personal care
+SYNTHETIC,SYN-C0394,Synthetic Customer 0394,SME,209929966C,TRUE,SG-AU-SEA,Export,Cosmetics and personal care
+SYNTHETIC,SYN-C0395,Synthetic Customer 0395,SME,209996201L,TRUE,JP-SG-SEA,Import,Chemicals
+SYNTHETIC,SYN-C0396,Synthetic Customer 0396,Mid-size,209930577D,TRUE,VN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0397,Synthetic Customer 0397,Mid-size,209959744S,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0398,Synthetic Customer 0398,Mid-size,209925234U,TRUE,MY-SG-ROAD,Import,Consumer electronics
+SYNTHETIC,SYN-C0399,Synthetic Customer 0399,SME,209952550Y,TRUE,SG-AU-SEA,Export,Auto parts and tyres
+SYNTHETIC,SYN-C0400,Synthetic Customer 0400,SME,209958552H,FALSE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0401,Synthetic Customer 0401,SME,209917464E,TRUE,CN-SG-AIR,Import,Furniture and homeware
+SYNTHETIC,SYN-C0402,Synthetic Customer 0402,SME,209948761S,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0403,Synthetic Customer 0403,SME,209982059N,TRUE,DE-SG-AIR,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0404,Synthetic Customer 0404,SME,209939563L,TRUE,CN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0405,Synthetic Customer 0405,SME,209962987G,TRUE,CN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0406,Synthetic Customer 0406,SME,209993166G,TRUE,CN-SG-AIR,Import,Chemicals
+SYNTHETIC,SYN-C0407,Synthetic Customer 0407,SME,209913529Z,TRUE,CN-SG-AIR,Import,Apparel and footwear
+SYNTHETIC,SYN-C0408,Synthetic Customer 0408,SME,209932938N,TRUE,US-SG-AIR,Import,Apparel and footwear
+SYNTHETIC,SYN-C0409,Synthetic Customer 0409,SME,209906997D,TRUE,VN-SG-SEA,Import,Toys and games
+SYNTHETIC,SYN-C0410,Synthetic Customer 0410,SME,209902332M,TRUE,US-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0411,Synthetic Customer 0411,SME,209966689H,TRUE,DE-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0412,Synthetic Customer 0412,Mid-size,209954318H,TRUE,DE-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0413,Synthetic Customer 0413,SME,209930288N,TRUE,MY-SG-ROAD,Import,Chemicals
+SYNTHETIC,SYN-C0414,Synthetic Customer 0414,SME,209984301C,TRUE,SG-AU-SEA,Export,Chemicals
+SYNTHETIC,SYN-C0415,Synthetic Customer 0415,SME,209993456P,TRUE,SG-AU-AIR,Export,Apparel and footwear
+SYNTHETIC,SYN-C0416,Synthetic Customer 0416,Large,209970550Y,TRUE,US-SG-AIR,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0417,Synthetic Customer 0417,SME,209974164G,TRUE,SG-AU-SEA,Export,Furniture and homeware
+SYNTHETIC,SYN-C0418,Synthetic Customer 0418,Mid-size,209937427T,TRUE,US-SG-AIR,Import,Furniture and homeware
+SYNTHETIC,SYN-C0419,Synthetic Customer 0419,Large,209924203N,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0420,Synthetic Customer 0420,SME,209936179R,TRUE,US-SG-AIR,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0421,Synthetic Customer 0421,Mid-size,209955685U,TRUE,SG-AU-AIR,Export,Packaged food and drink
+SYNTHETIC,SYN-C0422,Synthetic Customer 0422,Mid-size,209940527S,TRUE,US-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0423,Synthetic Customer 0423,SME,209998799A,TRUE,VN-SG-SEA,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0424,Synthetic Customer 0424,Mid-size,209929293A,TRUE,DE-SG-AIR,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0425,Synthetic Customer 0425,SME,209905486U,TRUE,VN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0426,Synthetic Customer 0426,SME,209916297G,FALSE,VN-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0427,Synthetic Customer 0427,SME,209987951R,TRUE,SG-AU-SEA,Export,Furniture and homeware
+SYNTHETIC,SYN-C0428,Synthetic Customer 0428,SME,209906186,TRUE,MY-SG-ROAD,Import,Apparel and footwear
+SYNTHETIC,SYN-C0429,Synthetic Customer 0429,SME,209989121U,TRUE,SG-AU-AIR,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0430,Synthetic Customer 0430,SME,209938823A,TRUE,SG-AU-SEA,Export,Apparel and footwear
+SYNTHETIC,SYN-C0431,Synthetic Customer 0431,Mid-size,209938654J,TRUE,US-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0432,Synthetic Customer 0432,SME,209942071F,TRUE,SG-AU-AIR,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0433,Synthetic Customer 0433,Large,209925866A,TRUE,CN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0434,Synthetic Customer 0434,Mid-size,209991762F,TRUE,SG-AU-SEA,Export,Packaged food and drink
+SYNTHETIC,SYN-C0435,Synthetic Customer 0435,Mid-size,209983941U,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0436,Synthetic Customer 0436,SME,209919927D,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0437,Synthetic Customer 0437,SME,209973886B,TRUE,SG-AU-SEA,Export,Auto parts and tyres
+SYNTHETIC,SYN-C0438,Synthetic Customer 0438,Mid-size,209921852X,FALSE,CN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0439,Synthetic Customer 0439,SME,209938396B,TRUE,SG-AU-AIR,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0440,Synthetic Customer 0440,SME,209956758R,TRUE,MY-SG-ROAD,Import,Consumer electronics
+SYNTHETIC,SYN-C0441,Synthetic Customer 0441,SME,209917749F,TRUE,US-SG-AIR,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0442,Synthetic Customer 0442,SME,209946405G,TRUE,SG-AU-AIR,Export,Consumer electronics
+SYNTHETIC,SYN-C0443,Synthetic Customer 0443,SME,209999776K,TRUE,US-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0444,Synthetic Customer 0444,Mid-size,209996823S,TRUE,SG-AU-AIR,Export,Consumer electronics
+SYNTHETIC,SYN-C0445,Synthetic Customer 0445,SME,209968707P,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0446,Synthetic Customer 0446,Large,209979430H,TRUE,MY-SG-ROAD,Import,Consumer electronics
+SYNTHETIC,SYN-C0447,Synthetic Customer 0447,SME,209936081T,TRUE,SG-AU-AIR,Export,Packaged food and drink
+SYNTHETIC,SYN-C0448,Synthetic Customer 0448,SME,209959155K,TRUE,VN-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0449,Synthetic Customer 0449,SME,209933974U,TRUE,SG-AU-AIR,Export,Auto parts and tyres
+SYNTHETIC,SYN-C0450,Synthetic Customer 0450,SME,209975777N,TRUE,US-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0451,Synthetic Customer 0451,SME,209945402B,TRUE,DE-SG-AIR,Import,Chemicals
+SYNTHETIC,SYN-C0452,Synthetic Customer 0452,SME,2099317450,TRUE,MY-SG-ROAD,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0453,Synthetic Customer 0453,SME,209921106P,TRUE,US-SG-AIR,Import,Apparel and footwear
+SYNTHETIC,SYN-C0454,Synthetic Customer 0454,SME,209994486L,TRUE,CN-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0455,Synthetic Customer 0455,SME,209919776C,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0456,Synthetic Customer 0456,SME,209960070M,TRUE,SG-AU-AIR,Export,Furniture and homeware
+SYNTHETIC,SYN-C0457,Synthetic Customer 0457,Mid-size,209946882B,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0458,Synthetic Customer 0458,SME,209905147M,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0459,Synthetic Customer 0459,SME,209970290A,TRUE,MY-SG-ROAD,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0460,Synthetic Customer 0460,SME,209969098X,TRUE,SG-AU-SEA,Export,Cosmetics and personal care
+SYNTHETIC,SYN-C0461,Synthetic Customer 0461,Mid-size,209958360A,TRUE,CN-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0462,Synthetic Customer 0462,SME,209998391H,TRUE,MY-SG-ROAD,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0463,Synthetic Customer 0463,SME,209952207L,TRUE,CN-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0464,Synthetic Customer 0464,Mid-size,209986823B,TRUE,SG-AU-AIR,Export,Apparel and footwear
+SYNTHETIC,SYN-C0465,Synthetic Customer 0465,Mid-size,209916023X,TRUE,CN-SG-AIR,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0466,Synthetic Customer 0466,Mid-size,209903607N,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0467,Synthetic Customer 0467,SME,209999686P,TRUE,CN-SG-SEA,Import,Toys and games
+SYNTHETIC,SYN-C0468,Synthetic Customer 0468,SME,209973547M,TRUE,SG-AU-SEA,Export,Apparel and footwear
+SYNTHETIC,SYN-C0469,Synthetic Customer 0469,SME,209923422E,TRUE,VN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0470,Synthetic Customer 0470,SME,209983841F,TRUE,SG-AU-SEA,Export,Consumer electronics
+SYNTHETIC,SYN-C0471,Synthetic Customer 0471,SME,209957828G,TRUE,SG-AU-SEA,Export,Auto parts and tyres
+SYNTHETIC,SYN-C0472,Synthetic Customer 0472,SME,209946925J,TRUE,DE-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0473,Synthetic Customer 0473,Large,209930835Y,TRUE,SG-AU-AIR,Export,Consumer electronics
+SYNTHETIC,SYN-C0474,Synthetic Customer 0474,SME,209920961Z,TRUE,SG-AU-AIR,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0475,Synthetic Customer 0475,Mid-size,209940132D,TRUE,US-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0476,Synthetic Customer 0476,Large,209988190M,TRUE,MY-SG-ROAD,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0477,Synthetic Customer 0477,SME,209918214D,TRUE,MY-SG-ROAD,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0478,Synthetic Customer 0478,Large,209967585B,TRUE,SG-AU-AIR,Export,Cosmetics and personal care
+SYNTHETIC,SYN-C0479,Synthetic Customer 0479,Mid-size,209924381J,TRUE,US-SG-AIR,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0480,Synthetic Customer 0480,SME,209908890X,TRUE,MY-SG-ROAD,Import,Packaged food and drink
+SYNTHETIC,SYN-C0481,Synthetic Customer 0481,SME,209965113H,TRUE,JP-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0482,Synthetic Customer 0482,SME,209923780T,TRUE,MY-SG-ROAD,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0483,Synthetic Customer 0483,SME,209994656F,TRUE,SG-AU-SEA,Export,Auto parts and tyres
+SYNTHETIC,SYN-C0484,Synthetic Customer 0484,SME,209914059R,TRUE,MY-SG-ROAD,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0485,Synthetic Customer 0485,Mid-size,209967967J,TRUE,DE-SG-AIR,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0486,Synthetic Customer 0486,SME,209918834Z,TRUE,MY-SG-ROAD,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0487,Synthetic Customer 0487,Mid-size,209983240A,TRUE,CN-SG-SEA,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0488,Synthetic Customer 0488,SME,209936477U,TRUE,US-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0489,Synthetic Customer 0489,SME,209997385H,TRUE,SG-AU-AIR,Export,Consumer electronics
+SYNTHETIC,SYN-C0490,Synthetic Customer 0490,SME,209980513K,TRUE,VN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0491,Synthetic Customer 0491,Large,209938726R,TRUE,DE-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0492,Synthetic Customer 0492,SME,209943197H,TRUE,VN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0493,Synthetic Customer 0493,SME,209988923S,TRUE,SG-AU-AIR,Export,Furniture and homeware
+SYNTHETIC,SYN-C0494,Synthetic Customer 0494,Mid-size,209907708R,TRUE,SG-AU-SEA,Export,Consumer electronics
+SYNTHETIC,SYN-C0495,Synthetic Customer 0495,SME,209921023U,TRUE,SG-AU-AIR,Export,Consumer electronics
+SYNTHETIC,SYN-C0496,Synthetic Customer 0496,SME,209905610N,TRUE,MY-SG-ROAD,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0497,Synthetic Customer 0497,SME,209951233B,TRUE,CN-SG-AIR,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0498,Synthetic Customer 0498,Mid-size,209922972Y,TRUE,VN-SG-SEA,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0499,Synthetic Customer 0499,Mid-size,209953015E,FALSE,JP-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0500,Synthetic Customer 0500,Large,209938367J,TRUE,CN-SG-SEA,Import,Chemicals
+SYNTHETIC,SYN-C0501,Synthetic Customer 0501,SME,209966222S,FALSE,US-SG-AIR,Import,Toys and games
+SYNTHETIC,SYN-C0502,Synthetic Customer 0502,Mid-size,209993948A,TRUE,SG-AU-AIR,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0503,Synthetic Customer 0503,SME,209948965C,TRUE,MY-SG-ROAD,Import,Chemicals
+SYNTHETIC,SYN-C0504,Synthetic Customer 0504,SME,209935845W,TRUE,JP-SG-SEA,Import,Chemicals
+SYNTHETIC,SYN-C0505,Synthetic Customer 0505,Large,209904632J,TRUE,MY-SG-ROAD,Import,Consumer electronics
+SYNTHETIC,SYN-C0506,Synthetic Customer 0506,SME,209960967P,TRUE,SG-AU-SEA,Export,Furniture and homeware
+SYNTHETIC,SYN-C0507,Synthetic Customer 0507,SME,209965807X,TRUE,SG-AU-SEA,Export,Furniture and homeware
+SYNTHETIC,SYN-C0508,Synthetic Customer 0508,Mid-size,209990091A,TRUE,MY-SG-ROAD,Import,Furniture and homeware
+SYNTHETIC,SYN-C0509,Synthetic Customer 0509,SME,209929930K,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0510,Synthetic Customer 0510,SME,209934504T,TRUE,SG-AU-SEA,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0511,Synthetic Customer 0511,SME,209906198P,TRUE,CN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0512,Synthetic Customer 0512,Large,209900235G,TRUE,SG-AU-AIR,Export,Furniture and homeware
+SYNTHETIC,SYN-C0513,Synthetic Customer 0513,SME,209974277J,TRUE,DE-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0514,Synthetic Customer 0514,SME,209918131G,TRUE,JP-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0515,Synthetic Customer 0515,SME,209917306K,TRUE,SG-AU-AIR,Export,Apparel and footwear
+SYNTHETIC,SYN-C0516,Synthetic Customer 0516,SME,209998981T,TRUE,SG-AU-SEA,Export,Consumer electronics
+SYNTHETIC,SYN-C0517,Synthetic Customer 0517,SME,209960539A,TRUE,JP-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0518,Synthetic Customer 0518,Large,209935564F,TRUE,MY-SG-ROAD,Import,Consumer electronics
+SYNTHETIC,SYN-C0519,Synthetic Customer 0519,SME,209912890E,TRUE,DE-SG-AIR,Import,Furniture and homeware
+SYNTHETIC,SYN-C0520,Synthetic Customer 0520,SME,209972826M,TRUE,DE-SG-AIR,Import,Chemicals
+SYNTHETIC,SYN-C0521,Synthetic Customer 0521,SME,209943674W,TRUE,MY-SG-ROAD,Import,Toys and games
+SYNTHETIC,SYN-C0522,Synthetic Customer 0522,SME,209960375E,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0523,Synthetic Customer 0523,Mid-size,209972570E,TRUE,VN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0524,Synthetic Customer 0524,SME,209916409C,TRUE,DE-SG-AIR,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0525,Synthetic Customer 0525,Mid-size,209913913E,TRUE,US-SG-AIR,Import,Chemicals
+SYNTHETIC,SYN-C0526,Synthetic Customer 0526,Mid-size,209967828M,TRUE,VN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0527,Synthetic Customer 0527,Mid-size,209949920Y,FALSE,DE-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0528,Synthetic Customer 0528,SME,209944295Y,TRUE,SG-AU-SEA,Export,Apparel and footwear
+SYNTHETIC,SYN-C0529,Synthetic Customer 0529,SME,209952121A,TRUE,CN-SG-SEA,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0530,Synthetic Customer 0530,SME,209915495D,TRUE,SG-AU-SEA,Export,Consumer electronics
+SYNTHETIC,SYN-C0531,Synthetic Customer 0531,Mid-size,209994600N,TRUE,SG-AU-AIR,Export,Apparel and footwear
+SYNTHETIC,SYN-C0532,Synthetic Customer 0532,Mid-size,209928529S,TRUE,CN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0533,Synthetic Customer 0533,SME,209994209X,TRUE,MY-SG-ROAD,Import,Packaged food and drink
+SYNTHETIC,SYN-C0534,Synthetic Customer 0534,SME,209996569J,TRUE,SG-AU-SEA,Export,Furniture and homeware
+SYNTHETIC,SYN-C0535,Synthetic Customer 0535,Mid-size,209956884M,TRUE,CN-SG-SEA,Import,Toys and games
+SYNTHETIC,SYN-C0536,Synthetic Customer 0536,SME,209990636C,TRUE,JP-SG-SEA,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0537,Synthetic Customer 0537,Large,209997151U,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0538,Synthetic Customer 0538,Mid-size,2099629820,TRUE,US-SG-AIR,Import,Toys and games
+SYNTHETIC,SYN-C0539,Synthetic Customer 0539,SME,209904414B,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0540,Synthetic Customer 0540,SME,209989924D,FALSE,SG-AU-AIR,Export,Furniture and homeware
+SYNTHETIC,SYN-C0541,Synthetic Customer 0541,SME,209935895J,TRUE,CN-SG-AIR,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0542,Synthetic Customer 0542,SME,209940777E,TRUE,CN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0543,Synthetic Customer 0543,SME,209975247H,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0544,Synthetic Customer 0544,SME,209954085D,FALSE,CN-SG-AIR,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0545,Synthetic Customer 0545,SME,209970308D,TRUE,CN-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0546,Synthetic Customer 0546,Large,209911213W,TRUE,CN-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0547,Synthetic Customer 0547,SME,209944272M,TRUE,CN-SG-SEA,Import,Toys and games
+SYNTHETIC,SYN-C0548,Synthetic Customer 0548,SME,209971755N,TRUE,VN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0549,Synthetic Customer 0549,Mid-size,209966072B,TRUE,CN-SG-SEA,Import,Chemicals
+SYNTHETIC,SYN-C0550,Synthetic Customer 0550,SME,209915707A,TRUE,SG-AU-SEA,Export,Pharmaceutical and medical
+SYNTHETIC,SYN-C0551,Synthetic Customer 0551,SME,209906906Z,TRUE,CN-SG-SEA,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0552,Synthetic Customer 0552,SME,209917776D,TRUE,MY-SG-ROAD,Import,Apparel and footwear
+SYNTHETIC,SYN-C0553,Synthetic Customer 0553,Mid-size,209921868T,TRUE,CN-SG-SEA,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0554,Synthetic Customer 0554,SME,209935610M,TRUE,CN-SG-AIR,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0555,Synthetic Customer 0555,SME,209935880Y,TRUE,SG-AU-SEA,Export,Apparel and footwear
+SYNTHETIC,SYN-C0556,Synthetic Customer 0556,Mid-size,209925060Z,TRUE,SG-AU-SEA,Export,Consumer electronics
+SYNTHETIC,SYN-C0557,Synthetic Customer 0557,SME,209994922L,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0558,Synthetic Customer 0558,SME,209900185U,TRUE,MY-SG-ROAD,Import,Furniture and homeware
+SYNTHETIC,SYN-C0559,Synthetic Customer 0559,SME,209933204C,TRUE,CN-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0560,Synthetic Customer 0560,SME,209975337W,TRUE,US-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0561,Synthetic Customer 0561,SME,209915252Y,TRUE,DE-SG-AIR,Import,Toys and games
+SYNTHETIC,SYN-C0562,Synthetic Customer 0562,SME,209990663N,TRUE,US-SG-AIR,Import,Apparel and footwear
+SYNTHETIC,SYN-C0563,Synthetic Customer 0563,Mid-size,209931127S,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0564,Synthetic Customer 0564,SME,209951390X,TRUE,DE-SG-AIR,Import,Furniture and homeware
+SYNTHETIC,SYN-C0565,Synthetic Customer 0565,SME,209927052L,FALSE,CN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0566,Synthetic Customer 0566,Mid-size,209976367S,TRUE,VN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0567,Synthetic Customer 0567,Mid-size,09911531G,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0568,Synthetic Customer 0568,SME,209952893W,TRUE,MY-SG-ROAD,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0569,Synthetic Customer 0569,SME,209968046Y,TRUE,DE-SG-AIR,Import,Chemicals
+SYNTHETIC,SYN-C0570,Synthetic Customer 0570,Mid-size,209910469X,TRUE,SG-AU-SEA,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0571,Synthetic Customer 0571,Mid-size,209981334A,TRUE,MY-SG-ROAD,Import,Apparel and footwear
+SYNTHETIC,SYN-C0572,Synthetic Customer 0572,SME,209982816D,TRUE,MY-SG-ROAD,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0573,Synthetic Customer 0573,SME,209964338Y,TRUE,CN-SG-SEA,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0574,Synthetic Customer 0574,Large,209977369M,TRUE,CN-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0575,Synthetic Customer 0575,SME,209994853Y,TRUE,CN-SG-AIR,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0576,Synthetic Customer 0576,Mid-size,209934546X,TRUE,US-SG-AIR,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0577,Synthetic Customer 0577,Large,209973451U,TRUE,SG-AU-AIR,Export,Pharmaceutical and medical
+SYNTHETIC,SYN-C0578,Synthetic Customer 0578,SME,209996237H,TRUE,SG-AU-AIR,Export,Packaged food and drink
+SYNTHETIC,SYN-C0579,Synthetic Customer 0579,Mid-size,209910277Y,TRUE,CN-SG-SEA,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0580,Synthetic Customer 0580,SME,209993331G,TRUE,MY-SG-ROAD,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0581,Synthetic Customer 0581,SME,209986992J,TRUE,CN-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0582,Synthetic Customer 0582,SME,209999176K,TRUE,CN-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0583,Synthetic Customer 0583,SME,209953585D,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0584,Synthetic Customer 0584,Mid-size,209919950P,TRUE,SG-AU-SEA,Export,Apparel and footwear
+SYNTHETIC,SYN-C0585,Synthetic Customer 0585,SME,209969715A,TRUE,SG-AU-SEA,Export,Packaged food and drink
+SYNTHETIC,SYN-C0586,Synthetic Customer 0586,SME,209945096A,TRUE,CN-SG-SEA,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0587,Synthetic Customer 0587,Mid-size,209992374H,TRUE,SG-AU-SEA,Export,Auto parts and tyres
+SYNTHETIC,SYN-C0588,Synthetic Customer 0588,SME,209963270W,TRUE,CN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0589,Synthetic Customer 0589,SME,209991185P,TRUE,CN-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0590,Synthetic Customer 0590,SME,209906614G,TRUE,US-SG-AIR,Import,Furniture and homeware
+SYNTHETIC,SYN-C0591,Synthetic Customer 0591,SME,209974606S,TRUE,VN-SG-SEA,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0592,Synthetic Customer 0592,Mid-size,209900905G,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0593,Synthetic Customer 0593,SME,209953739P,TRUE,CN-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0594,Synthetic Customer 0594,SME,209956994D,TRUE,MY-SG-ROAD,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0595,Synthetic Customer 0595,SME,209979173W,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0596,Synthetic Customer 0596,Mid-size,209913193E,TRUE,CN-SG-SEA,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0597,Synthetic Customer 0597,Mid-size,209997847J,TRUE,VN-SG-SEA,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0598,Synthetic Customer 0598,SME,209983002T,TRUE,DE-SG-AIR,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0599,Synthetic Customer 0599,Mid-size,209921625Y,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0600,Synthetic Customer 0600,SME,209910055R,TRUE,US-SG-AIR,Import,Apparel and footwear
+SYNTHETIC,SYN-C0601,Synthetic Customer 0601,Mid-size,209957410L,TRUE,CN-SG-SEA,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0602,Synthetic Customer 0602,Mid-size,209924467R,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0603,Synthetic Customer 0603,Mid-size,209930389G,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0604,Synthetic Customer 0604,SME,209906055H,TRUE,JP-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0605,Synthetic Customer 0605,SME,209926209K,TRUE,CN-SG-SEA,Import,Toys and games
+SYNTHETIC,SYN-C0606,Synthetic Customer 0606,Mid-size,209932647M,TRUE,DE-SG-AIR,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0607,Synthetic Customer 0607,SME,,TRUE,MY-SG-ROAD,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0608,Synthetic Customer 0608,SME,209945266J,TRUE,US-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0609,Synthetic Customer 0609,Mid-size,209988328X,TRUE,CN-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0610,Synthetic Customer 0610,Large,209925056P,TRUE,SG-AU-SEA,Export,Consumer electronics
+SYNTHETIC,SYN-C0611,Synthetic Customer 0611,SME,209997612R,TRUE,CN-SG-SEA,Import,Toys and games
+SYNTHETIC,SYN-C0612,Synthetic Customer 0612,SME,209943106Y,TRUE,CN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0613,Synthetic Customer 0613,SME,209956698M,TRUE,CN-SG-SEA,Import,Toys and games
+SYNTHETIC,SYN-C0614,Synthetic Customer 0614,Mid-size,209947443G,TRUE,SG-AU-SEA,Export,Furniture and homeware
+SYNTHETIC,SYN-C0615,Synthetic Customer 0615,SME,209944328R,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0616,Synthetic Customer 0616,Mid-size,209938866W,TRUE,US-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0617,Synthetic Customer 0617,Large,209951628Z,TRUE,SG-AU-AIR,Export,Packaged food and drink
+SYNTHETIC,SYN-C0618,Synthetic Customer 0618,SME,209921315P,TRUE,US-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0619,Synthetic Customer 0619,SME,209900582U,TRUE,US-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0620,Synthetic Customer 0620,Mid-size,209971281C,TRUE,CN-SG-SEA,Import,Chemicals
+SYNTHETIC,SYN-C0621,Synthetic Customer 0621,SME,209901653A,TRUE,MY-SG-ROAD,Import,Furniture and homeware
+SYNTHETIC,SYN-C0622,Synthetic Customer 0622,SME,209971615Y,TRUE,CN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0623,Synthetic Customer 0623,SME,209953075U,TRUE,VN-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0624,Synthetic Customer 0624,SME,209954197N,TRUE,US-SG-AIR,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0625,Synthetic Customer 0625,Mid-size,209975675U,TRUE,SG-AU-SEA,Export,Cosmetics and personal care
+SYNTHETIC,SYN-C0626,Synthetic Customer 0626,SME,209906550W,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0627,Synthetic Customer 0627,SME,209919662D,TRUE,US-SG-AIR,Import,Chemicals
+SYNTHETIC,SYN-C0628,Synthetic Customer 0628,SME,209969117X,TRUE,CN-SG-AIR,Import,Furniture and homeware
+SYNTHETIC,SYN-C0629,Synthetic Customer 0629,Large,209967298W,TRUE,CN-SG-AIR,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0630,Synthetic Customer 0630,Mid-size,209967338G,TRUE,CN-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0631,Synthetic Customer 0631,Mid-size,209929652W,TRUE,CN-SG-AIR,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0632,Synthetic Customer 0632,SME,209945300K,TRUE,CN-SG-SEA,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0633,Synthetic Customer 0633,SME,209919087X,TRUE,CN-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0634,Synthetic Customer 0634,Mid-size,209901587T,TRUE,DE-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0635,Synthetic Customer 0635,Mid-size,209940979J,TRUE,JP-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0636,Synthetic Customer 0636,SME,209904137C,TRUE,JP-SG-SEA,Import,Toys and games
+SYNTHETIC,SYN-C0637,Synthetic Customer 0637,Mid-size,209964046Z,TRUE,CN-SG-SEA,Import,Chemicals
+SYNTHETIC,SYN-C0638,Synthetic Customer 0638,SME,209932097J,TRUE,SG-AU-AIR,Export,Furniture and homeware
+SYNTHETIC,SYN-C0639,Synthetic Customer 0639,Large,209984712J,TRUE,US-SG-AIR,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0640,Synthetic Customer 0640,Large,209911110K,TRUE,US-SG-AIR,Import,Apparel and footwear
+SYNTHETIC,SYN-C0641,Synthetic Customer 0641,SME,209997787P,TRUE,SG-AU-AIR,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0642,Synthetic Customer 0642,SME,209962757H,TRUE,CN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0643,Synthetic Customer 0643,Mid-size,209962302X,TRUE,DE-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0644,Synthetic Customer 0644,SME,209934231A,TRUE,DE-SG-AIR,Import,Apparel and footwear
+SYNTHETIC,SYN-C0645,Synthetic Customer 0645,Mid-size,209911328C,TRUE,US-SG-AIR,Import,Apparel and footwear
+SYNTHETIC,SYN-C0646,Synthetic Customer 0646,Mid-size,209915374T,TRUE,SG-AU-AIR,Export,Furniture and homeware
+SYNTHETIC,SYN-C0647,Synthetic Customer 0647,SME,209972163W,TRUE,US-SG-AIR,Import,Toys and games
+SYNTHETIC,SYN-C0648,Synthetic Customer 0648,Mid-size,209938217X,TRUE,MY-SG-ROAD,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0649,Synthetic Customer 0649,SME,209978577Z,TRUE,SG-AU-AIR,Export,Pharmaceutical and medical
+SYNTHETIC,SYN-C0650,Synthetic Customer 0650,SME,209967345F,TRUE,JP-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0651,Synthetic Customer 0651,Mid-size,209987693Z,FALSE,CN-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0652,Synthetic Customer 0652,SME,209929375Z,TRUE,US-SG-AIR,Import,Toys and games
+SYNTHETIC,SYN-C0653,Synthetic Customer 0653,SME,209997565S,TRUE,CN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0654,Synthetic Customer 0654,Mid-size,209956099H,TRUE,US-SG-AIR,Import,Furniture and homeware
+SYNTHETIC,SYN-C0655,Synthetic Customer 0655,SME,209990971J,TRUE,VN-SG-SEA,Import,Chemicals
+SYNTHETIC,SYN-C0656,Synthetic Customer 0656,SME,209988964F,TRUE,SG-AU-SEA,Export,Auto parts and tyres
+SYNTHETIC,SYN-C0657,Synthetic Customer 0657,SME,209903306B,TRUE,JP-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0658,Synthetic Customer 0658,SME,209927769Y,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0659,Synthetic Customer 0659,Mid-size,209927187B,TRUE,JP-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0660,Synthetic Customer 0660,Mid-size,209982029E,TRUE,MY-SG-ROAD,Import,Consumer electronics
+SYNTHETIC,SYN-C0661,Synthetic Customer 0661,Mid-size,209900947Y,TRUE,CN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0662,Synthetic Customer 0662,Mid-size,209928310Z,TRUE,CN-SG-AIR,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0663,Synthetic Customer 0663,SME,209922010K,TRUE,MY-SG-ROAD,Import,Apparel and footwear
+SYNTHETIC,SYN-C0664,Synthetic Customer 0664,SME,209969946Z,TRUE,JP-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0665,Synthetic Customer 0665,SME,209994772F,TRUE,US-SG-AIR,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0666,Synthetic Customer 0666,SME,209981151D,TRUE,DE-SG-AIR,Import,Apparel and footwear
+SYNTHETIC,SYN-C0667,Synthetic Customer 0667,SME,209963016M,TRUE,SG-AU-AIR,Export,Apparel and footwear
+SYNTHETIC,SYN-C0668,Synthetic Customer 0668,Mid-size,209913046K,TRUE,US-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0669,Synthetic Customer 0669,Mid-size,209914205P,TRUE,CN-SG-SEA,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0670,Synthetic Customer 0670,SME,209924799C,TRUE,SG-AU-AIR,Export,Toys and games
+SYNTHETIC,SYN-C0671,Synthetic Customer 0671,SME,209994918R,TRUE,VN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0672,Synthetic Customer 0672,Mid-size,209970546G,TRUE,DE-SG-AIR,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0673,Synthetic Customer 0673,Large,209943007Z,TRUE,SG-AU-SEA,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0674,Synthetic Customer 0674,SME,209976820N,FALSE,DE-SG-AIR,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0675,Synthetic Customer 0675,SME,209978054K,TRUE,JP-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0676,Synthetic Customer 0676,Mid-size,209973047,TRUE,DE-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0677,Synthetic Customer 0677,SME,209945364J,TRUE,CN-SG-AIR,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0678,Synthetic Customer 0678,Mid-size,209984057H,TRUE,DE-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0679,Synthetic Customer 0679,SME,209910174A,TRUE,DE-SG-AIR,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0680,Synthetic Customer 0680,Mid-size,209981607U,TRUE,SG-AU-SEA,Export,Apparel and footwear
+SYNTHETIC,SYN-C0681,Synthetic Customer 0681,SME,209937397N,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0682,Synthetic Customer 0682,SME,209999220Z,TRUE,JP-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0683,Synthetic Customer 0683,SME,209911226B,TRUE,SG-AU-SEA,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0684,Synthetic Customer 0684,SME,209955934T,TRUE,CN-SG-SEA,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0685,Synthetic Customer 0685,Mid-size,209989525T,TRUE,SG-AU-AIR,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0686,Synthetic Customer 0686,Mid-size,209969178T,TRUE,MY-SG-ROAD,Import,Chemicals
+SYNTHETIC,SYN-C0687,Synthetic Customer 0687,SME,209925532C,FALSE,SG-AU-SEA,Export,Packaged food and drink
+SYNTHETIC,SYN-C0688,Synthetic Customer 0688,SME,209981934R,TRUE,CN-SG-SEA,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0689,Synthetic Customer 0689,SME,,FALSE,MY-SG-ROAD,Import,Apparel and footwear
+SYNTHETIC,SYN-C0690,Synthetic Customer 0690,SME,209977854S,TRUE,CN-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0691,Synthetic Customer 0691,SME,209911040J,TRUE,CN-SG-SEA,Import,Chemicals
+SYNTHETIC,SYN-C0692,Synthetic Customer 0692,SME,209909593F,TRUE,JP-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0693,Synthetic Customer 0693,SME,209906743H,TRUE,CN-SG-AIR,Import,Apparel and footwear
+SYNTHETIC,SYN-C0694,Synthetic Customer 0694,Mid-size,209989048N,TRUE,DE-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0695,Synthetic Customer 0695,SME,209955516Z,TRUE,VN-SG-SEA,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0696,Synthetic Customer 0696,Mid-size,209991024U,TRUE,VN-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0697,Synthetic Customer 0697,Mid-size,209979695G,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0698,Synthetic Customer 0698,SME,209971406W,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0699,Synthetic Customer 0699,Mid-size,209907140Y,TRUE,MY-SG-ROAD,Import,Consumer electronics
+SYNTHETIC,SYN-C0700,Synthetic Customer 0700,Mid-size,209947697T,TRUE,CN-SG-SEA,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0701,Synthetic Customer 0701,Mid-size,209931919K,TRUE,DE-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0702,Synthetic Customer 0702,SME,209908110J,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0703,Synthetic Customer 0703,Mid-size,209979023F,TRUE,SG-AU-AIR,Export,Chemicals
+SYNTHETIC,SYN-C0704,Synthetic Customer 0704,Mid-size,209917646W,TRUE,VN-SG-SEA,Import,Chemicals
+SYNTHETIC,SYN-C0705,Synthetic Customer 0705,Mid-size,209962341L,TRUE,CN-SG-AIR,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0706,Synthetic Customer 0706,SME,209947595R,TRUE,SG-AU-SEA,Export,Consumer electronics
+SYNTHETIC,SYN-C0707,Synthetic Customer 0707,Mid-size,209900546N,TRUE,VN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0708,Synthetic Customer 0708,SME,209911108Y,TRUE,CN-SG-AIR,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0709,Synthetic Customer 0709,SME,209997659A,TRUE,JP-SG-SEA,Import,Chemicals
+SYNTHETIC,SYN-C0710,Synthetic Customer 0710,SME,209977736J,TRUE,CN-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0711,Synthetic Customer 0711,SME,209991003A,TRUE,MY-SG-ROAD,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0712,Synthetic Customer 0712,SME,209952524S,TRUE,US-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0713,Synthetic Customer 0713,SME,209946393Z,TRUE,VN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0714,Synthetic Customer 0714,SME,209968369Z,TRUE,SG-AU-AIR,Export,Consumer electronics
+SYNTHETIC,SYN-C0715,Synthetic Customer 0715,SME,209988066N,FALSE,CN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0716,Synthetic Customer 0716,Large,209966330N,TRUE,MY-SG-ROAD,Import,Apparel and footwear
+SYNTHETIC,SYN-C0717,Synthetic Customer 0717,SME,209955907G,TRUE,SG-AU-SEA,Export,Apparel and footwear
+SYNTHETIC,SYN-C0718,Synthetic Customer 0718,Mid-size,209914107B,TRUE,MY-SG-ROAD,Import,Apparel and footwear
+SYNTHETIC,SYN-C0719,Synthetic Customer 0719,Mid-size,209958151Y,TRUE,JP-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0720,Synthetic Customer 0720,SME,209944618Z,TRUE,US-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0721,Synthetic Customer 0721,SME,209917104J,TRUE,MY-SG-ROAD,Import,Consumer electronics
+SYNTHETIC,SYN-C0722,Synthetic Customer 0722,SME,209937519X,TRUE,CN-SG-SEA,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0723,Synthetic Customer 0723,Mid-size,209902453C,TRUE,SG-AU-SEA,Export,Consumer electronics
+SYNTHETIC,SYN-C0724,Synthetic Customer 0724,SME,209983150M,TRUE,SG-AU-SEA,Export,Cosmetics and personal care
+SYNTHETIC,SYN-C0725,Synthetic Customer 0725,Mid-size,209960153E,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0726,Synthetic Customer 0726,SME,209957247K,TRUE,US-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0727,Synthetic Customer 0727,Large,209909344F,TRUE,US-SG-AIR,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0728,Synthetic Customer 0728,Large,209915567E,TRUE,MY-SG-ROAD,Import,Furniture and homeware
+SYNTHETIC,SYN-C0729,Synthetic Customer 0729,SME,209991808Y,TRUE,US-SG-AIR,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0730,Synthetic Customer 0730,Large,209932093N,FALSE,DE-SG-AIR,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0731,Synthetic Customer 0731,SME,209926189R,TRUE,DE-SG-AIR,Import,Toys and games
+SYNTHETIC,SYN-C0732,Synthetic Customer 0732,SME,209947062B,FALSE,JP-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0733,Synthetic Customer 0733,SME,209957977Z,TRUE,CN-SG-SEA,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0734,Synthetic Customer 0734,Mid-size,209900281C,TRUE,CN-SG-SEA,Import,Auto parts and tyres
+SYNTHETIC,SYN-C0735,Synthetic Customer 0735,SME,209912742N,TRUE,SG-AU-SEA,Export,Apparel and footwear
+SYNTHETIC,SYN-C0736,Synthetic Customer 0736,SME,209932772X,TRUE,MY-SG-ROAD,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0737,Synthetic Customer 0737,Mid-size,209953937P,TRUE,SG-AU-SEA,Export,Furniture and homeware
+SYNTHETIC,SYN-C0738,Synthetic Customer 0738,SME,209937099W,TRUE,US-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0739,Synthetic Customer 0739,SME,209969679L,TRUE,CN-SG-AIR,Import,Furniture and homeware
+SYNTHETIC,SYN-C0740,Synthetic Customer 0740,SME,209926738S,TRUE,CN-SG-AIR,Import,Chemicals
+SYNTHETIC,SYN-C0741,Synthetic Customer 0741,SME,209921907F,TRUE,CN-SG-AIR,Import,Furniture and homeware
+SYNTHETIC,SYN-C0742,Synthetic Customer 0742,SME,209983155F,TRUE,US-SG-AIR,Import,Toys and games
+SYNTHETIC,SYN-C0743,Synthetic Customer 0743,Mid-size,209996184H,TRUE,SG-AU-SEA,Export,Consumer electronics
+SYNTHETIC,SYN-C0744,Synthetic Customer 0744,Large,209963191H,TRUE,SG-AU-SEA,Export,Cosmetics and personal care
+SYNTHETIC,SYN-C0745,Synthetic Customer 0745,SME,209996040T,TRUE,DE-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0746,Synthetic Customer 0746,Mid-size,209909470Y,TRUE,DE-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0747,Synthetic Customer 0747,SME,209962873F,TRUE,VN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0748,Synthetic Customer 0748,SME,209978357J,TRUE,US-SG-AIR,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0749,Synthetic Customer 0749,Mid-size,209940294P,TRUE,DE-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0750,Synthetic Customer 0750,SME,209932932W,TRUE,SG-AU-SEA,Export,Toys and games
+SYNTHETIC,SYN-C0751,Synthetic Customer 0751,SME,209934872K,TRUE,US-SG-AIR,Import,Chemicals
+SYNTHETIC,SYN-C0752,Synthetic Customer 0752,SME,209955652W,TRUE,MY-SG-ROAD,Import,Apparel and footwear
+SYNTHETIC,SYN-C0753,Synthetic Customer 0753,Mid-size,209978480F,TRUE,SG-AU-SEA,Export,Consumer electronics
+SYNTHETIC,SYN-C0754,Synthetic Customer 0754,SME,209975127D,TRUE,MY-SG-ROAD,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0755,Synthetic Customer 0755,SME,209928826S,TRUE,CN-SG-AIR,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0756,Synthetic Customer 0756,SME,209955363J,TRUE,DE-SG-AIR,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0757,Synthetic Customer 0757,SME,209915233S,TRUE,MY-SG-ROAD,Import,Chemicals
+SYNTHETIC,SYN-C0758,Synthetic Customer 0758,Mid-size,209943973B,TRUE,CN-SG-SEA,Import,Toys and games
+SYNTHETIC,SYN-C0759,Synthetic Customer 0759,SME,209951570X,TRUE,SG-AU-SEA,Export,Apparel and footwear
+SYNTHETIC,SYN-C0760,Synthetic Customer 0760,SME,209954331P,TRUE,SG-AU-SEA,Export,Packaged food and drink
+SYNTHETIC,SYN-C0761,Synthetic Customer 0761,SME,209928663Z,TRUE,DE-SG-AIR,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0762,Synthetic Customer 0762,SME,209988555E,TRUE,SG-AU-SEA,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0763,Synthetic Customer 0763,Mid-size,209910154Z,TRUE,DE-SG-AIR,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0764,Synthetic Customer 0764,SME,209941986P,TRUE,JP-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0765,Synthetic Customer 0765,Mid-size,209986135Z,TRUE,US-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0766,Synthetic Customer 0766,Large,209900274G,TRUE,CN-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0767,Synthetic Customer 0767,SME,209953502F,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0768,Synthetic Customer 0768,SME,209998087A,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0769,Synthetic Customer 0769,SME,209999034Z,TRUE,DE-SG-AIR,Import,Toys and games
+SYNTHETIC,SYN-C0770,Synthetic Customer 0770,SME,209907360S,TRUE,CN-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0771,Synthetic Customer 0771,SME,209951754R,TRUE,JP-SG-SEA,Import,Packaged food and drink
+SYNTHETIC,SYN-C0772,Synthetic Customer 0772,SME,209974879H,TRUE,MY-SG-ROAD,Import,Chemicals
+SYNTHETIC,SYN-C0773,Synthetic Customer 0773,SME,209968240X,TRUE,CN-SG-AIR,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0774,Synthetic Customer 0774,SME,209929461G,TRUE,SG-AU-SEA,Export,Consumer electronics
+SYNTHETIC,SYN-C0775,Synthetic Customer 0775,SME,209972099Y,TRUE,CN-SG-AIR,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0776,Synthetic Customer 0776,SME,209937526W,TRUE,US-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0777,Synthetic Customer 0777,Mid-size,209968602C,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0778,Synthetic Customer 0778,SME,209982739A,TRUE,MY-SG-ROAD,Import,Apparel and footwear
+SYNTHETIC,SYN-C0779,Synthetic Customer 0779,Mid-size,209990144G,TRUE,CN-SG-SEA,Import,Consumer electronics
+SYNTHETIC,SYN-C0780,Synthetic Customer 0780,SME,209949454Y,TRUE,CN-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0781,Synthetic Customer 0781,Mid-size,209938832B,TRUE,CN-SG-AIR,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0782,Synthetic Customer 0782,SME,209958108B,TRUE,US-SG-AIR,Import,Cosmetics and personal care
+SYNTHETIC,SYN-C0783,Synthetic Customer 0783,SME,209915160A,TRUE,CN-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0784,Synthetic Customer 0784,Mid-size,209924269F,TRUE,SG-AU-AIR,Export,Industrial machinery and parts
+SYNTHETIC,SYN-C0785,Synthetic Customer 0785,SME,209978694E,TRUE,US-SG-AIR,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0786,Synthetic Customer 0786,SME,209923966K,TRUE,DE-SG-AIR,Import,Consumer electronics
+SYNTHETIC,SYN-C0787,Synthetic Customer 0787,Mid-size,209914978J,TRUE,CN-SG-SEA,Import,Toys and games
+SYNTHETIC,SYN-C0788,Synthetic Customer 0788,SME,209923980H,TRUE,SG-AU-AIR,Export,Packaged food and drink
+SYNTHETIC,SYN-C0789,Synthetic Customer 0789,Mid-size,209944978T,FALSE,CN-SG-SEA,Import,Industrial machinery and parts
+SYNTHETIC,SYN-C0790,Synthetic Customer 0790,Large,209922510H,TRUE,US-SG-AIR,Import,Furniture and homeware
+SYNTHETIC,SYN-C0791,Synthetic Customer 0791,SME,209925109B,TRUE,SG-AU-SEA,Export,Consumer electronics
+SYNTHETIC,SYN-C0792,Synthetic Customer 0792,Mid-size,209963930T,TRUE,DE-SG-AIR,Import,Packaged food and drink
+SYNTHETIC,SYN-C0793,Synthetic Customer 0793,Mid-size,209940827E,TRUE,SG-AU-SEA,Export,Chemicals
+SYNTHETIC,SYN-C0794,Synthetic Customer 0794,SME,209929521F,TRUE,SG-AU-SEA,Export,Cosmetics and personal care
+SYNTHETIC,SYN-C0795,Synthetic Customer 0795,SME,209902613K,TRUE,CN-SG-SEA,Import,Furniture and homeware
+SYNTHETIC,SYN-C0796,Synthetic Customer 0796,SME,209951133H,TRUE,SG-AU-SEA,Export,Cosmetics and personal care
+SYNTHETIC,SYN-C0797,Synthetic Customer 0797,SME,209916836U,TRUE,MY-SG-ROAD,Import,Consumer electronics
+SYNTHETIC,SYN-C0798,Synthetic Customer 0798,SME,209992984T,TRUE,CN-SG-AIR,Import,Pharmaceutical and medical
+SYNTHETIC,SYN-C0799,Synthetic Customer 0799,Mid-size,209972274E,TRUE,JP-SG-SEA,Import,Apparel and footwear
+SYNTHETIC,SYN-C0800,Synthetic Customer 0800,SME,209929403T,TRUE,SG-AU-SEA,Export,Consumer electronics

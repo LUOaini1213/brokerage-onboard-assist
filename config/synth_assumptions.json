@@ -1,0 +1,140 @@
+{
+  "_about": "Every parameter of the SYNTHETIC data generator (src/boa/synth.py). None of these numbers is estimated from real customs or customer data: each is an ASSUMPTION chosen to give a plausible-looking demo, or ILLUSTRATIVE (a stand-in for a real-world quantity such as an exchange rate). docs/assumptions.md is generated from this file. Changing a value changes every result.",
+  "seed": {"value": 20261115, "label": "ASSUMPTION", "about": "Seed of numpy.random.default_rng for the whole generator."},
+  "n_customers": {"value": 800, "label": "ASSUMPTION", "about": "Number of new customers whose enrolment requests are generated."},
+  "enrolment_window": {"value": ["2026-03-02", "2026-08-28"], "label": "ASSUMPTION", "about": "Enrolment requests are submitted on uniformly drawn weekdays in this window."},
+  "as_of_date": {"value": "2026-10-30", "label": "ASSUMPTION", "about": "Snapshot date. Events after it are not generated; open actions are judged overdue against it."},
+  "segment_mix": {"value": {"SME": 0.6, "Mid-size": 0.3, "Large": 0.1}, "label": "ASSUMPTION", "about": "Share of customers by size segment."},
+  "segment_defect_multiplier": {"value": {"SME": 1.4, "Mid-size": 1.0, "Large": 0.6}, "label": "ASSUMPTION", "about": "Multiplier on every enrolment and document defect probability, by segment."},
+  "segment_response_multiplier": {"value": {"SME": 1.2, "Mid-size": 1.0, "Large": 0.85}, "label": "ASSUMPTION", "about": "Multiplier on hold release times (how fast the customer supplies what is missing)."},
+  "lanes": {
+    "value": [
+      {"lane_id": "CN-SG-SEA", "origin": "CN", "destination": "SG", "mode": "Sea", "direction": "Import", "weight": 0.24, "transit_days": [7, 12]},
+      {"lane_id": "CN-SG-AIR", "origin": "CN", "destination": "SG", "mode": "Air", "direction": "Import", "weight": 0.08, "transit_days": [1, 3]},
+      {"lane_id": "US-SG-AIR", "origin": "US", "destination": "SG", "mode": "Air", "direction": "Import", "weight": 0.11, "transit_days": [2, 4]},
+      {"lane_id": "DE-SG-AIR", "origin": "DE", "destination": "SG", "mode": "Air", "direction": "Import", "weight": 0.08, "transit_days": [2, 4]},
+      {"lane_id": "JP-SG-SEA", "origin": "JP", "destination": "SG", "mode": "Sea", "direction": "Import", "weight": 0.06, "transit_days": [8, 13]},
+      {"lane_id": "VN-SG-SEA", "origin": "VN", "destination": "SG", "mode": "Sea", "direction": "Import", "weight": 0.07, "transit_days": [3, 6]},
+      {"lane_id": "MY-SG-ROAD", "origin": "MY", "destination": "SG", "mode": "Road", "direction": "Import", "weight": 0.12, "transit_days": [1, 2]},
+      {"lane_id": "SG-AU-SEA", "origin": "SG", "destination": "AU", "mode": "Sea", "direction": "Export", "weight": 0.13, "transit_days": [9, 14]},
+      {"lane_id": "SG-AU-AIR", "origin": "SG", "destination": "AU", "mode": "Air", "direction": "Export", "weight": 0.11, "transit_days": [1, 2]}
+    ],
+    "label": "ILLUSTRATIVE",
+    "about": "Trade lanes (country pair and mode), their share of customers' primary lanes and a uniform transit-time range in days. Country codes are real ISO 3166 codes; the shares and transit times are invented."
+  },
+  "p_primary_lane": {"value": 0.8, "label": "ASSUMPTION", "about": "Probability that a shipment uses the customer's primary lane; otherwise another lane with the same direction is drawn by weight."},
+  "commodities": {
+    "value": [
+      {"group": "Consumer electronics", "weight": 0.18, "hs6": ["851713", "847130", "852872", "851830", "850760", "851762"], "unit_price": [40, 900], "unit": "PCE", "kg_per_unit": [0.2, 3.0]},
+      {"group": "Apparel and footwear", "weight": 0.14, "hs6": ["610910", "620342", "640411", "611030"], "unit_price": [4, 60], "unit": "PCE", "kg_per_unit": [0.2, 1.0]},
+      {"group": "Packaged food and drink", "weight": 0.13, "hs6": ["190531", "210690", "200899", "220421", "090121", "160414"], "unit_price": [2, 40], "unit": "KGM", "kg_per_unit": [1.0, 1.2]},
+      {"group": "Cosmetics and personal care", "weight": 0.09, "hs6": ["330499", "330510", "330420", "340111"], "unit_price": [3, 45], "unit": "PCE", "kg_per_unit": [0.1, 0.6]},
+      {"group": "Pharmaceutical and medical", "weight": 0.07, "hs6": ["300490", "300420", "901890", "901839"], "unit_price": [5, 300], "unit": "PCE", "kg_per_unit": [0.05, 2.0]},
+      {"group": "Industrial machinery and parts", "weight": 0.13, "hs6": ["847989", "848180", "841391", "850440"], "unit_price": [60, 4000], "unit": "PCE", "kg_per_unit": [1.0, 80.0]},
+      {"group": "Chemicals", "weight": 0.07, "hs6": ["380891", "290511", "340290", "320890"], "unit_price": [2, 25], "unit": "KGM", "kg_per_unit": [1.0, 1.1]},
+      {"group": "Furniture and homeware", "weight": 0.08, "hs6": ["940360", "940171", "691110"], "unit_price": [10, 400], "unit": "PCE", "kg_per_unit": [0.5, 40.0]},
+      {"group": "Auto parts and tyres", "weight": 0.07, "hs6": ["870899", "870830", "401110"], "unit_price": [8, 300], "unit": "PCE", "kg_per_unit": [0.5, 12.0]},
+      {"group": "Toys and games", "weight": 0.04, "hs6": ["950300", "950450"], "unit_price": [3, 350], "unit": "PCE", "kg_per_unit": [0.2, 4.0]}
+    ],
+    "label": "ILLUSTRATIVE",
+    "about": "Commodity groups, their share of customers, the HS 2022 subheadings (real codes) a customer of that group trades, and invented unit-price (in the invoice currency) and weight ranges. National 7th-8th digits are drawn from national_suffixes."
+  },
+  "product_descriptions": {
+    "value": {
+      "851713": "smartphones", "847130": "laptop computers", "852872": "LED televisions", "851830": "headphones",
+      "850760": "lithium-ion battery packs", "851762": "network routers", "610910": "cotton T-shirts",
+      "620342": "cotton trousers", "640411": "sports shoes", "611030": "synthetic knit sweaters",
+      "190531": "sweet biscuits", "210690": "food supplement powder", "200899": "dried fruit snacks",
+      "220421": "bottled wine", "090121": "roasted coffee beans", "160414": "canned tuna",
+      "330499": "skin-care cream", "330510": "shampoo", "330420": "eye make-up", "340111": "toilet soap",
+      "300490": "packaged medicines", "300420": "antibiotic tablets", "901890": "medical instruments",
+      "901839": "syringe needles", "847989": "industrial mixers", "848180": "industrial valves",
+      "841391": "pump parts", "850440": "power converters", "380891": "insecticide spray", "290511": "methanol",
+      "340290": "cleaning preparations", "320890": "polymer paint", "940360": "wooden furniture",
+      "940171": "metal-frame seats", "691110": "porcelain tableware", "870899": "vehicle parts",
+      "870830": "brake parts", "401110": "car tyres", "950300": "toys", "950450": "game consoles"
+    },
+    "label": "ILLUSTRATIVE",
+    "about": "Plain-language product names used on synthetic invoices and in hold notes (this project's own wording, not the HS nomenclature text)."
+  },
+  "national_suffixes": {"value": ["00", "10", "90"], "label": "ILLUSTRATIVE", "about": "Two digits appended to an HS 6-digit code to make an 8-digit code. Invented: the STCCED national split is not used, so these may not be real AHTN codes."},
+  "outdated_or_malformed_hs": {"value": ["85171200", "94054000", "30022000", "8517130", "851713000"], "label": "ILLUSTRATIVE", "about": "Codes used for the hs_invalid defect: three HS 2017 subheadings that no longer exist in HS 2022 (8517.12, 9405.40, 3002.20) with two zeros appended, a 7-digit code and a 9-digit code."},
+  "product_origin": {"value": {"p_same_as_export_country": 0.85, "other_import_origins": ["TH", "VN", "MY", "IN", "KR", "ID"], "p_singapore_made_export": 0.4, "export_origins": ["CN", "MY", "JP", "DE", "US", "VN"]}, "label": "ASSUMPTION", "about": "Country of manufacture on the product master: for imports usually the export country, otherwise one of other_import_origins; for exports from Singapore, Singapore-made with probability p_singapore_made_export, otherwise one of export_origins."},
+  "p_licence_before_first_shipment": {"value": 0.5, "label": "ASSUMPTION", "about": "Probability that a licence missing at enrolment is obtained before the first shipment (otherwise it is obtained only after a CA_APPROVAL hold, when that hold's corrective action closes)."},
+  "shipment_cutoff_days_before_as_of": {"value": 14, "label": "ASSUMPTION", "about": "No shipment arrives later than this many days before the snapshot date, so almost every shipment is released by then."},
+  "products_per_customer": {"value": [2, 5], "label": "ASSUMPTION", "about": "Uniform range of products (HS codes) on a customer's product list."},
+  "lines_per_invoice": {"value": [1, 4], "label": "ASSUMPTION", "about": "Uniform range of invoice lines per shipment."},
+  "quantity_per_line": {"value": [10, 2000], "label": "ASSUMPTION", "about": "Log-uniform range of the quantity on one invoice line."},
+  "incoterm_mix": {"value": {"FOB": 0.32, "CIF": 0.18, "EXW": 0.12, "FCA": 0.1, "CFR": 0.1, "DAP": 0.12, "DDP": 0.06}, "label": "ASSUMPTION", "about": "Incoterms 2020 rule on the commercial invoice."},
+  "p_charges_known": {"value": 0.7, "label": "ASSUMPTION", "about": "Singapore imports only: probability that the actual freight and insurance (or, for CFR, the insurance) are on file when a flat rate could stand in for them (FOB from a country in the flat-rate table, or CFR). For every other term that needs charges they are always on file, and for exports to Australia freight and insurance are always shown."},
+  "freight_share_of_value": {"value": {"Sea": [0.03, 0.08], "Air": [0.06, 0.16], "Road": [0.01, 0.04]}, "label": "ASSUMPTION", "about": "Uniform range of actual freight as a share of the goods value, by mode."},
+  "insurance_share_of_value": {"value": [0.002, 0.006], "label": "ASSUMPTION", "about": "Uniform range of actual insurance as a share of the goods value."},
+  "inland_share_of_value": {"value": [0.005, 0.02], "label": "ASSUMPTION", "about": "Uniform range of inland transport and export handling (EXW) as a share of the goods value."},
+  "currency_by_origin": {"value": {"CN": ["USD", "CNY"], "US": ["USD"], "DE": ["EUR", "USD"], "JP": ["JPY", "USD"], "VN": ["USD"], "MY": ["MYR", "SGD"], "SG": ["SGD", "AUD", "USD"]}, "label": "ASSUMPTION", "about": "Invoice currency, drawn uniformly from the list for the export country."},
+  "fx_to_sgd": {"value": {"SGD": 1.0, "USD": 1.3, "CNY": 0.18, "EUR": 1.45, "JPY": 0.0088, "MYR": 0.3, "AUD": 0.86}, "label": "ILLUSTRATIVE", "about": "Fixed SGD per unit of currency. NOT the MAS weekly average rates that SG-IMP-10 requires; one fixed rate is used for the whole period."},
+  "fx_sgd_to_aud": {"value": 1.16, "label": "ILLUSTRATIVE", "about": "Fixed AUD per SGD for the Australian value checks."},
+  "p_preference_claimed": {"value": {"SG_dutiable": 0.5, "AU_export": 0.45}, "label": "ASSUMPTION", "about": "Probability that FTA preference is claimed: on Singapore imports of dutiable lines (wine in this data), and on exports to Australia."},
+  "funnel": {
+    "value": {"p_docs_received": 0.93, "days_to_docs": [1, 10], "p_fix_after_findings": 0.75, "days_to_fix": [3, 18], "days_to_validate": [1, 4], "p_profile": 0.97, "days_to_profile": [1, 4], "p_ships": 0.92, "days_to_first_shipment": [7, 40], "days_between_shipments": [10, 35]},
+    "label": "ASSUMPTION",
+    "about": "Onboarding funnel: probability of each step and uniform delays in days. An enrolment with blocking validator findings is fixed with probability p_fix_after_findings, otherwise it stalls at 'Documents received'."
+  },
+  "enrolment_defects": {
+    "value": {"uen_missing": 0.03, "uen_malformed": 0.04, "customs_account_inactive": 0.1, "sample_invoice_no_incoterm": 0.12, "product_hs_invalid": 0.05, "licence_missing_if_controlled": 0.4},
+    "label": "ASSUMPTION",
+    "about": "Probability of each defect in the enrolment bundle (before the segment multiplier). licence_missing_if_controlled applies per competent authority to customers whose products are screened as controlled."
+  },
+  "shipment_defects": {
+    "value": {
+      "invoice_field_missing": 0.1, "incoterm_missing": 0.05, "charges_not_added": 0.1, "value_typo": 0.04,
+      "hs_invalid": 0.025, "hs_misclassified": 0.05, "licence_missing_if_controlled": 0.06, "co_missing_if_preference": 0.3,
+      "origin_as_loading_country": 0.03, "quantity_mismatch": 0.04, "weight_mismatch": 0.04, "permit_late": 0.025,
+      "importer_uen_mismatch": 0.02, "packing_list_missing": 0.03, "transport_doc_missing": 0.02, "au_bicon_not_checked_if_screened": 0.35,
+      "au_abn_missing": 0.12
+    },
+    "label": "ASSUMPTION",
+    "about": "Probability of each latent defect on shipment 1 (before multipliers). licence_missing_if_controlled is the chance of a missing or wrong licence reference when the licence was obtained at enrolment; without a licence on file every screened line is a defect."
+  },
+  "sequence_multiplier": {"value": [1.0, 0.8, 0.65], "label": "ASSUMPTION", "about": "Multiplier on shipment defect probabilities for shipments 1, 2 and 3 (customers and suppliers learn the routine)."},
+  "recurrence_multiplier_after_action": {"value": 0.3, "label": "ASSUMPTION", "about": "Multiplier on a defect's probability in later shipments once a corrective action for a hold with that reason was closed before the shipment arrived."},
+  "p_hold_given_defect": {
+    "value": {"PERMIT_TIMING": 0.9, "PARTY_UEN": 0.8, "HS_INVALID": 0.85, "HS_QUERY": 0.55, "VALUE_CIF": 0.5, "INVOICE_DATA": 0.45, "CA_APPROVAL": 0.9, "ORIGIN_DOCS": 0.6, "DOC_MISMATCH": 0.3, "BIOSECURITY": 0.7},
+    "label": "ASSUMPTION",
+    "about": "Probability that a latent defect leads to a hold with that reason code."
+  },
+  "p_random_inspection": {"value": 0.02, "label": "ASSUMPTION", "about": "Probability of an INSPECTION hold on a shipment, independent of its documents."},
+  "max_holds_per_shipment": {"value": 2, "label": "ASSUMPTION", "about": "At most this many holds are recorded per shipment (the two with the longest expected release time)."},
+  "release_hours": {
+    "value": {"PERMIT_TIMING": [6, 0.6], "PARTY_UEN": [10, 0.6], "HS_INVALID": [8, 0.5], "HS_QUERY": [30, 0.7], "VALUE_CIF": [16, 0.7], "INVOICE_DATA": [12, 0.6], "CA_APPROVAL": [60, 0.6], "ORIGIN_DOCS": [28, 0.7], "DOC_MISMATCH": [14, 0.6], "INSPECTION": [20, 0.5], "BIOSECURITY": [48, 0.6]},
+    "label": "ASSUMPTION",
+    "about": "Hours from hold to release: lognormal with [median, sigma of log] per reason, before mode, destination and segment multipliers."
+  },
+  "release_mode_multiplier": {"value": {"Air": 0.8, "Sea": 1.1, "Road": 0.7}, "label": "ASSUMPTION", "about": "Multiplier on release hours by mode."},
+  "release_destination_multiplier": {"value": {"SG": 1.0, "AU": 1.25}, "label": "ASSUMPTION", "about": "Multiplier on release hours by destination country."},
+  "base_clearance_hours": {"value": {"Air": [5, 0.5], "Sea": [22, 0.45], "Road": [2.5, 0.5]}, "label": "ASSUMPTION", "about": "Hours from arrival to release for a shipment without a hold: lognormal [median, sigma of log] by mode."},
+  "hold_start_hours_after_arrival": {"value": [0.5, 6], "label": "ASSUMPTION", "about": "Uniform range of hours between arrival and the start of a hold."},
+  "permit_hours_before_arrival": {"value": [6, 96], "label": "ASSUMPTION", "about": "Uniform range of hours by which the permit precedes arrival (import) or departure (export); a 'permit_late' defect instead puts it 1-30 hours after."},
+  "action_types": {
+    "value": {
+      "PERMIT_TIMING": ["Apply for permit before arrival", "Add permit timing to handling note"],
+      "PARTY_UEN": ["Amend or re-apply permit with correct importer", "Correct customer master data"],
+      "HS_INVALID": ["Correct HS code and amend permit", "Update product master"],
+      "HS_QUERY": ["Provide product literature to Customs", "Consider classification ruling"],
+      "VALUE_CIF": ["Recompute CIF and amend permit", "Request freight and insurance invoices"],
+      "INVOICE_DATA": ["Request corrected commercial invoice", "Add field to invoice checklist"],
+      "CA_APPROVAL": ["Obtain competent-authority licence", "Record licence number in handling note"],
+      "ORIGIN_DOCS": ["Obtain certificate of origin", "Correct origin field"],
+      "DOC_MISMATCH": ["Reconcile invoice, packing list and BL/AWB", "Request corrected packing list"],
+      "INSPECTION": ["Arrange inspection"],
+      "BIOSECURITY": ["Check BICON and obtain permit or treatment certificate"]
+    },
+    "label": "ASSUMPTION",
+    "about": "Corrective actions logged for a hold of each reason: the first is always logged, the second with probability p_second_action. Wording follows rules/hold_reasons.csv."
+  },
+  "p_second_action": {"value": 0.6, "label": "ASSUMPTION", "about": "Probability that a hold also gets the second corrective action of its reason."},
+  "action_owner_roles": {"value": ["Onboarding analyst", "Customs declarant", "Customer"], "label": "ASSUMPTION", "about": "Roles an action can be assigned to (no person names); the first role owns every optional second action of a hold."},
+  "action_owner_by_reason": {"value": {"PERMIT_TIMING": "Customs declarant", "PARTY_UEN": "Customs declarant", "HS_INVALID": "Customs declarant", "HS_QUERY": "Customs declarant", "VALUE_CIF": "Customs declarant", "INVOICE_DATA": "Customer", "CA_APPROVAL": "Customer", "ORIGIN_DOCS": "Customer", "DOC_MISMATCH": "Customer", "INSPECTION": "Onboarding analyst", "BIOSECURITY": "Customer"}, "label": "ASSUMPTION", "about": "Owner role of the first corrective action of a hold, by reason; the optional second action is always owned by the onboarding analyst."},
+  "action_sla_days": {"value": 4, "label": "ASSUMPTION", "about": "Calendar days from opening to the due date of every action."},
+  "action_close_days": {"value": [2.0, 0.8], "label": "ASSUMPTION", "about": "Days from opening to closing: lognormal [median, sigma of log]."},
+  "note_noise": {"value": {"p_abbreviate": 0.35, "p_typo": 0.15, "p_reference": 0.5, "p_distractor": 0.12, "p_lowercase": 0.2}, "label": "ASSUMPTION", "about": "Free-text hold note noise: abbreviations (inv, pkg list, frt), one character swap, an appended reference, a sentence mentioning another document in passing, all-lowercase text."}
+}
