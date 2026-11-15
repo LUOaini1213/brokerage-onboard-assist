@@ -1,0 +1,91 @@
+/// SYNTHETIC holds on first-three shipments: reason code, hold date, hours to release and the free-text note.
+table FactHold
+
+	/// Hold events.
+	measure 'Holds' = COUNTROWS(FactHold)
+		formatString: #,##0
+
+	/// Share of all holds (any reason) in the other filters.
+	measure 'Hold Share %' = DIVIDE([Holds], CALCULATE([Holds], REMOVEFILTERS(DimReason)))
+		formatString: 0.0%
+
+	/// Cumulative share of holds up to this reason, reasons ordered by holds (descending) then code.
+	measure 'Hold Pareto Cumulative %' =
+			VAR curCode = SELECTEDVALUE(DimReason[ReasonCode])
+			VAR cur = [Holds]
+			VAR total = CALCULATE([Holds], REMOVEFILTERS(DimReason))
+			VAR cum = SUMX(FILTER(ALL(DimReason), VAR n = [Holds] RETURN n > cur || (n = cur && DimReason[ReasonCode] <= curCode)), [Holds])
+			RETURN IF(ISBLANK(curCode) || ISBLANK(cur), BLANK(), DIVIDE(cum, total))
+		formatString: 0.0%
+
+	/// Median hours from hold to release (open holds excluded).
+	measure 'Median Hours to Release' = MEDIAN(FactHold[HoursToRelease])
+		formatString: 0.0
+
+	/// 90th percentile of hours from hold to release.
+	measure 'P90 Hours to Release' = PERCENTILE.INC(FactHold[HoursToRelease], 0.9)
+		formatString: 0.0
+
+	column HoldId
+		dataType: string
+		summarizeBy: none
+		sourceColumn: HoldId
+
+	column ShipmentId
+		dataType: string
+		summarizeBy: none
+		sourceColumn: ShipmentId
+
+	column CustomerId
+		dataType: string
+		isHidden
+		summarizeBy: none
+		sourceColumn: CustomerId
+
+	column LaneId
+		dataType: string
+		isHidden
+		summarizeBy: none
+		sourceColumn: LaneId
+
+	column ReasonCode
+		dataType: string
+		isHidden
+		summarizeBy: none
+		sourceColumn: ReasonCode
+
+	column HoldDate
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-mm-dd
+		summarizeBy: none
+		sourceColumn: HoldDate
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column HoursToRelease
+		dataType: double
+		isHidden
+		formatString: 0.0
+		summarizeBy: none
+		sourceColumn: HoursToRelease
+
+	column Note
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Note
+
+	partition FactHold = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(
+						if Text.StartsWith(DataFolder, "http") then Web.Contents(DataFolder & "fact_hold.csv") else File.Contents(DataFolder & "fact_hold.csv"),
+						[Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+					),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					Typed = Table.TransformColumnTypes(Promoted, {{"HoldId", type text}, {"ShipmentId", type text}, {"CustomerId", type text}, {"LaneId", type text}, {"ReasonCode", type text}, {"HoldDate", type date}, {"HoursToRelease", type number}, {"Note", type text}}, "en-US")
+				in
+					Typed
+
+	annotation PBI_ResultType = Table

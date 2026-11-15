@@ -1,0 +1,115 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "al_cards",
+  "position": {
+    "x": 20,
+    "y": 90,
+    "z": 2000,
+    "height": 110,
+    "width": 1240,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction"
+                    }
+                  },
+                  "Property": "Actions"
+                }
+              },
+              "queryRef": "FactAction.Actions",
+              "nativeQueryRef": "Actions"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction"
+                    }
+                  },
+                  "Property": "Open Actions"
+                }
+              },
+              "queryRef": "FactAction.Open Actions",
+              "nativeQueryRef": "Open Actions"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction"
+                    }
+                  },
+                  "Property": "Overdue Actions"
+                }
+              },
+              "queryRef": "FactAction.Overdue Actions",
+              "nativeQueryRef": "Overdue Actions"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction"
+                    }
+                  },
+                  "Property": "Avg Days to Close"
+                }
+              },
+              "queryRef": "FactAction.Avg Days to Close",
+              "nativeQueryRef": "Avg Days to Close"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction"
+                    }
+                  },
+                  "Property": "Closed On Time %"
+                }
+              },
+              "queryRef": "FactAction.Closed On Time %",
+              "nativeQueryRef": "Closed On Time %"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Actions'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

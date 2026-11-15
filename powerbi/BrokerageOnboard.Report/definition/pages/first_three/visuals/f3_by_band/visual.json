@@ -1,0 +1,147 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "f3_by_band",
+  "position": {
+    "x": 860,
+    "y": 220,
+    "z": 5000,
+    "height": 480,
+    "width": 400,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactShipment"
+                    }
+                  },
+                  "Property": "ReadinessBand"
+                }
+              },
+              "queryRef": "FactShipment.ReadinessBand",
+              "nativeQueryRef": "ReadinessBand"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactShipment"
+                    }
+                  },
+                  "Property": "First-3 Shipments"
+                }
+              },
+              "queryRef": "FactShipment.First-3 Shipments",
+              "nativeQueryRef": "First-3 Shipments"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactShipment"
+                    }
+                  },
+                  "Property": "Held Shipments"
+                }
+              },
+              "queryRef": "FactShipment.Held Shipments",
+              "nativeQueryRef": "Held Shipments"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactShipment"
+                    }
+                  },
+                  "Property": "First-3 Hold Rate %"
+                }
+              },
+              "queryRef": "FactShipment.First-3 Hold Rate %",
+              "nativeQueryRef": "First-3 Hold Rate %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactShipment"
+                    }
+                  },
+                  "Property": "Customers Shipping"
+                }
+              },
+              "queryRef": "FactShipment.Customers Shipping",
+              "nativeQueryRef": "Customers Shipping"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactShipment"
+                    }
+                  },
+                  "Property": "Customers With a Hold"
+                }
+              },
+              "queryRef": "FactShipment.Customers With a Hold",
+              "nativeQueryRef": "Customers With a Hold"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FactShipment"
+                  }
+                },
+                "Property": "First-3 Shipments"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Hold rate by readiness band'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

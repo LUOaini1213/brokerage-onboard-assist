@@ -1,0 +1,687 @@
+{
+  "tomVersion": "19.117.0",
+  "compatibilityLevel": 1601,
+  "culture": "en-US",
+  "expressions": [
+    {
+      "name": "DataFolder",
+      "kind": "M",
+      "expression": "\"https://raw.githubusercontent.com/LUOaini1213/brokerage-onboard-assist/main/powerbi/data/\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+    }
+  ],
+  "tables": {
+    "DimDate": {
+      "dataCategory": "Time",
+      "columns": {
+        "Date": {
+          "dataType": "DateTime",
+          "sourceColumn": "Date",
+          "isKey": true,
+          "isHidden": false
+        },
+        "Year": {
+          "dataType": "Int64",
+          "sourceColumn": "Year",
+          "isKey": false,
+          "isHidden": false
+        },
+        "MonthNumber": {
+          "dataType": "Int64",
+          "sourceColumn": "MonthNumber",
+          "isKey": false,
+          "isHidden": true
+        },
+        "MonthName": {
+          "dataType": "String",
+          "sourceColumn": "MonthName",
+          "isKey": false,
+          "isHidden": false
+        },
+        "YearMonth": {
+          "dataType": "String",
+          "sourceColumn": "YearMonth",
+          "isKey": false,
+          "isHidden": false
+        },
+        "IsoWeekday": {
+          "dataType": "Int64",
+          "sourceColumn": "IsoWeekday",
+          "isKey": false,
+          "isHidden": true
+        },
+        "DayName": {
+          "dataType": "String",
+          "sourceColumn": "DayName",
+          "isKey": false,
+          "isHidden": false
+        }
+      },
+      "measures": {},
+      "partitionSources": [
+        "let\n\tSource = Csv.Document(\n\t\tif Text.StartsWith(DataFolder, \"http\") then Web.Contents(DataFolder & \"dim_date.csv\") else File.Contents(DataFolder & \"dim_date.csv\"),\n\t\t[Delimiter = \",\", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]\n\t),\n\tPromoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),\n\tTyped = Table.TransformColumnTypes(Promoted, {{\"Date\", type date}, {\"Year\", Int64.Type}, {\"MonthNumber\", Int64.Type}, {\"MonthName\", type text}, {\"YearMonth\", type text}, {\"IsoWeekday\", Int64.Type}, {\"DayName\", type text}}, \"en-US\")\nin\n\tTyped"
+      ]
+    },
+    "DimCustomer": {
+      "dataCategory": "",
+      "columns": {
+        "CustomerId": {
+          "dataType": "String",
+          "sourceColumn": "CustomerId",
+          "isKey": true,
+          "isHidden": false
+        },
+        "CustomerName": {
+          "dataType": "String",
+          "sourceColumn": "CustomerName",
+          "isKey": false,
+          "isHidden": false
+        },
+        "Segment": {
+          "dataType": "String",
+          "sourceColumn": "Segment",
+          "isKey": false,
+          "isHidden": false
+        },
+        "PrimaryLaneId": {
+          "dataType": "String",
+          "sourceColumn": "PrimaryLaneId",
+          "isKey": false,
+          "isHidden": false
+        },
+        "TradeDirection": {
+          "dataType": "String",
+          "sourceColumn": "TradeDirection",
+          "isKey": false,
+          "isHidden": false
+        },
+        "CommodityGroup": {
+          "dataType": "String",
+          "sourceColumn": "CommodityGroup",
+          "isKey": false,
+          "isHidden": false
+        }
+      },
+      "measures": {},
+      "partitionSources": [
+        "let\n\tSource = Csv.Document(\n\t\tif Text.StartsWith(DataFolder, \"http\") then Web.Contents(DataFolder & \"dim_customer.csv\") else File.Contents(DataFolder & \"dim_customer.csv\"),\n\t\t[Delimiter = \",\", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]\n\t),\n\tPromoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),\n\tTyped = Table.TransformColumnTypes(Promoted, {{\"CustomerId\", type text}, {\"CustomerName\", type text}, {\"Segment\", type text}, {\"PrimaryLaneId\", type text}, {\"TradeDirection\", type text}, {\"CommodityGroup\", type text}}, \"en-US\")\nin\n\tTyped"
+      ]
+    },
+    "DimLane": {
+      "dataCategory": "",
+      "columns": {
+        "LaneId": {
+          "dataType": "String",
+          "sourceColumn": "LaneId",
+          "isKey": true,
+          "isHidden": false
+        },
+        "LaneName": {
+          "dataType": "String",
+          "sourceColumn": "LaneName",
+          "isKey": false,
+          "isHidden": false
+        },
+        "Origin": {
+          "dataType": "String",
+          "sourceColumn": "Origin",
+          "isKey": false,
+          "isHidden": false
+        },
+        "Destination": {
+          "dataType": "String",
+          "sourceColumn": "Destination",
+          "isKey": false,
+          "isHidden": false
+        },
+        "Mode": {
+          "dataType": "String",
+          "sourceColumn": "Mode",
+          "isKey": false,
+          "isHidden": false
+        },
+        "Direction": {
+          "dataType": "String",
+          "sourceColumn": "Direction",
+          "isKey": false,
+          "isHidden": false
+        }
+      },
+      "measures": {},
+      "partitionSources": [
+        "let\n\tSource = Csv.Document(\n\t\tif Text.StartsWith(DataFolder, \"http\") then Web.Contents(DataFolder & \"dim_lane.csv\") else File.Contents(DataFolder & \"dim_lane.csv\"),\n\t\t[Delimiter = \",\", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]\n\t),\n\tPromoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),\n\tTyped = Table.TransformColumnTypes(Promoted, {{\"LaneId\", type text}, {\"LaneName\", type text}, {\"Origin\", type text}, {\"Destination\", type text}, {\"Mode\", type text}, {\"Direction\", type text}}, \"en-US\")\nin\n\tTyped"
+      ]
+    },
+    "DimReason": {
+      "dataCategory": "",
+      "columns": {
+        "ReasonCode": {
+          "dataType": "String",
+          "sourceColumn": "ReasonCode",
+          "isKey": true,
+          "isHidden": false
+        },
+        "ReasonLabel": {
+          "dataType": "String",
+          "sourceColumn": "ReasonLabel",
+          "isKey": false,
+          "isHidden": false
+        },
+        "Category": {
+          "dataType": "String",
+          "sourceColumn": "Category",
+          "isKey": false,
+          "isHidden": false
+        },
+        "DetectableBeforeLodgement": {
+          "dataType": "String",
+          "sourceColumn": "DetectableBeforeLodgement",
+          "isKey": false,
+          "isHidden": false
+        }
+      },
+      "measures": {},
+      "partitionSources": [
+        "let\n\tSource = Csv.Document(\n\t\tif Text.StartsWith(DataFolder, \"http\") then Web.Contents(DataFolder & \"dim_reason.csv\") else File.Contents(DataFolder & \"dim_reason.csv\"),\n\t\t[Delimiter = \",\", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]\n\t),\n\tPromoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),\n\tTyped = Table.TransformColumnTypes(Promoted, {{\"ReasonCode\", type text}, {\"ReasonLabel\", type text}, {\"Category\", type text}, {\"DetectableBeforeLodgement\", type text}}, \"en-US\")\nin\n\tTyped"
+      ]
+    },
+    "DimStage": {
+      "dataCategory": "",
+      "columns": {
+        "StageOrder": {
+          "dataType": "Int64",
+          "sourceColumn": "StageOrder",
+          "isKey": true,
+          "isHidden": false
+        },
+        "Stage": {
+          "dataType": "String",
+          "sourceColumn": "Stage",
+          "isKey": false,
+          "isHidden": false
+        }
+      },
+      "measures": {},
+      "partitionSources": [
+        "let\n\tSource = Csv.Document(\n\t\tif Text.StartsWith(DataFolder, \"http\") then Web.Contents(DataFolder & \"dim_stage.csv\") else File.Contents(DataFolder & \"dim_stage.csv\"),\n\t\t[Delimiter = \",\", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]\n\t),\n\tPromoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),\n\tTyped = Table.TransformColumnTypes(Promoted, {{\"StageOrder\", Int64.Type}, {\"Stage\", type text}}, \"en-US\")\nin\n\tTyped"
+      ]
+    },
+    "FactEnrolmentStage": {
+      "dataCategory": "",
+      "columns": {
+        "EnrolmentId": {
+          "dataType": "String",
+          "sourceColumn": "EnrolmentId",
+          "isKey": false,
+          "isHidden": false
+        },
+        "CustomerId": {
+          "dataType": "String",
+          "sourceColumn": "CustomerId",
+          "isKey": false,
+          "isHidden": true
+        },
+        "StageOrder": {
+          "dataType": "Int64",
+          "sourceColumn": "StageOrder",
+          "isKey": false,
+          "isHidden": true
+        },
+        "ReachedDate": {
+          "dataType": "DateTime",
+          "sourceColumn": "ReachedDate",
+          "isKey": false,
+          "isHidden": true
+        },
+        "DaysFromSubmission": {
+          "dataType": "Int64",
+          "sourceColumn": "DaysFromSubmission",
+          "isKey": false,
+          "isHidden": true
+        }
+      },
+      "measures": {
+        "Enrolments at Stage": {
+          "expression": "COUNTROWS(FactEnrolmentStage)",
+          "formatString": "#,##0"
+        },
+        "Enrolments Submitted": {
+          "expression": "CALCULATE([Enrolments at Stage], REMOVEFILTERS(DimStage), DimStage[StageOrder] = 1)",
+          "formatString": "#,##0"
+        },
+        "Profiles Created": {
+          "expression": "CALCULATE([Enrolments at Stage], REMOVEFILTERS(DimStage), DimStage[StageOrder] = 4)",
+          "formatString": "#,##0"
+        },
+        "Three Shipments Completed": {
+          "expression": "CALCULATE([Enrolments at Stage], REMOVEFILTERS(DimStage), DimStage[StageOrder] = 6)",
+          "formatString": "#,##0"
+        },
+        "Stage Conversion %": {
+          "expression": "DIVIDE([Enrolments at Stage], [Enrolments Submitted])",
+          "formatString": "0.0%"
+        },
+        "Step Conversion %": {
+          "expression": "VAR s = SELECTEDVALUE(DimStage[StageOrder])\nVAR prev = CALCULATE([Enrolments at Stage], REMOVEFILTERS(DimStage), DimStage[StageOrder] = s - 1)\nRETURN IF(ISBLANK(s) || s = 1, BLANK(), DIVIDE([Enrolments at Stage], prev))",
+          "formatString": "0.0%"
+        },
+        "Median Days to Stage": {
+          "expression": "MEDIAN(FactEnrolmentStage[DaysFromSubmission])",
+          "formatString": "0.0"
+        }
+      },
+      "partitionSources": [
+        "let\n\tSource = Csv.Document(\n\t\tif Text.StartsWith(DataFolder, \"http\") then Web.Contents(DataFolder & \"fact_enrolment_stage.csv\") else File.Contents(DataFolder & \"fact_enrolment_stage.csv\"),\n\t\t[Delimiter = \",\", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]\n\t),\n\tPromoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),\n\tTyped = Table.TransformColumnTypes(Promoted, {{\"EnrolmentId\", type text}, {\"CustomerId\", type text}, {\"StageOrder\", Int64.Type}, {\"ReachedDate\", type date}, {\"DaysFromSubmission\", Int64.Type}}, \"en-US\")\nin\n\tTyped"
+      ]
+    },
+    "FactShipment": {
+      "dataCategory": "",
+      "columns": {
+        "ShipmentId": {
+          "dataType": "String",
+          "sourceColumn": "ShipmentId",
+          "isKey": false,
+          "isHidden": false
+        },
+        "CustomerId": {
+          "dataType": "String",
+          "sourceColumn": "CustomerId",
+          "isKey": false,
+          "isHidden": true
+        },
+        "ShipmentSeq": {
+          "dataType": "Int64",
+          "sourceColumn": "ShipmentSeq",
+          "isKey": false,
+          "isHidden": false
+        },
+        "LaneId": {
+          "dataType": "String",
+          "sourceColumn": "LaneId",
+          "isKey": false,
+          "isHidden": true
+        },
+        "ArrivalDate": {
+          "dataType": "DateTime",
+          "sourceColumn": "ArrivalDate",
+          "isKey": false,
+          "isHidden": true
+        },
+        "ClearanceHours": {
+          "dataType": "Double",
+          "sourceColumn": "ClearanceHours",
+          "isKey": false,
+          "isHidden": true
+        },
+        "WasHeld": {
+          "dataType": "Boolean",
+          "sourceColumn": "WasHeld",
+          "isKey": false,
+          "isHidden": false
+        },
+        "HoldCount": {
+          "dataType": "Int64",
+          "sourceColumn": "HoldCount",
+          "isKey": false,
+          "isHidden": true
+        },
+        "ReadinessScore": {
+          "dataType": "Int64",
+          "sourceColumn": "ReadinessScore",
+          "isKey": false,
+          "isHidden": true
+        },
+        "ReadinessBand": {
+          "dataType": "String",
+          "sourceColumn": "ReadinessBand",
+          "isKey": false,
+          "isHidden": false
+        }
+      },
+      "measures": {
+        "First-3 Shipments": {
+          "expression": "COUNTROWS(FactShipment)",
+          "formatString": "#,##0"
+        },
+        "Held Shipments": {
+          "expression": "CALCULATE(COUNTROWS(FactShipment), KEEPFILTERS(FactShipment[WasHeld] = TRUE()))",
+          "formatString": "#,##0"
+        },
+        "First-3 Hold Rate %": {
+          "expression": "DIVIDE([Held Shipments], [First-3 Shipments])",
+          "formatString": "0.0%"
+        },
+        "Customers Shipping": {
+          "expression": "DISTINCTCOUNT(FactShipment[CustomerId])",
+          "formatString": "#,##0"
+        },
+        "Customers With a Hold": {
+          "expression": "CALCULATE(DISTINCTCOUNT(FactShipment[CustomerId]), KEEPFILTERS(FactShipment[WasHeld] = TRUE()))",
+          "formatString": "#,##0"
+        },
+        "Customers With a Hold %": {
+          "expression": "DIVIDE([Customers With a Hold], [Customers Shipping])",
+          "formatString": "0.0%"
+        },
+        "Median Clearance Hours": {
+          "expression": "MEDIAN(FactShipment[ClearanceHours])",
+          "formatString": "0.0"
+        },
+        "P90 Clearance Hours": {
+          "expression": "PERCENTILE.INC(FactShipment[ClearanceHours], 0.9)",
+          "formatString": "0.0"
+        },
+        "Avg Readiness Score": {
+          "expression": "AVERAGE(FactShipment[ReadinessScore])",
+          "formatString": "0.0"
+        }
+      },
+      "partitionSources": [
+        "let\n\tSource = Csv.Document(\n\t\tif Text.StartsWith(DataFolder, \"http\") then Web.Contents(DataFolder & \"fact_shipment.csv\") else File.Contents(DataFolder & \"fact_shipment.csv\"),\n\t\t[Delimiter = \",\", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]\n\t),\n\tPromoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),\n\tTyped = Table.TransformColumnTypes(Promoted, {{\"ShipmentId\", type text}, {\"CustomerId\", type text}, {\"ShipmentSeq\", Int64.Type}, {\"LaneId\", type text}, {\"ArrivalDate\", type date}, {\"ClearanceHours\", type number}, {\"WasHeld\", type logical}, {\"HoldCount\", Int64.Type}, {\"ReadinessScore\", Int64.Type}, {\"ReadinessBand\", type text}}, \"en-US\")\nin\n\tTyped"
+      ]
+    },
+    "FactHold": {
+      "dataCategory": "",
+      "columns": {
+        "HoldId": {
+          "dataType": "String",
+          "sourceColumn": "HoldId",
+          "isKey": false,
+          "isHidden": false
+        },
+        "ShipmentId": {
+          "dataType": "String",
+          "sourceColumn": "ShipmentId",
+          "isKey": false,
+          "isHidden": false
+        },
+        "CustomerId": {
+          "dataType": "String",
+          "sourceColumn": "CustomerId",
+          "isKey": false,
+          "isHidden": true
+        },
+        "LaneId": {
+          "dataType": "String",
+          "sourceColumn": "LaneId",
+          "isKey": false,
+          "isHidden": true
+        },
+        "ReasonCode": {
+          "dataType": "String",
+          "sourceColumn": "ReasonCode",
+          "isKey": false,
+          "isHidden": true
+        },
+        "HoldDate": {
+          "dataType": "DateTime",
+          "sourceColumn": "HoldDate",
+          "isKey": false,
+          "isHidden": true
+        },
+        "HoursToRelease": {
+          "dataType": "Double",
+          "sourceColumn": "HoursToRelease",
+          "isKey": false,
+          "isHidden": true
+        },
+        "Note": {
+          "dataType": "String",
+          "sourceColumn": "Note",
+          "isKey": false,
+          "isHidden": false
+        }
+      },
+      "measures": {
+        "Holds": {
+          "expression": "COUNTROWS(FactHold)",
+          "formatString": "#,##0"
+        },
+        "Hold Share %": {
+          "expression": "DIVIDE([Holds], CALCULATE([Holds], REMOVEFILTERS(DimReason)))",
+          "formatString": "0.0%"
+        },
+        "Hold Pareto Cumulative %": {
+          "expression": "VAR curCode = SELECTEDVALUE(DimReason[ReasonCode])\nVAR cur = [Holds]\nVAR total = CALCULATE([Holds], REMOVEFILTERS(DimReason))\nVAR cum = SUMX(FILTER(ALL(DimReason), VAR n = [Holds] RETURN n > cur || (n = cur && DimReason[ReasonCode] <= curCode)), [Holds])\nRETURN IF(ISBLANK(curCode) || ISBLANK(cur), BLANK(), DIVIDE(cum, total))",
+          "formatString": "0.0%"
+        },
+        "Median Hours to Release": {
+          "expression": "MEDIAN(FactHold[HoursToRelease])",
+          "formatString": "0.0"
+        },
+        "P90 Hours to Release": {
+          "expression": "PERCENTILE.INC(FactHold[HoursToRelease], 0.9)",
+          "formatString": "0.0"
+        }
+      },
+      "partitionSources": [
+        "let\n\tSource = Csv.Document(\n\t\tif Text.StartsWith(DataFolder, \"http\") then Web.Contents(DataFolder & \"fact_hold.csv\") else File.Contents(DataFolder & \"fact_hold.csv\"),\n\t\t[Delimiter = \",\", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]\n\t),\n\tPromoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),\n\tTyped = Table.TransformColumnTypes(Promoted, {{\"HoldId\", type text}, {\"ShipmentId\", type text}, {\"CustomerId\", type text}, {\"LaneId\", type text}, {\"ReasonCode\", type text}, {\"HoldDate\", type date}, {\"HoursToRelease\", type number}, {\"Note\", type text}}, \"en-US\")\nin\n\tTyped"
+      ]
+    },
+    "FactAction": {
+      "dataCategory": "",
+      "columns": {
+        "ActionId": {
+          "dataType": "String",
+          "sourceColumn": "ActionId",
+          "isKey": false,
+          "isHidden": false
+        },
+        "CustomerId": {
+          "dataType": "String",
+          "sourceColumn": "CustomerId",
+          "isKey": false,
+          "isHidden": true
+        },
+        "ShipmentId": {
+          "dataType": "String",
+          "sourceColumn": "ShipmentId",
+          "isKey": false,
+          "isHidden": false
+        },
+        "HoldId": {
+          "dataType": "String",
+          "sourceColumn": "HoldId",
+          "isKey": false,
+          "isHidden": false
+        },
+        "Source": {
+          "dataType": "String",
+          "sourceColumn": "Source",
+          "isKey": false,
+          "isHidden": false
+        },
+        "ReasonCode": {
+          "dataType": "String",
+          "sourceColumn": "ReasonCode",
+          "isKey": false,
+          "isHidden": true
+        },
+        "ActionType": {
+          "dataType": "String",
+          "sourceColumn": "ActionType",
+          "isKey": false,
+          "isHidden": false
+        },
+        "RuleRef": {
+          "dataType": "String",
+          "sourceColumn": "RuleRef",
+          "isKey": false,
+          "isHidden": false
+        },
+        "OwnerRole": {
+          "dataType": "String",
+          "sourceColumn": "OwnerRole",
+          "isKey": false,
+          "isHidden": false
+        },
+        "OpenedDate": {
+          "dataType": "DateTime",
+          "sourceColumn": "OpenedDate",
+          "isKey": false,
+          "isHidden": false
+        },
+        "DueDate": {
+          "dataType": "DateTime",
+          "sourceColumn": "DueDate",
+          "isKey": false,
+          "isHidden": false
+        },
+        "ClosedDate": {
+          "dataType": "DateTime",
+          "sourceColumn": "ClosedDate",
+          "isKey": false,
+          "isHidden": false
+        },
+        "Status": {
+          "dataType": "String",
+          "sourceColumn": "Status",
+          "isKey": false,
+          "isHidden": false
+        },
+        "DaysToClose": {
+          "dataType": "Int64",
+          "sourceColumn": "DaysToClose",
+          "isKey": false,
+          "isHidden": true
+        },
+        "IsOverdue": {
+          "dataType": "Boolean",
+          "sourceColumn": "IsOverdue",
+          "isKey": false,
+          "isHidden": false
+        }
+      },
+      "measures": {
+        "Actions": {
+          "expression": "COUNTROWS(FactAction)",
+          "formatString": "#,##0"
+        },
+        "Open Actions": {
+          "expression": "CALCULATE(COUNTROWS(FactAction), KEEPFILTERS(FactAction[Status] = \"Open\"))",
+          "formatString": "#,##0"
+        },
+        "Overdue Actions": {
+          "expression": "CALCULATE(COUNTROWS(FactAction), KEEPFILTERS(FactAction[IsOverdue] = TRUE()))",
+          "formatString": "#,##0"
+        },
+        "Avg Days to Close": {
+          "expression": "CALCULATE(AVERAGE(FactAction[DaysToClose]), KEEPFILTERS(FactAction[Status] = \"Closed\"))",
+          "formatString": "0.0"
+        },
+        "Closed On Time %": {
+          "expression": "DIVIDE(\n\tCALCULATE(COUNTROWS(FactAction), KEEPFILTERS(FactAction[Status] = \"Closed\"), KEEPFILTERS(FactAction[IsOverdue] = FALSE())),\n\tCALCULATE(COUNTROWS(FactAction), KEEPFILTERS(FactAction[Status] = \"Closed\")))",
+          "formatString": "0.0%"
+        }
+      },
+      "partitionSources": [
+        "let\n\tSource = Csv.Document(\n\t\tif Text.StartsWith(DataFolder, \"http\") then Web.Contents(DataFolder & \"fact_action.csv\") else File.Contents(DataFolder & \"fact_action.csv\"),\n\t\t[Delimiter = \",\", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]\n\t),\n\tPromoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),\n\tTyped = Table.TransformColumnTypes(Promoted, {{\"ActionId\", type text}, {\"CustomerId\", type text}, {\"ShipmentId\", type text}, {\"HoldId\", type text}, {\"Source\", type text}, {\"ReasonCode\", type text}, {\"ActionType\", type text}, {\"RuleRef\", type text}, {\"OwnerRole\", type text}, {\"OpenedDate\", type date}, {\"DueDate\", type date}, {\"ClosedDate\", type date}, {\"Status\", type text}, {\"DaysToClose\", Int64.Type}, {\"IsOverdue\", type logical}}, \"en-US\")\nin\n\tTyped"
+      ]
+    }
+  },
+  "relationships": [
+    {
+      "from": "FactEnrolmentStage.StageOrder",
+      "to": "DimStage.StageOrder",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "from": "FactEnrolmentStage.CustomerId",
+      "to": "DimCustomer.CustomerId",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "from": "FactEnrolmentStage.ReachedDate",
+      "to": "DimDate.Date",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "from": "FactShipment.CustomerId",
+      "to": "DimCustomer.CustomerId",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "from": "FactShipment.LaneId",
+      "to": "DimLane.LaneId",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "from": "FactShipment.ArrivalDate",
+      "to": "DimDate.Date",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "from": "FactHold.ReasonCode",
+      "to": "DimReason.ReasonCode",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "from": "FactHold.LaneId",
+      "to": "DimLane.LaneId",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "from": "FactHold.CustomerId",
+      "to": "DimCustomer.CustomerId",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "from": "FactHold.HoldDate",
+      "to": "DimDate.Date",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "from": "FactAction.ReasonCode",
+      "to": "DimReason.ReasonCode",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "from": "FactAction.CustomerId",
+      "to": "DimCustomer.CustomerId",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "from": "FactAction.OpenedDate",
+      "to": "DimDate.Date",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    }
+  ]
+}

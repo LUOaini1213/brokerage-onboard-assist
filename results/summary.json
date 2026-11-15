@@ -1,0 +1,101 @@
+{
+  "data_label": "SYNTHETIC",
+  "rules": {
+    "total": 44,
+    "SG": 34,
+    "AU": 10,
+    "verified": 29,
+    "partially verified": 13,
+    "not verified": 2
+  },
+  "counts": {
+    "customers": 800,
+    "enrolments": 800,
+    "shipments": 1714,
+    "holds": 551,
+    "actions": 1267
+  },
+  "funnel": {
+    "Enrolments Submitted": 800,
+    "Profiles Created": 671,
+    "Three Shipments Completed": 519
+  },
+  "first3": {
+    "hold_rate": 0.282964,
+    "customers_with_hold_rate": 0.595506,
+    "by_seq": {
+      "1": 0.354735,
+      "2": 0.270979,
+      "3": 0.210019
+    }
+  },
+  "pareto": {
+    "top": "INVOICE_DATA",
+    "top_share": 0.185118,
+    "vital_few": [
+      "INVOICE_DATA",
+      "CA_APPROVAL",
+      "VALUE_CIF",
+      "DOC_MISMATCH",
+      "HS_QUERY",
+      "ORIGIN_DOCS",
+      "INSPECTION"
+    ],
+    "vital_few_share": 0.816697
+  },
+  "release": {
+    "median_hours_all": 19.2,
+    "slowest_reason": "BIOSECURITY",
+    "slowest_median": 74.9,
+    "fastest_reason": "PERMIT_TIMING",
+    "fastest_median": 5.0
+  },
+  "clearance": {
+    "median_hours_all": 16.6,
+    "slowest_lane": "SG-AU-SEA",
+    "slowest_lane_median": 28.4,
+    "fastest_lane": "MY-SG-ROAD",
+    "fastest_lane_median": 3.5
+  },
+  "readiness": {
+    "detected_same_reason": 0.816697,
+    "detected_any_blocking": 0.842105,
+    "flagged_shipments": 589,
+    "flagged_held": 399,
+    "flagged_hold_rate": 0.677419,
+    "unflagged_shipments": 1125,
+    "unflagged_held": 86,
+    "unflagged_hold_rate": 0.076444,
+    "bands": {
+      "Not ready": 589,
+      "Ready": 913,
+      "Needs attention": 212
+    }
+  },
+  "actions": {
+    "open": 120,
+    "overdue": 477,
+    "closed_on_time": 0.688753,
+    "avg_days_to_close": 4.625109
+  },
+  "classifier": {
+    "n_train": 304,
+    "n_test_seen": 100,
+    "n_test_heldout": 147,
+    "seen_accuracy": 1.0,
+    "seen_macro_f1": 1.0,
+    "heldout_accuracy": 0.482993,
+    "heldout_macro_f1": 0.344949,
+    "heldout_accuracy_95ci": [
+      0.401361,
+      0.557823
+    ],
+    "heldout_keyword_accuracy": 0.115646,
+    "heldout_majority_accuracy": 0.170068,
+    "loto_accuracy": 0.84755,
+    "loto_macro_f1": 0.804642,
+    "llm": {
+      "status": "not run"
+    }
+  }
+}

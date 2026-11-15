@@ -1,0 +1,6 @@
+/// Folder or URL that holds the CSV extracts, ending with a slash. The default reads the files from the
+/// repository on GitHub once it is published; for a local clone set it to the powerbi\data folder, e.g.
+/// C:\src\brokerage-onboard-assist\powerbi\data\
+expression DataFolder = "https://raw.githubusercontent.com/LUOaini1213/brokerage-onboard-assist/main/powerbi/data/" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+
+	annotation PBI_ResultType = Text

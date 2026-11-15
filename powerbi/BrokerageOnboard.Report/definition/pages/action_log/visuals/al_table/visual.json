@@ -1,0 +1,231 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "al_table",
+  "position": {
+    "x": 400,
+    "y": 210,
+    "z": 4000,
+    "height": 490,
+    "width": 860,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction"
+                    }
+                  },
+                  "Property": "ActionId"
+                }
+              },
+              "queryRef": "FactAction.ActionId",
+              "nativeQueryRef": "ActionId"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimCustomer"
+                    }
+                  },
+                  "Property": "CustomerName"
+                }
+              },
+              "queryRef": "DimCustomer.CustomerName",
+              "nativeQueryRef": "CustomerName"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction"
+                    }
+                  },
+                  "Property": "ShipmentId"
+                }
+              },
+              "queryRef": "FactAction.ShipmentId",
+              "nativeQueryRef": "ShipmentId"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimReason"
+                    }
+                  },
+                  "Property": "ReasonLabel"
+                }
+              },
+              "queryRef": "DimReason.ReasonLabel",
+              "nativeQueryRef": "ReasonLabel"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction"
+                    }
+                  },
+                  "Property": "ActionType"
+                }
+              },
+              "queryRef": "FactAction.ActionType",
+              "nativeQueryRef": "ActionType"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction"
+                    }
+                  },
+                  "Property": "RuleRef"
+                }
+              },
+              "queryRef": "FactAction.RuleRef",
+              "nativeQueryRef": "RuleRef"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction"
+                    }
+                  },
+                  "Property": "OwnerRole"
+                }
+              },
+              "queryRef": "FactAction.OwnerRole",
+              "nativeQueryRef": "OwnerRole"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction"
+                    }
+                  },
+                  "Property": "OpenedDate"
+                }
+              },
+              "queryRef": "FactAction.OpenedDate",
+              "nativeQueryRef": "OpenedDate"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction"
+                    }
+                  },
+                  "Property": "DueDate"
+                }
+              },
+              "queryRef": "FactAction.DueDate",
+              "nativeQueryRef": "DueDate"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction"
+                    }
+                  },
+                  "Property": "ClosedDate"
+                }
+              },
+              "queryRef": "FactAction.ClosedDate",
+              "nativeQueryRef": "ClosedDate"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction"
+                    }
+                  },
+                  "Property": "Status"
+                }
+              },
+              "queryRef": "FactAction.Status",
+              "nativeQueryRef": "Status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction"
+                    }
+                  },
+                  "Property": "IsOverdue"
+                }
+              },
+              "queryRef": "FactAction.IsOverdue",
+              "nativeQueryRef": "IsOverdue"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FactAction"
+                  }
+                },
+                "Property": "OpenedDate"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Action log'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

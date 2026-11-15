@@ -1,0 +1,96 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "onb_funnel",
+  "position": {
+    "x": 20,
+    "y": 220,
+    "z": 3000,
+    "height": 480,
+    "width": 600,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "funnel",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimStage"
+                    }
+                  },
+                  "Property": "Stage"
+                }
+              },
+              "queryRef": "DimStage.Stage",
+              "nativeQueryRef": "Stage",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEnrolmentStage"
+                    }
+                  },
+                  "Property": "Enrolments at Stage"
+                }
+              },
+              "queryRef": "FactEnrolmentStage.Enrolments at Stage",
+              "nativeQueryRef": "Enrolments at Stage"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DimStage"
+                  }
+                },
+                "Property": "Stage"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Enrolments by stage reached'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

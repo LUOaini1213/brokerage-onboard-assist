@@ -1,0 +1,96 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "cl_release_by_reason",
+  "position": {
+    "x": 20,
+    "y": 400,
+    "z": 3000,
+    "height": 300,
+    "width": 600,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimReason"
+                    }
+                  },
+                  "Property": "ReasonLabel"
+                }
+              },
+              "queryRef": "DimReason.ReasonLabel",
+              "nativeQueryRef": "ReasonLabel",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactHold"
+                    }
+                  },
+                  "Property": "Median Hours to Release"
+                }
+              },
+              "queryRef": "FactHold.Median Hours to Release",
+              "nativeQueryRef": "Median Hours to Release"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FactHold"
+                  }
+                },
+                "Property": "Median Hours to Release"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Median hours to release by reason'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

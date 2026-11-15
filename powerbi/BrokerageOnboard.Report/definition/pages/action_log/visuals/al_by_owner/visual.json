@@ -1,0 +1,110 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "al_by_owner",
+  "position": {
+    "x": 20,
+    "y": 210,
+    "z": 3000,
+    "height": 490,
+    "width": 360,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction"
+                    }
+                  },
+                  "Property": "OwnerRole"
+                }
+              },
+              "queryRef": "FactAction.OwnerRole",
+              "nativeQueryRef": "OwnerRole",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction"
+                    }
+                  },
+                  "Property": "Open Actions"
+                }
+              },
+              "queryRef": "FactAction.Open Actions",
+              "nativeQueryRef": "Open Actions"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction"
+                    }
+                  },
+                  "Property": "Overdue Actions"
+                }
+              },
+              "queryRef": "FactAction.Overdue Actions",
+              "nativeQueryRef": "Overdue Actions"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FactAction"
+                  }
+                },
+                "Property": "Overdue Actions"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Open and overdue actions by owner'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,48 @@
+/// Trade lanes: country pair and transport mode (ILLUSTRATIVE).
+table DimLane
+
+	column LaneId
+		dataType: string
+		isKey
+		summarizeBy: none
+		sourceColumn: LaneId
+
+	column LaneName
+		dataType: string
+		summarizeBy: none
+		sourceColumn: LaneName
+
+	column Origin
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Origin
+
+	column Destination
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Destination
+
+	column Mode
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Mode
+
+	column Direction
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Direction
+
+	partition DimLane = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(
+						if Text.StartsWith(DataFolder, "http") then Web.Contents(DataFolder & "dim_lane.csv") else File.Contents(DataFolder & "dim_lane.csv"),
+						[Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+					),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					Typed = Table.TransformColumnTypes(Promoted, {{"LaneId", type text}, {"LaneName", type text}, {"Origin", type text}, {"Destination", type text}, {"Mode", type text}, {"Direction", type text}}, "en-US")
+				in
+					Typed
+
+	annotation PBI_ResultType = Table

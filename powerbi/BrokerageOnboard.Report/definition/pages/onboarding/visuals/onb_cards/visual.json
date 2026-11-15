@@ -1,0 +1,87 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "onb_cards",
+  "position": {
+    "x": 20,
+    "y": 90,
+    "z": 2000,
+    "height": 120,
+    "width": 1240,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEnrolmentStage"
+                    }
+                  },
+                  "Property": "Enrolments Submitted"
+                }
+              },
+              "queryRef": "FactEnrolmentStage.Enrolments Submitted",
+              "nativeQueryRef": "Enrolments Submitted"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEnrolmentStage"
+                    }
+                  },
+                  "Property": "Profiles Created"
+                }
+              },
+              "queryRef": "FactEnrolmentStage.Profiles Created",
+              "nativeQueryRef": "Profiles Created"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEnrolmentStage"
+                    }
+                  },
+                  "Property": "Three Shipments Completed"
+                }
+              },
+              "queryRef": "FactEnrolmentStage.Three Shipments Completed",
+              "nativeQueryRef": "Three Shipments Completed"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Enrolments'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

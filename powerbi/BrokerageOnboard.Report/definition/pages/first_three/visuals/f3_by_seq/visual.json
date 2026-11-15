@@ -1,0 +1,96 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "f3_by_seq",
+  "position": {
+    "x": 20,
+    "y": 220,
+    "z": 3000,
+    "height": 480,
+    "width": 400,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactShipment"
+                    }
+                  },
+                  "Property": "ShipmentSeq"
+                }
+              },
+              "queryRef": "FactShipment.ShipmentSeq",
+              "nativeQueryRef": "ShipmentSeq",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactShipment"
+                    }
+                  },
+                  "Property": "First-3 Hold Rate %"
+                }
+              },
+              "queryRef": "FactShipment.First-3 Hold Rate %",
+              "nativeQueryRef": "First-3 Hold Rate %"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FactShipment"
+                  }
+                },
+                "Property": "ShipmentSeq"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Hold rate by shipment number'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

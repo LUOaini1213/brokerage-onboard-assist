@@ -1,0 +1,119 @@
+/// Each SYNTHETIC customer's first three shipments, with clearance hours, hold flag and readiness score.
+table FactShipment
+
+	/// Shipments among customers' first three.
+	measure 'First-3 Shipments' = COUNTROWS(FactShipment)
+		formatString: #,##0
+
+	/// First-three shipments with at least one hold (KEEPFILTERS: a slicer on WasHeld still applies).
+	measure 'Held Shipments' = CALCULATE(COUNTROWS(FactShipment), KEEPFILTERS(FactShipment[WasHeld] = TRUE()))
+		formatString: #,##0
+
+	/// Share of first-three shipments with at least one hold.
+	measure 'First-3 Hold Rate %' = DIVIDE([Held Shipments], [First-3 Shipments])
+		formatString: 0.0%
+
+	/// Customers with at least one shipment in the filter context.
+	measure 'Customers Shipping' = DISTINCTCOUNT(FactShipment[CustomerId])
+		formatString: #,##0
+
+	/// Customers with at least one held shipment among their first three.
+	measure 'Customers With a Hold' = CALCULATE(DISTINCTCOUNT(FactShipment[CustomerId]), KEEPFILTERS(FactShipment[WasHeld] = TRUE()))
+		formatString: #,##0
+
+	/// Share of shipping customers with at least one held first-three shipment.
+	measure 'Customers With a Hold %' = DIVIDE([Customers With a Hold], [Customers Shipping])
+		formatString: 0.0%
+
+	/// Median hours from presentation to release, including time on hold.
+	measure 'Median Clearance Hours' = MEDIAN(FactShipment[ClearanceHours])
+		formatString: 0.0
+
+	/// 90th percentile of clearance hours.
+	measure 'P90 Clearance Hours' = PERCENTILE.INC(FactShipment[ClearanceHours], 0.9)
+		formatString: 0.0
+
+	/// Mean readiness score (0-100) from the pre-lodgement check.
+	measure 'Avg Readiness Score' = AVERAGE(FactShipment[ReadinessScore])
+		formatString: 0.0
+
+	column ShipmentId
+		dataType: string
+		summarizeBy: none
+		sourceColumn: ShipmentId
+
+	column CustomerId
+		dataType: string
+		isHidden
+		summarizeBy: none
+		sourceColumn: CustomerId
+
+	/// 1, 2 or 3: position among the customer's first three shipments.
+	column ShipmentSeq
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: ShipmentSeq
+
+	column LaneId
+		dataType: string
+		isHidden
+		summarizeBy: none
+		sourceColumn: LaneId
+
+	column ArrivalDate
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-mm-dd
+		summarizeBy: none
+		sourceColumn: ArrivalDate
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ClearanceHours
+		dataType: double
+		isHidden
+		formatString: 0.0
+		summarizeBy: none
+		sourceColumn: ClearanceHours
+
+	column WasHeld
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		summarizeBy: none
+		sourceColumn: WasHeld
+
+	column HoldCount
+		dataType: int64
+		isHidden
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: HoldCount
+
+	column ReadinessScore
+		dataType: int64
+		isHidden
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: ReadinessScore
+
+	/// Ready, Needs attention or Not ready, from the readiness check.
+	column ReadinessBand
+		dataType: string
+		summarizeBy: none
+		sourceColumn: ReadinessBand
+
+	partition FactShipment = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(
+						if Text.StartsWith(DataFolder, "http") then Web.Contents(DataFolder & "fact_shipment.csv") else File.Contents(DataFolder & "fact_shipment.csv"),
+						[Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+					),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					Typed = Table.TransformColumnTypes(Promoted, {{"ShipmentId", type text}, {"CustomerId", type text}, {"ShipmentSeq", Int64.Type}, {"LaneId", type text}, {"ArrivalDate", type date}, {"ClearanceHours", type number}, {"WasHeld", type logical}, {"HoldCount", Int64.Type}, {"ReadinessScore", Int64.Type}, {"ReadinessBand", type text}}, "en-US")
+				in
+					Typed
+
+	annotation PBI_ResultType = Table

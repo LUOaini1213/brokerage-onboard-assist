@@ -1,0 +1,123 @@
+page,visual,category,measure,value
+onboarding,onb_cards,,Enrolments Submitted,800
+onboarding,onb_cards,,Profiles Created,671
+onboarding,onb_cards,,Three Shipments Completed,519
+onboarding,onb_stage_table,Submitted,Enrolments at Stage,800
+onboarding,onb_stage_table,Submitted,Stage Conversion %,1
+onboarding,onb_stage_table,Submitted,Step Conversion %,
+onboarding,onb_stage_table,Submitted,Median Days to Stage,0
+onboarding,onb_stage_table,Documents received,Enrolments at Stage,736
+onboarding,onb_stage_table,Documents received,Stage Conversion %,0.92
+onboarding,onb_stage_table,Documents received,Step Conversion %,0.92
+onboarding,onb_stage_table,Documents received,Median Days to Stage,5
+onboarding,onb_stage_table,Validated,Enrolments at Stage,694
+onboarding,onb_stage_table,Validated,Stage Conversion %,0.8675
+onboarding,onb_stage_table,Validated,Step Conversion %,0.942935
+onboarding,onb_stage_table,Validated,Median Days to Stage,9
+onboarding,onb_stage_table,Profile created,Enrolments at Stage,671
+onboarding,onb_stage_table,Profile created,Stage Conversion %,0.83875
+onboarding,onb_stage_table,Profile created,Step Conversion %,0.966859
+onboarding,onb_stage_table,Profile created,Median Days to Stage,11
+onboarding,onb_stage_table,First shipment released,Enrolments at Stage,623
+onboarding,onb_stage_table,First shipment released,Stage Conversion %,0.77875
+onboarding,onb_stage_table,First shipment released,Step Conversion %,0.928465
+onboarding,onb_stage_table,First shipment released,Median Days to Stage,37
+onboarding,onb_stage_table,Three shipments released,Enrolments at Stage,519
+onboarding,onb_stage_table,Three shipments released,Stage Conversion %,0.64875
+onboarding,onb_stage_table,Three shipments released,Step Conversion %,0.833066
+onboarding,onb_stage_table,Three shipments released,Median Days to Stage,80
+first_three,f3_cards,,First-3 Shipments,1714
+first_three,f3_cards,,Held Shipments,485
+first_three,f3_cards,,First-3 Hold Rate %,0.282964
+first_three,f3_cards,,Customers With a Hold %,0.595506
+first_three,f3_cards,,Avg Readiness Score,86.295216
+first_three,f3_by_seq,1,First-3 Hold Rate %,0.354735
+first_three,f3_by_seq,2,First-3 Hold Rate %,0.270979
+first_three,f3_by_seq,3,First-3 Hold Rate %,0.210019
+first_three,f3_by_lane,CN-SG Sea,First-3 Hold Rate %,0.284314
+clearance,cl_by_lane,CN-SG Sea,Median Clearance Hours,25.8
+clearance,cl_by_lane,CN-SG Sea,P90 Clearance Hours,69.93
+first_three,f3_by_lane,CN-SG Air,First-3 Hold Rate %,0.282051
+clearance,cl_by_lane,CN-SG Air,Median Clearance Hours,6.4
+clearance,cl_by_lane,CN-SG Air,P90 Clearance Hours,32.15
+first_three,f3_by_lane,US-SG Air,First-3 Hold Rate %,0.298343
+clearance,cl_by_lane,US-SG Air,Median Clearance Hours,7
+clearance,cl_by_lane,US-SG Air,P90 Clearance Hours,27.9
+first_three,f3_by_lane,DE-SG Air,First-3 Hold Rate %,0.279503
+clearance,cl_by_lane,DE-SG Air,Median Clearance Hours,5.7
+clearance,cl_by_lane,DE-SG Air,P90 Clearance Hours,33.4
+first_three,f3_by_lane,JP-SG Sea,First-3 Hold Rate %,0.261905
+clearance,cl_by_lane,JP-SG Sea,Median Clearance Hours,25.8
+clearance,cl_by_lane,JP-SG Sea,P90 Clearance Hours,60.09
+first_three,f3_by_lane,VN-SG Sea,First-3 Hold Rate %,0.254237
+clearance,cl_by_lane,VN-SG Sea,Median Clearance Hours,25.45
+clearance,cl_by_lane,VN-SG Sea,P90 Clearance Hours,61.4
+first_three,f3_by_lane,MY-SG Road,First-3 Hold Rate %,0.284264
+clearance,cl_by_lane,MY-SG Road,Median Clearance Hours,3.5
+clearance,cl_by_lane,MY-SG Road,P90 Clearance Hours,34.18
+first_three,f3_by_lane,SG-AU Sea,First-3 Hold Rate %,0.260664
+clearance,cl_by_lane,SG-AU Sea,Median Clearance Hours,28.4
+clearance,cl_by_lane,SG-AU Sea,P90 Clearance Hours,64.8
+first_three,f3_by_lane,SG-AU Air,First-3 Hold Rate %,0.318182
+clearance,cl_by_lane,SG-AU Air,Median Clearance Hours,7.45
+clearance,cl_by_lane,SG-AU Air,P90 Clearance Hours,32.2
+hold_reasons,hr_table,Permit not obtained in time,Holds,34
+hold_reasons,hr_table,Permit not obtained in time,Hold Share %,0.061706
+hold_reasons,hr_table,Permit not obtained in time,Hold Pareto Cumulative %,0.878403
+hold_reasons,hr_table,Permit not obtained in time,Median Hours to Release,5
+hold_reasons,hr_table,Permit not obtained in time,P90 Hours to Release,15.2
+hold_reasons,hr_table,Importer UEN or account issue,Holds,26
+hold_reasons,hr_table,Importer UEN or account issue,Hold Share %,0.047187
+hold_reasons,hr_table,Importer UEN or account issue,Hold Pareto Cumulative %,0.981851
+hold_reasons,hr_table,Importer UEN or account issue,Median Hours to Release,12.05
+hold_reasons,hr_table,Importer UEN or account issue,P90 Hours to Release,19.7
+hold_reasons,hr_table,HS code not valid,Holds,31
+hold_reasons,hr_table,HS code not valid,Hold Share %,0.056261
+hold_reasons,hr_table,HS code not valid,Hold Pareto Cumulative %,0.934664
+hold_reasons,hr_table,HS code not valid,Median Hours to Release,8.2
+hold_reasons,hr_table,HS code not valid,P90 Hours to Release,14
+hold_reasons,hr_table,Classification query,Holds,50
+hold_reasons,hr_table,Classification query,Hold Share %,0.090744
+hold_reasons,hr_table,Classification query,Hold Pareto Cumulative %,0.667877
+hold_reasons,hr_table,Classification query,Median Hours to Release,27.85
+hold_reasons,hr_table,Classification query,P90 Hours to Release,82.37
+hold_reasons,hr_table,Customs value query,Holds,64
+hold_reasons,hr_table,Customs value query,Hold Share %,0.116152
+hold_reasons,hr_table,Customs value query,Hold Pareto Cumulative %,0.484574
+hold_reasons,hr_table,Customs value query,Median Hours to Release,18.4
+hold_reasons,hr_table,Customs value query,P90 Hours to Release,40.56
+hold_reasons,hr_table,Invoice incomplete,Holds,102
+hold_reasons,hr_table,Invoice incomplete,Hold Share %,0.185118
+hold_reasons,hr_table,Invoice incomplete,Hold Pareto Cumulative %,0.185118
+hold_reasons,hr_table,Invoice incomplete,Median Hours to Release,12
+hold_reasons,hr_table,Invoice incomplete,P90 Hours to Release,26.45
+hold_reasons,hr_table,Competent-authority approval missing,Holds,101
+hold_reasons,hr_table,Competent-authority approval missing,Hold Share %,0.183303
+hold_reasons,hr_table,Competent-authority approval missing,Hold Pareto Cumulative %,0.368421
+hold_reasons,hr_table,Competent-authority approval missing,Median Hours to Release,62.3
+hold_reasons,hr_table,Competent-authority approval missing,P90 Hours to Release,140.3
+hold_reasons,hr_table,Origin documents,Holds,45
+hold_reasons,hr_table,Origin documents,Hold Share %,0.08167
+hold_reasons,hr_table,Origin documents,Hold Pareto Cumulative %,0.749546
+hold_reasons,hr_table,Origin documents,Median Hours to Release,34.2
+hold_reasons,hr_table,Origin documents,P90 Hours to Release,84.66
+hold_reasons,hr_table,Documents do not agree,Holds,51
+hold_reasons,hr_table,Documents do not agree,Hold Share %,0.092559
+hold_reasons,hr_table,Documents do not agree,Hold Pareto Cumulative %,0.577132
+hold_reasons,hr_table,Documents do not agree,Median Hours to Release,14.3
+hold_reasons,hr_table,Documents do not agree,P90 Hours to Release,32.1
+hold_reasons,hr_table,Inspection without document defect,Holds,37
+hold_reasons,hr_table,Inspection without document defect,Hold Share %,0.067151
+hold_reasons,hr_table,Inspection without document defect,Hold Pareto Cumulative %,0.816697
+hold_reasons,hr_table,Inspection without document defect,Median Hours to Release,19.1
+hold_reasons,hr_table,Inspection without document defect,P90 Hours to Release,39.54
+hold_reasons,hr_table,Biosecurity referral (Australia),Holds,10
+hold_reasons,hr_table,Biosecurity referral (Australia),Hold Share %,0.018149
+hold_reasons,hr_table,Biosecurity referral (Australia),Hold Pareto Cumulative %,1
+hold_reasons,hr_table,Biosecurity referral (Australia),Median Hours to Release,74.9
+hold_reasons,hr_table,Biosecurity referral (Australia),P90 Hours to Release,145.96
+action_log,al_cards,,Actions,1267
+action_log,al_cards,,Open Actions,120
+action_log,al_cards,,Overdue Actions,477
+action_log,al_cards,,Avg Days to Close,4.625109
+action_log,al_cards,,Closed On Time %,0.688753

@@ -1,0 +1,30 @@
+/// Onboarding funnel stages, in order.
+table DimStage
+
+	column StageOrder
+		dataType: int64
+		isKey
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: StageOrder
+
+	column Stage
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Stage
+		sortByColumn: StageOrder
+
+	partition DimStage = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(
+						if Text.StartsWith(DataFolder, "http") then Web.Contents(DataFolder & "dim_stage.csv") else File.Contents(DataFolder & "dim_stage.csv"),
+						[Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+					),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					Typed = Table.TransformColumnTypes(Promoted, {{"StageOrder", Int64.Type}, {"Stage", type text}}, "en-US")
+				in
+					Typed
+
+	annotation PBI_ResultType = Table

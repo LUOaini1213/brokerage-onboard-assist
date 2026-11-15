@@ -1,0 +1,48 @@
+/// SYNTHETIC new customers (fictional names and UENs; see config/synth_assumptions.json).
+table DimCustomer
+
+	column CustomerId
+		dataType: string
+		isKey
+		summarizeBy: none
+		sourceColumn: CustomerId
+
+	column CustomerName
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CustomerName
+
+	column Segment
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Segment
+
+	column PrimaryLaneId
+		dataType: string
+		summarizeBy: none
+		sourceColumn: PrimaryLaneId
+
+	column TradeDirection
+		dataType: string
+		summarizeBy: none
+		sourceColumn: TradeDirection
+
+	column CommodityGroup
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CommodityGroup
+
+	partition DimCustomer = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(
+						if Text.StartsWith(DataFolder, "http") then Web.Contents(DataFolder & "dim_customer.csv") else File.Contents(DataFolder & "dim_customer.csv"),
+						[Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+					),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					Typed = Table.TransformColumnTypes(Promoted, {{"CustomerId", type text}, {"CustomerName", type text}, {"Segment", type text}, {"PrimaryLaneId", type text}, {"TradeDirection", type text}, {"CommodityGroup", type text}}, "en-US")
+				in
+					Typed
+
+	annotation PBI_ResultType = Table

@@ -1,0 +1,22 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["DataFolder", "DimDate", "DimCustomer", "DimLane", "DimReason", "DimStage", "FactEnrolmentStage", "FactShipment", "FactHold", "FactAction"]
+
+ref table DimDate
+ref table DimCustomer
+ref table DimLane
+ref table DimReason
+ref table DimStage
+ref table FactEnrolmentStage
+ref table FactShipment
+ref table FactHold
+ref table FactAction

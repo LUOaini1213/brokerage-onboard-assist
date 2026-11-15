@@ -1,0 +1,129 @@
+/// SYNTHETIC action log: corrective actions for holds and enrolment findings, with due and closing dates.
+table FactAction
+
+	/// Logged actions.
+	measure 'Actions' = COUNTROWS(FactAction)
+		formatString: #,##0
+
+	/// Actions not closed by the snapshot date (KEEPFILTERS: a Status slicer still applies).
+	measure 'Open Actions' = CALCULATE(COUNTROWS(FactAction), KEEPFILTERS(FactAction[Status] = "Open"))
+		formatString: #,##0
+
+	/// Actions closed after their due date, or still open after it.
+	measure 'Overdue Actions' = CALCULATE(COUNTROWS(FactAction), KEEPFILTERS(FactAction[IsOverdue] = TRUE()))
+		formatString: #,##0
+
+	/// Mean days from opening to closing, closed actions only.
+	measure 'Avg Days to Close' = CALCULATE(AVERAGE(FactAction[DaysToClose]), KEEPFILTERS(FactAction[Status] = "Closed"))
+		formatString: 0.0
+
+	/// Share of closed actions closed by their due date.
+	measure 'Closed On Time %' =
+			DIVIDE(
+				CALCULATE(COUNTROWS(FactAction), KEEPFILTERS(FactAction[Status] = "Closed"), KEEPFILTERS(FactAction[IsOverdue] = FALSE())),
+				CALCULATE(COUNTROWS(FactAction), KEEPFILTERS(FactAction[Status] = "Closed")))
+		formatString: 0.0%
+
+	column ActionId
+		dataType: string
+		summarizeBy: none
+		sourceColumn: ActionId
+
+	column CustomerId
+		dataType: string
+		isHidden
+		summarizeBy: none
+		sourceColumn: CustomerId
+
+	column ShipmentId
+		dataType: string
+		summarizeBy: none
+		sourceColumn: ShipmentId
+
+	column HoldId
+		dataType: string
+		summarizeBy: none
+		sourceColumn: HoldId
+
+	column Source
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Source
+
+	column ReasonCode
+		dataType: string
+		isHidden
+		summarizeBy: none
+		sourceColumn: ReasonCode
+
+	column ActionType
+		dataType: string
+		summarizeBy: none
+		sourceColumn: ActionType
+
+	column RuleRef
+		dataType: string
+		summarizeBy: none
+		sourceColumn: RuleRef
+
+	column OwnerRole
+		dataType: string
+		summarizeBy: none
+		sourceColumn: OwnerRole
+
+	column OpenedDate
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		summarizeBy: none
+		sourceColumn: OpenedDate
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DueDate
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		summarizeBy: none
+		sourceColumn: DueDate
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ClosedDate
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		summarizeBy: none
+		sourceColumn: ClosedDate
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Status
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Status
+
+	column DaysToClose
+		dataType: int64
+		isHidden
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: DaysToClose
+
+	column IsOverdue
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		summarizeBy: none
+		sourceColumn: IsOverdue
+
+	partition FactAction = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(
+						if Text.StartsWith(DataFolder, "http") then Web.Contents(DataFolder & "fact_action.csv") else File.Contents(DataFolder & "fact_action.csv"),
+						[Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+					),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					Typed = Table.TransformColumnTypes(Promoted, {{"ActionId", type text}, {"CustomerId", type text}, {"ShipmentId", type text}, {"HoldId", type text}, {"Source", type text}, {"ReasonCode", type text}, {"ActionType", type text}, {"RuleRef", type text}, {"OwnerRole", type text}, {"OpenedDate", type date}, {"DueDate", type date}, {"ClosedDate", type date}, {"Status", type text}, {"DaysToClose", Int64.Type}, {"IsOverdue", type logical}}, "en-US")
+				in
+					Typed
+
+	annotation PBI_ResultType = Table

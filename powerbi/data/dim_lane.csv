@@ -1,0 +1,10 @@
+LaneId,LaneName,Origin,Destination,Mode,Direction
+CN-SG-SEA,CN-SG Sea,CN,SG,Sea,Import
+CN-SG-AIR,CN-SG Air,CN,SG,Air,Import
+US-SG-AIR,US-SG Air,US,SG,Air,Import
+DE-SG-AIR,DE-SG Air,DE,SG,Air,Import
+JP-SG-SEA,JP-SG Sea,JP,SG,Sea,Import
+VN-SG-SEA,VN-SG Sea,VN,SG,Sea,Import
+MY-SG-ROAD,MY-SG Road,MY,SG,Road,Import
+SG-AU-SEA,SG-AU Sea,SG,AU,Sea,Export
+SG-AU-AIR,SG-AU Air,SG,AU,Air,Export

@@ -1,0 +1,82 @@
+/// One row per SYNTHETIC enrolment request and funnel stage it reached, with the date reached.
+table FactEnrolmentStage
+
+	/// Enrolment requests that reached the stage(s) in the filter context.
+	measure 'Enrolments at Stage' = COUNTROWS(FactEnrolmentStage)
+		formatString: #,##0
+
+	/// Enrolment requests submitted (stage 1), whatever stage is selected.
+	measure 'Enrolments Submitted' = CALCULATE([Enrolments at Stage], REMOVEFILTERS(DimStage), DimStage[StageOrder] = 1)
+		formatString: #,##0
+
+	/// Customers whose profile and handling note were created (stage 4).
+	measure 'Profiles Created' = CALCULATE([Enrolments at Stage], REMOVEFILTERS(DimStage), DimStage[StageOrder] = 4)
+		formatString: #,##0
+
+	/// Customers whose first three shipments were all released (stage 6).
+	measure 'Three Shipments Completed' = CALCULATE([Enrolments at Stage], REMOVEFILTERS(DimStage), DimStage[StageOrder] = 6)
+		formatString: #,##0
+
+	/// Share of submitted enrolments that reached the stage.
+	measure 'Stage Conversion %' = DIVIDE([Enrolments at Stage], [Enrolments Submitted])
+		formatString: 0.0%
+
+	/// Share of the previous stage that reached this stage; BLANK for the first stage or no single stage.
+	measure 'Step Conversion %' =
+			VAR s = SELECTEDVALUE(DimStage[StageOrder])
+			VAR prev = CALCULATE([Enrolments at Stage], REMOVEFILTERS(DimStage), DimStage[StageOrder] = s - 1)
+			RETURN IF(ISBLANK(s) || s = 1, BLANK(), DIVIDE([Enrolments at Stage], prev))
+		formatString: 0.0%
+
+	/// Median days from submission to reaching the stage.
+	measure 'Median Days to Stage' = MEDIAN(FactEnrolmentStage[DaysFromSubmission])
+		formatString: 0.0
+
+	column EnrolmentId
+		dataType: string
+		summarizeBy: none
+		sourceColumn: EnrolmentId
+
+	column CustomerId
+		dataType: string
+		isHidden
+		summarizeBy: none
+		sourceColumn: CustomerId
+
+	column StageOrder
+		dataType: int64
+		isHidden
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: StageOrder
+
+	column ReachedDate
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-mm-dd
+		summarizeBy: none
+		sourceColumn: ReachedDate
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DaysFromSubmission
+		dataType: int64
+		isHidden
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: DaysFromSubmission
+
+	partition FactEnrolmentStage = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(
+						if Text.StartsWith(DataFolder, "http") then Web.Contents(DataFolder & "fact_enrolment_stage.csv") else File.Contents(DataFolder & "fact_enrolment_stage.csv"),
+						[Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+					),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					Typed = Table.TransformColumnTypes(Promoted, {{"EnrolmentId", type text}, {"CustomerId", type text}, {"StageOrder", Int64.Type}, {"ReachedDate", type date}, {"DaysFromSubmission", Int64.Type}}, "en-US")
+				in
+					Typed
+
+	annotation PBI_ResultType = Table

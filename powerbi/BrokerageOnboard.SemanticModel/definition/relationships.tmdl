@@ -1,0 +1,51 @@
+relationship f4569406-6fbd-5305-8b58-10b12cb47241
+	fromColumn: FactEnrolmentStage.StageOrder
+	toColumn: DimStage.StageOrder
+
+relationship 18af7d62-2abb-5dc9-967e-e21794b42fee
+	fromColumn: FactEnrolmentStage.CustomerId
+	toColumn: DimCustomer.CustomerId
+
+relationship 0d6ee59d-328a-5842-ad23-f661a32047ac
+	fromColumn: FactEnrolmentStage.ReachedDate
+	toColumn: DimDate.Date
+
+relationship 612a55da-ee3c-5031-9777-40a4297c6052
+	fromColumn: FactShipment.CustomerId
+	toColumn: DimCustomer.CustomerId
+
+relationship 699c55d9-5c7d-5b3d-bc47-53c6f774deb4
+	fromColumn: FactShipment.LaneId
+	toColumn: DimLane.LaneId
+
+relationship b8f15e3a-566f-590b-85af-969d94af9cbc
+	fromColumn: FactShipment.ArrivalDate
+	toColumn: DimDate.Date
+
+relationship cbfd5be2-a219-555b-9525-6cd9ace1508c
+	fromColumn: FactHold.ReasonCode
+	toColumn: DimReason.ReasonCode
+
+relationship cf6cd4c8-8d45-5d4a-b6be-d674fe344f74
+	fromColumn: FactHold.LaneId
+	toColumn: DimLane.LaneId
+
+relationship 01775cf2-db5b-57dd-a055-8d7276f700cd
+	fromColumn: FactHold.CustomerId
+	toColumn: DimCustomer.CustomerId
+
+relationship 633d4c4e-29fb-53b0-8972-ce1ac3079831
+	fromColumn: FactHold.HoldDate
+	toColumn: DimDate.Date
+
+relationship 4d92d0ad-e770-51ae-bdad-98efbea30a80
+	fromColumn: FactAction.ReasonCode
+	toColumn: DimReason.ReasonCode
+
+relationship 0d022aa7-39a3-50ff-a55e-24dd61ab2586
+	fromColumn: FactAction.CustomerId
+	toColumn: DimCustomer.CustomerId
+
+relationship b94a2aa1-c5ef-5968-a46e-190a46d18bdc
+	fromColumn: FactAction.OpenedDate
+	toColumn: DimDate.Date

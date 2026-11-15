@@ -1,0 +1,801 @@
+CustomerId,CustomerName,Segment,PrimaryLaneId,TradeDirection,CommodityGroup
+SYN-C0001,Synthetic Customer 0001,SME,US-SG-AIR,Import,Pharmaceutical and medical
+SYN-C0002,Synthetic Customer 0002,SME,CN-SG-SEA,Import,Packaged food and drink
+SYN-C0003,Synthetic Customer 0003,SME,MY-SG-ROAD,Import,Packaged food and drink
+SYN-C0004,Synthetic Customer 0004,SME,US-SG-AIR,Import,Auto parts and tyres
+SYN-C0005,Synthetic Customer 0005,SME,SG-AU-SEA,Export,Furniture and homeware
+SYN-C0006,Synthetic Customer 0006,Mid-size,MY-SG-ROAD,Import,Apparel and footwear
+SYN-C0007,Synthetic Customer 0007,SME,SG-AU-SEA,Export,Packaged food and drink
+SYN-C0008,Synthetic Customer 0008,SME,US-SG-AIR,Import,Industrial machinery and parts
+SYN-C0009,Synthetic Customer 0009,SME,CN-SG-SEA,Import,Pharmaceutical and medical
+SYN-C0010,Synthetic Customer 0010,SME,VN-SG-SEA,Import,Auto parts and tyres
+SYN-C0011,Synthetic Customer 0011,Mid-size,SG-AU-AIR,Export,Packaged food and drink
+SYN-C0012,Synthetic Customer 0012,Mid-size,DE-SG-AIR,Import,Cosmetics and personal care
+SYN-C0013,Synthetic Customer 0013,SME,VN-SG-SEA,Import,Apparel and footwear
+SYN-C0014,Synthetic Customer 0014,Mid-size,CN-SG-SEA,Import,Pharmaceutical and medical
+SYN-C0015,Synthetic Customer 0015,SME,CN-SG-SEA,Import,Cosmetics and personal care
+SYN-C0016,Synthetic Customer 0016,SME,SG-AU-SEA,Export,Pharmaceutical and medical
+SYN-C0017,Synthetic Customer 0017,SME,SG-AU-AIR,Export,Apparel and footwear
+SYN-C0018,Synthetic Customer 0018,SME,SG-AU-SEA,Export,Industrial machinery and parts
+SYN-C0019,Synthetic Customer 0019,SME,JP-SG-SEA,Import,Apparel and footwear
+SYN-C0020,Synthetic Customer 0020,SME,SG-AU-SEA,Export,Pharmaceutical and medical
+SYN-C0021,Synthetic Customer 0021,Mid-size,SG-AU-SEA,Export,Industrial machinery and parts
+SYN-C0022,Synthetic Customer 0022,Mid-size,US-SG-AIR,Import,Cosmetics and personal care
+SYN-C0023,Synthetic Customer 0023,Mid-size,US-SG-AIR,Import,Auto parts and tyres
+SYN-C0024,Synthetic Customer 0024,SME,DE-SG-AIR,Import,Industrial machinery and parts
+SYN-C0025,Synthetic Customer 0025,Mid-size,SG-AU-SEA,Export,Packaged food and drink
+SYN-C0026,Synthetic Customer 0026,Mid-size,CN-SG-SEA,Import,Auto parts and tyres
+SYN-C0027,Synthetic Customer 0027,Mid-size,SG-AU-SEA,Export,Packaged food and drink
+SYN-C0028,Synthetic Customer 0028,SME,VN-SG-SEA,Import,Furniture and homeware
+SYN-C0029,Synthetic Customer 0029,Large,CN-SG-AIR,Import,Packaged food and drink
+SYN-C0030,Synthetic Customer 0030,SME,CN-SG-AIR,Import,Auto parts and tyres
+SYN-C0031,Synthetic Customer 0031,SME,SG-AU-AIR,Export,Packaged food and drink
+SYN-C0032,Synthetic Customer 0032,Large,SG-AU-AIR,Export,Packaged food and drink
+SYN-C0033,Synthetic Customer 0033,SME,MY-SG-ROAD,Import,Consumer electronics
+SYN-C0034,Synthetic Customer 0034,SME,CN-SG-SEA,Import,Cosmetics and personal care
+SYN-C0035,Synthetic Customer 0035,SME,MY-SG-ROAD,Import,Auto parts and tyres
+SYN-C0036,Synthetic Customer 0036,SME,US-SG-AIR,Import,Apparel and footwear
+SYN-C0037,Synthetic Customer 0037,Mid-size,US-SG-AIR,Import,Packaged food and drink
+SYN-C0038,Synthetic Customer 0038,SME,DE-SG-AIR,Import,Consumer electronics
+SYN-C0039,Synthetic Customer 0039,SME,CN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0040,Synthetic Customer 0040,SME,CN-SG-AIR,Import,Toys and games
+SYN-C0041,Synthetic Customer 0041,SME,SG-AU-AIR,Export,Packaged food and drink
+SYN-C0042,Synthetic Customer 0042,Mid-size,VN-SG-SEA,Import,Pharmaceutical and medical
+SYN-C0043,Synthetic Customer 0043,Large,SG-AU-AIR,Export,Pharmaceutical and medical
+SYN-C0044,Synthetic Customer 0044,SME,SG-AU-SEA,Export,Cosmetics and personal care
+SYN-C0045,Synthetic Customer 0045,SME,SG-AU-SEA,Export,Pharmaceutical and medical
+SYN-C0046,Synthetic Customer 0046,SME,CN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0047,Synthetic Customer 0047,Mid-size,MY-SG-ROAD,Import,Industrial machinery and parts
+SYN-C0048,Synthetic Customer 0048,SME,DE-SG-AIR,Import,Packaged food and drink
+SYN-C0049,Synthetic Customer 0049,SME,CN-SG-SEA,Import,Cosmetics and personal care
+SYN-C0050,Synthetic Customer 0050,Mid-size,US-SG-AIR,Import,Apparel and footwear
+SYN-C0051,Synthetic Customer 0051,Mid-size,MY-SG-ROAD,Import,Toys and games
+SYN-C0052,Synthetic Customer 0052,SME,MY-SG-ROAD,Import,Pharmaceutical and medical
+SYN-C0053,Synthetic Customer 0053,SME,SG-AU-SEA,Export,Industrial machinery and parts
+SYN-C0054,Synthetic Customer 0054,Mid-size,CN-SG-SEA,Import,Cosmetics and personal care
+SYN-C0055,Synthetic Customer 0055,Mid-size,CN-SG-AIR,Import,Consumer electronics
+SYN-C0056,Synthetic Customer 0056,SME,US-SG-AIR,Import,Industrial machinery and parts
+SYN-C0057,Synthetic Customer 0057,Large,VN-SG-SEA,Import,Chemicals
+SYN-C0058,Synthetic Customer 0058,Mid-size,CN-SG-SEA,Import,Chemicals
+SYN-C0059,Synthetic Customer 0059,Mid-size,US-SG-AIR,Import,Consumer electronics
+SYN-C0060,Synthetic Customer 0060,Large,SG-AU-SEA,Export,Packaged food and drink
+SYN-C0061,Synthetic Customer 0061,SME,CN-SG-SEA,Import,Auto parts and tyres
+SYN-C0062,Synthetic Customer 0062,Mid-size,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0063,Synthetic Customer 0063,Large,CN-SG-AIR,Import,Cosmetics and personal care
+SYN-C0064,Synthetic Customer 0064,SME,US-SG-AIR,Import,Auto parts and tyres
+SYN-C0065,Synthetic Customer 0065,SME,MY-SG-ROAD,Import,Apparel and footwear
+SYN-C0066,Synthetic Customer 0066,Mid-size,SG-AU-AIR,Export,Consumer electronics
+SYN-C0067,Synthetic Customer 0067,SME,CN-SG-SEA,Import,Cosmetics and personal care
+SYN-C0068,Synthetic Customer 0068,SME,CN-SG-SEA,Import,Packaged food and drink
+SYN-C0069,Synthetic Customer 0069,SME,US-SG-AIR,Import,Pharmaceutical and medical
+SYN-C0070,Synthetic Customer 0070,Mid-size,DE-SG-AIR,Import,Apparel and footwear
+SYN-C0071,Synthetic Customer 0071,Mid-size,CN-SG-AIR,Import,Pharmaceutical and medical
+SYN-C0072,Synthetic Customer 0072,Large,CN-SG-SEA,Import,Furniture and homeware
+SYN-C0073,Synthetic Customer 0073,SME,SG-AU-SEA,Export,Cosmetics and personal care
+SYN-C0074,Synthetic Customer 0074,SME,US-SG-AIR,Import,Apparel and footwear
+SYN-C0075,Synthetic Customer 0075,SME,US-SG-AIR,Import,Packaged food and drink
+SYN-C0076,Synthetic Customer 0076,Mid-size,SG-AU-AIR,Export,Industrial machinery and parts
+SYN-C0077,Synthetic Customer 0077,Mid-size,SG-AU-SEA,Export,Consumer electronics
+SYN-C0078,Synthetic Customer 0078,SME,DE-SG-AIR,Import,Industrial machinery and parts
+SYN-C0079,Synthetic Customer 0079,SME,MY-SG-ROAD,Import,Furniture and homeware
+SYN-C0080,Synthetic Customer 0080,SME,MY-SG-ROAD,Import,Industrial machinery and parts
+SYN-C0081,Synthetic Customer 0081,SME,SG-AU-AIR,Export,Apparel and footwear
+SYN-C0082,Synthetic Customer 0082,Mid-size,CN-SG-AIR,Import,Furniture and homeware
+SYN-C0083,Synthetic Customer 0083,SME,CN-SG-AIR,Import,Auto parts and tyres
+SYN-C0084,Synthetic Customer 0084,Large,CN-SG-AIR,Import,Consumer electronics
+SYN-C0085,Synthetic Customer 0085,Mid-size,MY-SG-ROAD,Import,Apparel and footwear
+SYN-C0086,Synthetic Customer 0086,SME,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0087,Synthetic Customer 0087,Large,CN-SG-SEA,Import,Packaged food and drink
+SYN-C0088,Synthetic Customer 0088,SME,SG-AU-AIR,Export,Consumer electronics
+SYN-C0089,Synthetic Customer 0089,Mid-size,VN-SG-SEA,Import,Furniture and homeware
+SYN-C0090,Synthetic Customer 0090,Mid-size,MY-SG-ROAD,Import,Furniture and homeware
+SYN-C0091,Synthetic Customer 0091,SME,SG-AU-AIR,Export,Consumer electronics
+SYN-C0092,Synthetic Customer 0092,Large,SG-AU-SEA,Export,Consumer electronics
+SYN-C0093,Synthetic Customer 0093,SME,SG-AU-AIR,Export,Consumer electronics
+SYN-C0094,Synthetic Customer 0094,SME,MY-SG-ROAD,Import,Auto parts and tyres
+SYN-C0095,Synthetic Customer 0095,SME,DE-SG-AIR,Import,Furniture and homeware
+SYN-C0096,Synthetic Customer 0096,SME,JP-SG-SEA,Import,Apparel and footwear
+SYN-C0097,Synthetic Customer 0097,SME,CN-SG-SEA,Import,Chemicals
+SYN-C0098,Synthetic Customer 0098,SME,SG-AU-SEA,Export,Consumer electronics
+SYN-C0099,Synthetic Customer 0099,SME,US-SG-AIR,Import,Pharmaceutical and medical
+SYN-C0100,Synthetic Customer 0100,Mid-size,CN-SG-SEA,Import,Furniture and homeware
+SYN-C0101,Synthetic Customer 0101,SME,VN-SG-SEA,Import,Consumer electronics
+SYN-C0102,Synthetic Customer 0102,SME,CN-SG-SEA,Import,Consumer electronics
+SYN-C0103,Synthetic Customer 0103,SME,CN-SG-SEA,Import,Toys and games
+SYN-C0104,Synthetic Customer 0104,SME,SG-AU-AIR,Export,Apparel and footwear
+SYN-C0105,Synthetic Customer 0105,SME,CN-SG-SEA,Import,Consumer electronics
+SYN-C0106,Synthetic Customer 0106,SME,CN-SG-SEA,Import,Consumer electronics
+SYN-C0107,Synthetic Customer 0107,Mid-size,CN-SG-SEA,Import,Cosmetics and personal care
+SYN-C0108,Synthetic Customer 0108,SME,DE-SG-AIR,Import,Furniture and homeware
+SYN-C0109,Synthetic Customer 0109,SME,CN-SG-AIR,Import,Industrial machinery and parts
+SYN-C0110,Synthetic Customer 0110,SME,DE-SG-AIR,Import,Cosmetics and personal care
+SYN-C0111,Synthetic Customer 0111,Large,SG-AU-AIR,Export,Industrial machinery and parts
+SYN-C0112,Synthetic Customer 0112,SME,SG-AU-AIR,Export,Industrial machinery and parts
+SYN-C0113,Synthetic Customer 0113,SME,CN-SG-SEA,Import,Furniture and homeware
+SYN-C0114,Synthetic Customer 0114,Large,JP-SG-SEA,Import,Apparel and footwear
+SYN-C0115,Synthetic Customer 0115,SME,US-SG-AIR,Import,Industrial machinery and parts
+SYN-C0116,Synthetic Customer 0116,SME,US-SG-AIR,Import,Apparel and footwear
+SYN-C0117,Synthetic Customer 0117,SME,CN-SG-AIR,Import,Furniture and homeware
+SYN-C0118,Synthetic Customer 0118,Mid-size,CN-SG-SEA,Import,Auto parts and tyres
+SYN-C0119,Synthetic Customer 0119,SME,CN-SG-SEA,Import,Consumer electronics
+SYN-C0120,Synthetic Customer 0120,SME,DE-SG-AIR,Import,Consumer electronics
+SYN-C0121,Synthetic Customer 0121,Mid-size,MY-SG-ROAD,Import,Consumer electronics
+SYN-C0122,Synthetic Customer 0122,SME,SG-AU-AIR,Export,Packaged food and drink
+SYN-C0123,Synthetic Customer 0123,Large,US-SG-AIR,Import,Industrial machinery and parts
+SYN-C0124,Synthetic Customer 0124,Mid-size,JP-SG-SEA,Import,Industrial machinery and parts
+SYN-C0125,Synthetic Customer 0125,SME,CN-SG-AIR,Import,Apparel and footwear
+SYN-C0126,Synthetic Customer 0126,SME,DE-SG-AIR,Import,Apparel and footwear
+SYN-C0127,Synthetic Customer 0127,Mid-size,SG-AU-SEA,Export,Apparel and footwear
+SYN-C0128,Synthetic Customer 0128,Large,CN-SG-SEA,Import,Auto parts and tyres
+SYN-C0129,Synthetic Customer 0129,SME,DE-SG-AIR,Import,Industrial machinery and parts
+SYN-C0130,Synthetic Customer 0130,Mid-size,CN-SG-AIR,Import,Pharmaceutical and medical
+SYN-C0131,Synthetic Customer 0131,Mid-size,VN-SG-SEA,Import,Cosmetics and personal care
+SYN-C0132,Synthetic Customer 0132,Mid-size,SG-AU-SEA,Export,Industrial machinery and parts
+SYN-C0133,Synthetic Customer 0133,SME,CN-SG-SEA,Import,Furniture and homeware
+SYN-C0134,Synthetic Customer 0134,SME,CN-SG-SEA,Import,Furniture and homeware
+SYN-C0135,Synthetic Customer 0135,SME,DE-SG-AIR,Import,Furniture and homeware
+SYN-C0136,Synthetic Customer 0136,Mid-size,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0137,Synthetic Customer 0137,Mid-size,VN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0138,Synthetic Customer 0138,Mid-size,CN-SG-SEA,Import,Chemicals
+SYN-C0139,Synthetic Customer 0139,Large,CN-SG-SEA,Import,Pharmaceutical and medical
+SYN-C0140,Synthetic Customer 0140,Mid-size,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0141,Synthetic Customer 0141,SME,MY-SG-ROAD,Import,Apparel and footwear
+SYN-C0142,Synthetic Customer 0142,Large,CN-SG-SEA,Import,Chemicals
+SYN-C0143,Synthetic Customer 0143,Mid-size,SG-AU-SEA,Export,Consumer electronics
+SYN-C0144,Synthetic Customer 0144,Mid-size,SG-AU-SEA,Export,Industrial machinery and parts
+SYN-C0145,Synthetic Customer 0145,SME,CN-SG-SEA,Import,Furniture and homeware
+SYN-C0146,Synthetic Customer 0146,Mid-size,SG-AU-AIR,Export,Apparel and footwear
+SYN-C0147,Synthetic Customer 0147,Large,MY-SG-ROAD,Import,Apparel and footwear
+SYN-C0148,Synthetic Customer 0148,Mid-size,SG-AU-SEA,Export,Consumer electronics
+SYN-C0149,Synthetic Customer 0149,Mid-size,US-SG-AIR,Import,Apparel and footwear
+SYN-C0150,Synthetic Customer 0150,SME,SG-AU-SEA,Export,Industrial machinery and parts
+SYN-C0151,Synthetic Customer 0151,Mid-size,CN-SG-SEA,Import,Packaged food and drink
+SYN-C0152,Synthetic Customer 0152,SME,CN-SG-AIR,Import,Industrial machinery and parts
+SYN-C0153,Synthetic Customer 0153,SME,SG-AU-AIR,Export,Apparel and footwear
+SYN-C0154,Synthetic Customer 0154,SME,SG-AU-AIR,Export,Apparel and footwear
+SYN-C0155,Synthetic Customer 0155,SME,CN-SG-SEA,Import,Consumer electronics
+SYN-C0156,Synthetic Customer 0156,Mid-size,US-SG-AIR,Import,Furniture and homeware
+SYN-C0157,Synthetic Customer 0157,SME,VN-SG-SEA,Import,Apparel and footwear
+SYN-C0158,Synthetic Customer 0158,Mid-size,SG-AU-AIR,Export,Industrial machinery and parts
+SYN-C0159,Synthetic Customer 0159,Mid-size,SG-AU-AIR,Export,Consumer electronics
+SYN-C0160,Synthetic Customer 0160,Mid-size,US-SG-AIR,Import,Packaged food and drink
+SYN-C0161,Synthetic Customer 0161,Mid-size,CN-SG-SEA,Import,Packaged food and drink
+SYN-C0162,Synthetic Customer 0162,Large,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0163,Synthetic Customer 0163,Mid-size,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0164,Synthetic Customer 0164,SME,SG-AU-AIR,Export,Packaged food and drink
+SYN-C0165,Synthetic Customer 0165,Mid-size,VN-SG-SEA,Import,Consumer electronics
+SYN-C0166,Synthetic Customer 0166,Large,SG-AU-AIR,Export,Consumer electronics
+SYN-C0167,Synthetic Customer 0167,Mid-size,SG-AU-AIR,Export,Pharmaceutical and medical
+SYN-C0168,Synthetic Customer 0168,SME,VN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0169,Synthetic Customer 0169,SME,CN-SG-SEA,Import,Packaged food and drink
+SYN-C0170,Synthetic Customer 0170,SME,JP-SG-SEA,Import,Industrial machinery and parts
+SYN-C0171,Synthetic Customer 0171,SME,CN-SG-SEA,Import,Consumer electronics
+SYN-C0172,Synthetic Customer 0172,Mid-size,US-SG-AIR,Import,Packaged food and drink
+SYN-C0173,Synthetic Customer 0173,Mid-size,DE-SG-AIR,Import,Furniture and homeware
+SYN-C0174,Synthetic Customer 0174,SME,VN-SG-SEA,Import,Consumer electronics
+SYN-C0175,Synthetic Customer 0175,SME,MY-SG-ROAD,Import,Toys and games
+SYN-C0176,Synthetic Customer 0176,Mid-size,CN-SG-AIR,Import,Packaged food and drink
+SYN-C0177,Synthetic Customer 0177,SME,SG-AU-SEA,Export,Auto parts and tyres
+SYN-C0178,Synthetic Customer 0178,SME,SG-AU-SEA,Export,Consumer electronics
+SYN-C0179,Synthetic Customer 0179,SME,CN-SG-AIR,Import,Auto parts and tyres
+SYN-C0180,Synthetic Customer 0180,Mid-size,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0181,Synthetic Customer 0181,SME,CN-SG-SEA,Import,Consumer electronics
+SYN-C0182,Synthetic Customer 0182,SME,SG-AU-AIR,Export,Apparel and footwear
+SYN-C0183,Synthetic Customer 0183,Large,SG-AU-AIR,Export,Toys and games
+SYN-C0184,Synthetic Customer 0184,SME,SG-AU-AIR,Export,Packaged food and drink
+SYN-C0185,Synthetic Customer 0185,SME,VN-SG-SEA,Import,Chemicals
+SYN-C0186,Synthetic Customer 0186,SME,DE-SG-AIR,Import,Pharmaceutical and medical
+SYN-C0187,Synthetic Customer 0187,Mid-size,JP-SG-SEA,Import,Consumer electronics
+SYN-C0188,Synthetic Customer 0188,SME,CN-SG-AIR,Import,Cosmetics and personal care
+SYN-C0189,Synthetic Customer 0189,SME,JP-SG-SEA,Import,Furniture and homeware
+SYN-C0190,Synthetic Customer 0190,Large,VN-SG-SEA,Import,Furniture and homeware
+SYN-C0191,Synthetic Customer 0191,Mid-size,JP-SG-SEA,Import,Industrial machinery and parts
+SYN-C0192,Synthetic Customer 0192,SME,SG-AU-SEA,Export,Consumer electronics
+SYN-C0193,Synthetic Customer 0193,Mid-size,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0194,Synthetic Customer 0194,SME,JP-SG-SEA,Import,Industrial machinery and parts
+SYN-C0195,Synthetic Customer 0195,SME,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0196,Synthetic Customer 0196,Mid-size,SG-AU-AIR,Export,Apparel and footwear
+SYN-C0197,Synthetic Customer 0197,Large,SG-AU-SEA,Export,Cosmetics and personal care
+SYN-C0198,Synthetic Customer 0198,Mid-size,CN-SG-SEA,Import,Auto parts and tyres
+SYN-C0199,Synthetic Customer 0199,Mid-size,CN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0200,Synthetic Customer 0200,SME,US-SG-AIR,Import,Industrial machinery and parts
+SYN-C0201,Synthetic Customer 0201,SME,SG-AU-SEA,Export,Apparel and footwear
+SYN-C0202,Synthetic Customer 0202,Mid-size,SG-AU-SEA,Export,Cosmetics and personal care
+SYN-C0203,Synthetic Customer 0203,SME,VN-SG-SEA,Import,Consumer electronics
+SYN-C0204,Synthetic Customer 0204,SME,US-SG-AIR,Import,Industrial machinery and parts
+SYN-C0205,Synthetic Customer 0205,Large,SG-AU-AIR,Export,Industrial machinery and parts
+SYN-C0206,Synthetic Customer 0206,SME,CN-SG-AIR,Import,Packaged food and drink
+SYN-C0207,Synthetic Customer 0207,SME,VN-SG-SEA,Import,Packaged food and drink
+SYN-C0208,Synthetic Customer 0208,SME,JP-SG-SEA,Import,Industrial machinery and parts
+SYN-C0209,Synthetic Customer 0209,Large,MY-SG-ROAD,Import,Industrial machinery and parts
+SYN-C0210,Synthetic Customer 0210,Mid-size,SG-AU-SEA,Export,Apparel and footwear
+SYN-C0211,Synthetic Customer 0211,SME,MY-SG-ROAD,Import,Consumer electronics
+SYN-C0212,Synthetic Customer 0212,SME,US-SG-AIR,Import,Apparel and footwear
+SYN-C0213,Synthetic Customer 0213,Mid-size,CN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0214,Synthetic Customer 0214,SME,CN-SG-AIR,Import,Consumer electronics
+SYN-C0215,Synthetic Customer 0215,SME,SG-AU-SEA,Export,Consumer electronics
+SYN-C0216,Synthetic Customer 0216,Mid-size,JP-SG-SEA,Import,Packaged food and drink
+SYN-C0217,Synthetic Customer 0217,Mid-size,SG-AU-AIR,Export,Consumer electronics
+SYN-C0218,Synthetic Customer 0218,SME,CN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0219,Synthetic Customer 0219,Mid-size,CN-SG-AIR,Import,Auto parts and tyres
+SYN-C0220,Synthetic Customer 0220,Mid-size,SG-AU-AIR,Export,Auto parts and tyres
+SYN-C0221,Synthetic Customer 0221,Large,DE-SG-AIR,Import,Packaged food and drink
+SYN-C0222,Synthetic Customer 0222,SME,MY-SG-ROAD,Import,Packaged food and drink
+SYN-C0223,Synthetic Customer 0223,Mid-size,SG-AU-AIR,Export,Industrial machinery and parts
+SYN-C0224,Synthetic Customer 0224,Mid-size,CN-SG-SEA,Import,Furniture and homeware
+SYN-C0225,Synthetic Customer 0225,SME,SG-AU-SEA,Export,Chemicals
+SYN-C0226,Synthetic Customer 0226,SME,SG-AU-SEA,Export,Pharmaceutical and medical
+SYN-C0227,Synthetic Customer 0227,SME,SG-AU-AIR,Export,Chemicals
+SYN-C0228,Synthetic Customer 0228,Large,DE-SG-AIR,Import,Industrial machinery and parts
+SYN-C0229,Synthetic Customer 0229,SME,CN-SG-AIR,Import,Pharmaceutical and medical
+SYN-C0230,Synthetic Customer 0230,Large,SG-AU-SEA,Export,Consumer electronics
+SYN-C0231,Synthetic Customer 0231,Mid-size,MY-SG-ROAD,Import,Chemicals
+SYN-C0232,Synthetic Customer 0232,SME,SG-AU-SEA,Export,Packaged food and drink
+SYN-C0233,Synthetic Customer 0233,SME,SG-AU-SEA,Export,Packaged food and drink
+SYN-C0234,Synthetic Customer 0234,SME,MY-SG-ROAD,Import,Chemicals
+SYN-C0235,Synthetic Customer 0235,Mid-size,SG-AU-AIR,Export,Consumer electronics
+SYN-C0236,Synthetic Customer 0236,SME,MY-SG-ROAD,Import,Packaged food and drink
+SYN-C0237,Synthetic Customer 0237,SME,JP-SG-SEA,Import,Packaged food and drink
+SYN-C0238,Synthetic Customer 0238,Mid-size,CN-SG-SEA,Import,Cosmetics and personal care
+SYN-C0239,Synthetic Customer 0239,SME,US-SG-AIR,Import,Consumer electronics
+SYN-C0240,Synthetic Customer 0240,Mid-size,MY-SG-ROAD,Import,Apparel and footwear
+SYN-C0241,Synthetic Customer 0241,Mid-size,DE-SG-AIR,Import,Pharmaceutical and medical
+SYN-C0242,Synthetic Customer 0242,Large,CN-SG-SEA,Import,Packaged food and drink
+SYN-C0243,Synthetic Customer 0243,Mid-size,JP-SG-SEA,Import,Consumer electronics
+SYN-C0244,Synthetic Customer 0244,Mid-size,CN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0245,Synthetic Customer 0245,Large,CN-SG-SEA,Import,Pharmaceutical and medical
+SYN-C0246,Synthetic Customer 0246,SME,JP-SG-SEA,Import,Chemicals
+SYN-C0247,Synthetic Customer 0247,SME,CN-SG-SEA,Import,Packaged food and drink
+SYN-C0248,Synthetic Customer 0248,Mid-size,VN-SG-SEA,Import,Consumer electronics
+SYN-C0249,Synthetic Customer 0249,Mid-size,MY-SG-ROAD,Import,Cosmetics and personal care
+SYN-C0250,Synthetic Customer 0250,SME,CN-SG-SEA,Import,Pharmaceutical and medical
+SYN-C0251,Synthetic Customer 0251,Mid-size,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0252,Synthetic Customer 0252,SME,MY-SG-ROAD,Import,Consumer electronics
+SYN-C0253,Synthetic Customer 0253,Large,SG-AU-SEA,Export,Pharmaceutical and medical
+SYN-C0254,Synthetic Customer 0254,Mid-size,DE-SG-AIR,Import,Pharmaceutical and medical
+SYN-C0255,Synthetic Customer 0255,Large,MY-SG-ROAD,Import,Furniture and homeware
+SYN-C0256,Synthetic Customer 0256,SME,CN-SG-SEA,Import,Toys and games
+SYN-C0257,Synthetic Customer 0257,Mid-size,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0258,Synthetic Customer 0258,SME,JP-SG-SEA,Import,Furniture and homeware
+SYN-C0259,Synthetic Customer 0259,SME,CN-SG-SEA,Import,Consumer electronics
+SYN-C0260,Synthetic Customer 0260,Mid-size,DE-SG-AIR,Import,Furniture and homeware
+SYN-C0261,Synthetic Customer 0261,Mid-size,CN-SG-SEA,Import,Cosmetics and personal care
+SYN-C0262,Synthetic Customer 0262,SME,VN-SG-SEA,Import,Consumer electronics
+SYN-C0263,Synthetic Customer 0263,Mid-size,DE-SG-AIR,Import,Cosmetics and personal care
+SYN-C0264,Synthetic Customer 0264,Large,DE-SG-AIR,Import,Consumer electronics
+SYN-C0265,Synthetic Customer 0265,SME,SG-AU-AIR,Export,Consumer electronics
+SYN-C0266,Synthetic Customer 0266,Mid-size,CN-SG-SEA,Import,Furniture and homeware
+SYN-C0267,Synthetic Customer 0267,SME,MY-SG-ROAD,Import,Cosmetics and personal care
+SYN-C0268,Synthetic Customer 0268,Mid-size,CN-SG-SEA,Import,Furniture and homeware
+SYN-C0269,Synthetic Customer 0269,SME,VN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0270,Synthetic Customer 0270,SME,CN-SG-SEA,Import,Chemicals
+SYN-C0271,Synthetic Customer 0271,Large,CN-SG-SEA,Import,Consumer electronics
+SYN-C0272,Synthetic Customer 0272,SME,CN-SG-SEA,Import,Cosmetics and personal care
+SYN-C0273,Synthetic Customer 0273,Mid-size,MY-SG-ROAD,Import,Pharmaceutical and medical
+SYN-C0274,Synthetic Customer 0274,Mid-size,SG-AU-SEA,Export,Packaged food and drink
+SYN-C0275,Synthetic Customer 0275,Mid-size,CN-SG-AIR,Import,Packaged food and drink
+SYN-C0276,Synthetic Customer 0276,SME,CN-SG-SEA,Import,Toys and games
+SYN-C0277,Synthetic Customer 0277,Mid-size,DE-SG-AIR,Import,Apparel and footwear
+SYN-C0278,Synthetic Customer 0278,Mid-size,US-SG-AIR,Import,Packaged food and drink
+SYN-C0279,Synthetic Customer 0279,SME,SG-AU-SEA,Export,Furniture and homeware
+SYN-C0280,Synthetic Customer 0280,Large,CN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0281,Synthetic Customer 0281,Large,SG-AU-SEA,Export,Apparel and footwear
+SYN-C0282,Synthetic Customer 0282,SME,MY-SG-ROAD,Import,Pharmaceutical and medical
+SYN-C0283,Synthetic Customer 0283,SME,VN-SG-SEA,Import,Apparel and footwear
+SYN-C0284,Synthetic Customer 0284,SME,CN-SG-AIR,Import,Packaged food and drink
+SYN-C0285,Synthetic Customer 0285,SME,DE-SG-AIR,Import,Apparel and footwear
+SYN-C0286,Synthetic Customer 0286,Large,VN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0287,Synthetic Customer 0287,SME,SG-AU-AIR,Export,Apparel and footwear
+SYN-C0288,Synthetic Customer 0288,SME,MY-SG-ROAD,Import,Industrial machinery and parts
+SYN-C0289,Synthetic Customer 0289,Mid-size,US-SG-AIR,Import,Chemicals
+SYN-C0290,Synthetic Customer 0290,Large,CN-SG-AIR,Import,Auto parts and tyres
+SYN-C0291,Synthetic Customer 0291,Large,US-SG-AIR,Import,Furniture and homeware
+SYN-C0292,Synthetic Customer 0292,Large,DE-SG-AIR,Import,Cosmetics and personal care
+SYN-C0293,Synthetic Customer 0293,SME,CN-SG-AIR,Import,Packaged food and drink
+SYN-C0294,Synthetic Customer 0294,SME,MY-SG-ROAD,Import,Auto parts and tyres
+SYN-C0295,Synthetic Customer 0295,SME,CN-SG-SEA,Import,Packaged food and drink
+SYN-C0296,Synthetic Customer 0296,SME,US-SG-AIR,Import,Consumer electronics
+SYN-C0297,Synthetic Customer 0297,SME,CN-SG-AIR,Import,Furniture and homeware
+SYN-C0298,Synthetic Customer 0298,SME,CN-SG-SEA,Import,Cosmetics and personal care
+SYN-C0299,Synthetic Customer 0299,Mid-size,SG-AU-AIR,Export,Packaged food and drink
+SYN-C0300,Synthetic Customer 0300,SME,MY-SG-ROAD,Import,Cosmetics and personal care
+SYN-C0301,Synthetic Customer 0301,SME,DE-SG-AIR,Import,Apparel and footwear
+SYN-C0302,Synthetic Customer 0302,SME,SG-AU-AIR,Export,Chemicals
+SYN-C0303,Synthetic Customer 0303,Large,CN-SG-SEA,Import,Auto parts and tyres
+SYN-C0304,Synthetic Customer 0304,Large,CN-SG-SEA,Import,Furniture and homeware
+SYN-C0305,Synthetic Customer 0305,SME,CN-SG-SEA,Import,Consumer electronics
+SYN-C0306,Synthetic Customer 0306,Mid-size,VN-SG-SEA,Import,Packaged food and drink
+SYN-C0307,Synthetic Customer 0307,SME,CN-SG-AIR,Import,Pharmaceutical and medical
+SYN-C0308,Synthetic Customer 0308,Mid-size,CN-SG-SEA,Import,Furniture and homeware
+SYN-C0309,Synthetic Customer 0309,SME,MY-SG-ROAD,Import,Industrial machinery and parts
+SYN-C0310,Synthetic Customer 0310,SME,CN-SG-SEA,Import,Cosmetics and personal care
+SYN-C0311,Synthetic Customer 0311,SME,MY-SG-ROAD,Import,Apparel and footwear
+SYN-C0312,Synthetic Customer 0312,SME,SG-AU-SEA,Export,Packaged food and drink
+SYN-C0313,Synthetic Customer 0313,SME,US-SG-AIR,Import,Consumer electronics
+SYN-C0314,Synthetic Customer 0314,SME,CN-SG-SEA,Import,Consumer electronics
+SYN-C0315,Synthetic Customer 0315,Mid-size,SG-AU-AIR,Export,Furniture and homeware
+SYN-C0316,Synthetic Customer 0316,Mid-size,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0317,Synthetic Customer 0317,Large,DE-SG-AIR,Import,Toys and games
+SYN-C0318,Synthetic Customer 0318,SME,CN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0319,Synthetic Customer 0319,Mid-size,SG-AU-AIR,Export,Furniture and homeware
+SYN-C0320,Synthetic Customer 0320,Mid-size,CN-SG-AIR,Import,Chemicals
+SYN-C0321,Synthetic Customer 0321,SME,CN-SG-SEA,Import,Packaged food and drink
+SYN-C0322,Synthetic Customer 0322,SME,VN-SG-SEA,Import,Packaged food and drink
+SYN-C0323,Synthetic Customer 0323,Mid-size,SG-AU-AIR,Export,Toys and games
+SYN-C0324,Synthetic Customer 0324,Mid-size,US-SG-AIR,Import,Packaged food and drink
+SYN-C0325,Synthetic Customer 0325,SME,DE-SG-AIR,Import,Chemicals
+SYN-C0326,Synthetic Customer 0326,Mid-size,VN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0327,Synthetic Customer 0327,SME,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0328,Synthetic Customer 0328,SME,SG-AU-SEA,Export,Apparel and footwear
+SYN-C0329,Synthetic Customer 0329,SME,SG-AU-AIR,Export,Industrial machinery and parts
+SYN-C0330,Synthetic Customer 0330,SME,MY-SG-ROAD,Import,Industrial machinery and parts
+SYN-C0331,Synthetic Customer 0331,SME,US-SG-AIR,Import,Industrial machinery and parts
+SYN-C0332,Synthetic Customer 0332,SME,DE-SG-AIR,Import,Apparel and footwear
+SYN-C0333,Synthetic Customer 0333,Mid-size,CN-SG-SEA,Import,Cosmetics and personal care
+SYN-C0334,Synthetic Customer 0334,SME,VN-SG-SEA,Import,Apparel and footwear
+SYN-C0335,Synthetic Customer 0335,Mid-size,MY-SG-ROAD,Import,Toys and games
+SYN-C0336,Synthetic Customer 0336,SME,CN-SG-SEA,Import,Chemicals
+SYN-C0337,Synthetic Customer 0337,Large,SG-AU-SEA,Export,Industrial machinery and parts
+SYN-C0338,Synthetic Customer 0338,SME,CN-SG-AIR,Import,Consumer electronics
+SYN-C0339,Synthetic Customer 0339,SME,US-SG-AIR,Import,Packaged food and drink
+SYN-C0340,Synthetic Customer 0340,Mid-size,SG-AU-SEA,Export,Apparel and footwear
+SYN-C0341,Synthetic Customer 0341,Mid-size,CN-SG-AIR,Import,Apparel and footwear
+SYN-C0342,Synthetic Customer 0342,SME,DE-SG-AIR,Import,Consumer electronics
+SYN-C0343,Synthetic Customer 0343,Mid-size,MY-SG-ROAD,Import,Cosmetics and personal care
+SYN-C0344,Synthetic Customer 0344,SME,SG-AU-AIR,Export,Apparel and footwear
+SYN-C0345,Synthetic Customer 0345,Mid-size,CN-SG-AIR,Import,Consumer electronics
+SYN-C0346,Synthetic Customer 0346,SME,VN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0347,Synthetic Customer 0347,SME,MY-SG-ROAD,Import,Apparel and footwear
+SYN-C0348,Synthetic Customer 0348,SME,CN-SG-AIR,Import,Industrial machinery and parts
+SYN-C0349,Synthetic Customer 0349,Mid-size,VN-SG-SEA,Import,Apparel and footwear
+SYN-C0350,Synthetic Customer 0350,Large,JP-SG-SEA,Import,Cosmetics and personal care
+SYN-C0351,Synthetic Customer 0351,SME,VN-SG-SEA,Import,Auto parts and tyres
+SYN-C0352,Synthetic Customer 0352,SME,JP-SG-SEA,Import,Auto parts and tyres
+SYN-C0353,Synthetic Customer 0353,Mid-size,JP-SG-SEA,Import,Cosmetics and personal care
+SYN-C0354,Synthetic Customer 0354,Mid-size,CN-SG-SEA,Import,Chemicals
+SYN-C0355,Synthetic Customer 0355,Mid-size,SG-AU-SEA,Export,Chemicals
+SYN-C0356,Synthetic Customer 0356,Mid-size,SG-AU-SEA,Export,Chemicals
+SYN-C0357,Synthetic Customer 0357,Mid-size,SG-AU-SEA,Export,Apparel and footwear
+SYN-C0358,Synthetic Customer 0358,SME,VN-SG-SEA,Import,Consumer electronics
+SYN-C0359,Synthetic Customer 0359,Large,DE-SG-AIR,Import,Toys and games
+SYN-C0360,Synthetic Customer 0360,SME,DE-SG-AIR,Import,Cosmetics and personal care
+SYN-C0361,Synthetic Customer 0361,SME,SG-AU-SEA,Export,Apparel and footwear
+SYN-C0362,Synthetic Customer 0362,Mid-size,SG-AU-SEA,Export,Auto parts and tyres
+SYN-C0363,Synthetic Customer 0363,SME,CN-SG-SEA,Import,Consumer electronics
+SYN-C0364,Synthetic Customer 0364,Mid-size,CN-SG-AIR,Import,Packaged food and drink
+SYN-C0365,Synthetic Customer 0365,Mid-size,SG-AU-SEA,Export,Industrial machinery and parts
+SYN-C0366,Synthetic Customer 0366,SME,CN-SG-SEA,Import,Consumer electronics
+SYN-C0367,Synthetic Customer 0367,Mid-size,SG-AU-AIR,Export,Industrial machinery and parts
+SYN-C0368,Synthetic Customer 0368,SME,CN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0369,Synthetic Customer 0369,Large,CN-SG-AIR,Import,Apparel and footwear
+SYN-C0370,Synthetic Customer 0370,SME,MY-SG-ROAD,Import,Industrial machinery and parts
+SYN-C0371,Synthetic Customer 0371,SME,DE-SG-AIR,Import,Consumer electronics
+SYN-C0372,Synthetic Customer 0372,SME,CN-SG-SEA,Import,Consumer electronics
+SYN-C0373,Synthetic Customer 0373,Mid-size,VN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0374,Synthetic Customer 0374,SME,SG-AU-AIR,Export,Furniture and homeware
+SYN-C0375,Synthetic Customer 0375,SME,CN-SG-AIR,Import,Consumer electronics
+SYN-C0376,Synthetic Customer 0376,Mid-size,US-SG-AIR,Import,Packaged food and drink
+SYN-C0377,Synthetic Customer 0377,SME,DE-SG-AIR,Import,Industrial machinery and parts
+SYN-C0378,Synthetic Customer 0378,SME,VN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0379,Synthetic Customer 0379,Large,US-SG-AIR,Import,Industrial machinery and parts
+SYN-C0380,Synthetic Customer 0380,SME,VN-SG-SEA,Import,Consumer electronics
+SYN-C0381,Synthetic Customer 0381,Mid-size,CN-SG-SEA,Import,Consumer electronics
+SYN-C0382,Synthetic Customer 0382,Mid-size,SG-AU-SEA,Export,Chemicals
+SYN-C0383,Synthetic Customer 0383,Large,MY-SG-ROAD,Import,Packaged food and drink
+SYN-C0384,Synthetic Customer 0384,SME,SG-AU-AIR,Export,Furniture and homeware
+SYN-C0385,Synthetic Customer 0385,SME,US-SG-AIR,Import,Apparel and footwear
+SYN-C0386,Synthetic Customer 0386,Large,CN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0387,Synthetic Customer 0387,SME,MY-SG-ROAD,Import,Toys and games
+SYN-C0388,Synthetic Customer 0388,SME,MY-SG-ROAD,Import,Industrial machinery and parts
+SYN-C0389,Synthetic Customer 0389,SME,VN-SG-SEA,Import,Packaged food and drink
+SYN-C0390,Synthetic Customer 0390,SME,VN-SG-SEA,Import,Packaged food and drink
+SYN-C0391,Synthetic Customer 0391,SME,VN-SG-SEA,Import,Auto parts and tyres
+SYN-C0392,Synthetic Customer 0392,SME,SG-AU-SEA,Export,Apparel and footwear
+SYN-C0393,Synthetic Customer 0393,Mid-size,SG-AU-AIR,Export,Cosmetics and personal care
+SYN-C0394,Synthetic Customer 0394,SME,SG-AU-SEA,Export,Cosmetics and personal care
+SYN-C0395,Synthetic Customer 0395,SME,JP-SG-SEA,Import,Chemicals
+SYN-C0396,Synthetic Customer 0396,Mid-size,VN-SG-SEA,Import,Apparel and footwear
+SYN-C0397,Synthetic Customer 0397,Mid-size,CN-SG-SEA,Import,Consumer electronics
+SYN-C0398,Synthetic Customer 0398,Mid-size,MY-SG-ROAD,Import,Consumer electronics
+SYN-C0399,Synthetic Customer 0399,SME,SG-AU-SEA,Export,Auto parts and tyres
+SYN-C0400,Synthetic Customer 0400,SME,CN-SG-SEA,Import,Consumer electronics
+SYN-C0401,Synthetic Customer 0401,SME,CN-SG-AIR,Import,Furniture and homeware
+SYN-C0402,Synthetic Customer 0402,SME,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0403,Synthetic Customer 0403,SME,DE-SG-AIR,Import,Cosmetics and personal care
+SYN-C0404,Synthetic Customer 0404,SME,CN-SG-SEA,Import,Packaged food and drink
+SYN-C0405,Synthetic Customer 0405,SME,CN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0406,Synthetic Customer 0406,SME,CN-SG-AIR,Import,Chemicals
+SYN-C0407,Synthetic Customer 0407,SME,CN-SG-AIR,Import,Apparel and footwear
+SYN-C0408,Synthetic Customer 0408,SME,US-SG-AIR,Import,Apparel and footwear
+SYN-C0409,Synthetic Customer 0409,SME,VN-SG-SEA,Import,Toys and games
+SYN-C0410,Synthetic Customer 0410,SME,US-SG-AIR,Import,Packaged food and drink
+SYN-C0411,Synthetic Customer 0411,SME,DE-SG-AIR,Import,Consumer electronics
+SYN-C0412,Synthetic Customer 0412,Mid-size,DE-SG-AIR,Import,Consumer electronics
+SYN-C0413,Synthetic Customer 0413,SME,MY-SG-ROAD,Import,Chemicals
+SYN-C0414,Synthetic Customer 0414,SME,SG-AU-SEA,Export,Chemicals
+SYN-C0415,Synthetic Customer 0415,SME,SG-AU-AIR,Export,Apparel and footwear
+SYN-C0416,Synthetic Customer 0416,Large,US-SG-AIR,Import,Industrial machinery and parts
+SYN-C0417,Synthetic Customer 0417,SME,SG-AU-SEA,Export,Furniture and homeware
+SYN-C0418,Synthetic Customer 0418,Mid-size,US-SG-AIR,Import,Furniture and homeware
+SYN-C0419,Synthetic Customer 0419,Large,CN-SG-SEA,Import,Consumer electronics
+SYN-C0420,Synthetic Customer 0420,SME,US-SG-AIR,Import,Pharmaceutical and medical
+SYN-C0421,Synthetic Customer 0421,Mid-size,SG-AU-AIR,Export,Packaged food and drink
+SYN-C0422,Synthetic Customer 0422,Mid-size,US-SG-AIR,Import,Consumer electronics
+SYN-C0423,Synthetic Customer 0423,SME,VN-SG-SEA,Import,Auto parts and tyres
+SYN-C0424,Synthetic Customer 0424,Mid-size,DE-SG-AIR,Import,Industrial machinery and parts
+SYN-C0425,Synthetic Customer 0425,SME,VN-SG-SEA,Import,Packaged food and drink
+SYN-C0426,Synthetic Customer 0426,SME,VN-SG-SEA,Import,Furniture and homeware
+SYN-C0427,Synthetic Customer 0427,SME,SG-AU-SEA,Export,Furniture and homeware
+SYN-C0428,Synthetic Customer 0428,SME,MY-SG-ROAD,Import,Apparel and footwear
+SYN-C0429,Synthetic Customer 0429,SME,SG-AU-AIR,Export,Industrial machinery and parts
+SYN-C0430,Synthetic Customer 0430,SME,SG-AU-SEA,Export,Apparel and footwear
+SYN-C0431,Synthetic Customer 0431,Mid-size,US-SG-AIR,Import,Packaged food and drink
+SYN-C0432,Synthetic Customer 0432,SME,SG-AU-AIR,Export,Industrial machinery and parts
+SYN-C0433,Synthetic Customer 0433,Large,CN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0434,Synthetic Customer 0434,Mid-size,SG-AU-SEA,Export,Packaged food and drink
+SYN-C0435,Synthetic Customer 0435,Mid-size,CN-SG-SEA,Import,Consumer electronics
+SYN-C0436,Synthetic Customer 0436,SME,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0437,Synthetic Customer 0437,SME,SG-AU-SEA,Export,Auto parts and tyres
+SYN-C0438,Synthetic Customer 0438,Mid-size,CN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0439,Synthetic Customer 0439,SME,SG-AU-AIR,Export,Industrial machinery and parts
+SYN-C0440,Synthetic Customer 0440,SME,MY-SG-ROAD,Import,Consumer electronics
+SYN-C0441,Synthetic Customer 0441,SME,US-SG-AIR,Import,Auto parts and tyres
+SYN-C0442,Synthetic Customer 0442,SME,SG-AU-AIR,Export,Consumer electronics
+SYN-C0443,Synthetic Customer 0443,SME,US-SG-AIR,Import,Packaged food and drink
+SYN-C0444,Synthetic Customer 0444,Mid-size,SG-AU-AIR,Export,Consumer electronics
+SYN-C0445,Synthetic Customer 0445,SME,CN-SG-SEA,Import,Consumer electronics
+SYN-C0446,Synthetic Customer 0446,Large,MY-SG-ROAD,Import,Consumer electronics
+SYN-C0447,Synthetic Customer 0447,SME,SG-AU-AIR,Export,Packaged food and drink
+SYN-C0448,Synthetic Customer 0448,SME,VN-SG-SEA,Import,Furniture and homeware
+SYN-C0449,Synthetic Customer 0449,SME,SG-AU-AIR,Export,Auto parts and tyres
+SYN-C0450,Synthetic Customer 0450,SME,US-SG-AIR,Import,Consumer electronics
+SYN-C0451,Synthetic Customer 0451,SME,DE-SG-AIR,Import,Chemicals
+SYN-C0452,Synthetic Customer 0452,SME,MY-SG-ROAD,Import,Cosmetics and personal care
+SYN-C0453,Synthetic Customer 0453,SME,US-SG-AIR,Import,Apparel and footwear
+SYN-C0454,Synthetic Customer 0454,SME,CN-SG-SEA,Import,Furniture and homeware
+SYN-C0455,Synthetic Customer 0455,SME,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0456,Synthetic Customer 0456,SME,SG-AU-AIR,Export,Furniture and homeware
+SYN-C0457,Synthetic Customer 0457,Mid-size,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0458,Synthetic Customer 0458,SME,CN-SG-SEA,Import,Consumer electronics
+SYN-C0459,Synthetic Customer 0459,SME,MY-SG-ROAD,Import,Auto parts and tyres
+SYN-C0460,Synthetic Customer 0460,SME,SG-AU-SEA,Export,Cosmetics and personal care
+SYN-C0461,Synthetic Customer 0461,Mid-size,CN-SG-AIR,Import,Consumer electronics
+SYN-C0462,Synthetic Customer 0462,SME,MY-SG-ROAD,Import,Auto parts and tyres
+SYN-C0463,Synthetic Customer 0463,SME,CN-SG-SEA,Import,Furniture and homeware
+SYN-C0464,Synthetic Customer 0464,Mid-size,SG-AU-AIR,Export,Apparel and footwear
+SYN-C0465,Synthetic Customer 0465,Mid-size,CN-SG-AIR,Import,Cosmetics and personal care
+SYN-C0466,Synthetic Customer 0466,Mid-size,CN-SG-SEA,Import,Consumer electronics
+SYN-C0467,Synthetic Customer 0467,SME,CN-SG-SEA,Import,Toys and games
+SYN-C0468,Synthetic Customer 0468,SME,SG-AU-SEA,Export,Apparel and footwear
+SYN-C0469,Synthetic Customer 0469,SME,VN-SG-SEA,Import,Consumer electronics
+SYN-C0470,Synthetic Customer 0470,SME,SG-AU-SEA,Export,Consumer electronics
+SYN-C0471,Synthetic Customer 0471,SME,SG-AU-SEA,Export,Auto parts and tyres
+SYN-C0472,Synthetic Customer 0472,SME,DE-SG-AIR,Import,Packaged food and drink
+SYN-C0473,Synthetic Customer 0473,Large,SG-AU-AIR,Export,Consumer electronics
+SYN-C0474,Synthetic Customer 0474,SME,SG-AU-AIR,Export,Industrial machinery and parts
+SYN-C0475,Synthetic Customer 0475,Mid-size,US-SG-AIR,Import,Consumer electronics
+SYN-C0476,Synthetic Customer 0476,Large,MY-SG-ROAD,Import,Industrial machinery and parts
+SYN-C0477,Synthetic Customer 0477,SME,MY-SG-ROAD,Import,Industrial machinery and parts
+SYN-C0478,Synthetic Customer 0478,Large,SG-AU-AIR,Export,Cosmetics and personal care
+SYN-C0479,Synthetic Customer 0479,Mid-size,US-SG-AIR,Import,Pharmaceutical and medical
+SYN-C0480,Synthetic Customer 0480,SME,MY-SG-ROAD,Import,Packaged food and drink
+SYN-C0481,Synthetic Customer 0481,SME,JP-SG-SEA,Import,Apparel and footwear
+SYN-C0482,Synthetic Customer 0482,SME,MY-SG-ROAD,Import,Industrial machinery and parts
+SYN-C0483,Synthetic Customer 0483,SME,SG-AU-SEA,Export,Auto parts and tyres
+SYN-C0484,Synthetic Customer 0484,SME,MY-SG-ROAD,Import,Cosmetics and personal care
+SYN-C0485,Synthetic Customer 0485,Mid-size,DE-SG-AIR,Import,Cosmetics and personal care
+SYN-C0486,Synthetic Customer 0486,SME,MY-SG-ROAD,Import,Pharmaceutical and medical
+SYN-C0487,Synthetic Customer 0487,Mid-size,CN-SG-SEA,Import,Auto parts and tyres
+SYN-C0488,Synthetic Customer 0488,SME,US-SG-AIR,Import,Packaged food and drink
+SYN-C0489,Synthetic Customer 0489,SME,SG-AU-AIR,Export,Consumer electronics
+SYN-C0490,Synthetic Customer 0490,SME,VN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0491,Synthetic Customer 0491,Large,DE-SG-AIR,Import,Packaged food and drink
+SYN-C0492,Synthetic Customer 0492,SME,VN-SG-SEA,Import,Packaged food and drink
+SYN-C0493,Synthetic Customer 0493,SME,SG-AU-AIR,Export,Furniture and homeware
+SYN-C0494,Synthetic Customer 0494,Mid-size,SG-AU-SEA,Export,Consumer electronics
+SYN-C0495,Synthetic Customer 0495,SME,SG-AU-AIR,Export,Consumer electronics
+SYN-C0496,Synthetic Customer 0496,SME,MY-SG-ROAD,Import,Pharmaceutical and medical
+SYN-C0497,Synthetic Customer 0497,SME,CN-SG-AIR,Import,Cosmetics and personal care
+SYN-C0498,Synthetic Customer 0498,Mid-size,VN-SG-SEA,Import,Auto parts and tyres
+SYN-C0499,Synthetic Customer 0499,Mid-size,JP-SG-SEA,Import,Industrial machinery and parts
+SYN-C0500,Synthetic Customer 0500,Large,CN-SG-SEA,Import,Chemicals
+SYN-C0501,Synthetic Customer 0501,SME,US-SG-AIR,Import,Toys and games
+SYN-C0502,Synthetic Customer 0502,Mid-size,SG-AU-AIR,Export,Industrial machinery and parts
+SYN-C0503,Synthetic Customer 0503,SME,MY-SG-ROAD,Import,Chemicals
+SYN-C0504,Synthetic Customer 0504,SME,JP-SG-SEA,Import,Chemicals
+SYN-C0505,Synthetic Customer 0505,Large,MY-SG-ROAD,Import,Consumer electronics
+SYN-C0506,Synthetic Customer 0506,SME,SG-AU-SEA,Export,Furniture and homeware
+SYN-C0507,Synthetic Customer 0507,SME,SG-AU-SEA,Export,Furniture and homeware
+SYN-C0508,Synthetic Customer 0508,Mid-size,MY-SG-ROAD,Import,Furniture and homeware
+SYN-C0509,Synthetic Customer 0509,SME,CN-SG-SEA,Import,Consumer electronics
+SYN-C0510,Synthetic Customer 0510,SME,SG-AU-SEA,Export,Industrial machinery and parts
+SYN-C0511,Synthetic Customer 0511,SME,CN-SG-SEA,Import,Packaged food and drink
+SYN-C0512,Synthetic Customer 0512,Large,SG-AU-AIR,Export,Furniture and homeware
+SYN-C0513,Synthetic Customer 0513,SME,DE-SG-AIR,Import,Packaged food and drink
+SYN-C0514,Synthetic Customer 0514,SME,JP-SG-SEA,Import,Packaged food and drink
+SYN-C0515,Synthetic Customer 0515,SME,SG-AU-AIR,Export,Apparel and footwear
+SYN-C0516,Synthetic Customer 0516,SME,SG-AU-SEA,Export,Consumer electronics
+SYN-C0517,Synthetic Customer 0517,SME,JP-SG-SEA,Import,Consumer electronics
+SYN-C0518,Synthetic Customer 0518,Large,MY-SG-ROAD,Import,Consumer electronics
+SYN-C0519,Synthetic Customer 0519,SME,DE-SG-AIR,Import,Furniture and homeware
+SYN-C0520,Synthetic Customer 0520,SME,DE-SG-AIR,Import,Chemicals
+SYN-C0521,Synthetic Customer 0521,SME,MY-SG-ROAD,Import,Toys and games
+SYN-C0522,Synthetic Customer 0522,SME,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0523,Synthetic Customer 0523,Mid-size,VN-SG-SEA,Import,Consumer electronics
+SYN-C0524,Synthetic Customer 0524,SME,DE-SG-AIR,Import,Cosmetics and personal care
+SYN-C0525,Synthetic Customer 0525,Mid-size,US-SG-AIR,Import,Chemicals
+SYN-C0526,Synthetic Customer 0526,Mid-size,VN-SG-SEA,Import,Consumer electronics
+SYN-C0527,Synthetic Customer 0527,Mid-size,DE-SG-AIR,Import,Consumer electronics
+SYN-C0528,Synthetic Customer 0528,SME,SG-AU-SEA,Export,Apparel and footwear
+SYN-C0529,Synthetic Customer 0529,SME,CN-SG-SEA,Import,Pharmaceutical and medical
+SYN-C0530,Synthetic Customer 0530,SME,SG-AU-SEA,Export,Consumer electronics
+SYN-C0531,Synthetic Customer 0531,Mid-size,SG-AU-AIR,Export,Apparel and footwear
+SYN-C0532,Synthetic Customer 0532,Mid-size,CN-SG-SEA,Import,Packaged food and drink
+SYN-C0533,Synthetic Customer 0533,SME,MY-SG-ROAD,Import,Packaged food and drink
+SYN-C0534,Synthetic Customer 0534,SME,SG-AU-SEA,Export,Furniture and homeware
+SYN-C0535,Synthetic Customer 0535,Mid-size,CN-SG-SEA,Import,Toys and games
+SYN-C0536,Synthetic Customer 0536,SME,JP-SG-SEA,Import,Cosmetics and personal care
+SYN-C0537,Synthetic Customer 0537,Large,CN-SG-SEA,Import,Consumer electronics
+SYN-C0538,Synthetic Customer 0538,Mid-size,US-SG-AIR,Import,Toys and games
+SYN-C0539,Synthetic Customer 0539,SME,CN-SG-SEA,Import,Consumer electronics
+SYN-C0540,Synthetic Customer 0540,SME,SG-AU-AIR,Export,Furniture and homeware
+SYN-C0541,Synthetic Customer 0541,SME,CN-SG-AIR,Import,Auto parts and tyres
+SYN-C0542,Synthetic Customer 0542,SME,CN-SG-SEA,Import,Packaged food and drink
+SYN-C0543,Synthetic Customer 0543,SME,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0544,Synthetic Customer 0544,SME,CN-SG-AIR,Import,Cosmetics and personal care
+SYN-C0545,Synthetic Customer 0545,SME,CN-SG-AIR,Import,Packaged food and drink
+SYN-C0546,Synthetic Customer 0546,Large,CN-SG-AIR,Import,Consumer electronics
+SYN-C0547,Synthetic Customer 0547,SME,CN-SG-SEA,Import,Toys and games
+SYN-C0548,Synthetic Customer 0548,SME,VN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0549,Synthetic Customer 0549,Mid-size,CN-SG-SEA,Import,Chemicals
+SYN-C0550,Synthetic Customer 0550,SME,SG-AU-SEA,Export,Pharmaceutical and medical
+SYN-C0551,Synthetic Customer 0551,SME,CN-SG-SEA,Import,Cosmetics and personal care
+SYN-C0552,Synthetic Customer 0552,SME,MY-SG-ROAD,Import,Apparel and footwear
+SYN-C0553,Synthetic Customer 0553,Mid-size,CN-SG-SEA,Import,Auto parts and tyres
+SYN-C0554,Synthetic Customer 0554,SME,CN-SG-AIR,Import,Cosmetics and personal care
+SYN-C0555,Synthetic Customer 0555,SME,SG-AU-SEA,Export,Apparel and footwear
+SYN-C0556,Synthetic Customer 0556,Mid-size,SG-AU-SEA,Export,Consumer electronics
+SYN-C0557,Synthetic Customer 0557,SME,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0558,Synthetic Customer 0558,SME,MY-SG-ROAD,Import,Furniture and homeware
+SYN-C0559,Synthetic Customer 0559,SME,CN-SG-AIR,Import,Consumer electronics
+SYN-C0560,Synthetic Customer 0560,SME,US-SG-AIR,Import,Packaged food and drink
+SYN-C0561,Synthetic Customer 0561,SME,DE-SG-AIR,Import,Toys and games
+SYN-C0562,Synthetic Customer 0562,SME,US-SG-AIR,Import,Apparel and footwear
+SYN-C0563,Synthetic Customer 0563,Mid-size,CN-SG-SEA,Import,Consumer electronics
+SYN-C0564,Synthetic Customer 0564,SME,DE-SG-AIR,Import,Furniture and homeware
+SYN-C0565,Synthetic Customer 0565,SME,CN-SG-SEA,Import,Packaged food and drink
+SYN-C0566,Synthetic Customer 0566,Mid-size,VN-SG-SEA,Import,Packaged food and drink
+SYN-C0567,Synthetic Customer 0567,Mid-size,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0568,Synthetic Customer 0568,SME,MY-SG-ROAD,Import,Cosmetics and personal care
+SYN-C0569,Synthetic Customer 0569,SME,DE-SG-AIR,Import,Chemicals
+SYN-C0570,Synthetic Customer 0570,Mid-size,SG-AU-SEA,Export,Industrial machinery and parts
+SYN-C0571,Synthetic Customer 0571,Mid-size,MY-SG-ROAD,Import,Apparel and footwear
+SYN-C0572,Synthetic Customer 0572,SME,MY-SG-ROAD,Import,Cosmetics and personal care
+SYN-C0573,Synthetic Customer 0573,SME,CN-SG-SEA,Import,Pharmaceutical and medical
+SYN-C0574,Synthetic Customer 0574,Large,CN-SG-SEA,Import,Furniture and homeware
+SYN-C0575,Synthetic Customer 0575,SME,CN-SG-AIR,Import,Industrial machinery and parts
+SYN-C0576,Synthetic Customer 0576,Mid-size,US-SG-AIR,Import,Auto parts and tyres
+SYN-C0577,Synthetic Customer 0577,Large,SG-AU-AIR,Export,Pharmaceutical and medical
+SYN-C0578,Synthetic Customer 0578,SME,SG-AU-AIR,Export,Packaged food and drink
+SYN-C0579,Synthetic Customer 0579,Mid-size,CN-SG-SEA,Import,Cosmetics and personal care
+SYN-C0580,Synthetic Customer 0580,SME,MY-SG-ROAD,Import,Industrial machinery and parts
+SYN-C0581,Synthetic Customer 0581,SME,CN-SG-AIR,Import,Packaged food and drink
+SYN-C0582,Synthetic Customer 0582,SME,CN-SG-AIR,Import,Consumer electronics
+SYN-C0583,Synthetic Customer 0583,SME,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0584,Synthetic Customer 0584,Mid-size,SG-AU-SEA,Export,Apparel and footwear
+SYN-C0585,Synthetic Customer 0585,SME,SG-AU-SEA,Export,Packaged food and drink
+SYN-C0586,Synthetic Customer 0586,SME,CN-SG-SEA,Import,Pharmaceutical and medical
+SYN-C0587,Synthetic Customer 0587,Mid-size,SG-AU-SEA,Export,Auto parts and tyres
+SYN-C0588,Synthetic Customer 0588,SME,CN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0589,Synthetic Customer 0589,SME,CN-SG-SEA,Import,Furniture and homeware
+SYN-C0590,Synthetic Customer 0590,SME,US-SG-AIR,Import,Furniture and homeware
+SYN-C0591,Synthetic Customer 0591,SME,VN-SG-SEA,Import,Pharmaceutical and medical
+SYN-C0592,Synthetic Customer 0592,Mid-size,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0593,Synthetic Customer 0593,SME,CN-SG-AIR,Import,Packaged food and drink
+SYN-C0594,Synthetic Customer 0594,SME,MY-SG-ROAD,Import,Pharmaceutical and medical
+SYN-C0595,Synthetic Customer 0595,SME,CN-SG-SEA,Import,Consumer electronics
+SYN-C0596,Synthetic Customer 0596,Mid-size,CN-SG-SEA,Import,Cosmetics and personal care
+SYN-C0597,Synthetic Customer 0597,Mid-size,VN-SG-SEA,Import,Cosmetics and personal care
+SYN-C0598,Synthetic Customer 0598,SME,DE-SG-AIR,Import,Auto parts and tyres
+SYN-C0599,Synthetic Customer 0599,Mid-size,CN-SG-SEA,Import,Consumer electronics
+SYN-C0600,Synthetic Customer 0600,SME,US-SG-AIR,Import,Apparel and footwear
+SYN-C0601,Synthetic Customer 0601,Mid-size,CN-SG-SEA,Import,Pharmaceutical and medical
+SYN-C0602,Synthetic Customer 0602,Mid-size,CN-SG-SEA,Import,Consumer electronics
+SYN-C0603,Synthetic Customer 0603,Mid-size,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0604,Synthetic Customer 0604,SME,JP-SG-SEA,Import,Packaged food and drink
+SYN-C0605,Synthetic Customer 0605,SME,CN-SG-SEA,Import,Toys and games
+SYN-C0606,Synthetic Customer 0606,Mid-size,DE-SG-AIR,Import,Cosmetics and personal care
+SYN-C0607,Synthetic Customer 0607,SME,MY-SG-ROAD,Import,Cosmetics and personal care
+SYN-C0608,Synthetic Customer 0608,SME,US-SG-AIR,Import,Packaged food and drink
+SYN-C0609,Synthetic Customer 0609,Mid-size,CN-SG-AIR,Import,Packaged food and drink
+SYN-C0610,Synthetic Customer 0610,Large,SG-AU-SEA,Export,Consumer electronics
+SYN-C0611,Synthetic Customer 0611,SME,CN-SG-SEA,Import,Toys and games
+SYN-C0612,Synthetic Customer 0612,SME,CN-SG-SEA,Import,Packaged food and drink
+SYN-C0613,Synthetic Customer 0613,SME,CN-SG-SEA,Import,Toys and games
+SYN-C0614,Synthetic Customer 0614,Mid-size,SG-AU-SEA,Export,Furniture and homeware
+SYN-C0615,Synthetic Customer 0615,SME,CN-SG-SEA,Import,Consumer electronics
+SYN-C0616,Synthetic Customer 0616,Mid-size,US-SG-AIR,Import,Packaged food and drink
+SYN-C0617,Synthetic Customer 0617,Large,SG-AU-AIR,Export,Packaged food and drink
+SYN-C0618,Synthetic Customer 0618,SME,US-SG-AIR,Import,Consumer electronics
+SYN-C0619,Synthetic Customer 0619,SME,US-SG-AIR,Import,Consumer electronics
+SYN-C0620,Synthetic Customer 0620,Mid-size,CN-SG-SEA,Import,Chemicals
+SYN-C0621,Synthetic Customer 0621,SME,MY-SG-ROAD,Import,Furniture and homeware
+SYN-C0622,Synthetic Customer 0622,SME,CN-SG-SEA,Import,Packaged food and drink
+SYN-C0623,Synthetic Customer 0623,SME,VN-SG-SEA,Import,Furniture and homeware
+SYN-C0624,Synthetic Customer 0624,SME,US-SG-AIR,Import,Auto parts and tyres
+SYN-C0625,Synthetic Customer 0625,Mid-size,SG-AU-SEA,Export,Cosmetics and personal care
+SYN-C0626,Synthetic Customer 0626,SME,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0627,Synthetic Customer 0627,SME,US-SG-AIR,Import,Chemicals
+SYN-C0628,Synthetic Customer 0628,SME,CN-SG-AIR,Import,Furniture and homeware
+SYN-C0629,Synthetic Customer 0629,Large,CN-SG-AIR,Import,Auto parts and tyres
+SYN-C0630,Synthetic Customer 0630,Mid-size,CN-SG-AIR,Import,Packaged food and drink
+SYN-C0631,Synthetic Customer 0631,Mid-size,CN-SG-AIR,Import,Industrial machinery and parts
+SYN-C0632,Synthetic Customer 0632,SME,CN-SG-SEA,Import,Cosmetics and personal care
+SYN-C0633,Synthetic Customer 0633,SME,CN-SG-AIR,Import,Consumer electronics
+SYN-C0634,Synthetic Customer 0634,Mid-size,DE-SG-AIR,Import,Consumer electronics
+SYN-C0635,Synthetic Customer 0635,Mid-size,JP-SG-SEA,Import,Furniture and homeware
+SYN-C0636,Synthetic Customer 0636,SME,JP-SG-SEA,Import,Toys and games
+SYN-C0637,Synthetic Customer 0637,Mid-size,CN-SG-SEA,Import,Chemicals
+SYN-C0638,Synthetic Customer 0638,SME,SG-AU-AIR,Export,Furniture and homeware
+SYN-C0639,Synthetic Customer 0639,Large,US-SG-AIR,Import,Auto parts and tyres
+SYN-C0640,Synthetic Customer 0640,Large,US-SG-AIR,Import,Apparel and footwear
+SYN-C0641,Synthetic Customer 0641,SME,SG-AU-AIR,Export,Industrial machinery and parts
+SYN-C0642,Synthetic Customer 0642,SME,CN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0643,Synthetic Customer 0643,Mid-size,DE-SG-AIR,Import,Packaged food and drink
+SYN-C0644,Synthetic Customer 0644,SME,DE-SG-AIR,Import,Apparel and footwear
+SYN-C0645,Synthetic Customer 0645,Mid-size,US-SG-AIR,Import,Apparel and footwear
+SYN-C0646,Synthetic Customer 0646,Mid-size,SG-AU-AIR,Export,Furniture and homeware
+SYN-C0647,Synthetic Customer 0647,SME,US-SG-AIR,Import,Toys and games
+SYN-C0648,Synthetic Customer 0648,Mid-size,MY-SG-ROAD,Import,Auto parts and tyres
+SYN-C0649,Synthetic Customer 0649,SME,SG-AU-AIR,Export,Pharmaceutical and medical
+SYN-C0650,Synthetic Customer 0650,SME,JP-SG-SEA,Import,Industrial machinery and parts
+SYN-C0651,Synthetic Customer 0651,Mid-size,CN-SG-SEA,Import,Furniture and homeware
+SYN-C0652,Synthetic Customer 0652,SME,US-SG-AIR,Import,Toys and games
+SYN-C0653,Synthetic Customer 0653,SME,CN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0654,Synthetic Customer 0654,Mid-size,US-SG-AIR,Import,Furniture and homeware
+SYN-C0655,Synthetic Customer 0655,SME,VN-SG-SEA,Import,Chemicals
+SYN-C0656,Synthetic Customer 0656,SME,SG-AU-SEA,Export,Auto parts and tyres
+SYN-C0657,Synthetic Customer 0657,SME,JP-SG-SEA,Import,Industrial machinery and parts
+SYN-C0658,Synthetic Customer 0658,SME,CN-SG-SEA,Import,Consumer electronics
+SYN-C0659,Synthetic Customer 0659,Mid-size,JP-SG-SEA,Import,Furniture and homeware
+SYN-C0660,Synthetic Customer 0660,Mid-size,MY-SG-ROAD,Import,Consumer electronics
+SYN-C0661,Synthetic Customer 0661,Mid-size,CN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0662,Synthetic Customer 0662,Mid-size,CN-SG-AIR,Import,Industrial machinery and parts
+SYN-C0663,Synthetic Customer 0663,SME,MY-SG-ROAD,Import,Apparel and footwear
+SYN-C0664,Synthetic Customer 0664,SME,JP-SG-SEA,Import,Consumer electronics
+SYN-C0665,Synthetic Customer 0665,SME,US-SG-AIR,Import,Industrial machinery and parts
+SYN-C0666,Synthetic Customer 0666,SME,DE-SG-AIR,Import,Apparel and footwear
+SYN-C0667,Synthetic Customer 0667,SME,SG-AU-AIR,Export,Apparel and footwear
+SYN-C0668,Synthetic Customer 0668,Mid-size,US-SG-AIR,Import,Consumer electronics
+SYN-C0669,Synthetic Customer 0669,Mid-size,CN-SG-SEA,Import,Pharmaceutical and medical
+SYN-C0670,Synthetic Customer 0670,SME,SG-AU-AIR,Export,Toys and games
+SYN-C0671,Synthetic Customer 0671,SME,VN-SG-SEA,Import,Apparel and footwear
+SYN-C0672,Synthetic Customer 0672,Mid-size,DE-SG-AIR,Import,Pharmaceutical and medical
+SYN-C0673,Synthetic Customer 0673,Large,SG-AU-SEA,Export,Industrial machinery and parts
+SYN-C0674,Synthetic Customer 0674,SME,DE-SG-AIR,Import,Pharmaceutical and medical
+SYN-C0675,Synthetic Customer 0675,SME,JP-SG-SEA,Import,Industrial machinery and parts
+SYN-C0676,Synthetic Customer 0676,Mid-size,DE-SG-AIR,Import,Consumer electronics
+SYN-C0677,Synthetic Customer 0677,SME,CN-SG-AIR,Import,Industrial machinery and parts
+SYN-C0678,Synthetic Customer 0678,Mid-size,DE-SG-AIR,Import,Consumer electronics
+SYN-C0679,Synthetic Customer 0679,SME,DE-SG-AIR,Import,Pharmaceutical and medical
+SYN-C0680,Synthetic Customer 0680,Mid-size,SG-AU-SEA,Export,Apparel and footwear
+SYN-C0681,Synthetic Customer 0681,SME,CN-SG-SEA,Import,Consumer electronics
+SYN-C0682,Synthetic Customer 0682,SME,JP-SG-SEA,Import,Apparel and footwear
+SYN-C0683,Synthetic Customer 0683,SME,SG-AU-SEA,Export,Industrial machinery and parts
+SYN-C0684,Synthetic Customer 0684,SME,CN-SG-SEA,Import,Auto parts and tyres
+SYN-C0685,Synthetic Customer 0685,Mid-size,SG-AU-AIR,Export,Industrial machinery and parts
+SYN-C0686,Synthetic Customer 0686,Mid-size,MY-SG-ROAD,Import,Chemicals
+SYN-C0687,Synthetic Customer 0687,SME,SG-AU-SEA,Export,Packaged food and drink
+SYN-C0688,Synthetic Customer 0688,SME,CN-SG-SEA,Import,Auto parts and tyres
+SYN-C0689,Synthetic Customer 0689,SME,MY-SG-ROAD,Import,Apparel and footwear
+SYN-C0690,Synthetic Customer 0690,SME,CN-SG-SEA,Import,Furniture and homeware
+SYN-C0691,Synthetic Customer 0691,SME,CN-SG-SEA,Import,Chemicals
+SYN-C0692,Synthetic Customer 0692,SME,JP-SG-SEA,Import,Consumer electronics
+SYN-C0693,Synthetic Customer 0693,SME,CN-SG-AIR,Import,Apparel and footwear
+SYN-C0694,Synthetic Customer 0694,Mid-size,DE-SG-AIR,Import,Packaged food and drink
+SYN-C0695,Synthetic Customer 0695,SME,VN-SG-SEA,Import,Pharmaceutical and medical
+SYN-C0696,Synthetic Customer 0696,Mid-size,VN-SG-SEA,Import,Furniture and homeware
+SYN-C0697,Synthetic Customer 0697,Mid-size,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0698,Synthetic Customer 0698,SME,CN-SG-SEA,Import,Consumer electronics
+SYN-C0699,Synthetic Customer 0699,Mid-size,MY-SG-ROAD,Import,Consumer electronics
+SYN-C0700,Synthetic Customer 0700,Mid-size,CN-SG-SEA,Import,Auto parts and tyres
+SYN-C0701,Synthetic Customer 0701,Mid-size,DE-SG-AIR,Import,Packaged food and drink
+SYN-C0702,Synthetic Customer 0702,SME,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0703,Synthetic Customer 0703,Mid-size,SG-AU-AIR,Export,Chemicals
+SYN-C0704,Synthetic Customer 0704,Mid-size,VN-SG-SEA,Import,Chemicals
+SYN-C0705,Synthetic Customer 0705,Mid-size,CN-SG-AIR,Import,Cosmetics and personal care
+SYN-C0706,Synthetic Customer 0706,SME,SG-AU-SEA,Export,Consumer electronics
+SYN-C0707,Synthetic Customer 0707,Mid-size,VN-SG-SEA,Import,Consumer electronics
+SYN-C0708,Synthetic Customer 0708,SME,CN-SG-AIR,Import,Pharmaceutical and medical
+SYN-C0709,Synthetic Customer 0709,SME,JP-SG-SEA,Import,Chemicals
+SYN-C0710,Synthetic Customer 0710,SME,CN-SG-SEA,Import,Furniture and homeware
+SYN-C0711,Synthetic Customer 0711,SME,MY-SG-ROAD,Import,Cosmetics and personal care
+SYN-C0712,Synthetic Customer 0712,SME,US-SG-AIR,Import,Consumer electronics
+SYN-C0713,Synthetic Customer 0713,SME,VN-SG-SEA,Import,Consumer electronics
+SYN-C0714,Synthetic Customer 0714,SME,SG-AU-AIR,Export,Consumer electronics
+SYN-C0715,Synthetic Customer 0715,SME,CN-SG-SEA,Import,Packaged food and drink
+SYN-C0716,Synthetic Customer 0716,Large,MY-SG-ROAD,Import,Apparel and footwear
+SYN-C0717,Synthetic Customer 0717,SME,SG-AU-SEA,Export,Apparel and footwear
+SYN-C0718,Synthetic Customer 0718,Mid-size,MY-SG-ROAD,Import,Apparel and footwear
+SYN-C0719,Synthetic Customer 0719,Mid-size,JP-SG-SEA,Import,Consumer electronics
+SYN-C0720,Synthetic Customer 0720,SME,US-SG-AIR,Import,Packaged food and drink
+SYN-C0721,Synthetic Customer 0721,SME,MY-SG-ROAD,Import,Consumer electronics
+SYN-C0722,Synthetic Customer 0722,SME,CN-SG-SEA,Import,Cosmetics and personal care
+SYN-C0723,Synthetic Customer 0723,Mid-size,SG-AU-SEA,Export,Consumer electronics
+SYN-C0724,Synthetic Customer 0724,SME,SG-AU-SEA,Export,Cosmetics and personal care
+SYN-C0725,Synthetic Customer 0725,Mid-size,CN-SG-SEA,Import,Consumer electronics
+SYN-C0726,Synthetic Customer 0726,SME,US-SG-AIR,Import,Consumer electronics
+SYN-C0727,Synthetic Customer 0727,Large,US-SG-AIR,Import,Pharmaceutical and medical
+SYN-C0728,Synthetic Customer 0728,Large,MY-SG-ROAD,Import,Furniture and homeware
+SYN-C0729,Synthetic Customer 0729,SME,US-SG-AIR,Import,Cosmetics and personal care
+SYN-C0730,Synthetic Customer 0730,Large,DE-SG-AIR,Import,Auto parts and tyres
+SYN-C0731,Synthetic Customer 0731,SME,DE-SG-AIR,Import,Toys and games
+SYN-C0732,Synthetic Customer 0732,SME,JP-SG-SEA,Import,Apparel and footwear
+SYN-C0733,Synthetic Customer 0733,SME,CN-SG-SEA,Import,Auto parts and tyres
+SYN-C0734,Synthetic Customer 0734,Mid-size,CN-SG-SEA,Import,Auto parts and tyres
+SYN-C0735,Synthetic Customer 0735,SME,SG-AU-SEA,Export,Apparel and footwear
+SYN-C0736,Synthetic Customer 0736,SME,MY-SG-ROAD,Import,Pharmaceutical and medical
+SYN-C0737,Synthetic Customer 0737,Mid-size,SG-AU-SEA,Export,Furniture and homeware
+SYN-C0738,Synthetic Customer 0738,SME,US-SG-AIR,Import,Consumer electronics
+SYN-C0739,Synthetic Customer 0739,SME,CN-SG-AIR,Import,Furniture and homeware
+SYN-C0740,Synthetic Customer 0740,SME,CN-SG-AIR,Import,Chemicals
+SYN-C0741,Synthetic Customer 0741,SME,CN-SG-AIR,Import,Furniture and homeware
+SYN-C0742,Synthetic Customer 0742,SME,US-SG-AIR,Import,Toys and games
+SYN-C0743,Synthetic Customer 0743,Mid-size,SG-AU-SEA,Export,Consumer electronics
+SYN-C0744,Synthetic Customer 0744,Large,SG-AU-SEA,Export,Cosmetics and personal care
+SYN-C0745,Synthetic Customer 0745,SME,DE-SG-AIR,Import,Consumer electronics
+SYN-C0746,Synthetic Customer 0746,Mid-size,DE-SG-AIR,Import,Consumer electronics
+SYN-C0747,Synthetic Customer 0747,SME,VN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0748,Synthetic Customer 0748,SME,US-SG-AIR,Import,Pharmaceutical and medical
+SYN-C0749,Synthetic Customer 0749,Mid-size,DE-SG-AIR,Import,Consumer electronics
+SYN-C0750,Synthetic Customer 0750,SME,SG-AU-SEA,Export,Toys and games
+SYN-C0751,Synthetic Customer 0751,SME,US-SG-AIR,Import,Chemicals
+SYN-C0752,Synthetic Customer 0752,SME,MY-SG-ROAD,Import,Apparel and footwear
+SYN-C0753,Synthetic Customer 0753,Mid-size,SG-AU-SEA,Export,Consumer electronics
+SYN-C0754,Synthetic Customer 0754,SME,MY-SG-ROAD,Import,Cosmetics and personal care
+SYN-C0755,Synthetic Customer 0755,SME,CN-SG-AIR,Import,Industrial machinery and parts
+SYN-C0756,Synthetic Customer 0756,SME,DE-SG-AIR,Import,Pharmaceutical and medical
+SYN-C0757,Synthetic Customer 0757,SME,MY-SG-ROAD,Import,Chemicals
+SYN-C0758,Synthetic Customer 0758,Mid-size,CN-SG-SEA,Import,Toys and games
+SYN-C0759,Synthetic Customer 0759,SME,SG-AU-SEA,Export,Apparel and footwear
+SYN-C0760,Synthetic Customer 0760,SME,SG-AU-SEA,Export,Packaged food and drink
+SYN-C0761,Synthetic Customer 0761,SME,DE-SG-AIR,Import,Pharmaceutical and medical
+SYN-C0762,Synthetic Customer 0762,SME,SG-AU-SEA,Export,Industrial machinery and parts
+SYN-C0763,Synthetic Customer 0763,Mid-size,DE-SG-AIR,Import,Cosmetics and personal care
+SYN-C0764,Synthetic Customer 0764,SME,JP-SG-SEA,Import,Consumer electronics
+SYN-C0765,Synthetic Customer 0765,Mid-size,US-SG-AIR,Import,Consumer electronics
+SYN-C0766,Synthetic Customer 0766,Large,CN-SG-SEA,Import,Packaged food and drink
+SYN-C0767,Synthetic Customer 0767,SME,CN-SG-SEA,Import,Consumer electronics
+SYN-C0768,Synthetic Customer 0768,SME,CN-SG-SEA,Import,Consumer electronics
+SYN-C0769,Synthetic Customer 0769,SME,DE-SG-AIR,Import,Toys and games
+SYN-C0770,Synthetic Customer 0770,SME,CN-SG-AIR,Import,Packaged food and drink
+SYN-C0771,Synthetic Customer 0771,SME,JP-SG-SEA,Import,Packaged food and drink
+SYN-C0772,Synthetic Customer 0772,SME,MY-SG-ROAD,Import,Chemicals
+SYN-C0773,Synthetic Customer 0773,SME,CN-SG-AIR,Import,Cosmetics and personal care
+SYN-C0774,Synthetic Customer 0774,SME,SG-AU-SEA,Export,Consumer electronics
+SYN-C0775,Synthetic Customer 0775,SME,CN-SG-AIR,Import,Industrial machinery and parts
+SYN-C0776,Synthetic Customer 0776,SME,US-SG-AIR,Import,Consumer electronics
+SYN-C0777,Synthetic Customer 0777,Mid-size,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0778,Synthetic Customer 0778,SME,MY-SG-ROAD,Import,Apparel and footwear
+SYN-C0779,Synthetic Customer 0779,Mid-size,CN-SG-SEA,Import,Consumer electronics
+SYN-C0780,Synthetic Customer 0780,SME,CN-SG-AIR,Import,Packaged food and drink
+SYN-C0781,Synthetic Customer 0781,Mid-size,CN-SG-AIR,Import,Pharmaceutical and medical
+SYN-C0782,Synthetic Customer 0782,SME,US-SG-AIR,Import,Cosmetics and personal care
+SYN-C0783,Synthetic Customer 0783,SME,CN-SG-SEA,Import,Apparel and footwear
+SYN-C0784,Synthetic Customer 0784,Mid-size,SG-AU-AIR,Export,Industrial machinery and parts
+SYN-C0785,Synthetic Customer 0785,SME,US-SG-AIR,Import,Industrial machinery and parts
+SYN-C0786,Synthetic Customer 0786,SME,DE-SG-AIR,Import,Consumer electronics
+SYN-C0787,Synthetic Customer 0787,Mid-size,CN-SG-SEA,Import,Toys and games
+SYN-C0788,Synthetic Customer 0788,SME,SG-AU-AIR,Export,Packaged food and drink
+SYN-C0789,Synthetic Customer 0789,Mid-size,CN-SG-SEA,Import,Industrial machinery and parts
+SYN-C0790,Synthetic Customer 0790,Large,US-SG-AIR,Import,Furniture and homeware
+SYN-C0791,Synthetic Customer 0791,SME,SG-AU-SEA,Export,Consumer electronics
+SYN-C0792,Synthetic Customer 0792,Mid-size,DE-SG-AIR,Import,Packaged food and drink
+SYN-C0793,Synthetic Customer 0793,Mid-size,SG-AU-SEA,Export,Chemicals
+SYN-C0794,Synthetic Customer 0794,SME,SG-AU-SEA,Export,Cosmetics and personal care
+SYN-C0795,Synthetic Customer 0795,SME,CN-SG-SEA,Import,Furniture and homeware
+SYN-C0796,Synthetic Customer 0796,SME,SG-AU-SEA,Export,Cosmetics and personal care
+SYN-C0797,Synthetic Customer 0797,SME,MY-SG-ROAD,Import,Consumer electronics
+SYN-C0798,Synthetic Customer 0798,SME,CN-SG-AIR,Import,Pharmaceutical and medical
+SYN-C0799,Synthetic Customer 0799,Mid-size,JP-SG-SEA,Import,Apparel and footwear
+SYN-C0800,Synthetic Customer 0800,SME,SG-AU-SEA,Export,Consumer electronics

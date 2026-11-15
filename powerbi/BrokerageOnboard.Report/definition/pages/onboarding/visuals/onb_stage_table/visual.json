@@ -1,0 +1,133 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "onb_stage_table",
+  "position": {
+    "x": 640,
+    "y": 220,
+    "z": 4000,
+    "height": 480,
+    "width": 620,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimStage"
+                    }
+                  },
+                  "Property": "Stage"
+                }
+              },
+              "queryRef": "DimStage.Stage",
+              "nativeQueryRef": "Stage"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEnrolmentStage"
+                    }
+                  },
+                  "Property": "Enrolments at Stage"
+                }
+              },
+              "queryRef": "FactEnrolmentStage.Enrolments at Stage",
+              "nativeQueryRef": "Enrolments at Stage"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEnrolmentStage"
+                    }
+                  },
+                  "Property": "Stage Conversion %"
+                }
+              },
+              "queryRef": "FactEnrolmentStage.Stage Conversion %",
+              "nativeQueryRef": "Stage Conversion %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEnrolmentStage"
+                    }
+                  },
+                  "Property": "Step Conversion %"
+                }
+              },
+              "queryRef": "FactEnrolmentStage.Step Conversion %",
+              "nativeQueryRef": "Step Conversion %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEnrolmentStage"
+                    }
+                  },
+                  "Property": "Median Days to Stage"
+                }
+              },
+              "queryRef": "FactEnrolmentStage.Median Days to Stage",
+              "nativeQueryRef": "Median Days to Stage"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DimStage"
+                  }
+                },
+                "Property": "Stage"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Conversion and days from submission'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

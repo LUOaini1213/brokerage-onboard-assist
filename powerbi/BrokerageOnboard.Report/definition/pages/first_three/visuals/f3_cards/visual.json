@@ -1,0 +1,115 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "f3_cards",
+  "position": {
+    "x": 20,
+    "y": 90,
+    "z": 2000,
+    "height": 120,
+    "width": 1240,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactShipment"
+                    }
+                  },
+                  "Property": "First-3 Shipments"
+                }
+              },
+              "queryRef": "FactShipment.First-3 Shipments",
+              "nativeQueryRef": "First-3 Shipments"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactShipment"
+                    }
+                  },
+                  "Property": "Held Shipments"
+                }
+              },
+              "queryRef": "FactShipment.Held Shipments",
+              "nativeQueryRef": "Held Shipments"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactShipment"
+                    }
+                  },
+                  "Property": "First-3 Hold Rate %"
+                }
+              },
+              "queryRef": "FactShipment.First-3 Hold Rate %",
+              "nativeQueryRef": "First-3 Hold Rate %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactShipment"
+                    }
+                  },
+                  "Property": "Customers With a Hold %"
+                }
+              },
+              "queryRef": "FactShipment.Customers With a Hold %",
+              "nativeQueryRef": "Customers With a Hold %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactShipment"
+                    }
+                  },
+                  "Property": "Avg Readiness Score"
+                }
+              },
+              "queryRef": "FactShipment.Avg Readiness Score",
+              "nativeQueryRef": "Avg Readiness Score"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'First-three shipments'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

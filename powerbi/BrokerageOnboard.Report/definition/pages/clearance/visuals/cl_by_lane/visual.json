@@ -1,0 +1,110 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "cl_by_lane",
+  "position": {
+    "x": 20,
+    "y": 90,
+    "z": 1000,
+    "height": 300,
+    "width": 600,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimLane"
+                    }
+                  },
+                  "Property": "LaneName"
+                }
+              },
+              "queryRef": "DimLane.LaneName",
+              "nativeQueryRef": "LaneName",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactShipment"
+                    }
+                  },
+                  "Property": "Median Clearance Hours"
+                }
+              },
+              "queryRef": "FactShipment.Median Clearance Hours",
+              "nativeQueryRef": "Median Clearance Hours"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactShipment"
+                    }
+                  },
+                  "Property": "P90 Clearance Hours"
+                }
+              },
+              "queryRef": "FactShipment.P90 Clearance Hours",
+              "nativeQueryRef": "P90 Clearance Hours"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FactShipment"
+                  }
+                },
+                "Property": "Median Clearance Hours"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Clearance hours by lane (median and P90)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

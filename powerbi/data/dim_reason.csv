@@ -1,0 +1,12 @@
+ReasonCode,ReasonLabel,Category,DetectableBeforeLodgement
+PERMIT_TIMING,Permit not obtained in time,Permit,yes
+PARTY_UEN,Importer UEN or account issue,Party data,yes
+HS_INVALID,HS code not valid,Classification,yes
+HS_QUERY,Classification query,Classification,no
+VALUE_CIF,Customs value query,Valuation,yes
+INVOICE_DATA,Invoice incomplete,Documents,yes
+CA_APPROVAL,Competent-authority approval missing,Controlled goods,yes
+ORIGIN_DOCS,Origin documents,Origin,yes
+DOC_MISMATCH,Documents do not agree,Documents,yes
+INSPECTION,Inspection without document defect,Inspection,no
+BIOSECURITY,Biosecurity referral (Australia),Biosecurity,partly

@@ -1,0 +1,119 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "cl_reason_lane_table",
+  "position": {
+    "x": 640,
+    "y": 400,
+    "z": 4000,
+    "height": 300,
+    "width": 620,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimLane"
+                    }
+                  },
+                  "Property": "LaneName"
+                }
+              },
+              "queryRef": "DimLane.LaneName",
+              "nativeQueryRef": "LaneName"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimReason"
+                    }
+                  },
+                  "Property": "ReasonLabel"
+                }
+              },
+              "queryRef": "DimReason.ReasonLabel",
+              "nativeQueryRef": "ReasonLabel"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactHold"
+                    }
+                  },
+                  "Property": "Holds"
+                }
+              },
+              "queryRef": "FactHold.Holds",
+              "nativeQueryRef": "Holds"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactHold"
+                    }
+                  },
+                  "Property": "Median Hours to Release"
+                }
+              },
+              "queryRef": "FactHold.Median Hours to Release",
+              "nativeQueryRef": "Median Hours to Release"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FactHold"
+                  }
+                },
+                "Property": "Holds"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Time to release by lane and reason'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
