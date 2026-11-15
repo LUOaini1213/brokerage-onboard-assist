@@ -1,0 +1,4 @@
+band,shipments,held,hold_rate
+Needs attention,212,38,0.179245
+Not ready,589,399,0.677419
+Ready,913,48,0.052574

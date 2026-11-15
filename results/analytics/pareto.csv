@@ -1,0 +1,12 @@
+rank,reason_code,label,holds,share,cumulative_share
+1,INVOICE_DATA,Invoice incomplete,102,0.185118,0.185118
+2,CA_APPROVAL,Competent-authority approval missing,101,0.183303,0.368421
+3,VALUE_CIF,Customs value query,64,0.116152,0.484574
+4,DOC_MISMATCH,Documents do not agree,51,0.092559,0.577132
+5,HS_QUERY,Classification query,50,0.090744,0.667877
+6,ORIGIN_DOCS,Origin documents,45,0.08167,0.749546
+7,INSPECTION,Inspection without document defect,37,0.067151,0.816697
+8,PERMIT_TIMING,Permit not obtained in time,34,0.061706,0.878403
+9,HS_INVALID,HS code not valid,31,0.056261,0.934664
+10,PARTY_UEN,Importer UEN or account issue,26,0.047187,0.981851
+11,BIOSECURITY,Biosecurity referral (Australia),10,0.018149,1
