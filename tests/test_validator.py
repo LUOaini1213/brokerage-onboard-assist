@@ -34,7 +34,7 @@ def clean_import():
              "packing_quantity": 50, "ca_licence_ref": ""}],
         "packing_list": {"present": True, "gross_weight_kg": 210.0},
         "transport_doc": {"present": True, "gross_weight_kg": 210.0},
-        "co_present": False, "licences": {}, "product_origin": {"P1": "CN", "P2": "CN"},
+        "co_present": False, "licences": {}, "licence_refs": {}, "product_origin": {"P1": "CN", "P2": "CN"},
     }
 
 
@@ -136,9 +136,23 @@ def test_controlled_goods_need_licence_on_file_and_quoted():
     b["licences"] = {"IMDA": "2026-01-15"}
     assert non_info(run(b)) == [("ca_screening", "CA_APPROVAL", "BLOCKING")]   # on file but not quoted
     b["lines"][0]["ca_licence_ref"] = "LIC-1"
+    assert non_info(run(b)) == [("ca_screening", "CA_APPROVAL", "BLOCKING")]   # quoted, but not an IMDA licence
+    b["licence_refs"] = {"IMDA": {"LIC-1"}}
     assert non_info(run(b)) == []
     b["licences"] = {"IMDA": "2026-05-09"}   # obtained after the permit was submitted
     assert non_info(run(b)) == [("ca_screening", "CA_APPROVAL", "BLOCKING")]
+
+
+def test_line_under_two_authorities_needs_both_licences_quoted():
+    b = clean_import()
+    b["lines"][0]["hs_code"] = "90221400"   # medical X-ray apparatus: NEA (irradiating apparatus) and HSA (device)
+    b["licences"] = {"NEA": "2026-01-15", "HSA": "2026-01-15"}
+    b["licence_refs"] = {"NEA": {"N-1"}, "HSA": {"H-1"}}
+    b["lines"][0]["ca_licence_ref"] = "N-1"
+    got = [f for f in run(b) if f.severity != "INFO"]
+    assert len(got) == 1 and "HSA licence on file but not quoted" in got[0].message
+    b["lines"][0]["ca_licence_ref"] = "N-1;H-1"
+    assert non_info(run(b)) == []
 
 
 def test_pharma_flagged_cosmetics_not():

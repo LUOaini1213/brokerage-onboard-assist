@@ -278,4 +278,4 @@ Mean readiness score (0-100) from the pre-lodgement check.
 AVERAGE(FactShipment[ReadinessScore])
 ```
 
-- Format: `0.0`; Python: `boa.kpis.avg_readiness_score`; value (all data): 86.2952
+- Format: `0.0`; Python: `boa.kpis.avg_readiness_score`; value (all data): 86.2077

@@ -30,7 +30,7 @@ first_three,f3_cards,,First-3 Shipments,1714
 first_three,f3_cards,,Held Shipments,485
 first_three,f3_cards,,First-3 Hold Rate %,0.282964
 first_three,f3_cards,,Customers With a Hold %,0.595506
-first_three,f3_cards,,Avg Readiness Score,86.295216
+first_three,f3_cards,,Avg Readiness Score,86.207701
 first_three,f3_by_seq,1,First-3 Hold Rate %,0.354735
 first_three,f3_by_seq,2,First-3 Hold Rate %,0.270979
 first_three,f3_by_seq,3,First-3 Hold Rate %,0.210019

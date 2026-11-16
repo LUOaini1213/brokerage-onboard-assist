@@ -992,6 +992,7 @@ SYN-S0233-3,au_voti_gst,AU-04,,INFO,"AU: VoTI AUD 15,380.29, GST AUD 1,538.03 (d
 SYN-S0233-3,preference_proof,AU-09,ORIGIN_DOCS,BLOCKING,FTA preference claimed but no certificate of origin or self-certification on file,
 SYN-S0234-1,gst_estimate,SG-IMP-11,,INFO,"estimated GST SGD 102.58 (9% of CIF SGD 1,139.72, duty 0)",
 SYN-S0234-2,gst_estimate,SG-IMP-11,,INFO,"estimated GST SGD 2,821.88 (9% of CIF SGD 31,354.20, duty 0)",
+SYN-S0234-2,ca_screening,SG-IMP-19,CA_APPROVAL,BLOCKING,line 2: NEA licence on file but not quoted on the permit line,2
 SYN-S0234-3,gst_estimate,SG-IMP-11,,INFO,"estimated GST SGD 2,970.58 (9% of CIF SGD 33,006.43, duty 0)",
 SYN-S0236-1,docs_present,SG-IMP-25,DOC_MISMATCH,WARNING,packing list not on file,
 SYN-S0236-1,gst_estimate,SG-IMP-11,,INFO,"estimated GST SGD 126.67 (9% of CIF SGD 1,407.39, duty 0)",
@@ -1040,6 +1041,7 @@ SYN-S0244-1,gst_estimate,SG-IMP-11,,INFO,"estimated GST SGD 825,091.32 (9% of CI
 SYN-S0244-2,gst_estimate,SG-IMP-11,,INFO,"estimated GST SGD 30,240.54 (9% of CIF SGD 336,006.03, duty 0)",
 SYN-S0244-3,gst_estimate,SG-IMP-11,,INFO,"estimated GST SGD 4,885.79 (9% of CIF SGD 54,286.58, duty 0)",
 SYN-S0246-1,gst_estimate,SG-IMP-11,,INFO,"estimated GST SGD 1,676.14 (9% of CIF SGD 18,623.74, duty 0)",
+SYN-S0246-1,ca_screening,SG-IMP-19,CA_APPROVAL,BLOCKING,line 2: NEA licence on file but not quoted on the permit line,2
 SYN-S0247-1,docs_present,SG-IMP-25,DOC_MISMATCH,WARNING,packing list not on file,
 SYN-S0247-1,gst_estimate,SG-IMP-11,,INFO,"estimated GST SGD 5,424.21 (9% of CIF SGD 60,269.00, duty 0)",
 SYN-S0247-1,ca_screening,SG-IMP-17,CA_APPROVAL,BLOCKING,line 1: Processed food (cereal preparations) - no SFA licence on file (SFA registration),1
@@ -1377,6 +1379,7 @@ SYN-S0328-1,au_voti_gst,AU-04,,INFO,"AU: VoTI AUD 138,369.89, GST AUD 13,836.99 
 SYN-S0328-1,preference_proof,AU-09,ORIGIN_DOCS,BLOCKING,FTA preference claimed but no certificate of origin or self-certification on file,
 SYN-S0329-1,au_declaration_type,AU-01,,INFO,"AU: Import Declaration (N10), import processing charge payable (customs value AUD 3,638,466.14)",
 SYN-S0329-1,au_voti_gst,AU-04,,INFO,"AU: VoTI AUD 4,204,327.48, GST AUD 420,432.75 (duty 0 assumed)",
+SYN-S0329-1,hs_format_and_hs6,SG-IMP-05,HS_INVALID,BLOCKING,line 1: HS code '851713000' is not 8 digits,1
 SYN-S0329-2,cif_consistency,AU-03,VALUE_CIF,WARNING,a DDP price can include Australian duty and GST; ask for the breakdown,
 SYN-S0329-2,au_declaration_type,AU-01,,INFO,"AU: Import Declaration (N10), import processing charge payable (customs value AUD 6,478,214.52)",
 SYN-S0329-2,au_voti_gst,AU-04,,INFO,"AU: VoTI AUD 6,873,299.00, GST AUD 687,329.90 (duty 0 assumed)",
@@ -2305,6 +2308,7 @@ SYN-S0548-2,gst_estimate,SG-IMP-11,,INFO,"estimated GST SGD 147,763.64 (9% of CI
 SYN-S0548-3,gst_estimate,SG-IMP-11,,INFO,"estimated GST SGD 698,851.97 (9% of CIF SGD 7,765,021.90, duty 0)",
 SYN-S0549-1,gst_estimate,SG-IMP-11,,INFO,"estimated GST SGD 2,448.96 (9% of CIF SGD 27,210.64, duty 0)",
 SYN-S0549-2,gst_estimate,SG-IMP-11,,INFO,"estimated GST SGD 1,346.94 (9% of CIF SGD 14,966.03, duty 0)",
+SYN-S0549-2,ca_screening,SG-IMP-16,CA_APPROVAL,BLOCKING,line 1: HSA licence on file but not quoted on the permit line,1
 SYN-S0549-3,gst_estimate,SG-IMP-11,,INFO,"estimated GST SGD 390.64 (9% of CIF SGD 4,340.49, duty 0)",
 SYN-S0553-1,gst_estimate,SG-IMP-11,,INFO,"estimated GST SGD 22,639.08 (9% of CIF SGD 251,545.28, duty 0)",
 SYN-S0553-2,permit_before_arrival,SG-IMP-01,PERMIT_TIMING,BLOCKING,permit submitted 2026-06-30T18:12 is not before arrival 2026-06-30T12:20,
@@ -2569,6 +2573,7 @@ SYN-S0618-3,cif_consistency,SG-IMP-07,VALUE_CIF,BLOCKING,"declared value SGD 105
 SYN-S0618-3,gst_estimate,SG-IMP-11,,INFO,"estimated GST SGD 9,554.58 (9% of CIF SGD 106,162.02, duty 0)",
 SYN-S0620-1,gst_estimate,SG-IMP-11,,INFO,"estimated GST SGD 56.95 (9% of CIF SGD 632.74, duty 0)",
 SYN-S0620-2,gst_estimate,SG-IMP-11,,INFO,"estimated GST SGD 32.17 (9% of CIF SGD 357.42, duty 0)",
+SYN-S0620-2,ca_screening,SG-IMP-16,CA_APPROVAL,BLOCKING,line 1: HSA licence on file but not quoted on the permit line,1
 SYN-S0620-3,gst_estimate,SG-IMP-11,,INFO,"estimated GST SGD 1,299.00 (9% of CIF SGD 14,433.37, duty 0)",
 SYN-S0621-1,gst_estimate,SG-IMP-11,,INFO,"estimated GST SGD 7,249.58 (9% of CIF SGD 80,550.86, duty 0)",
 SYN-S0621-2,gst_estimate,SG-IMP-11,,INFO,"estimated GST SGD 13,524.56 (9% of CIF SGD 150,272.93, duty 0)",
@@ -2616,7 +2621,8 @@ SYN-S0632-1,gst_estimate,SG-IMP-11,,INFO,"estimated GST SGD 850.36 (9% of CIF SG
 SYN-S0632-2,gst_estimate,SG-IMP-11,,INFO,"estimated GST SGD 774.91 (9% of CIF SGD 8,610.15, duty 0)",
 SYN-S0632-3,cif_consistency,SG-IMP-07,VALUE_CIF,BLOCKING,"declared value SGD 33,569.27 differs from the CIF value SGD 38,772.50 (+ flat 15.5% freight and insurance for CN (SG-IMP-08))",
 SYN-S0632-3,gst_estimate,SG-IMP-11,,INFO,"estimated GST SGD 3,489.53 (9% of CIF SGD 38,772.50, duty 0)",
-SYN-S0632-3,ca_screening,SG-IMP-19,CA_APPROVAL,BLOCKING,line 2: Miscellaneous chemical products (possible hazardous substance) - no NEA licence on file (NEA hazardous substances licence or statement that not controlled),2
+SYN-S0632-3,hs_format_and_hs6,SG-IMP-05,HS_INVALID,BLOCKING,line 2: HS code '851713000' is not 8 digits,2
+SYN-S0632-3,ca_screening,SG-IMP-18,CA_APPROVAL,BLOCKING,line 2: Telephone sets and telecommunication apparatus - no IMDA licence on file (IMDA dealer licence number and equipment registration (or own-use declaration)),2
 SYN-S0633-1,gst_estimate,SG-IMP-11,,INFO,"estimated GST SGD 9,009.91 (9% of CIF SGD 100,110.13, duty 0)",
 SYN-S0633-2,gst_estimate,SG-IMP-11,,INFO,"estimated GST SGD 26,803.75 (9% of CIF SGD 297,819.42, duty 0)",
 SYN-S0633-2,ca_screening,SG-IMP-18,CA_APPROVAL,BLOCKING,line 2: Monitors and television receivers - no IMDA licence on file (IMDA dealer licence number and equipment registration),2

@@ -389,7 +389,9 @@ class Generator:
         if self.bern(p("hs_misclassified")):
             k = self.ri(0, len(lines) - 1)
             others = [h for g in c["commodities"] if g["group"] != group["group"] for h in g["hs6"]]
-            lines[k]["hs_code"] = self.code8(self.pick(others))
+            wrong = self.code8(self.pick(others))
+            if lines[k]["hs_code"] == lines[k]["_true_hs"]:   # keep an invalid code already planted on this line
+                lines[k]["hs_code"] = wrong
             add("hs_misclassified", lines[k]["line_no"], lines[k]["hs_code"])
         if self.bern(p("origin_as_loading_country")):
             cand = [ln for ln in lines if ln["origin_country"] and ln["origin_country"] != loading]

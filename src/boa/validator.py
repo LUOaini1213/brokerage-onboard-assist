@@ -122,6 +122,7 @@ def validate_shipment(b, fx_to_sgd, fx_sgd_to_aud):
               origin_country, packing_quantity, ca_licence_ref)
        packing_list: present, gross_weight_kg;  transport_doc: present, gross_weight_kg;  co_present: bool
        licences: {authority: obtained_date (ISO)} on file for the customer
+       licence_refs: {authority: set of licence references on file}; a controlled line must quote one of them
        product_origin: {product_id: country of manufacture on the product master}
     fx_to_sgd: SGD per unit of currency; fx_sgd_to_aud: AUD per SGD (both ILLUSTRATIVE in this project)."""
     s, cust, inv, lines = b["shipment"], b["customer"], b["invoice"], b["lines"]
@@ -250,7 +251,7 @@ def validate_shipment(b, fx_to_sgd, fx_sgd_to_aud):
                     add(Finding("ca_screening", sc.rule_id, "CA_APPROVAL", "BLOCKING",
                                 f"line {ln['line_no']}: {sc.scope} - no {sc.authority} licence on file "
                                 f"({sc.licence_to_ask_for})", ln["line_no"]))
-                elif not refs:
+                elif not (refs & b["licence_refs"].get(sc.authority, set())):
                     add(Finding("ca_screening", sc.rule_id, "CA_APPROVAL", "BLOCKING",
                                 f"line {ln['line_no']}: {sc.authority} licence on file but not quoted on the permit "
                                 f"line", ln["line_no"]))

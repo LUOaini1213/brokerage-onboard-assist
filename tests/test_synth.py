@@ -5,7 +5,7 @@ from datetime import date, timedelta
 import pytest
 
 from boa import hs
-from boa.data import read_tables
+from boa.data import read_tables, write_tables
 from boa.docs_render import assumptions_markdown
 from boa.io import read_json
 from boa.note_templates import HELD_OUT_TEMPLATES, TEMPLATES
@@ -15,16 +15,20 @@ from boa.synth import Config, generate, load_config
 
 
 @pytest.fixture(scope="module")
-def tables():
-    return read_tables(SYNTHETIC)
+def tables(tmp_path_factory):
+    """Freshly generated tables, written and read back the way the pipeline does it, so the consistency checks
+    below test the generator itself (tests/test_pipeline.py compares the committed files with a rebuild)."""
+    folder = tmp_path_factory.mktemp("synth")
+    write_tables(generate(), folder)
+    return read_tables(folder)
 
 
-def test_generation_is_deterministic_and_matches_committed_files(tables):
+def test_generation_is_deterministic_and_same_size_as_committed(tables):
     a, b = generate(), generate()
     assert a == b
-    # the committed CSVs are what the generator writes (values compared after typing)
-    assert len(tables["shipments"]) == len(a["shipments"]) and len(tables["holds"]) == len(a["holds"])
-    assert [h["note"] for h in tables["holds"]] == [h["note"] for h in a["holds"]]
+    committed = read_tables(SYNTHETIC)
+    assert {k: len(v) for k, v in committed.items()} == {k: len(v) for k, v in tables.items()}
+    assert [h["note"] for h in committed["holds"]] == [h["note"] for h in tables["holds"]]
 
 
 def test_every_row_is_labelled_synthetic(tables):

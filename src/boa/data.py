@@ -76,6 +76,9 @@ def shipment_bundles(t):
         if prev is None or x["obtained_date"] < prev:
             licences[x["customer_id"]][x["authority"]] = x["obtained_date"]
     origin = {p["product_id"]: p["origin_country"] for p in t["products"]}
+    refs = defaultdict(lambda: defaultdict(set))
+    for x in t["licences"]:
+        refs[x["customer_id"]][x["authority"]].add(x["licence_ref"])
     out = {}
     for s in t["shipments"]:
         d = docs[s["shipment_id"]]
@@ -85,5 +88,6 @@ def shipment_bundles(t):
             "lines": sorted(lines[s["shipment_id"]], key=lambda x: x["line_no"]),
             "packing_list": d["Packing list"], "transport_doc": transport,
             "co_present": d["Certificate of origin"]["present"], "licences": licences[s["customer_id"]],
+            "licence_refs": refs[s["customer_id"]],
             "product_origin": origin}
     return out
