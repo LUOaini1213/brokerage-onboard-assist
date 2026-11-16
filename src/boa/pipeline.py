@@ -5,6 +5,7 @@
 out_root defaults to the repository; tests/test_pipeline.py builds into a temporary folder and compares.
 """
 import csv
+import hashlib
 from collections import Counter
 from datetime import date
 from pathlib import Path
@@ -117,7 +118,7 @@ def build(out_root=ROOT, figures=True):
     prec = an.blocking_precision(shipments, sfind)
 
     # 5. classifier
-    cl = _classifier(holds, out)
+    cl, cl_metrics = _classifier(holds, out)
 
     # 6. Power BI model data and the Python KPIs on it
     pdir = out / "powerbi" / "data"
@@ -168,7 +169,7 @@ def build(out_root=ROOT, figures=True):
     write_json(out / "results" / "summary.json", summary)
     if figures:
         from .figures import draw_all
-        draw_all(out, frames, par, rel_r, clr, rates, cl)
+        draw_all(out, frames, par, rel_r, clr, rates, cl_metrics)
     return summary
 
 
@@ -223,11 +224,11 @@ def _classifier(holds, out):
     pooled = clf.evaluate(pooled_t, pooled_p, labels)
     result["leave_one_template_out"] = {"folds": folds, "pooled_accuracy": pooled["accuracy"],
                                         "pooled_macro_f1": pooled["macro_f1"]}
-    result["llm"] = _llm_metrics(rows, labels)
+    result["llm"] = _llm_metrics(rows, labels, {h["hold_id"]: h["note"] for h in holds})
     write_csv(out / "results" / "classifier" / "predictions.csv", rows,
               ["hold_id", "split", "note_template", "true", "tfidf_logreg", "keyword_rules"])
     write_json(out / "results" / "classifier" / "metrics.json", result)
-    return {k: result[k] for k in ("n_train", "n_test_seen", "n_test_heldout")} | {
+    summary = {k: result[k] for k in ("n_train", "n_test_seen", "n_test_heldout")} | {
         "seen_accuracy": result["seen"]["tfidf_logreg"]["accuracy"],
         "seen_macro_f1": result["seen"]["tfidf_logreg"]["macro_f1"],
         "heldout_accuracy": result["heldout"]["tfidf_logreg"]["accuracy"],
@@ -237,17 +238,20 @@ def _classifier(holds, out):
         "heldout_majority_accuracy": result["heldout"]["majority"]["accuracy"],
         "loto_accuracy": result["leave_one_template_out"]["pooled_accuracy"],
         "loto_macro_f1": result["leave_one_template_out"]["pooled_macro_f1"],
-        "llm": {k: v for k, v in result["llm"].items() if k != "per_split_detail"},
+        "llm": result["llm"],
     }
+    return summary, result
 
 
-def _llm_metrics(rows, labels):
+def _llm_metrics(rows, labels, notes):
     """Metrics of the cached local-LLM predictions (scripts/run_llm_baseline.py), on the same test notes."""
     if not LLM_CACHE.exists():
         return {"status": "not run"}
     with open(LLM_CACHE, encoding="utf-8", newline="") as fh:
         cache = list(csv.DictReader(fh))
-    by_id = {r["hold_id"]: r for r in cache}
+    # an answer counts only if it was given for the note text that is in the data now
+    by_id = {r["hold_id"]: r for r in cache
+             if r["hold_id"] in notes and r["note_sha256"] == hashlib.sha256(notes[r["hold_id"]].encode()).hexdigest()[:16]}
     meta = {k: cache[0][k] for k in ("model", "ollama_version", "prompt_sha256")} if cache else {}
     out = {"status": "cached", **meta}
     for split_name in ("seen", "heldout"):

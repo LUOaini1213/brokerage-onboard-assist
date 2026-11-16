@@ -1492,6 +1492,39 @@
     "pooled_macro_f1": 0.804642
   },
   "llm": {
-    "status": "not run"
+    "status": "cached",
+    "model": "qwen3.5:4b",
+    "ollama_version": "0.40.2",
+    "prompt_sha256": "fd4a7ee016f8f2a61596c573e8f507d864d63c5212669b0904a328ae8fb0b536",
+    "seen": {
+      "n": 100,
+      "accuracy": 0.96,
+      "macro_f1": 0.971123,
+      "accuracy_95ci": [
+        0.92,
+        0.99
+      ],
+      "macro_f1_95ci": [
+        0.936624,
+        0.992759
+      ],
+      "invalid_outputs": 0,
+      "median_seconds": 6.93
+    },
+    "heldout": {
+      "n": 147,
+      "accuracy": 0.965986,
+      "macro_f1": 0.973889,
+      "accuracy_95ci": [
+        0.938776,
+        0.993197
+      ],
+      "macro_f1_95ci": [
+        0.949354,
+        0.99334
+      ],
+      "invalid_outputs": 0,
+      "median_seconds": 6.03
+    }
   }
 }

@@ -58,17 +58,17 @@
     "fastest_lane_median": 3.5
   },
   "readiness": {
-    "detected_same_reason": 0.816697,
-    "detected_any_blocking": 0.842105,
-    "flagged_shipments": 589,
-    "flagged_held": 399,
-    "flagged_hold_rate": 0.677419,
-    "unflagged_shipments": 1125,
-    "unflagged_held": 86,
-    "unflagged_hold_rate": 0.076444,
+    "detected_same_reason": 0.825771,
+    "detected_any_blocking": 0.85118,
+    "flagged_shipments": 594,
+    "flagged_held": 404,
+    "flagged_hold_rate": 0.680135,
+    "unflagged_shipments": 1120,
+    "unflagged_held": 81,
+    "unflagged_hold_rate": 0.072321,
     "bands": {
-      "Not ready": 589,
-      "Ready": 913,
+      "Not ready": 594,
+      "Ready": 908,
       "Needs attention": 212
     }
   },
@@ -95,7 +95,40 @@
     "loto_accuracy": 0.84755,
     "loto_macro_f1": 0.804642,
     "llm": {
-      "status": "not run"
+      "status": "cached",
+      "model": "qwen3.5:4b",
+      "ollama_version": "0.40.2",
+      "prompt_sha256": "fd4a7ee016f8f2a61596c573e8f507d864d63c5212669b0904a328ae8fb0b536",
+      "seen": {
+        "n": 100,
+        "accuracy": 0.96,
+        "macro_f1": 0.971123,
+        "accuracy_95ci": [
+          0.92,
+          0.99
+        ],
+        "macro_f1_95ci": [
+          0.936624,
+          0.992759
+        ],
+        "invalid_outputs": 0,
+        "median_seconds": 6.93
+      },
+      "heldout": {
+        "n": 147,
+        "accuracy": 0.965986,
+        "macro_f1": 0.973889,
+        "accuracy_95ci": [
+          0.938776,
+          0.993197
+        ],
+        "macro_f1_95ci": [
+          0.949354,
+          0.99334
+        ],
+        "invalid_outputs": 0,
+        "median_seconds": 6.03
+      }
     }
   }
 }
