@@ -1,0 +1,436 @@
+{
+  "killed": 42,
+  "total": 42,
+  "controls": {
+    "unmodified_copy_passes": true,
+    "harmless_edit_survives": true
+  },
+  "results": [
+    {
+      "mutant": "Gst_rate_8pct",
+      "file": "src/boa/valuation.py",
+      "bug": "Singapore GST at the 2023 rate",
+      "tests": [
+        "tests/test_valuation.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_valuation.py::test_singapore_gst"
+    },
+    {
+      "mutant": "Gst_ignores_duty",
+      "file": "src/boa/valuation.py",
+      "bug": "GST base leaves out the duty",
+      "tests": [
+        "tests/test_valuation.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_valuation.py::test_singapore_gst"
+    },
+    {
+      "mutant": "Cif_fob_drops_insurance",
+      "file": "src/boa/valuation.py",
+      "bug": "FOB invoice: insurance not added to the CIF value",
+      "tests": [
+        "tests/test_valuation.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_valuation.py::test_fob_with_actual_charges"
+    },
+    {
+      "mutant": "Cif_flat_rate_for_fca",
+      "file": "src/boa/valuation.py",
+      "bug": "flat freight-and-insurance rate applied to FCA quotes (published for FOB only)",
+      "tests": [
+        "tests/test_valuation.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_valuation.py::test_fca_and_fas_have_no_flat_rate"
+    },
+    {
+      "mutant": "Cif_cfr_flat_insurance_2pct",
+      "file": "src/boa/valuation.py",
+      "bug": "flat CFR insurance doubled",
+      "tests": [
+        "tests/test_valuation.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_valuation.py::test_cfr_insurance_flat_one_percent"
+    },
+    {
+      "mutant": "Fob_keeps_insurance_in_cif_price",
+      "file": "src/boa/valuation.py",
+      "bug": "FOB value from a CIF price leaves the insurance in",
+      "tests": [
+        "tests/test_valuation.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_valuation.py::test_fob_value_for_exports_and_australia"
+    },
+    {
+      "mutant": "Au_voti_drops_transport",
+      "file": "src/boa/valuation.py",
+      "bug": "Australian GST base without transport and insurance",
+      "tests": [
+        "tests/test_valuation.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_valuation.py::test_australian_gst_on_voti"
+    },
+    {
+      "mutant": "Au_n10_threshold_inclusive",
+      "file": "src/boa/valuation.py",
+      "bug": "Import Declaration required at exactly AUD 1,000 (rule: over 1,000)",
+      "tests": [
+        "tests/test_valuation.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_valuation.py::test_australian_declaration_type[1000.0-False-False-Self-Assessed Clearance]"
+    },
+    {
+      "mutant": "Hs_checks_chapter_only",
+      "file": "src/boa/hs.py",
+      "bug": "HS validity tested at chapter level, so deleted subheadings pass",
+      "tests": [
+        "tests/test_hs_uen.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_hs_uen.py::test_sg_hs_check[85171200-hs6_unknown]"
+    },
+    {
+      "mutant": "Hs_accepts_7_digits",
+      "file": "src/boa/hs.py",
+      "bug": "7-digit HS codes accepted for Singapore",
+      "tests": [
+        "tests/test_hs_uen.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_hs_uen.py::test_sg_hs_check[8517130-format]"
+    },
+    {
+      "mutant": "Uen_lowercase_check_letter",
+      "file": "src/boa/uen.py",
+      "bug": "UEN with a lower-case check letter accepted",
+      "tests": [
+        "tests/test_hs_uen.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_hs_uen.py::test_uen_formats[200912345k-None]"
+    },
+    {
+      "mutant": "Score_blocking_weight",
+      "file": "src/boa/validator.py",
+      "bug": "readiness score weight changed",
+      "tests": [
+        "tests/test_validator.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_validator.py::test_missing_incoterm_blocks_and_skips_value_check"
+    },
+    {
+      "mutant": "Band_warning_reads_ready",
+      "file": "src/boa/validator.py",
+      "bug": "a shipment with warnings is reported Ready",
+      "tests": [
+        "tests/test_validator.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_validator.py::test_readiness_score_arithmetic"
+    },
+    {
+      "mutant": "Permit_timing_reversed",
+      "file": "src/boa/validator.py",
+      "bug": "permit-before-arrival check reversed",
+      "tests": [
+        "tests/test_validator.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_validator.py::test_clean_bundle_is_ready_with_gst_estimate"
+    },
+    {
+      "mutant": "Value_tolerance_5pct",
+      "file": "src/boa/validator.py",
+      "bug": "declared value may differ by 5% instead of 0.5%",
+      "tests": [
+        "tests/test_validator.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_validator.py::test_value_within_tolerance_passes"
+    },
+    {
+      "mutant": "Weight_tolerance_5pct",
+      "file": "src/boa/validator.py",
+      "bug": "gross weights may differ by 5% instead of 2%",
+      "tests": [
+        "tests/test_validator.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_validator.py::test_quantities_weights_and_documents"
+    },
+    {
+      "mutant": "Licence_date_ignored",
+      "file": "src/boa/validator.py",
+      "bug": "a licence obtained after the permit counts as on file",
+      "tests": [
+        "tests/test_validator.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_validator.py::test_controlled_goods_need_licence_on_file_and_quoted"
+    },
+    {
+      "mutant": "Licence_any_reference_accepted",
+      "file": "src/boa/validator.py",
+      "bug": "any quoted reference satisfies every authority of a line",
+      "tests": [
+        "tests/test_validator.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_validator.py::test_controlled_goods_need_licence_on_file_and_quoted"
+    },
+    {
+      "mutant": "Origin_check_inverted",
+      "file": "src/boa/validator.py",
+      "bug": "origin mismatch check inverted",
+      "tests": [
+        "tests/test_validator.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_validator.py::test_clean_bundle_is_ready_with_gst_estimate"
+    },
+    {
+      "mutant": "Preference_needs_no_proof",
+      "file": "src/boa/validator.py",
+      "bug": "preference without proof of origin passes",
+      "tests": [
+        "tests/test_validator.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_validator.py::test_origin_checks"
+    },
+    {
+      "mutant": "Sg_controls_applied_to_exports",
+      "file": "src/boa/validator.py",
+      "bug": "Singapore import controls applied to exports",
+      "tests": [
+        "tests/test_validator.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_validator.py::test_export_to_australia"
+    },
+    {
+      "mutant": "Cancel_window_7_days",
+      "file": "src/boa/validator.py",
+      "bug": "expired permits treated as cancellable for a week (rule: 1 calendar day)",
+      "tests": [
+        "tests/test_validator.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_validator.py::test_corrective_action_route"
+    },
+    {
+      "mutant": "Pareto_ascending",
+      "file": "src/boa/analytics.py",
+      "bug": "Pareto sorted from the rarest reason",
+      "tests": [
+        "tests/test_analytics.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_analytics.py::test_pareto_hand_worked"
+    },
+    {
+      "mutant": "Percentile_lower",
+      "file": "src/boa/analytics.py",
+      "bug": "percentiles without interpolation (differs from DAX)",
+      "tests": [
+        "tests/test_analytics.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_analytics.py::test_percentiles_are_linear_like_dax"
+    },
+    {
+      "mutant": "Vital_few_strict",
+      "file": "src/boa/analytics.py",
+      "bug": "vital-few cut-off excludes a reason that lands exactly on the threshold",
+      "tests": [
+        "tests/test_analytics.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_analytics.py::test_pareto_hand_worked"
+    },
+    {
+      "mutant": "Detection_ignores_warnings",
+      "file": "src/boa/analytics.py",
+      "bug": "holds flagged only by a warning counted as not detected",
+      "tests": [
+        "tests/test_analytics.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_analytics.py::test_detection_and_blocking_precision"
+    },
+    {
+      "mutant": "Kpi_hold_rate_inverted",
+      "file": "src/boa/kpis.py",
+      "bug": "hold rate numerator and denominator swapped",
+      "tests": [
+        "tests/test_kpis.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_kpis.py::test_pandas_matches_hand_value[First-3 Hold Rate %-19]"
+    },
+    {
+      "mutant": "Kpi_pareto_tie_break",
+      "file": "src/boa/kpis.py",
+      "bug": "Pareto cumulative share leaves out the reason itself when counts tie",
+      "tests": [
+        "tests/test_kpis.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_kpis.py::test_pandas_matches_hand_value[Hold Pareto Cumulative %-36]"
+    },
+    {
+      "mutant": "Kpi_step_conversion_vs_first_stage",
+      "file": "src/boa/kpis.py",
+      "bug": "step conversion divides by the first stage instead of the previous one",
+      "tests": [
+        "tests/test_kpis.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_kpis.py::test_pandas_matches_hand_value[Step Conversion %-10]"
+    },
+    {
+      "mutant": "Clf_heldout_templates_leak",
+      "file": "src/boa/classifier.py",
+      "bug": "held-out-template notes leak into the training pool",
+      "tests": [
+        "tests/test_classifier.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_classifier.py::test_split_is_disjoint_and_template_held_out"
+    },
+    {
+      "mutant": "Clf_accuracy_is_error_rate",
+      "file": "src/boa/classifier.py",
+      "bug": "accuracy computed as the error rate",
+      "tests": [
+        "tests/test_classifier.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_classifier.py::test_metrics_hand_worked"
+    },
+    {
+      "mutant": "Dax_hold_rate_per_customer",
+      "file": "powerbi/BrokerageOnboard.SemanticModel/definition/tables/FactShipment.tmdl",
+      "bug": "hold rate divided by customers instead of shipments",
+      "tests": [
+        "tests/test_kpis.py",
+        "tests/test_measures.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_kpis.py::test_dax_matches_hand_value[First-3 Hold Rate %-19]"
+    },
+    {
+      "mutant": "Dax_median_is_average",
+      "file": "powerbi/BrokerageOnboard.SemanticModel/definition/tables/FactShipment.tmdl",
+      "bug": "median clearance hours computed as the mean",
+      "tests": [
+        "tests/test_kpis.py",
+        "tests/test_measures.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_kpis.py::test_dax_matches_hand_value[Median Clearance Hours-29]"
+    },
+    {
+      "mutant": "Dax_open_actions_overrides_slicer",
+      "file": "powerbi/BrokerageOnboard.SemanticModel/definition/tables/FactAction.tmdl",
+      "bug": "Open Actions ignores a Status slicer (KEEPFILTERS removed)",
+      "tests": [
+        "tests/test_kpis.py",
+        "tests/test_measures.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_kpis.py::test_dax_matches_hand_value[Open Actions-52]"
+    },
+    {
+      "mutant": "Dax_pareto_ties_double_counted",
+      "file": "powerbi/BrokerageOnboard.SemanticModel/definition/tables/FactHold.tmdl",
+      "bug": "Pareto cumulative share counts every tied reason",
+      "tests": [
+        "tests/test_kpis.py",
+        "tests/test_measures.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_kpis.py::test_dax_matches_hand_value[Hold Pareto Cumulative %-40]"
+    },
+    {
+      "mutant": "Dax_stage_conversion_keeps_stage_filter",
+      "file": "powerbi/BrokerageOnboard.SemanticModel/definition/tables/FactEnrolmentStage.tmdl",
+      "bug": "Enrolments Submitted keeps the selected stage's filter, so conversion is blank or 100%",
+      "tests": [
+        "tests/test_kpis.py",
+        "tests/test_measures.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_kpis.py::test_dax_matches_hand_value[Enrolments Submitted-3]"
+    },
+    {
+      "mutant": "Relationship_hold_lane_on_name",
+      "file": "powerbi/BrokerageOnboard.SemanticModel/definition/relationships.tmdl",
+      "bug": "holds joined to lanes on the wrong column",
+      "tests": [
+        "tests/test_measures.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_measures.py::test_measure_matches_pandas[Holds-12]"
+    },
+    {
+      "mutant": "Engine_keepfilters_replaces",
+      "file": "pbitest/dax.py",
+      "bug": "evaluator treats KEEPFILTERS like a plain filter",
+      "tests": [
+        "tests/test_dax_engine.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_dax_engine.py::test_keepfilters_intersects_instead_of_replacing"
+    },
+    {
+      "mutant": "Engine_no_context_transition",
+      "file": "pbitest/dax.py",
+      "bug": "measure references inside an iterator ignore the current row",
+      "tests": [
+        "tests/test_dax_engine.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_dax_engine.py::test_filter_sumx_and_context_transition"
+    },
+    {
+      "mutant": "Synth_held_flag_always_false",
+      "file": "src/boa/synth.py",
+      "bug": "shipments never marked held although hold rows exist",
+      "tests": [
+        "tests/test_synth.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_synth.py::test_holds_agree_with_shipments"
+    },
+    {
+      "mutant": "Synth_due_date_one_day_late",
+      "file": "src/boa/synth.py",
+      "bug": "action due dates one day after the documented SLA",
+      "tests": [
+        "tests/test_synth.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_synth.py::test_actions_are_consistent"
+    },
+    {
+      "mutant": "Rule_table_china_flat_rate",
+      "file": "rules/sg_flat_freight_insurance.csv",
+      "bug": "published flat rate for China mistyped",
+      "tests": [
+        "tests/test_rules.py",
+        "tests/test_valuation.py"
+      ],
+      "killed": true,
+      "summary": "tests/test_rules.py::test_flat_rates_table"
+    }
+  ]
+}
