@@ -1,74 +1,53 @@
-# Flow 1: "Enrolment readiness check"
+# Flow 1: "BA - Enrolment readiness check"
 
-DESIGN — build in progress (trigger, score and update item reported built; email and error handling not yet).
-Automated cloud flow, standard connectors only (SharePoint, Office 365 Outlook).
+**Built and tested** in the owner's Microsoft 365 account (see [README.md](README.md)). Automated cloud flow,
+standard connectors only (SharePoint, Office 365 Outlook). The flow's package export is not in this repository; the
+steps below are written from the build. Expressions use internal column names; `<onedrive-site-url>` stands for the
+site address.
 
-**What it does:** when a customer is added to BA_Customers, it scores the four document checks (25 points each:
-commercial invoice, packing list, permit or licence if needed, importer UEN present), sets EnrolmentStatus from the
-score, writes both back to the item and emails the owner a summary with what is missing.
+**What it does:** when a customer is added to BA_Customers, it scores four document checks (25 points each:
+commercial invoice, packing list, permit ready or not needed, importer UEN present), writes the score and a status
+back to the item, and, if anything is missing, emails the person who created the item.
 
-The score is the same rule as the app's `lblScore` ([app.md](app.md)) and as the `ReadinessScore` column of the
-seed (`seed/make_seed.py`): 100 -> Validated, 50 to 75 -> Docs pending, below 50 -> Requested. It is a simplified
-stand-in for the 44-rule validator of the analytics part.
-
-## Build sheet
+## Steps as built
 
 1. **Trigger** - SharePoint "When an item is created".
-   - Site Address: `<onedrive-site-url>` (choose "Enter custom value" if the personal site is not listed)
-   - List Name: `BA_Customers`
-   - Because the trigger fires only on creation, the "Update item" below cannot re-trigger the flow.
+   - Site Address: `<onedrive-site-url>`; List Name: `BA_Customers`.
+   - The trigger fires only on creation, so the "Update item" below does not start the flow again.
 
-2. **Scope "Try"** - put steps 3 to 6 inside it.
-
-3. **Compose "Score"** - Inputs (expression):
+2. **Compose "ReadinessScore"** - the number of passed checks times 100, divided by 4:
    ```
-   add(add(add(
-       if(equals(triggerBody()?['InvoiceReady'], true), 25, 0),
-       if(equals(triggerBody()?['PackingListReady'], true), 25, 0)),
-       if(or(equals(triggerBody()?['PermitReady'], true), equals(triggerBody()?['PermitNeeded'], false)), 25, 0)),
-       if(empty(trim(coalesce(triggerBody()?['ImporterUEN'], ''))), 0, 25))
+   div(mul(add(add(add(
+       if(InvoiceReady, 1, 0),
+       if(PackingListReady, 1, 0)),
+       if(or(not(PermitNeeded), PermitReady), 1, 0)),
+       if(empty(ImporterUEN), 0, 1)), 100), 4)
    ```
+   where each column name stands for the trigger output of that column, e.g. `triggerBody()?['InvoiceReady']`.
 
-4. **Compose "Status"** - Inputs (expression):
-   ```
-   if(equals(outputs('Score'), 100), 'Validated', if(greaterOrEquals(outputs('Score'), 50), 'Docs pending', 'Requested'))
-   ```
+3. **Update item** (SharePoint, BA_Customers, the trigger's item)
+   - ReadinessScore: the Compose output
+   - EnrolmentStatus: `Validated` if the score equals 100, otherwise `Docs pending`
 
-5. **Compose "Missing"** - Inputs (expression):
-   ```
-   concat(
-       if(equals(triggerBody()?['InvoiceReady'], true), '', 'Commercial invoice not received. '),
-       if(equals(triggerBody()?['PackingListReady'], true), '', 'Packing list not received. '),
-       if(or(equals(triggerBody()?['PermitReady'], true), equals(triggerBody()?['PermitNeeded'], false)), '', 'Permit or licence not ready (controlled goods). '),
-       if(empty(trim(coalesce(triggerBody()?['ImporterUEN'], ''))), 'Importer UEN missing. ', ''),
-       if(equals(triggerBody()?['CoORequested'], true), 'Customer wants FTA preference: certificate of origin needed. ', ''))
-   ```
+4. **Condition** - score is less than 100.
+   - If true: **Send an email (V2)** (Office 365 Outlook) to the item's creator, listing the missing documents.
+   - If false: no action.
 
-6. **Update item** (SharePoint)
-   - Site Address `<onedrive-site-url>`, List Name `BA_Customers`
-   - Id: `triggerBody()?['ID']`
-   - CustomerName (the renamed Title, required by the action): `triggerBody()?['Title']`
-   - ReadinessScore: `outputs('Score')`
-   - EnrolmentStatus Value: `outputs('Status')`
-   - Retry policy: leave the default (exponential).
+## Test run
 
-7. **Send an email (V2)** (Office 365 Outlook) - inside "Try", after Update item
-   - To: `<owner-email>` (the owner only)
-   - Subject: `[Onboarding] @{triggerBody()?['Title']} (@{triggerBody()?['AccountNo']}): @{outputs('Status')}, score @{outputs('Score')}`
-   - Body: `Lane @{triggerBody()?['TradeLane']?['Value']}, commodity @{triggerBody()?['Commodity']?['Value']}. Missing: @{outputs('Missing')}`
+A customer DEMO-C025 was created with InvoiceReady = Yes, PackingListReady = No, PermitNeeded = Yes,
+PermitReady = No and no ImporterUEN. Expected by the rule: 1 of 4 checks, score 25, status Docs pending. Result: the
+run succeeded in 4 s, the item shows score 25 and status Docs pending, and the email was sent
+([screenshot](screenshots/flow1_enrolment_check_run.png)). The creator is the owner, so the email went to the
+owner's own mailbox.
 
-8. **Scope "Catch"** - after "Try"; Settings > Run after: "has failed" and "has timed out" only.
-   - **Send an email (V2)** to `<owner-email>`, subject `[Onboarding] readiness check failed for @{triggerBody()?['AccountNo']}`,
-     body `Run @{workflow()?['run']?['name']} of flow @{workflow()?['name']} failed; see the flow's run history.`
+## Notes and limits
 
-## Test (build-order step 3 in [README.md](README.md))
-
-Create an item with InvoiceReady = No, PackingListReady = Yes, PermitNeeded = No, PermitReady = Yes and a UEN:
-expect ReadinessScore 75, EnrolmentStatus "Docs pending", one email whose body lists "Commercial invoice not
-received". Then create one with everything ready: expect 100 and "Validated".
-
-## Notes
-
-- Yes/No columns arrive in the trigger output as `true`/`false`; choice columns as records with a `Value` field.
-- Customers that are later edited in the app get their score from the app's Save button, not from this flow
-  (the trigger only covers creation).
+- The score rule is the one the seed uses for its ReadinessScore column (`seed/make_seed.py`);
+  `tests/test_power_platform.py` recomputes it for every seed row. The seed script additionally gives the status
+  "Requested" to scores below 50; the flow as built uses only Validated and Docs pending. No seed row scores below 50.
+- Only this one case was run. Not tested: a customer with all four checks passing (no email expected), and failure
+  of the SharePoint or Outlook step.
+- Not built: Try/Catch scopes with a failure notification, and re-scoring when a customer is edited later (the
+  trigger covers creation only).
+- It is a simplified stand-in for the 44-rule validator of the analytics part (`src/boa/validator.py`).

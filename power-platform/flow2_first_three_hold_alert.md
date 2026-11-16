@@ -1,63 +1,51 @@
-# Flow 2: "First-three-shipment hold alert"
+# Flow 2: "BA - First three shipments hold alert"
 
-DESIGN — not started (see [README.md](README.md)). Automated cloud flow, standard connectors only (SharePoint,
-Office 365 Outlook).
+**Built and tested** in the owner's Microsoft 365 account (see [README.md](README.md)). Automated cloud flow,
+standard connectors only (SharePoint, Office 365 Outlook). The flow's package export is not in this repository; the
+steps below are written from the build. `<onedrive-site-url>` stands for the site address.
 
-**What it does:** when a shipment in BA_Shipments is Held and is one of the customer's first three shipments
-(ShipmentSeq 1 to 3), it adds one "Hold follow-up" row to BA_ActionLog and emails the owner. It writes only to
-BA_ActionLog, so it cannot re-trigger itself; a duplicate check keeps it to one row per held shipment when the
-shipment is edited again.
+**What it does:** when a shipment in BA_Shipments becomes Held and is one of the customer's first three shipments
+(ShipmentSeq 1 to 3), it stamps HeldOn, adds one "Hold follow-up" row to BA_ActionLog and emails the person who
+modified the item.
 
-## Build sheet
+## Steps as built
 
 1. **Trigger** - SharePoint "When an item is created or modified".
-   - Site Address: `<onedrive-site-url>`; List Name: `BA_Shipments`
-   - Settings > Trigger conditions (one line; the flow only starts for held first-three shipments):
+   - Site Address: `<onedrive-site-url>`; List Name: `BA_Shipments`.
+   - Trigger condition (the flow starts only for a held shipment whose HeldOn is still empty):
      ```
-     @and(equals(triggerBody()?['Status']?['Value'], 'Held'), lessOrEquals(int(triggerBody()?['ShipmentSeq']), 3))
+     @and(equals(Status, 'Held'), empty(HeldOn))
      ```
+     where `Status` and `HeldOn` stand for the trigger outputs of those columns.
 
-2. **Scope "Try"** - put steps 3 to 7 inside it.
+2. **Condition** - Status is Held **and** ShipmentSeq is less than or equal to 3 **and** HeldOn is empty.
+   - If false: no action.
+   - If true: steps 3 to 5.
 
-3. **Get items** (SharePoint) "Existing action"
-   - List Name: `BA_ActionLog`
-   - Filter Query: `ShipmentRef eq '@{triggerBody()?['Title']}' and ActionType eq 'Hold follow-up'`
-   - Top Count: `1`
+3. **Update item** (SharePoint, BA_Shipments, the trigger's item) - HeldOn = `utcNow()`.
 
-4. **Condition** "No action logged yet": `length(body('Existing_action')?['value'])` is equal to `0`.
-   - If no: do nothing (an action already exists for this shipment).
-   - If yes: steps 5 to 7.
+4. **Create item** (SharePoint, BA_ActionLog) - ActionType "Hold follow-up", LoggedBy "Flow", and an outcome text
+   that contains the hold reason.
 
-5. **Create item** (SharePoint) - List Name `BA_ActionLog`
-   - ActionTitle (renamed Title): `Hold follow-up @{triggerBody()?['Title']}`
-   - AccountNo: `triggerBody()?['AccountNo']`
-   - ShipmentRef: `triggerBody()?['Title']`
-   - ActionType Value: `Hold follow-up`
-   - LoggedOn: `formatDateTime(utcNow(), 'yyyy-MM-dd')`
-   - Outcome: `Reason: @{triggerBody()?['HoldReason']?['Value']}. Logged automatically; follow up with the customer.`
-   - LoggedBy: `Flow`
+5. **Send an email (V2)** (Office 365 Outlook) to the person who modified the item.
 
-6. **Get items** (SharePoint) "Customer" - List Name `BA_Customers`; Filter Query
-   `AccountNo eq '@{triggerBody()?['AccountNo']}'`; Top Count `1`.
+## Why it does not loop
 
-7. **Send an email (V2)** (Office 365 Outlook)
-   - To: `<owner-email>` (the owner only)
-   - Subject: `[First 3] Hold on shipment @{triggerBody()?['ShipmentSeq']} of 3 for @{triggerBody()?['AccountNo']}: @{triggerBody()?['HoldReason']?['Value']}`
-   - Body: `@{first(body('Customer')?['value'])?['Title']} - shipment @{triggerBody()?['Title']}, HS @{triggerBody()?['HSCode']}, @{triggerBody()?['Incoterm']?['Value']}, held on @{triggerBody()?['HeldOn']}. Handling notes: @{first(body('Customer')?['value'])?['HandlingNotes']}`
+Step 3 modifies the same list item that triggered the flow, which would normally trigger it again. After step 3
+HeldOn is no longer empty, so the trigger condition is false and no second run starts. The flow designer still shows
+its static "possible loop" warning, because it does not evaluate the trigger condition.
 
-8. **Scope "Catch"** - after "Try"; Run after "has failed" and "has timed out".
-   - **Send an email (V2)** to `<owner-email>`: subject `[First 3] hold alert failed for @{triggerBody()?['Title']}`,
-     body `Run @{workflow()?['run']?['name']} failed; see the flow's run history.`
+## Test run
 
-## Test (build-order step 4 in [README.md](README.md))
+Shipment DEMO-S0041 (ShipmentSeq 1, status In transit) was set to Held with HoldReason "Permit missing". Result:
+exactly one run (2 s); HeldOn was stamped, one row was added to BA_ActionLog and the email was sent
+([screenshot](screenshots/flow2_hold_alert_run.png)). The modifier is the owner, so the email went to the owner's
+own mailbox.
 
-Set a shipment with ShipmentSeq = 1 to Status "Held", HoldReason "Invoice missing": expect one new BA_ActionLog row
-(ActionType "Hold follow-up", LoggedBy "Flow") and one email. Edit the same shipment again: the trigger fires but the
-condition finds the existing row, so no second row or email. Set a shipment with ShipmentSeq = 3 to "Released": the
-trigger condition stops the run.
+## Notes and limits
 
-## Notes
-
-- Filter queries use internal names: the renamed Title column is `Title`.
-- The seed already contains a "Hold follow-up" row for every held seed shipment, so for seed data the condition is
-  false until a new shipment is set to Held.
+- Only this one case was run. Not tested: a held shipment with ShipmentSeq above 3 (the seed has none), a shipment
+  that is released and later held again (HeldOn would already be filled, so no new alert), and failure of a step.
+- A shipment created as Held with HeldOn already filled in, as in the seed rows, does not start the flow; the seed
+  already contains a "Hold follow-up" row for each of its held shipments.
+- Not built: Try/Catch scopes with a failure notification.

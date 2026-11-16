@@ -1,8 +1,12 @@
 # Microsoft Lists
 
-Three lists on the owner's OneDrive personal site (`<onedrive-site-url>`), created from the SYNTHETIC seed CSVs in
-[seed/](seed) with "Create list > From CSV". The machine-readable version of this page is
-[lists_schema.json](lists_schema.json); `tests/test_power_platform.py` checks that it matches the seed files.
+Three lists on the owner's OneDrive personal site (`<onedrive-site-url>`), filled from the SYNTHETIC seed CSVs in
+[seed/](seed). The machine-readable version of this page is [lists_schema.json](lists_schema.json);
+`tests/test_power_platform.py` checks that it matches the seed files.
+
+How they were made: the lists were first created with "Create list > From CSV". That importer gave the columns
+internal names such as `field_1` and made the Choice columns multi-select, so the lists were rebuilt through the
+SharePoint REST API with internal column names equal to the CSV headers and single-select Choice columns.
 
 Naming: each list's first column is SharePoint's built-in **Title** column renamed (to CustomerName, ShipmentRef or
 ActionTitle). Renaming changes only the display name, so its **internal name stays `Title`**: use `Title` in
@@ -60,11 +64,11 @@ and text-key filters are delegable (see [app.md](app.md)). Index `AccountNo` in 
 | Outcome | Outcome | Multiple lines of text (plain) | |
 | LoggedBy | LoggedBy | Single line of text | role or "Flow", no person names |
 
-## Import notes
+## Notes
 
-- Check each column's type in the import preview; the CSV holds `Yes`/`No` for the Yes/No columns and ISO dates
-  (`2026-10-06`) for the date columns.
-- If the import offers no Choice type for a column, create it as text, then change the type to Choice in list
-  settings and enter the values above.
+- The CSVs hold `Yes`/`No` for the Yes/No columns and ISO dates (`2026-10-06`) for the date columns.
+- The choice lists above include a few values the seed does not use; the column types and choice values written
+  here are the intended ones and were not read back from the live lists into this repository.
 - Row counts stay far below the Power Apps data row limit (500 by default), so the non-delegable formulas noted in
   [app.md](app.md) still see every row.
+- The live lists differ from the seed by the test rows listed in [README.md](README.md).

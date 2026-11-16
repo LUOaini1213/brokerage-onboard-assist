@@ -1,5 +1,5 @@
 {
-  "_about": "Schema of the three Microsoft Lists used by the Power Apps / Power Automate part (power-platform/). Column names and seed data follow the lists created in the owner's Microsoft 365 account (seed/make_seed.py, SYNTHETIC, fixed seed 20261115). Internal names equal the column names, except the first column of each list, which is SharePoint's Title column renamed (internal name stays 'Title'). 'type' is the intended SharePoint column type; confirm it against the built list.",
+  "_about": "Schema of the three Microsoft Lists used by the Power Apps / Power Automate part (power-platform/). Column names and seed data follow the lists built in the owner's Microsoft 365 account (seed/make_seed.py, SYNTHETIC, fixed seed 20261115). The lists were rebuilt through the SharePoint REST API so that internal names equal the CSV headers and Choice columns are single-select; the first column of each list is SharePoint's Title column renamed (internal name stays 'Title'). 'type' and 'choices' are the intended values; they were not read back from the live lists into this file.",
   "site": "<onedrive-site-url>",
   "lists": [
     {

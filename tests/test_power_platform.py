@@ -92,20 +92,41 @@ def test_held_seed_shipments_have_one_follow_up_each():
     assert sorted(follow) == sorted(held)
 
 
-def test_design_label_and_no_real_addresses():
+def test_status_wording_and_no_real_addresses():
     text = {p.name: p.read_text(encoding="utf-8") for p in PP.glob("*.md")}
-    assert "DESIGN" in text["README.md"] and "not complete" in text["README.md"]
-    for name in ("app.md", "flow1_enrolment_readiness.md", "flow2_first_three_hold_alert.md"):
-        assert "DESIGN" in text[name], name
+    readme = text["README.md"]
+    # the status is "built and tested", with what is missing said plainly
+    assert "built and tested" in readme and "saved, not published" in readme
+    assert "No package exports" in readme and "DEMO-C025" in readme and "DEMO-S0041" in readme
+    for name in ("flow1_enrolment_readiness.md", "flow2_first_three_hold_alert.md", "app.md"):
+        assert "Built and tested" in text[name] and "not in this repository" in text[name], name
+    assert "not a listing of the built app" in text["app.md"]
     everything = "\n".join(text.values()) + (PP / "lists_schema.json").read_text(encoding="utf-8")
     assert not re.search(r"[\w.+-]+@[\w-]+\.[\w.]+", everything), "an email address is written in power-platform/"
     assert not re.search(r"https://[\w-]+(-my)?\.sharepoint\.com", everything), "a tenant URL is written down"
     assert "<owner-email>" in everything and "<onedrive-site-url>" in everything
 
 
+def test_screenshots_exist_and_are_linked():
+    shots = sorted(p.name for p in (PP / "screenshots").glob("*.png"))
+    assert shots == ["app_first_three_shipments.png", "flow1_enrolment_check_run.png", "flow2_hold_alert_run.png"]
+    readme = (PP / "README.md").read_text(encoding="utf-8")
+    for name in shots:
+        assert f"screenshots/{name}" in readme
+        assert (PP / "screenshots" / name).read_bytes()[1:4] == b"PNG"
+
+
+def test_flow1_documented_test_case_follows_the_score_rule():
+    """DEMO-C025 in the build test: invoice yes, packing list no, permit needed and not ready, no UEN -> 25."""
+    checks = [True, False, (not True) or False, False]
+    assert 100 * sum(checks) // 4 == 25
+    text = (PP / "flow1_enrolment_readiness.md").read_text(encoding="utf-8")
+    assert "score 25" in text and "Docs pending" in text
+
+
 def test_only_standard_connectors_in_the_build_sheets():
     for name in ("flow1_enrolment_readiness.md", "flow2_first_three_hold_alert.md"):
         steps = [ln for ln in (PP / name).read_text(encoding="utf-8").splitlines() if re.match(r"^\d+\. \*\*", ln)]
-        assert steps
+        assert len(steps) >= 4
         for ln in steps:
-            assert not re.search(r"\bHTTP\b|Dataverse|AI Builder|SQL", ln), ln
+            assert not re.search(r"HTTP|Dataverse|AI Builder|SQL", ln), ln

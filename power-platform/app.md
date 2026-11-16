@@ -1,12 +1,35 @@
 # Canvas app "Brokerage Onboard Assist"
 
-DESIGN — build in progress (see [README.md](README.md)). Data source: the three lists in [lists.md](lists.md),
-added through the standard SharePoint connector with the site address `<onedrive-site-url>`. In Power Fx a renamed
-Title column is used by its display name (CustomerName, ShipmentRef, ActionTitle); choice columns are records, so
-compare `.Value`.
+**Built and tested** in the owner's Microsoft 365 account; saved, not published (see [README.md](README.md)). The
+app's package export (.msapp) is not in this repository, so its exact formulas cannot be read from here.
 
-Flow of screens: enrolment queue -> customer profile with checklist and handling notes -> first three shipments ->
-log an action.
+## The app as built
+
+Data source: the three lists in [lists.md](lists.md) through the standard SharePoint connector.
+
+- **Screen 1** was generated from BA_Customers ("Create an app" from the list): a searchable list of customers and a
+  profile form that includes the handling notes. The header was renamed. A "First 3 shipments" button is shown only
+  for customers whose EnrolmentStatus is Validated or Active.
+- **Screen 2, "First three shipments"**, was added as pasted YAML:
+  - the selected customer's shipments, sorted by ShipmentSeq, with Held rows highlighted and the hold reason and
+    dates shown;
+  - an action form: an ActionType combo box filled from `Choices`, an outcome text box and a button that Patches a
+    row into BA_ActionLog with LoggedBy "App";
+  - the customer's action log below the form.
+- Test: in preview, one action row was written to BA_ActionLog
+  ([screenshot](screenshots/app_first_three_shipments.png)).
+
+## Reference formulas (design sheet)
+
+The rest of this page is the design sheet written before the build: Power Fx for this data model on a SharePoint data
+source, with delegation notes. It is **not a listing of the built app**. The built app covers the queue with search,
+the profile form, the first-three-shipments gallery with hold highlighting, the action form and the action history
+in two screens instead of the four below, and writes LoggedBy "App" where the sheet says "Agent". The status
+drop-down, the score preview and checklist gallery, the Save button that recomputes the score, and the portfolio
+hold-rate label are in this sheet only and were not built.
+
+In Power Fx a renamed Title column is used by its display name (CustomerName, ShipmentRef, ActionTitle); choice
+columns are records, so compare `.Value`.
 
 ## 1. scrQueue: enrolment queue
 
