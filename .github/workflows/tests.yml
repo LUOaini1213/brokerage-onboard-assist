@@ -1,0 +1,24 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: Fetch Microsoft's PBIP/PBIR JSON schemas (pinned commit)
+        run: bash tools/fetch_schemas.sh
+      - name: Tests (offline apart from the schema copy fetched above)
+        env:
+          SCHEMAS_REQUIRED: "1"
+        run: python -m pytest
