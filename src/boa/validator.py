@@ -53,7 +53,7 @@ def _blank(x):
 
 
 def _close(a, b, rel, floor):
-    return abs(a - b) <= max(rel * max(abs(a), abs(b)), floor)
+    return abs(a - b) <= max(rel * max(abs(a), abs(b)), floor) + 1e-9   # a one-cent gap is not exactly 0.01 in floats
 
 
 def screens_for(hs_code, kinds=("controlled", "dutiable", "prohibited")):

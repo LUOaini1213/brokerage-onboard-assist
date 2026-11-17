@@ -328,3 +328,21 @@ def test_handling_note_mentions_flat_rate_controls_and_open_items():
     assert "[WARNING]" in note and "(SG-IMP-18)" in note
     note2 = draft_note(customer, products, lanes, [], {"IMDA": "SYN-IMDA-1"})
     assert "on file: SYN-IMDA-1" in note2 and "- none" in note2
+
+
+def test_permit_submitted_at_the_arrival_or_departure_instant_still_blocks():
+    """'Before arrival' / 'before departure' is strict: a permit stamped at the same instant is late."""
+    b = clean_import()
+    b["shipment"]["permit_submitted_at"] = b["shipment"]["arrival_at"]
+    assert non_info(run(b)) == [("permit_before_arrival", "PERMIT_TIMING", "BLOCKING")]
+    b = export_to_au()
+    b["shipment"]["permit_submitted_at"] = b["shipment"]["departure_at"]
+    assert non_info(run(b)) == [("permit_before_departure", "PERMIT_TIMING", "BLOCKING")]
+
+
+def test_tolerance_is_relative_to_the_larger_amount():
+    from boa.validator import _close
+    # 2% of the larger figure (102.03) is 2.0406: a difference of 2.03 is inside, 2.05 against 102.05 (2.041) is not
+    assert _close(100.0, 102.03, 0.02, 0)
+    assert not _close(100.0, 102.05, 0.02, 0)
+    assert _close(100.0, 100.01, 0.0, 0.01) and not _close(100.0, 100.02, 0.0, 0.01)   # the absolute floor

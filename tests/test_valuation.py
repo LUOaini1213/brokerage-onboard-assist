@@ -84,3 +84,8 @@ def test_australian_gst_on_voti():
 ])
 def test_australian_declaration_type(value, permit, alcohol, expected):
     assert expected in V.au_declaration_type(value, permit, alcohol)
+
+
+def test_australian_voti_includes_wine_equalisation_tax():
+    # AU-04: VoTI = customs value 10,000 + T&I 900 + duty 500 + WET 300 = 11,700
+    assert V.au_voti(10_000, 900, duty_aud=500, wet_aud=300) == 11_700
