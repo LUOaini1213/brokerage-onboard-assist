@@ -1,0 +1,183 @@
+{
+  "name": "12c4a959-8994-4fd0-911a-3d8ecbb336f8",
+  "id": "/providers/Microsoft.Flow/flows/12c4a959-8994-4fd0-911a-3d8ecbb336f8",
+  "type": "Microsoft.Flow/flows",
+  "properties": {
+    "apiId": "/providers/Microsoft.PowerApps/apis/shared_logicflows",
+    "displayName": "BA - First three shipments hold alert",
+    "definition": {
+      "metadata": {
+        "workflowEntityId": null,
+        "processAdvisorMetadata": null,
+        "flowChargedByPaygo": null,
+        "flowclientsuspensionreason": "None",
+        "flowclientsuspensiontime": null,
+        "flowclientsuspensionreasondetails": null,
+        "creator": {
+          "id": "5fefca60-458b-4b7c-8dbb-d12fcaa7396b",
+          "type": "User",
+          "tenantId": "00000000-0000-0000-0000-000000000000"
+        },
+        "provisioningMethod": "FromDefinition",
+        "failureAlertSubscription": true,
+        "clientLastModifiedTime": "2026-11-15T14:53:49.8586726Z",
+        "lastModifiedBy": "5fefca60-458b-4b7c-8dbb-d12fcaa7396b",
+        "connectionKeySavedTimeKey": "2026-11-15T14:53:49.8586726Z",
+        "creationSource": "Portal",
+        "modifiedSources": "Portal"
+      },
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "创建或修改项时": {
+          "recurrence": {
+            "frequency": "Minute",
+            "interval": 1
+          },
+          "evaluatedRecurrence": {
+            "frequency": "Minute",
+            "interval": 1
+          },
+          "splitOn": "@triggerOutputs()?['body/value']",
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "dataset": "https://contoso-my.sharepoint.com/personal/owner_example_edu",
+              "table": "6b6ff923-c214-44cd-9e96-7116a6134423"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+              "connectionName": "shared_sharepointonline",
+              "operationId": "GetOnUpdatedItems"
+            },
+            "authentication": "@parameters('$authentication')"
+          },
+          "conditions": [
+            {
+              "expression": "@and(equals(triggerOutputs()?['body/Status/Value'],'Held'),empty(triggerOutputs()?['body/HeldOn']))"
+            }
+          ]
+        }
+      },
+      "actions": {
+        "条件": {
+          "actions": {
+            "更新项": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "dataset": "https://contoso-my.sharepoint.com/personal/owner_example_edu",
+                  "table": "6b6ff923-c214-44cd-9e96-7116a6134423",
+                  "id": "@triggerOutputs()?['body/ID']",
+                  "item/Title": "@triggerOutputs()?['body/Title']",
+                  "item/HeldOn": "@utcNow()"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+                  "connectionName": "shared_sharepointonline",
+                  "operationId": "PatchItem"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "创建项": {
+              "runAfter": {
+                "更新项": [
+                  "Succeeded"
+                ]
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "dataset": "https://contoso-my.sharepoint.com/personal/owner_example_edu",
+                  "table": "f911da1e-4678-40e5-b8b8-f3394f0fcff5",
+                  "item/Title": "@concat('Hold follow-up ', triggerOutputs()?['body/Title'])",
+                  "item/AccountNo": "@triggerOutputs()?['body/AccountNo']",
+                  "item/ShipmentRef": "@triggerOutputs()?['body/Title']",
+                  "item/ActionType/Value": "Hold follow-up",
+                  "item/LoggedOn": "@utcNow()",
+                  "item/Outcome": "@concat('Auto-logged when the shipment was marked Held. Reason: ', triggerOutputs()?['body/HoldReason/Value'], '. Contact the customer within one working day.')",
+                  "item/LoggedBy": "Flow"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+                  "connectionName": "shared_sharepointonline",
+                  "operationId": "PostItem"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "发送电子邮件(V2)": {
+              "runAfter": {
+                "创建项": [
+                  "Succeeded"
+                ]
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "emailMessage/To": "@triggerOutputs()?['body/Editor/Email']",
+                  "emailMessage/Subject": "@concat('Shipment held: ', triggerOutputs()?['body/Title'], ' / ', triggerOutputs()?['body/HoldReason/Value'])",
+                  "emailMessage/Body": "<p class=\"editor-paragraph\">@{concat('Shipment ', string(triggerOutputs()?['body/ShipmentSeq']), ' of the first three for account ', triggerOutputs()?['body/AccountNo'], ' was marked Held. Reason: ', triggerOutputs()?['body/HoldReason/Value'], '. HS code ', triggerOutputs()?['body/HSCode'], ', Incoterm ', triggerOutputs()?['body/Incoterm/Value'], '. A Hold follow-up entry was added to the action log.')}</p>",
+                  "emailMessage/Importance": "Normal"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365",
+                  "connectionName": "shared_office365",
+                  "operationId": "SendEmailV2"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {},
+          "else": {
+            "actions": {}
+          },
+          "expression": {
+            "and": [
+              {
+                "equals": [
+                  "@if(and(equals(triggerOutputs()?['body/Status/Value'],'Held'), lessOrEquals(triggerOutputs()?['body/ShipmentSeq'],3), empty(triggerOutputs()?['body/HeldOn'])),'yes','no')",
+                  "yes"
+                ]
+              }
+            ]
+          },
+          "type": "If"
+        }
+      },
+      "outputs": {}
+    },
+    "connectionReferences": {
+      "shared_sharepointonline": {
+        "connectionName": "shared-sharepointonl-14878558-58c4-47fc-beea-0f080e034d92",
+        "source": "Embedded",
+        "id": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+        "tier": "NotSpecified",
+        "apiName": "sharepointonline",
+        "isProcessSimpleApiReferenceConversionAlreadyDone": false
+      },
+      "shared_office365": {
+        "connectionName": "shared-office365-6079d908-aa57-4c1e-8dec-ac91dd3096d3",
+        "source": "Embedded",
+        "id": "/providers/Microsoft.PowerApps/apis/shared_office365",
+        "tier": "NotSpecified",
+        "apiName": "office365",
+        "isProcessSimpleApiReferenceConversionAlreadyDone": false
+      }
+    },
+    "flowFailureAlertSubscribed": false,
+    "isManaged": false
+  }
+}

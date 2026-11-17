@@ -1,0 +1,180 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  ShipmentsScreen:
+    Properties:
+      Fill: =RGBA(255, 255, 255, 1)
+      LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    Children:
+      - ShipHeaderBar:
+          Control: Rectangle@2.3.0
+          Properties:
+            Fill: =RGBA(0, 120, 212, 1)
+            Height: =56
+            Width: =Parent.Width
+      - ShipBackIcon:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =56
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Back()
+            PaddingBottom: =14
+            PaddingLeft: =14
+            PaddingRight: =14
+            PaddingTop: =14
+            Width: =56
+      - ShipTitle:
+          Control: Label@2.5.1
+          Properties:
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =56
+            Size: =15
+            Text: ="First three shipments · " & RecordsGallery1.Selected.CustomerName & " (" & RecordsGallery1.Selected.AccountNo & ")"
+            Width: =Parent.Width - 72
+            X: =60
+      - ShipHint:
+          Control: Label@2.5.1
+          Properties:
+            Color: =RGBA(96, 94, 92, 1)
+            Height: =32
+            Size: =11
+            Text: ="Held shipments are highlighted. Select one, then log the follow-up on the right."
+            Width: =Parent.Width * 0.55 - 24
+            X: =16
+            Y: =64
+      - ShipGallery:
+          Control: Gallery@2.15.0
+          Variant: BrowseLayout_Vertical_ThreeTextVariant_ver5.0
+          Properties:
+            BorderColor: =RGBA(225, 223, 221, 1)
+            BorderThickness: =1
+            Height: =Parent.Height - 112
+            Items: =SortByColumns(Filter(BA_Shipments, AccountNo = RecordsGallery1.Selected.AccountNo), "ShipmentSeq", SortOrder.Ascending)
+            TemplateFill: =If(ThisItem.Status.Value = "Held", RGBA(253, 231, 233, 1), If(ThisItem.IsSelected, RGBA(237, 235, 233, 1), RGBA(0, 0, 0, 0)))
+            TemplateSize: =92
+            Width: =Parent.Width * 0.55 - 24
+            X: =16
+            Y: =100
+          Children:
+            - ShipRefLabel:
+                Control: Label@2.5.1
+                Properties:
+                  FontWeight: =FontWeight.Semibold
+                  Height: =28
+                  OnSelect: =Select(Parent)
+                  Text: ="Shipment " & ThisItem.ShipmentSeq & " · " & ThisItem.ShipmentRef
+                  Width: =Parent.TemplateWidth - 32
+                  X: =16
+                  Y: =8
+            - ShipStatusLabel:
+                Control: Label@2.5.1
+                Properties:
+                  Color: =If(ThisItem.Status.Value = "Held", RGBA(164, 38, 44, 1), RGBA(50, 49, 48, 1))
+                  Height: =24
+                  OnSelect: =Select(Parent)
+                  Size: =12
+                  Text: =ThisItem.Status.Value & If(ThisItem.HoldReason.Value <> "None", " · " & ThisItem.HoldReason.Value, "") & If(IsBlank(ThisItem.HeldOn), "", " · held " & Text(ThisItem.HeldOn, "dd mmm")) & If(IsBlank(ThisItem.ReleasedOn), "", " · released " & Text(ThisItem.ReleasedOn, "dd mmm"))
+                  Width: =Parent.TemplateWidth - 32
+                  X: =16
+                  Y: =36
+            - ShipMetaLabel:
+                Control: Label@2.5.1
+                Properties:
+                  Color: =RGBA(96, 94, 92, 1)
+                  Height: =24
+                  OnSelect: =Select(Parent)
+                  Size: =11
+                  Text: ="HS " & ThisItem.HSCode & " · " & ThisItem.Incoterm.Value & " · SGD " & Text(ThisItem.DeclaredValueSGD, "#,##0")
+                  Width: =Parent.TemplateWidth - 32
+                  X: =16
+                  Y: =60
+      - ActionHeading:
+          Control: Label@2.5.1
+          Properties:
+            FontWeight: =FontWeight.Semibold
+            Height: =32
+            Text: ="Log an action · " & If(IsBlank(ShipGallery.Selected.ShipmentRef), RecordsGallery1.Selected.AccountNo, ShipGallery.Selected.ShipmentRef)
+            Width: =Parent.Width * 0.45 - 24
+            X: =Parent.Width * 0.55 + 8
+            Y: =64
+      - ActionTypeCombo:
+          Control: Classic/ComboBox@2.4.0
+          Properties:
+            DefaultSelectedItems: =Filter(Choices(BA_ActionLog.ActionType), Value = If(ShipGallery.Selected.Status.Value = "Held", "Hold follow-up", "Document request"))
+            Items: =Choices(BA_ActionLog.ActionType)
+            SelectMultiple: =false
+            Width: =Parent.Width * 0.45 - 24
+            X: =Parent.Width * 0.55 + 8
+            Y: =100
+      - OutcomeInput:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            Default: =""
+            Height: =88
+            HintText: ="What was done, what is still pending"
+            Mode: =TextMode.MultiLine
+            Width: =Parent.Width * 0.45 - 24
+            X: =Parent.Width * 0.55 + 8
+            Y: =148
+      - LogActionButton:
+          Control: Classic/Button@2.2.0
+          Properties:
+            DisplayMode: =If(IsBlank(ActionTypeCombo.Selected.Value) || IsBlank(Trim(OutcomeInput.Text)), DisplayMode.Disabled, DisplayMode.Edit)
+            OnSelect: |-
+              =Patch(BA_ActionLog, Defaults(BA_ActionLog), {ActionTitle: ActionTypeCombo.Selected.Value & " " & If(IsBlank(ShipGallery.Selected.ShipmentRef), RecordsGallery1.Selected.AccountNo, ShipGallery.Selected.ShipmentRef), AccountNo: RecordsGallery1.Selected.AccountNo, ShipmentRef: If(IsBlank(ShipGallery.Selected.ShipmentRef), "", ShipGallery.Selected.ShipmentRef), ActionType: ActionTypeCombo.Selected, LoggedOn: Today(), Outcome: OutcomeInput.Text, LoggedBy: "App"});
+              Notify("Action logged", NotificationType.Success);
+              Reset(OutcomeInput)
+            Text: ="Log action"
+            X: =Parent.Width * 0.55 + 8
+            Y: =244
+      - ActionsHeading:
+          Control: Label@2.5.1
+          Properties:
+            FontWeight: =FontWeight.Semibold
+            Height: =32
+            Size: =12
+            Text: ="Action log for this customer"
+            Width: =Parent.Width * 0.45 - 24
+            X: =Parent.Width * 0.55 + 8
+            Y: =296
+      - ActionsGallery:
+          Control: Gallery@2.15.0
+          Variant: BrowseLayout_Vertical_ThreeTextVariant_ver5.0
+          Properties:
+            BorderColor: =RGBA(225, 223, 221, 1)
+            BorderThickness: =1
+            Height: =Parent.Height - 344
+            Items: =SortByColumns(Filter(BA_ActionLog, AccountNo = RecordsGallery1.Selected.AccountNo), "LoggedOn", SortOrder.Descending)
+            TemplateSize: =68
+            Width: =Parent.Width * 0.45 - 24
+            X: =Parent.Width * 0.55 + 8
+            Y: =332
+          Children:
+            - ActTitleLabel:
+                Control: Label@2.5.1
+                Properties:
+                  FontWeight: =FontWeight.Semibold
+                  Height: =24
+                  Size: =11
+                  Text: =Text(ThisItem.LoggedOn, "dd mmm yyyy") & " · " & ThisItem.ActionType.Value & If(IsBlank(ThisItem.ShipmentRef), "", " · " & ThisItem.ShipmentRef)
+                  Width: =Parent.TemplateWidth - 24
+                  X: =12
+                  Y: =6
+            - ActOutcomeLabel:
+                Control: Label@2.5.1
+                Properties:
+                  Color: =RGBA(96, 94, 92, 1)
+                  Height: =36
+                  Size: =10
+                  Text: =ThisItem.Outcome & " (" & ThisItem.LoggedBy & ")"
+                  Width: =Parent.TemplateWidth - 24
+                  X: =12
+                  Y: =28

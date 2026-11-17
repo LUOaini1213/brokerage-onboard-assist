@@ -20,7 +20,7 @@ are paraphrased from official public pages and are a study aid, not customs or l
 | 3. Validator | Document-readiness checks that cite the rules, a readiness score and a draft customer handling note | tested with hand-worked cases |
 | 4. Root-cause analytics | Hold-reason Pareto, time to release by reason and lane, a classifier from hold notes to reason codes | computed on the synthetic data only |
 | 5. [Power BI project](powerbi) | PBIP: TMDL semantic model and PBIR report (funnel, first-three hold rate, Pareto, clearance lead time, action log) | **not yet opened in Power BI Desktop**; checked offline (below) |
-| 6. [Power Apps and Power Automate](power-platform/README.md) | A canvas app and two cloud flows on three Microsoft Lists | **built and tested by hand in a Microsoft 365 account**; exports are not in this repository |
+| 6. [Power Apps and Power Automate](power-platform/README.md) | A canvas app and two cloud flows on three Microsoft Lists | **built and tested by hand in a Microsoft 365 account**; package exports included |
 
 ## Headline numbers (synthetic data)
 
@@ -169,9 +169,9 @@ Built and tested by hand in a Microsoft 365 account with the Power Apps for Offi
 connectors only: a canvas app "Brokerage Onboard Assist" (enrolment screen and a first-three-shipments screen with
 hold highlighting and an action form) and two cloud flows (an enrolment readiness check and a first-three-shipments
 hold alert) on three Microsoft Lists with synthetic rows. One test case was run for each flow and one action was
-logged from the app in preview. The app is saved but not published, and **no app or flow exports are in this
-repository**: [power-platform/README.md](power-platform/README.md) gives the facts, the build sheets and three
-screenshots.
+logged from the app in preview. The app has not been shared with other users. The **package exports of the app
+and both flows are in `power-platform/export/`**, with the account name and site address replaced by placeholders:
+[power-platform/README.md](power-platform/README.md) gives the facts, the build sheets and three screenshots.
 
 ![First three shipments screen of the canvas app](power-platform/screenshots/app_first_three_shipments.png)
 
@@ -235,8 +235,8 @@ tests to fail: {{mutation}} caught ([mutation/mutation_report.md](mutation/mutat
 - Exchange rates are fixed illustrative numbers.
 - The classifier was trained and tested on templated synthetic notes; its real-world accuracy is unknown.
 - The Power BI report has not been rendered. The DAX was checked by a partial evaluator, not by the engine.
-- The Power Platform build exists only in one Microsoft 365 account; without exports it cannot be reproduced from
-  this repository, and each flow was tested with a single case.
+- The Power Platform build runs in one Microsoft 365 account; the exported packages have not been re-imported
+  anywhere else, and each flow was tested with a single case.
 
 ## Licence
 

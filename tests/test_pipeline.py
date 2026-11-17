@@ -100,7 +100,7 @@ def test_committed_text_files_use_lf_only():
     for folder in ("data", "results", "powerbi", "docs", "rules", "config", "power-platform", "src", "tests", "tools",
                    "scripts", "pbitest", "checks", "mutation", ".github"):
         for p in (ROOT / folder).rglob("*"):
-            if p.is_file() and p.suffix not in (".png", ".pyc") and "raw" not in p.parts and b"\r" in p.read_bytes():
+            if p.is_file() and p.suffix not in (".png", ".pyc", ".zip") and "raw" not in p.parts and b"\r" in p.read_bytes():
                 bad.append(p.relative_to(ROOT).as_posix())
     assert not bad, bad
 

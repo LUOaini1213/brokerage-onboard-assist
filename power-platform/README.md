@@ -27,7 +27,7 @@ equal the CSV headers and Choice columns are single-select.
 
 ### Canvas app "Brokerage Onboard Assist"
 
-SharePoint connector; **saved, not published**.
+SharePoint connector; saved in the owner's environment and **not shared with other users**.
 
 - Screen 1 was generated from BA_Customers: search, and a profile form that includes the handling notes; the header
   was renamed.
@@ -71,12 +71,30 @@ The flow designer screenshots are in Chinese because of the account's display la
 
 ## Not in the repository
 
-- **No package exports.** The app (.msapp) and the flows (.zip) have not been downloaded into this repository, so
-  the build cannot be re-imported from here; the build sheets describe it.
-- The app is saved but not published, and it has been tried only in preview.
+- **No tenant.** The package exports are in [export/](export) (see below), but the lists, connections and the
+  account they run in are not, so importing them needs your own Microsoft Lists and connections.
+- The app has not been shared with other users and has been tried only in preview.
 - The live lists now differ from the seed by the test rows: one extra customer (DEMO-C025), one shipment changed to
   Held (DEMO-S0041) and two extra action-log rows. The seed CSVs in this folder stay as generated.
 - Each flow was tested with one case (above). Error paths (for example a failed SharePoint call) were not tested.
+
+## Package exports
+
+Exported on 17 November 2026 with the standard "Export package" command of Power Apps and Power Automate:
+
+| File | What it is |
+|---|---|
+| [export/BrokerageOnboardAssist_App.zip](export/BrokerageOnboardAssist_App.zip) | the canvas app package (contains the `.msapp`); the app version saved on 15 November 2026 |
+| [export/BA_EnrolmentReadinessCheck.zip](export/BA_EnrolmentReadinessCheck.zip) | flow 1 package |
+| [export/BA_FirstThreeShipmentsHoldAlert.zip](export/BA_FirstThreeShipmentsHoldAlert.zip) | flow 2 package |
+| [export/src/](export/src) | readable copies taken from those packages: the two screens and `App` as Power Apps YAML, and the two flow definitions as JSON |
+
+**The packages were edited after export, in one way only:** the owner's account name, the personal site address and
+the tenant identifier were replaced by placeholders (an `owner` address at `example.edu`, the host
+`contoso-my.sharepoint.com`, a zero GUID), by byte replacement inside the archives. Formulas, expressions, steps and list identifiers are as
+exported. Because of the placeholders an import will ask for connections and the flows' site and list must be
+re-pointed; that import has not been tried. `tests/test_power_platform.py` checks that the archives open, that no
+account identifier is left in them and that the extracted sources match the archives.
 
 ## Files
 

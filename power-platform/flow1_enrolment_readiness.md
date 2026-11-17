@@ -1,8 +1,8 @@
 # Flow 1: "BA - Enrolment readiness check"
 
 **Built and tested** in the owner's Microsoft 365 account (see [README.md](README.md)). Automated cloud flow,
-standard connectors only (SharePoint, Office 365 Outlook). The flow's package export is not in this repository; the
-steps below are written from the build. Expressions use internal column names; `<onedrive-site-url>` stands for the
+standard connectors only (SharePoint, Office 365 Outlook). The flow's package export is in [export/](export) and its definition as exported is
+[export/src/flow1_definition.json](export/src/flow1_definition.json); the steps below are written from the build. Expressions use internal column names; `<onedrive-site-url>` stands for the
 site address.
 
 **What it does:** when a customer is added to BA_Customers, it scores four document checks (25 points each:

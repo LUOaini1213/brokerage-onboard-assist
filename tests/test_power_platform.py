@@ -96,10 +96,10 @@ def test_status_wording_and_no_real_addresses():
     text = {p.name: p.read_text(encoding="utf-8") for p in PP.glob("*.md")}
     readme = text["README.md"]
     # the status is "built and tested", with what is missing said plainly
-    assert "built and tested" in readme and "saved, not published" in readme
-    assert "No package exports" in readme and "DEMO-C025" in readme and "DEMO-S0041" in readme
+    assert "built and tested" in readme and "not shared with other users" in readme
+    assert "Package exports" in readme and "DEMO-C025" in readme and "DEMO-S0041" in readme
     for name in ("flow1_enrolment_readiness.md", "flow2_first_three_hold_alert.md", "app.md"):
-        assert "Built and tested" in text[name] and "not in this repository" in text[name], name
+        assert "Built and tested" in text[name] and "(export" in text[name], name
     assert "not a listing of the built app" in text["app.md"]
     everything = "\n".join(text.values()) + (PP / "lists_schema.json").read_text(encoding="utf-8")
     assert not re.search(r"[\w.+-]+@[\w-]+\.[\w.]+", everything), "an email address is written in power-platform/"
@@ -130,3 +130,54 @@ def test_only_standard_connectors_in_the_build_sheets():
         assert len(steps) >= 4
         for ln in steps:
             assert not re.search(r"HTTP|Dataverse|AI Builder|SQL", ln), ln
+
+
+# ---------------------------------------------------------------------------------------------------------------
+# package exports (power-platform/export): archives open, hold no account identifier, and match the extracted sources
+EXPORT = PP / "export"
+PACKAGES = ("BrokerageOnboardAssist_App.zip", "BA_EnrolmentReadinessCheck.zip", "BA_FirstThreeShipmentsHoldAlert.zip")
+
+
+def _members(data, prefix=""):
+    """Every file in a zip archive, descending into nested archives (the .msapp is a zip inside the app package)."""
+    import io
+    import zipfile
+    z = zipfile.ZipFile(io.BytesIO(data))
+    assert z.testzip() is None
+    for info in z.infolist():
+        b = z.read(info)
+        if b[:2] == b"PK":
+            yield from _members(b, prefix + info.filename + " > ")
+        else:
+            yield prefix + info.filename, b
+
+
+def test_exports_open_and_hold_no_account_identifier():
+    import re
+    # a university account id (letter + 7 digits), a real e-mail domain, a real SharePoint tenant, a personal name
+    bad = re.compile(rb"(?<![0-9a-fA-F-])[eE]\d{7}(?![0-9a-fA-F-])|@u\.nus\.edu|nus\.edu|nusu|(?<!contoso)(?<!contoso-my)\.sharepoint\.com|Wenjie", re.I)
+    for name in PACKAGES:
+        found = [(m, bad.findall(b)[:3]) for m, b in _members((EXPORT / name).read_bytes()) if bad.search(b)]
+        assert not found, (name, found)
+
+
+def test_extracted_sources_match_the_packages():
+    import json
+    app = dict(_members((EXPORT / PACKAGES[0]).read_bytes()))
+    for short in ("App.pa.yaml", "MainScreen1.pa.yaml", "ShipmentsScreen.pa.yaml"):
+        packed = next(b for m, b in app.items() if m.endswith("Src/" + short))
+        assert packed.decode("utf-8-sig").replace("\r\n", "\n") == (EXPORT / "src" / short).read_text(encoding="utf-8")
+    for pkg, short in ((PACKAGES[1], "flow1_definition.json"), (PACKAGES[2], "flow2_definition.json")):
+        packed = next(b for m, b in _members((EXPORT / pkg).read_bytes()) if m.endswith("definition.json"))
+        assert json.loads(packed.decode("utf-8-sig")) == json.loads((EXPORT / "src" / short).read_text(encoding="utf-8"))
+
+
+def test_exported_app_and_flows_are_the_ones_described():
+    ship = (EXPORT / "src" / "ShipmentsScreen.pa.yaml").read_text(encoding="utf-8")
+    for needle in ("ShipGallery", "ActionTypeCombo", "LogActionButton", "Patch(", "BA_ActionLog", "SortByColumns"):
+        assert needle in ship, needle
+    assert "ShipmentsNavButton" in (EXPORT / "src" / "MainScreen1.pa.yaml").read_text(encoding="utf-8")
+    f1 = (EXPORT / "src" / "flow1_definition.json").read_text(encoding="utf-8")
+    f2 = (EXPORT / "src" / "flow2_definition.json").read_text(encoding="utf-8")
+    assert "ReadinessScore" in f1 and "Docs pending" in f1 and "Validated" in f1
+    assert "HeldOn" in f2 and "Hold follow-up" in f2 and "ShipmentSeq" in f2

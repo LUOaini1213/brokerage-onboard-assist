@@ -41,7 +41,7 @@ def test_fixed_facts_in_the_readme_are_true(model):
     assert f"{len(model.measures)} measures" in text
     assert "**All customer, shipment, hold and action data in this repository are SYNTHETIC**" in text
     assert "not yet opened in Power BI Desktop" in text
-    assert "no app or flow exports are in this" in text
+    assert "package exports of the app" in text and (ROOT / "power-platform" / "export").is_dir()
     for rel in re.findall(r"\]\(((?!https?://)[^)#]+)\)", text):
         assert (ROOT / rel).exists(), f"README links to a missing file: {rel}"
 

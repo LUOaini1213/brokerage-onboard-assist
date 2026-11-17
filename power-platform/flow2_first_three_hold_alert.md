@@ -1,8 +1,8 @@
 # Flow 2: "BA - First three shipments hold alert"
 
 **Built and tested** in the owner's Microsoft 365 account (see [README.md](README.md)). Automated cloud flow,
-standard connectors only (SharePoint, Office 365 Outlook). The flow's package export is not in this repository; the
-steps below are written from the build. `<onedrive-site-url>` stands for the site address.
+standard connectors only (SharePoint, Office 365 Outlook). The flow's package export is in [export/](export) and its definition as exported is
+[export/src/flow2_definition.json](export/src/flow2_definition.json); the steps below are written from the build. `<onedrive-site-url>` stands for the site address.
 
 **What it does:** when a shipment in BA_Shipments becomes Held and is one of the customer's first three shipments
 (ShipmentSeq 1 to 3), it stamps HeldOn, adds one "Hold follow-up" row to BA_ActionLog and emails the person who

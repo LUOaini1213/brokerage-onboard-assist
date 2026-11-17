@@ -1,7 +1,9 @@
 # Canvas app "Brokerage Onboard Assist"
 
-**Built and tested** in the owner's Microsoft 365 account; saved, not published (see [README.md](README.md)). The
-app's package export (.msapp) is not in this repository, so its exact formulas cannot be read from here.
+**Built and tested** in the owner's Microsoft 365 account; not shared with other users (see
+[README.md](README.md)). The app's package export is in [export/](export), and the exact formulas of the built app
+can be read in [export/src/ShipmentsScreen.pa.yaml](export/src/ShipmentsScreen.pa.yaml) and
+[export/src/MainScreen1.pa.yaml](export/src/MainScreen1.pa.yaml).
 
 ## The app as built
 

@@ -1,0 +1,161 @@
+{
+  "name": "2c7030f4-6f24-43f8-a1ee-1e0df0216628",
+  "id": "/providers/Microsoft.Flow/flows/2c7030f4-6f24-43f8-a1ee-1e0df0216628",
+  "type": "Microsoft.Flow/flows",
+  "properties": {
+    "apiId": "/providers/Microsoft.PowerApps/apis/shared_logicflows",
+    "displayName": "BA - Enrolment readiness check",
+    "definition": {
+      "metadata": {
+        "workflowEntityId": null,
+        "processAdvisorMetadata": null,
+        "flowChargedByPaygo": null,
+        "flowclientsuspensionreason": "None",
+        "flowclientsuspensiontime": null,
+        "flowclientsuspensionreasondetails": null,
+        "creator": {
+          "id": "5fefca60-458b-4b7c-8dbb-d12fcaa7396b",
+          "type": "User",
+          "tenantId": "00000000-0000-0000-0000-000000000000"
+        },
+        "provisioningMethod": "FromDefinition",
+        "failureAlertSubscription": true,
+        "clientLastModifiedTime": "2026-11-15T14:32:37.8431043Z",
+        "lastModifiedBy": "5fefca60-458b-4b7c-8dbb-d12fcaa7396b",
+        "connectionKeySavedTimeKey": "2026-11-15T14:32:37.8431043Z",
+        "creationSource": "Portal",
+        "modifiedSources": "Portal"
+      },
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "当创建项时": {
+          "recurrence": {
+            "frequency": "Minute",
+            "interval": 1
+          },
+          "evaluatedRecurrence": {
+            "frequency": "Minute",
+            "interval": 1
+          },
+          "splitOn": "@triggerOutputs()?['body/value']",
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "dataset": "https://contoso-my.sharepoint.com/personal/owner_example_edu",
+              "table": "95d9bf61-b4b5-4d92-8e83-2868a18aba5c"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+              "connectionName": "shared_sharepointonline",
+              "operationId": "GetOnNewItems"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "ReadinessScore": {
+          "runAfter": {},
+          "type": "Compose",
+          "inputs": "@div(mul(add(add(add(if(equals(triggerOutputs()?['body/InvoiceReady'],true),1,0),if(equals(triggerOutputs()?['body/PackingListReady'],true),1,0)),if(or(equals(triggerOutputs()?['body/PermitNeeded'],false),equals(triggerOutputs()?['body/PermitReady'],true)),1,0)),if(empty(triggerOutputs()?['body/ImporterUEN']),0,1)),100),4)"
+        },
+        "更新项": {
+          "runAfter": {
+            "ReadinessScore": [
+              "Succeeded"
+            ]
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "dataset": "https://contoso-my.sharepoint.com/personal/owner_example_edu",
+              "table": "95d9bf61-b4b5-4d92-8e83-2868a18aba5c",
+              "id": "@triggerOutputs()?['body/ID']",
+              "item/Title": "@triggerOutputs()?['body/Title']",
+              "item/ReadinessScore": "@outputs('ReadinessScore')",
+              "item/EnrolmentStatus/Value": "@if(equals(outputs('ReadinessScore'),100),'Validated','Docs pending')"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+              "connectionName": "shared_sharepointonline",
+              "operationId": "PatchItem"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "条件": {
+          "actions": {
+            "发送电子邮件(V2)": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "emailMessage/To": "@triggerOutputs()?['body/Author/Email']",
+                  "emailMessage/Subject": "@concat('Docs pending: ', triggerOutputs()?['body/Title'], ' / ', triggerOutputs()?['body/AccountNo'])",
+                  "emailMessage/Body": "<p class=\"editor-paragraph\">@{concat('Readiness score ', string(outputs('ReadinessScore')), ' of 100. Missing: ', if(equals(triggerOutputs()?['body/InvoiceReady'],true),'','commercial invoice; '), if(equals(triggerOutputs()?['body/PackingListReady'],true),'','packing list; '), if(or(equals(triggerOutputs()?['body/PermitNeeded'],false),equals(triggerOutputs()?['body/PermitReady'],true)),'','permit or licence; '), if(empty(triggerOutputs()?['body/ImporterUEN']),'importer UEN; ',''), ' Handling notes: ', coalesce(triggerOutputs()?['body/HandlingNotes'],''))}</p>",
+                  "emailMessage/Importance": "Normal"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365",
+                  "connectionName": "shared_office365",
+                  "operationId": "SendEmailV2"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "更新项": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {}
+          },
+          "expression": {
+            "and": [
+              {
+                "less": [
+                  "@outputs('ReadinessScore')",
+                  100
+                ]
+              }
+            ]
+          },
+          "type": "If"
+        }
+      },
+      "outputs": {}
+    },
+    "connectionReferences": {
+      "shared_sharepointonline": {
+        "connectionName": "shared-sharepointonl-14878558-58c4-47fc-beea-0f080e034d92",
+        "source": "Embedded",
+        "id": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+        "tier": "NotSpecified",
+        "apiName": "sharepointonline",
+        "isProcessSimpleApiReferenceConversionAlreadyDone": false
+      },
+      "shared_office365": {
+        "connectionName": "shared-office365-6079d908-aa57-4c1e-8dec-ac91dd3096d3",
+        "source": "Embedded",
+        "id": "/providers/Microsoft.PowerApps/apis/shared_office365",
+        "tier": "NotSpecified",
+        "apiName": "office365",
+        "isProcessSimpleApiReferenceConversionAlreadyDone": false
+      }
+    },
+    "flowFailureAlertSubscribed": false,
+    "isManaged": false
+  }
+}
